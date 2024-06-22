@@ -1,21 +1,20 @@
-.navbar {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border-radius: 10px;
-    margin: 20px;
-  }
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-  }
-  
-  .navbar a:hover {
-    background-color: #575757;
-    border-radius: 5px;
-  }
-  
+.nav { /* Updated from .navbar to .nav */
+  display: flex;
+  justify-content: center; 
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.nav a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}

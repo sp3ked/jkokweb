@@ -15,12 +15,12 @@
     align-items: center;
     justify-content: start;
     overflow: hidden;
-    height: 300px; /* Set a fixed height for consistency */
+    height: 300px;
     width: 100%;
   }
   
   .projectimg {
-    height: 100px; /* Adjust height as needed */
+    height: 100px;
     background-color: #000;
     width: 80%;
     margin-bottom: 10px;
@@ -39,7 +39,7 @@
     overflow-wrap: break-word;
     width: 90%;
     margin: 0 auto;
-    flex-grow: 1; /* Ensure text grows to fill space */
+    flex-grow: 1;
   }
   
   /* Mobile */

@@ -1,0 +1,36 @@
+.resume-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.resume-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.resume-container h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.resume-container p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.download-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.download-link:hover {
+    background-color: #0056b3;
+}
