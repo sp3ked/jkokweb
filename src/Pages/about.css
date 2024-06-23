@@ -3,10 +3,19 @@
     max-width: 1200px;
     margin: auto;
     padding: 20px;
+    justify-content: center;
 }
 
 .about-content {
     flex: 1; 
-    padding-left: 20px;
-    text-align: left;
+    text-align: center; 
+}
+
+.about-content p {
+    margin-top: 20px; /* Adjusts space above each paragraph */
+}
+
+.underline-link {
+    text-decoration: underline; 
+    color: inherit; 
 }
