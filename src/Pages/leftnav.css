@@ -1,5 +1,8 @@
 .Profile {
-    position: fixed; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Align children to top and bottom */
+    position: fixed;
     width: 400px;
     height: 100vh;
     padding: 20px;
@@ -7,32 +10,49 @@
     background-color: #f4f4f4;
     box-sizing: border-box;
     top: 0;
-    left: 0; 
-    overflow-y: auto; 
+    left: 0;
+    overflow-y: auto;
 }
 
-.profile-pic {
-    width: 100%;
-    height: auto;
+.circular--landscape {
+    display: inline-block;
+    position: relative;
+    width: 170px;
+    height: 170px;
+    overflow: hidden;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-top: 40px;
 }
 
-.profile-nav h1 {
-    color: #333;
-    margin-bottom: 20px;
+.circular--landscape img {
+    width: auto;
+    height: 100%;
+    margin-left: -50px; /* Center the image horizontally */
 }
 
-.Profile-nav a {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+.description {
+    color: #3b3b3b;
+    font-size: 1em;
+    margin-top: 10px;
 }
 
-.Profile a:hover {
-    background-color: #0056b3;
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Increased gap for better visual separation */
+    margin-bottom: 20px; /* Ensure there's space at the bottom */
 }
+
+.links a:hover {
+    transform: scale(1.1);
+}
+
+.links a img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+
+}
+
+
