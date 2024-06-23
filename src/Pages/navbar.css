@@ -1,42 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
-:root {
-    --black: #000;
-    --grey: #333;
-    --org: #ff6404;
+.nav {
+  font-size: 1em;
+  width: 100%;
+  padding: 1em;
+  background-color: white;
 }
 
-.nav {
-    font-family: 'League Spartan', sans-serif;
-    font-size: 1em;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 1em;
-    background-color: var(--black);
-    box-shadow: 0 0 30px var(--grey);
-    display: flex;
+.cent-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-item {
-    padding: 10px 15px;
-    color: white;
-    text-decoration: none;
-    position: relative;
-    display: inline-block;
+  padding: 10px 20px;
+  color: black;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
 }
 
 .nav-item::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background-color: var(--org);
-    transition: all 0.3s ease-out;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 0;
+  height: 2px;
+  background-color: rgb(216, 216, 216);
+  transition: all 0.2s ease;
 }
 
 .nav-item:hover::after {
-    width: 100%;
+  width: 100%;
 }
