@@ -19,17 +19,22 @@
   display: inline-block;
 }
 
-.nav-item::after {
+.nav-item span {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-item span::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 5px;
+  bottom: 0;
   width: 0;
   height: 2px;
   background-color: rgb(216, 216, 216);
   transition: all 0.2s ease;
 }
 
-.nav-item:hover::after {
+.nav-item:hover span::after {
   width: 100%;
 }
