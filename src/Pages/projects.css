@@ -8,17 +8,18 @@
 }
 
 .box {
-  background-color: #ccc;
+  background-color: #dbdbdb;
   border-radius: 10px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   height: 300px;
   overflow: hidden;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .title {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: bold;
   margin: 0 0 15px 0;
   text-align: center;
