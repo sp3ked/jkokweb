@@ -1,0 +1,14 @@
+.fullProjectDetails {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .fullProjectDetails h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .fullProjectDetails p {
+    line-height: 1.6;
+  }

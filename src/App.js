@@ -5,6 +5,7 @@ import Projects from "./Pages/projects";
 import About from "./Pages/about";
 import Resume from "./Pages/resume";
 import LeftNav from "./Pages/leftnav";
+import Scout from "./Pages/scout"; 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/resume" element={<Resume />} />
+            <Route path="/projects/scout" element={<Scout />} />
           </Routes>
         </div>
       </div>
