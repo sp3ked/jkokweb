@@ -61,6 +61,11 @@
   font-size: 18px;
 }
 
+.underline-link {
+  text-decoration: underline; 
+  color: inherit; 
+}
+
 .box > p {
   margin: 0;
   overflow: auto;

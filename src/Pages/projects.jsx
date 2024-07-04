@@ -15,8 +15,9 @@ function Projects() {
               <strong className="secondTitle"> Scout - Shopping and Selling App</strong><br/>
               Scout is an innovative mobile application designed to revolutionize the way users shop and sell items. The app utilizes advanced scanning technology to recognize items and compare prices across 100+ retailers. Additionally, Scout features an automated selling tool that creates and uploads listings to eBay within seconds.<br/><br/>
               
-              <Link to="/projects/scout">Show More</Link>
+              <a href="/projects/scout" className="about">...see more</a>
             </p>
+            
           </div>
         </div>
       </div>
