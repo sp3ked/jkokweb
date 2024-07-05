@@ -1,15 +1,33 @@
 import React from 'react';
 import './projectDetails.css';
+import scout1 from '../images/scout1.jpg';
+import scout2 from '../images/scout2.jpg';
+import scout3 from '../images/scout3.jpg';
+import scout4 from '../images/scout4.jpg';
 
 function Scout() {
+  const images = [scout1, scout2, scout3, scout4];
 
   return (
     <div className="fullProjectContainer">
       <div className="fullProjectDetails">
         <a href="/projects" className="backButton">back</a>
         <h1>Scout - Shopping and Selling App</h1>
-        <p>
-          <strong>Description:</strong><br/>
+        <div className="marqueeContainer">
+          <div className="marquee">
+            {[...images, ...images].map((img, index) => (
+              <img 
+                key={index} 
+                src={img} 
+                alt={`Scout App ${(index % 4) + 1}`} 
+                className="marqueeImage"
+              />
+            ))}
+          </div>
+        </div>
+        <div className="projectContent">
+          <p>
+            <strong>Description:</strong><br/>
           Scout is an innovative mobile application designed to revolutionize the way users shop and sell items. The app utilizes advanced scanning technology to recognize items and compare prices across 100+ retailers. Additionally, Scout features an automated selling tool that creates and uploads listings to eBay within seconds.<br/><br/>
           
           <strong>Technical Specifications:</strong><br/>
@@ -53,6 +71,7 @@ function Scout() {
           Enhanced skills in React Native, state management, navigation, theming, and API integration.
         </p>
       </div>
+    </div>
     </div>
   );
 }

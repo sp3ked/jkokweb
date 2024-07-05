@@ -4,11 +4,10 @@
 
 .backButton {
     position: absolute;
-    top: 20px;
-    left: 20px;
     font-size: 1em;
     color: #008cff;
     text-decoration: none;
+    padding-bottom: 30px;
 }
 
 .backButton:hover {
@@ -30,3 +29,56 @@
 .fullProjectDetails p {
     line-height: 1.6;
 }
+
+
+.fullProjectContainer {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .fullProjectDetails {
+    position: relative;
+  }
+  
+  .backButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .marqueeContainer {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .marquee {
+    display: flex;
+    animation: marquee 45s linear infinite;
+  }
+  
+  .marqueeImage {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  

@@ -6,6 +6,7 @@ import About from "./Pages/about";
 import Resume from "./Pages/resume";
 import LeftNav from "./Pages/leftnav";
 import Scout from "./Pages/scout"; 
+import Raspi from "./Pages/raspi"; 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/projects/scout" element={<Scout />} />
+            <Route path="/projects/raspi" element={<Raspi />} />
           </Routes>
         </div>
       </div>

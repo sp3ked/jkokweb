@@ -43,3 +43,13 @@ body {
   background-color: #ebebeb;
   
 }
+
+.seemore {
+  color: #008cff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.seemore:hover {
+  text-decoration: underline;
+}
