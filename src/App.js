@@ -5,8 +5,8 @@ import Projects from "./Pages/projects";
 import About from "./Pages/about";
 import Resume from "./Pages/resume";
 import LeftNav from "./Pages/leftnav";
-import Scout from "./Pages/scout"; 
-import Raspi from "./Pages/raspi"; 
+import Scout from "./Pages/scout";
+import Raspi from "./Pages/raspi";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {

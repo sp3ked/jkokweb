@@ -73,22 +73,47 @@
   flex-grow: 1;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
   .projectGrid {
     grid-template-columns: 1fr;
   }
 
+  .box {
+    height: auto;
+    min-height: 200px;
+    max-height: 250px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
   .projectContent {
     flex-direction: column;
-    align-items: center;
   }
 
   .projectImgScout {
-    margin-bottom: 15px;
+    display: none;
   }
 
   .projectText {
-    text-align: center;
+    height: 100%;
+  }
+
+  .projectText p {
+    -webkit-line-clamp: unset;
+    display: block;
+    font-size: 14px;
+  }
+
+  .secondTitle {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .seemore {
+    font-size: 14px;
+    margin-top: 10px;
   }
 }

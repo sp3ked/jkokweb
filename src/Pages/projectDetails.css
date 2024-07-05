@@ -82,3 +82,37 @@
     }
   }
   
+  @media (max-width: 768px) {
+    .fullProjectContainer {
+      padding: 10px;
+    }
+  
+    .fullProjectDetails {
+      padding: 15px;
+    }
+  
+    .backButton {
+      top: 15px;
+      left: 15px;
+      font-size: 14px;
+    }
+  
+    h1 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  
+    .projectImage {
+      max-height: 300px;
+    }
+  
+    .marqueeImage {
+      width: 150px;
+      height: 100px;
+    }
+  
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }

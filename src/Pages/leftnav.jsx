@@ -17,7 +17,7 @@ function LeftNav() {
                 <a href="/about" className="seemore">...see more</a>
             </div>
             <div className="links">
-                <a href="https://github.com/sp3ked" target="_blank" rel="noopener noreferrer"> {/* opens new tab  */} 
+                <a href="https://github.com/sp3ked" target="_blank" rel="noopener noreferrer">
                     <img src={githubIcon} alt="GitHub" />
                 </a>
                 <a href="https://twitter.com/sp3ked" target="_blank" rel="noopener noreferrer">
