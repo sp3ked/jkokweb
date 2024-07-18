@@ -7,6 +7,7 @@ import Resume from "./Pages/resume";
 import LeftNav from "./Pages/leftnav";
 import Scout from "./Pages/scout";
 import Raspi from "./Pages/raspi";
+import Langnav from "./Pages/langnav";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -59,6 +60,9 @@ function App() {
     <Router>
       <canvas id="matrix-canvas" style={{position: 'fixed', top: 0, left: 0, zIndex: -1}}></canvas>
       <div className="container">
+        <div className="langnav">
+          <Langnav />
+        </div>
         <div className="profile">
           <LeftNav />
         </div>

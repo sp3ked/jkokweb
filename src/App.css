@@ -1,28 +1,23 @@
-@font-face {
-  font-family: 'Terminus';
-  src: url('./fonts/Terminus.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-body {
-  font-family: 'Terminus', monospace;
-  margin: 0;
-  padding: 0;
-  color: #00ff00;
-  overflow: hidden;
-}
-
 .container {
   display: grid;
   grid-template-columns: 400px 1fr;
-  grid-template-rows: 50px 1fr;
+  grid-template-rows: 50px 50px 1fr;
   grid-template-areas:
+    "langnav langnav"
     "profile navbar"
     "profile content";
   height: 100vh;
   position: relative;
   z-index: 1;
+}
+
+.langnav {
+  grid-area: langnav;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-bottom: 2em;
 }
 
 .profile {
@@ -41,7 +36,6 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.7);
-  padding-bottom: 40;
 }
 
 .content {
@@ -63,8 +57,9 @@ body {
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: auto auto auto 1fr;
     grid-template-areas:
+      "langnav"
       "navbar"
       "profile"
       "content";
