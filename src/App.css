@@ -7,6 +7,10 @@
 
 body {
   font-family: 'Terminus', monospace;
+  margin: 0;
+  padding: 0;
+  color: #00ff00;
+  overflow: hidden;
 }
 
 .container {
@@ -17,13 +21,14 @@ body {
     "profile navbar"
     "profile content";
   height: 100vh;
-  background-color: #eb2222;
+  position: relative;
+  z-index: 1;
 }
 
 .profile {
   grid-area: profile;
   height: 100vh;
-  background-color: #f4f4f4;
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,16 +40,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .content {
   grid-area: content;
   overflow-y: auto;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .seemore {
-  color: #008cff;
+  color: #00ff00;
   text-decoration: none;
   font-size: 15px;
 }

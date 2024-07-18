@@ -10,7 +10,7 @@ function Projects() {
       <TerminalBox title="Scout" content={
         <>
           <div className="projectContent">
-            <img src={scoutLogo} alt="Scout Logo" className="projectImgScout"/>
+            <img src={scoutLogo} alt="Scout Logo" className="projectImg"/>
             <div className="projectText">
               <p>
                 <strong className="secondTitle">Scout - Shopping and Selling App</strong><br/>
@@ -25,7 +25,7 @@ function Projects() {
       <TerminalBox title="Raspberry Pi Glasses" content={
         <>
           <div className="projectContent">
-            <img src={raspberryPiGlasses} alt="Raspberry Pi Glasses" className="projectImgScout"/>
+            <img src={raspberryPiGlasses} alt="Raspberry Pi Glasses" className="projectImg"/>
             <div className="projectText">
               <p>
                 <strong className="secondTitle">AI-Powered Smart Glasses</strong><br/>

@@ -26,7 +26,7 @@ function RaspberryPiGlasses() {
           </div>
         </div>
         <div className="projectContent">
-        <p>
+        <p className="projectDetailsText">
           <strong>Description:</strong><br/>
           Using a Raspberry Pi, my brother and I created smart glasses that capture images, process them using the Inception v3 model, and display the predicted object on a screen. This innovative project combines computer vision, machine learning, and wearable technology.<br/><br/>
 
