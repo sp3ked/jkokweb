@@ -7,70 +7,84 @@
   box-sizing: border-box;
 }
 
-.box {
-  background-color: #dbdbdb;
-  border-radius: 10px;
-  padding: 20px;
+.terminalBox {
+  background-color: #0c0c0c;
+  border: 1px solid #00ff00;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: 'Consolas', 'Courier New', monospace;
+  color: #00ff00;
   display: flex;
   flex-direction: column;
   height: 300px;
-  overflow: hidden;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
 }
 
-.title {
-  font-size: 32px;
+.terminalHeader {
+  background-color: #0c0c0c;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #00ff00;
+}
+
+.terminalTitle {
+  font-size: 14px;
+}
+
+.terminalControls {
+  display: flex;
+  gap: 5px;
+}
+
+.terminalControl {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #00ff00;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.terminalContent {
+  padding: 10px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.terminalPrompt {
+  margin: 0 0 10px 0;
   font-weight: bold;
-  margin: 0 0 15px 0;
-  text-align: center;
 }
 
 .projectContent {
   display: flex;
-  flex-grow: 1;
-  overflow: hidden;
-  gap: 50px;
+  gap: 20px;
 }
 
 .projectImgScout {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
-  border-radius: 15%;
-  margin-left: 30px;
-  margin-top: 30px;
-}
-
-.secondTitle {
-  font-size: 20px;
-  font-weight: bold;
-  display: block;
 }
 
 .projectText {
   flex: 1;
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
 }
 
-.projectText p {
-  margin: 0;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  font-size: 18px;
+.secondTitle {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
 }
 
-.underline-link {
-  text-decoration: underline; 
-  color: inherit; 
-}
-
-.box > p {
-  margin: 0;
-  overflow: auto;
-  flex-grow: 1;
+.seemore {
+  color: #00ff00;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -78,15 +92,9 @@
     grid-template-columns: 1fr;
   }
 
-  .box {
+  .terminalBox {
     height: auto;
-    min-height: 200px;
-    max-height: 250px;
-  }
-
-  .title {
-    font-size: 20px;
-    margin-bottom: 10px;
+    max-height: 400px;
   }
 
   .projectContent {
@@ -94,26 +102,7 @@
   }
 
   .projectImgScout {
-    display: none;
-  }
-
-  .projectText {
-    height: 100%;
-  }
-
-  .projectText p {
-    -webkit-line-clamp: unset;
-    display: block;
-    font-size: 14px;
-  }
-
-  .secondTitle {
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-
-  .seemore {
-    font-size: 14px;
-    margin-top: 10px;
+    width: 80px;
+    height: 80px;
   }
 }
