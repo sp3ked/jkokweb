@@ -37,10 +37,10 @@ function Projects() {
           </div>
         </>
       } />
-      <TerminalBox title="Project 3" content={
+      <TerminalBox title="Project" content={
         <p>Coming Soon...</p>
       } />
-      <TerminalBox title="Project 4" content={
+      <TerminalBox title="Project" content={
         <p>Coming Soon...</p>
       } />
     </div>
@@ -59,7 +59,7 @@ function TerminalBox({ title, content }) {
         </div>
       </div>
       <div className="terminalContent">
-        <p className="terminalPrompt">C:\Users\{title}&gt;</p>
+        <p className="terminalPrompt">C:\Users\Projects\{title}&gt;</p>
         {content}
       </div>
     </div>
