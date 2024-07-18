@@ -22,7 +22,7 @@ function Projects() {
           </div>
         </>
       } />
-      <TerminalBox title="Raspberry Pi Glasses" content={
+      <TerminalBox title="Raspi" content={
         <>
           <div className="projectContent">
             <img src={raspberryPiGlasses} alt="Raspberry Pi Glasses" className="projectImg"/>
@@ -38,10 +38,10 @@ function Projects() {
         </>
       } />
       <TerminalBox title="Project 3" content={
-        <p>NGSJIOnijsgnionghi,9owenjmghi9owsenemgh9usnemhgu</p>
+        <p>Coming Soon...</p>
       } />
       <TerminalBox title="Project 4" content={
-        <p>sgngsngsdngjikosdngikjosdngjiksd.</p>
+        <p>Coming Soon...</p>
       } />
     </div>
   );
