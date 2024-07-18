@@ -11,6 +11,9 @@
     text-align: left; 
     color: green;
     font-size: 20px;
+    background-color: black;
+    padding: 20px;
+    margin-top: 40px;
 }
 
 .title {
