@@ -8,8 +8,18 @@
 
 .about-content {
     flex: 1; 
-    text-align: center; 
+    text-align: left; 
+    color: green;
+    font-size: 20px;
 }
+
+.title {
+    flex: 1; 
+    text-align: left; 
+    color: green;
+    font-size: 40px;
+}
+
 
 .about-content p {
     margin-top: 20px; 
