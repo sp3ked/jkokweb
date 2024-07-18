@@ -50,7 +50,7 @@ function App() {
       }
     };
 
-    const interval = setInterval(draw, 30);
+    const interval = setInterval(draw, 60);
 
     return () => clearInterval(interval);
   }, []);
