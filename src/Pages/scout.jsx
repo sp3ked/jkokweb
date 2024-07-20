@@ -27,48 +27,47 @@ function Scout() {
         </div>
         <div className="projectContent">
           <p className="projectDetailsText">
-            <strong>Description:</strong><br/>
-          Scout is an innovative mobile application designed to revolutionize the way users shop and sell items. The app utilizes advanced scanning technology to recognize items and compare prices across 100+ retailers. Additionally, Scout features an automated selling tool that creates and uploads listings to eBay within seconds.<br/><br/>
+          <a href="https://github.com/scoutfinder/app" target="_blank" rel="noopener noreferrer" className="underline-link">--CLICK HERE TO SEE GITHUB REPO--</a>
+          <br></br>
+          <br></br>
+          <strong>Description:</strong><br/>
+          Scout is an innovative mobile application designed to revolutionize the way users shop and sell items. The app utilizes "google scan" to recognize items and compare prices across 100+ retailers. Additionally, Scout features an automated selling tool that creates and uploads listings to eBay within seconds.<br/><br/>
           
           <strong>Technical Specifications:</strong><br/>
           <strong>Platform:</strong> React Native<br/>
-          Developed using React Native to ensure a seamless cross-platform experience on both iOS and Android devices.<br/>
+          Developed using React Native to ensure make it easy to make it cross-platform on both iOS and Android devices.<br/>
           <strong>Item Recognition:</strong> Google Lens<br/>
-          Integrated with Google Lens for accurate and efficient item recognition through image scanning.<br/>
+          We used a scraper in order to scrape the data from google lens and implement it into our app. This allowed for efficent and accrate scanning of items as you cant really beat googles datasets.<br/>
           <strong>Price Comparison:</strong><br/>
-          Aggregates price data from over 100 retailers, providing users with comprehensive price comparisons for scanned items.<br/>
+          After scaning the scaper will filter though the results as their is alot of false results (things such as youtube and tiktok). After doing this it then grabs the price of every item sorts it and then displays to the user the cheapest retailer and the link to purchase that item.<br/>
           <strong>Automated Selling:</strong><br/>
-          Features an automated listing creation tool that generates eBay listings from user-uploaded images.<br/>
-          Connects to eBay via OAuth for secure authentication and data transfer.<br/>
-          <strong>State Management:</strong><br/>
-          Uses React hooks such as useState, useEffect, and useCallback for managing component state and side effects.<br/>
-          <strong>Navigation:</strong><br/>
-          Utilizes @react-navigation/native and expo-router for seamless navigation within the app.<br/>
+          Features an automated listing creation tool that generates eBay listings from user-uploaded images. Connects to eBay via OAuth for secure authentication and data transfer. By this we mean auto genorate everything like the description, catergory, etc. (This is not in the app but we had it working apple just get rejecting it for privacy violations)<br/>
           <strong>Theming:</strong><br/>
-          Supports dark and light modes using useColorScheme and conditional styling.<br/>
-          <strong>Splash Screen:</strong><br/>
-          Prevents the splash screen from auto-hiding using expo-splash-screen until assets are loaded.<br/>
-          <strong>Data Storage:</strong><br/>
-          Uses AsyncStorage for local data persistence, such as storing scanned items and user settings.<br/>
-          <strong>UUID Generation:</strong><br/>
-          Generates unique device identifiers using expo-crypto.<br/><br/>
+          Dark and light modes theme and app icon changes based on which theme.<br/>
+          <strong>State Management:</strong> React Hooks<br/>
+          Utilizes React Hooks for efficient state management throughout the application, ensuring smooth data flow and component updates.<br/>
+          <strong>Data Persistence:</strong> AsyncStorage<br/>
+          Implements AsyncStorage for local data persistence, allowing users to store and retrieve scan history, favorites, and other app-related data across sessions.<br/>
+          
+          <br/>
           
           <strong>Key Features:</strong><br/>
           Scan and Compare: Instantly scan items to see price differences across multiple retailers.<br/>
-          Effortless Lists: Simplifies the creation of shopping lists with a quick scan-and-save feature.<br/>
-          Quick Listings: Automates the process of creating and uploading eBay listings, reducing the time to under 30 seconds.<br/><br/>
+          Quick Listings: Automates the process of creating and uploading eBay listings, reducing the time to under 30 seconds.<br/>
+          Easy to Use: Simple and intuitive interface for a seamless user experience.<br/><br/>
           
           <strong>Developer Contributions:</strong><br/>
-          Led the development and integration of Google Lens for item recognition.<br/>
-          Implemented OAuth for secure eBay connectivity and automated listing functionality.<br/>
-          Optimized the app for performance and user experience across both iOS and Android platforms.<br/>
+          Helped Implement OAuth for secure eBay connectivity and automated listing functionality.<br/>
           Developed custom components and styled using StyleSheet for a responsive and user-friendly interface.<br/>
-          Managed state effectively using React hooks and ensured smooth navigation and transitions within the app.<br/>
-          Ensured data persistence and retrieval using AsyncStorage for a seamless user experience.<br/><br/>
+          Created the most of the frontend of the app, including many functionalitys like the favoring an item and deleteing an item.<br/><br/>
           
           <strong>Learning and Development:</strong><br/>
           Focused on mobile app development and frontend development for this app.<br/>
-          Enhanced skills in React Native, state management, navigation, theming, and API integration.
+          Enhanced skills in React Native, theming, and useability (First Mobile Application).<br/>
+          <br/>
+          <br/>
+          <br/>
+          <strong>Comments:</strong> Currently working on getting it in the app store, a couple months after creation we noticed someone also doing this so we decided to dump this project... but it was a great learning expirence. You can find the app <a href="https://www.apple.com/app-store/scout" target="_blank" rel="noopener noreferrer" className="underline-link">here</a> if it is even approved for the app store<br/>
         </p>
       </div>
     </div>
