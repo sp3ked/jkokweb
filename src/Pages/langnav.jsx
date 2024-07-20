@@ -20,7 +20,7 @@ function Langnav() {
   useEffect(() => {
     const marquee = marqueeRef.current;
     let position = 0;
-    const speed = 0.5;
+    const speed = 0.08;
 
     const scroll = () => {
       position -= speed;
