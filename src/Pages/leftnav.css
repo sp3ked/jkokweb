@@ -14,6 +14,7 @@
   left: 0;
   overflow-y: auto;
   color: #00ff00;
+  transition: transform 0.3s ease-in-out;
 }
 
 .circular--landscape {
@@ -36,7 +37,6 @@
   font-size: 1em;
   margin-top: 10px;
 }
-
 
 .links {
   display: flex;
@@ -64,41 +64,7 @@
 
 @media (max-width: 768px) {
   .Profile {
-    position: static;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px;
-    border-right: none;
-    border-bottom: 2px solid #00ff00;
-  }
-
-  .circular--landscape {
-    width: 50px;
-    height: 50px;
-    margin-top: 0;
-    margin-right: 10px;
-  }
-
-  .circular--landscape img {
-    margin-left: 0;
-  }
-
-  .Profile h1 {
-    font-size: 1.2em;
-    margin: 0;
-  }
-
-  .description, .seemore {
-    display: none;
-  }
-
-  .links {
-    margin-bottom: 0;
-  }
-
-  .innerLink {
-    font-size: 1em;
+    transform: translateX(-100%);
+    z-index: 1000;
   }
 }

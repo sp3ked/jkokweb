@@ -14,7 +14,7 @@ function LeftNav() {
                 </div>
                 <h1>Joey Kokinda</h1>
                 <p className="description">Student studying AI at Purdue University</p>
-                <a href="/about" className="seemore">...see more</a>
+                <a href="/about" className="seemore">...see more (click me)</a>
             </div>
             <div className="links">
                 <a href="https://github.com/sp3ked" target="_blank" rel="noopener noreferrer">

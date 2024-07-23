@@ -1,8 +1,8 @@
 .projectGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  padding: 40px;
+  padding: 20px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -16,7 +16,7 @@
   color: #00ff00;
   display: flex;
   flex-direction: column;
-  height: 300px;
+  min-height: 300px;
 }
 
 .terminalHeader {
@@ -54,6 +54,7 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 }
 
 .terminalPrompt {
@@ -63,14 +64,16 @@
 
 .projectContent {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 20px;
 }
 
 .projectImg {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
   object-fit: cover;
+  align-self: center;
 }
 
 .projectText {
@@ -90,30 +93,31 @@
 
 .seemore {
   color: #00ff00;
-  
+  text-decoration: none;
 }
 
 .seemore:hover {
   text-decoration: underline;
-
 }
 
-@media (max-width: 768px) {
-  .projectGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .terminalBox {
-    height: auto;
-    max-height: 400px;
-  }
-
+@media (min-width: 768px) {
   .projectContent {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    align-items: flex-start;
   }
 
   .projectImg {
-    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .projectGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .terminalBox {
+    height: auto;
   }
 }

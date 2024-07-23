@@ -15,8 +15,7 @@ function Projects() {
               <p>
                 <strong className="secondTitle">Scout - Shopping and Selling App</strong><br/>
                 Scout is an innovative mobile application designed to revolutionize the way users shop and sell items. The app utilizes "google scan" to recognize items and compare prices across 100+ retailers. Additionally, Scout features an automated selling tool that creates and uploads listings to eBay within seconds.<br/><br/>
-                
-                <Link className="seemore" to="/projects/scout">...see more</Link>
+                <Link className="seemore" to="/projects/scout">...see more (click me)</Link>
               </p>
             </div>
           </div>
@@ -30,8 +29,7 @@ function Projects() {
               <p>
                 <strong className="secondTitle">Raspi - Smart Glasses</strong><br/>
                 Using a Raspberry Pi, my brother and I created "smart" glasses that capture images, process them using the Inception v3 model, and display the predicted object on a screen. This project is based around the topics of computer vision, machine learning, and wearable technology.<br/><br/>
-                <br/>
-                <Link className="seemore" to="/projects/raspi">...see more</Link>
+                <Link className="seemore" to="/projects/raspi">...see more (click me)</Link>
               </p>
             </div>
           </div>
