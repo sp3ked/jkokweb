@@ -12,6 +12,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   useEffect(() => {
+    // Auto-refresh logic
+    if (!localStorage.getItem('firstLoadDone')) {
+      localStorage.setItem('firstLoadDone', 'true');
+      window.location.reload();
+    }
+
+    // Matrix canvas animation logic
     const canvas = document.getElementById('matrix-canvas');
     const ctx = canvas.getContext('2d');
 
