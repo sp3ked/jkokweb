@@ -1,3 +1,4 @@
+/* App.css */
 body, html {
   margin: 0;
   padding: 0;
@@ -62,42 +63,61 @@ body, html {
   text-decoration: underline;
 }
 
-/* @media (max-width: 1200px) {
-  .container {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto 1fr 1fr;
-    grid-template-areas:
-      "langnav langnav"
-      "profile profile"
-      "navbar navbar"
-      "content";
-  }
-
-  .profile {
-    height: auto;
-  }
-
-  .content {
-    padding: 20px;
-  }
-} */
-
-/* @media (max-width: 768px) {
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
   .container {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: auto auto auto 1fr;
     grid-template-areas:
       "langnav"
-      "navbar"
       "profile"
+      "navbar"
       "content";
   }
 
   .profile {
-    height: auto;
+    grid-area: profile;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 60px; /* Adjust height as needed */
+    flex-direction: row; /* This makes the profile picture bar horizontal */
   }
 
-  .content {
-    padding: 20px;
+  .profile img {
+    width: 50px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    border-radius: 50%;
   }
-} */
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 1fr;
+    grid-template-areas:
+      "langnav"
+      "profile"
+      "navbar"
+      "content";
+  }
+
+  .profile {
+    grid-area: profile;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 60px; /* Adjust height as needed */
+    flex-direction: row; /* This makes the profile picture bar horizontal */
+  }
+
+  .profile img {
+    width: 50px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    border-radius: 50%;
+  }
+}
