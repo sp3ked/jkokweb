@@ -1,3 +1,4 @@
+/* resume.css */
 .resume-container {
     max-width: 800px;
     margin: auto;
@@ -12,19 +13,19 @@
 }
 
 .resume-container h1 {
-    color: #333;
+    color: #00ff00; 
     margin-bottom: 20px;
 }
 
 .resume-container p {
-    color: #666;
+    color: #00ff00; 
     margin-bottom: 10px;
 }
 
 .download-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #0d6d00;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -32,5 +33,5 @@
 }
 
 .download-link:hover {
-    background-color: #0056b3;
+    background-color: #0a5300;
 }
