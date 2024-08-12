@@ -1,4 +1,5 @@
-import React from "react";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import "./projectDetails.css";
 import scout1 from "../images/scout1.jpg";
 import scout2 from "../images/scout2.jpg";
@@ -7,7 +8,11 @@ import scout4 from "../images/scout4.jpg";
 
 function Scout() {
   const images = [scout1, scout2, scout3, scout4];
+  const location = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]); 
   return (
     <div className="fullProjectContainer">
       <div className="fullProjectDetails">
