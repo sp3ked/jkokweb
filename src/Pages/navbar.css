@@ -39,19 +39,3 @@
 .nav-item:hover span::after {
   width: 100%;
 }
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-  .nav {
-    padding: 0.5em;
-  }
-
-  .cent-nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-item {
-    padding: 5px 10px;
-  }
-}
