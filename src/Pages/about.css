@@ -1,34 +1,33 @@
 .about-container {
-    display: flex;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-    justify-content: center;
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  justify-content: center;
 }
 
 .about-content {
-    flex: 1; 
-    text-align: left; 
-    color: green;
-    font-size: 20px;
-    background-color: black;
-    padding: 40px;
-    margin-top: 60px;
+  flex: 1;
+  text-align: left;
+  color: green;
+  font-size: 20px;
+  background-color: black;
+  padding: 40px;
+  margin-top: 60px;
 }
 
 .title {
-    flex: 1; 
-    text-align: left; 
-    color: green;
-    font-size: 40px;
+  flex: 1;
+  text-align: left;
+  color: green;
+  font-size: 40px;
 }
 
-
 .about-content p {
-    margin-top: 20px; 
+  margin-top: 20px;
 }
 
 .underline-link {
-    text-decoration: underline; 
-    color: inherit; 
+  text-decoration: underline;
+  color: inherit;
 }

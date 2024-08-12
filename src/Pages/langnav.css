@@ -1,19 +1,19 @@
 .language-marquee-container {
-    width: 100%;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.842);
-    padding: 5px 0;
-    margin-bottom: 20px;
-  }
-  
-  .language-marquee {
-    display: inline-flex;
-    white-space: nowrap;
-  }
-  
-  .language-item {
-    display: inline-block;
-    padding: 0 20px;
-    color: #00ff00;
-    font-family: 'Courier New', monospace;
-  }
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.842);
+  padding: 5px 0;
+  margin-bottom: 20px;
+}
+
+.language-marquee {
+  display: inline-flex;
+  white-space: nowrap;
+}
+
+.language-item {
+  display: inline-block;
+  padding: 0 20px;
+  color: #00ff00;
+  font-family: "Courier New", monospace;
+}

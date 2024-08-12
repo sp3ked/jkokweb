@@ -1,95 +1,92 @@
-
-
 .fullProjectContainer {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: black;
-    padding: 40px;
-    margin-top: 60px;
-    margin-bottom: 60px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: black;
+  padding: 40px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
-  
+
+.fullProjectDetails {
+  position: relative;
+}
+
+.backButton {
+  position: absolute;
+  top: -30px;
+  left: 0px;
+  text-decoration: none;
+  color: #00ff00;
+}
+
+.backButton:hover {
+  text-decoration: underline;
+}
+
+.projectDetailsText {
+  color: #00ff00;
+  line-height: 1.5;
+}
+
+.marqueeContainer {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.marquee {
+  display: flex;
+  animation: marquee 45s linear infinite;
+}
+
+.marqueeImage {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 1200px) {
+  .fullProjectContainer {
+    padding: 10px;
+  }
+
   .fullProjectDetails {
-    position: relative;
+    padding: 15px;
   }
-  
+
   .backButton {
-    position: absolute;
-    top: -30px;
-    left: 0px;
-    text-decoration: none;
-    color: #00ff00;
+    top: 15px;
+    left: 15px;
+    font-size: 14px;
   }
 
-  .backButton:hover {
-    text-decoration: underline;
+  h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
   }
 
-  .projectDetailsText {
-    color: #00ff00;
+  .projectImage {
+    max-height: 300px;
+  }
+
+  .marqueeImage {
+    width: 150px;
+    height: 100px;
+  }
+
+  p {
+    font-size: 14px;
     line-height: 1.5;
   }
-
-  .marqueeContainer {
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 20px;
-  }
-  
-  .marquee {
-    display: flex;
-    animation: marquee 45s linear infinite;
-  }
-  
-  .marqueeImage {
-    width: 400px;
-    height: 300px;
-    object-fit: cover;
-
-  }
-  
-  @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  
-  @media (max-width: 1200px) {
-    .fullProjectContainer {
-      padding: 10px;
-    }
-  
-    .fullProjectDetails {
-      padding: 15px;
-    }
-  
-    .backButton {
-      top: 15px;
-      left: 15px;
-      font-size: 14px;
-    }
-  
-    h1 {
-      font-size: 24px;
-      margin-bottom: 15px;
-    }
-  
-    .projectImage {
-      max-height: 300px;
-    }
-  
-    .marqueeImage {
-      width: 150px;
-      height: 100px;
-    }
-  
-    p {
-      font-size: 14px;
-      line-height: 1.5;
-    }
-  }
+}

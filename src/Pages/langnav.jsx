@@ -1,17 +1,17 @@
-import React, { useEffect, useRef } from 'react';
-import './langnav.css';
+import React, { useEffect, useRef } from "react";
+import "./langnav.css";
 
 const languages = [
-  'print("Hello, World!")',  // Python
-  'console.log("Hello, World!");',  // JavaScript
-  'System.out.println("Hello, World!");',  // Java
-  'printf("Hello, World!");',  // C
-  'std::cout << "Hello, World!";',  // C++
-  'puts "Hello, World!"',  // Ruby
-  'echo "Hello, World!";',  // PHP
-  'fmt.Println("Hello, World!")',  // Go
-  'Console.WriteLine("Hello, World!");',  // C#
-  'println!("Hello, World!");',  // Rust
+  'print("Hello, World!")', // Python
+  'console.log("Hello, World!");', // JavaScript
+  'System.out.println("Hello, World!");', // Java
+  'printf("Hello, World!");', // C
+  'std::cout << "Hello, World!";', // C++
+  'puts "Hello, World!"', // Ruby
+  'echo "Hello, World!";', // PHP
+  'fmt.Println("Hello, World!")', // Go
+  'Console.WriteLine("Hello, World!");', // C#
+  'println!("Hello, World!");', // Rust
 ];
 
 function Langnav() {
@@ -38,7 +38,9 @@ function Langnav() {
     <div className="language-marquee-container">
       <div className="language-marquee" ref={marqueeRef}>
         {languages.concat(languages).map((code, index) => (
-          <span key={index} className="language-item">{code}</span>
+          <span key={index} className="language-item">
+            {code}
+          </span>
         ))}
       </div>
     </div>

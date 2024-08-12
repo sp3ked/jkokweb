@@ -62,60 +62,59 @@
   font-size: 1.2em;
 }
 
-/* Media Queries for Responsiveness */
 @media screen and (max-width: 1200px) {
   .Profile {
-      width: 300px;
+    width: 300px;
   }
-  
+
   .circular--landscape {
-      width: 150px;
-      height: 150px;
+    width: 150px;
+    height: 150px;
   }
 }
 
 @media screen and (max-width: 992px) {
   .Profile {
-      width: 250px;
+    width: 250px;
   }
-  
+
   .circular--landscape {
-      width: 130px;
-      height: 130px;
+    width: 130px;
+    height: 130px;
   }
-  
+
   .description {
-      font-size: 0.9em;
+    font-size: 0.9em;
   }
-  
+
   .innerLink {
-      font-size: 1em;
+    font-size: 1em;
   }
 }
 
 @media screen and (max-width: 768px) {
   .Profile {
-      width: 200px;
-      padding: 15px;
+    width: 200px;
+    padding: 15px;
   }
-  
+
   .circular--landscape {
-      width: 110px;
-      height: 110px;
-      margin-top: 20px;
+    width: 110px;
+    height: 110px;
+    margin-top: 20px;
   }
-  
+
   h1 {
-      font-size: 1.5em;
+    font-size: 1.5em;
   }
-  
+
   .description {
-      font-size: 0.8em;
+    font-size: 0.8em;
   }
-  
+
   .links {
-      flex-direction: column;
-      gap: 10px;
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
@@ -123,35 +122,21 @@
   .Profile {
     width: 100%;
     height: auto;
-    max-height: 50vh; /* Adjust this value as needed */
+    max-height: 50vh;
     position: static;
     border-right: none;
     border-bottom: 2px solid #00ff00;
-    overflow-y: auto; /* This makes it scrollable */
-    padding-bottom: 20px; /* Add some padding at the bottom for better scrolling */
-  }
-  
-  .circular--landscape {
-    width: 100px;
-    height: 100px;
-  }
-  
-  .links {
-    padding-top: 20px;
-    flex-direction: row;
-  }
+    overflow-y: auto;
+    padding-bottom: 20px;
 
-  /* Optional: Improve scrolling experience */
-  .Profile::-webkit-scrollbar {
-    width: 6px;
-  }
+    .circular--landscape {
+      width: 100px;
+      height: 100px;
+    }
 
-  .Profile::-webkit-scrollbar-track {
-    background: #000000;
-  }
-
-  .Profile::-webkit-scrollbar-thumb {
-    background: #00ff00;
-    border-radius: 3px;
+    .links {
+      padding-top: 20px;
+      flex-direction: row;
+    }
   }
 }
