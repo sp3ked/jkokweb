@@ -100,7 +100,7 @@
   text-decoration: underline;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .projectContent {
     flex-direction: row;
     align-items: flex-start;
@@ -112,7 +112,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .projectGrid {
     grid-template-columns: repeat(2, 1fr);
   }
