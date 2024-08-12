@@ -10,6 +10,7 @@ export default function Navbar() {
                 <Link className="nav-item" to="/about"><span>About</span></Link>
                 <Link className="nav-item" to="/resume"><span>Resume</span></Link>
             </div>
+           
         </nav>
     );
 }
