@@ -63,7 +63,7 @@ body, html {
   text-decoration: underline;
 }
 
-/* Media Queries for Responsive Design */
+
 @media (max-width: 1200px) {
   .container {
     grid-template-columns: 1fr;
