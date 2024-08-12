@@ -1,0 +1,44 @@
+.MobileProfile {
+    background-color: #000000;
+    color: #00ff00;
+    padding: 20px;
+    border-bottom: 2px solid #00ff00;
+}
+
+.mobile-content {
+    display: flex;
+    align-items: center;
+}
+
+.mobile-profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.mobile-info {
+    flex-grow: 1;
+}
+
+.mobile-info h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.mobile-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.mobile-links a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+.mobile-message {
+    margin-top: 10px;
+    font-style: italic;
+    text-align: center;
+}

@@ -121,19 +121,37 @@
 
 @media screen and (max-width: 576px) {
   .Profile {
-      width: 100%;
-      height: auto;
-      position: static;
-      border-right: none;
-      border-bottom: 2px solid #00ff00;
+    width: 100%;
+    height: auto;
+    max-height: 50vh; /* Adjust this value as needed */
+    position: static;
+    border-right: none;
+    border-bottom: 2px solid #00ff00;
+    overflow-y: auto; /* This makes it scrollable */
+    padding-bottom: 20px; /* Add some padding at the bottom for better scrolling */
   }
   
   .circular--landscape {
-      width: 100px;
-      height: 100px;
+    width: 100px;
+    height: 100px;
   }
   
   .links {
-      flex-direction: row;
+    padding-top: 20px;
+    flex-direction: row;
+  }
+
+  /* Optional: Improve scrolling experience */
+  .Profile::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .Profile::-webkit-scrollbar-track {
+    background: #000000;
+  }
+
+  .Profile::-webkit-scrollbar-thumb {
+    background: #00ff00;
+    border-radius: 3px;
   }
 }
