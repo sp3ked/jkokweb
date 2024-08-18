@@ -11,8 +11,15 @@ function Scout() {
   const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    const timeoutId = setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
   }, [location]); 
+
+
+  
   return (
     <div className="fullProjectContainer">
       <div className="fullProjectDetails">

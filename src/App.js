@@ -5,21 +5,22 @@ import Projects from "./Pages/projects";
 import About from "./Pages/about";
 import Resume from "./Pages/resume";
 import LeftNav from "./Pages/leftnav";
-import MobileNav from "./Pages/mobilenav"; // New import
+import MobileNav from "./Pages/mobilenav";
 import Scout from "./Pages/scout";
 import Raspi from "./Pages/raspi";
 import Langnav from "./Pages/langnav";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./Pages/scrollToTop";
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 576);
 
   useEffect(() => {
-    // Auto-refresh logic
-    if (!localStorage.getItem("firstLoadDone")) {
-      localStorage.setItem("firstLoadDone", "true");
-      window.location.reload();
-    }
+    // // Auto-refresh logic
+    // if (!localStorage.getItem("firstLoadDone")) {
+    //   localStorage.setItem("firstLoadDone", "true");
+    //   window.location.reload();
+    // }
 
     // Matrix canvas animation logic
     const canvas = document.getElementById("matrix-canvas");
@@ -66,7 +67,6 @@ function App() {
 
     const interval = setInterval(draw, 60);
 
-    // Handle window resize
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 576);
       canvas.width = window.innerWidth;
@@ -83,6 +83,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <canvas
         id="matrix-canvas"
         style={{ position: "fixed", top: 0, left: 0, zIndex: -1 }}
