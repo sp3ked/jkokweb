@@ -7,7 +7,7 @@ function About() {
       <div className="about-content">
         <h1 className="title">About Me</h1>
         <p>
-          Hey, my name is Joey Kokinda. I am currently a student at Purude
+          Hey, my name is Joe Kokinda. I am currently a student at Purude
           University pursuing a Bachelor's degree in Artificial Intelligence. My
           passion lies in AI and robotics and I love building things in these
           fields. I also have interest in basically anything tech related.

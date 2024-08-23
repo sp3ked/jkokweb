@@ -8,7 +8,7 @@ function MobileNav() {
       <div className="mobile-content">
         <img src={profilePic} alt="Profile" className="mobile-profile-pic" />
         <div className="mobile-info">
-          <h1>Joey Kokinda</h1>
+          <h1>Joe Kokinda</h1>
           <div className="mobile-links">
             <a
               href="https://github.com/sp3ked"
