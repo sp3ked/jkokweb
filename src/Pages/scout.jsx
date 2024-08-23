@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./projectDetails.css";
 import scout1 from "../images/scout1.jpg";
 import scout2 from "../images/scout2.jpg";
@@ -16,10 +16,8 @@ function Scout() {
     }, 100);
 
     return () => clearTimeout(timeoutId);
-  }, [location]); 
+  }, [location]);
 
-
-  
   return (
     <div className="fullProjectContainer">
       <div className="fullProjectDetails">

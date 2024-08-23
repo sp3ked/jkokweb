@@ -42,7 +42,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.541);
   padding-top: 20px;
 }
 
@@ -50,7 +50,6 @@ html {
   grid-area: content;
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.7);
   overflow-y: auto;
 }
 
@@ -108,33 +107,27 @@ html {
   }
 }
 
-
 ::-webkit-scrollbar {
-  width: 10px;  /* Width of the entire scrollbar */
+  width: 10px; /* Width of the entire scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;  /* Black background for the tracking area */
-  border-radius: 10px;  /* Rounded corners for the track */
+  background: #000000; /* Black background for the tracking area */
+  border-radius: 10px; /* Rounded corners for the track */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #00ff00;  /* Matching the green color used in the site */
-  border-radius: 10px;  /* Rounded corners for the thumb to make it oval */
-  border: 2px solid #000000;  /* Black border to create space around the thumb */
+  background: #00ff00; /* Matching the green color used in the site */
+  border-radius: 10px; /* Rounded corners for the thumb to make it oval */
+  border: 2px solid #000000; /* Black border to create space around the thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00cc00;  /* Slightly darker green on hover */
+  background: #00cc00; /* Slightly darker green on hover */
 }
 
 /* For Firefox */
 * {
-  scrollbar-width: thin;  /* "auto" or "thin" */
-  scrollbar-color: #00ff00 #000000;  /* scroll thumb and track */
-}
-
-/* Ensure the content area has a black background */
-.content {
-  background-color: #000000;
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: #00ff00 #000000; /* scroll thumb and track */
 }

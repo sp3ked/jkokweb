@@ -10,18 +10,11 @@ import Scout from "./Pages/scout";
 import Raspi from "./Pages/raspi";
 import Langnav from "./Pages/langnav";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ScrollToTop from "./Pages/scrollToTop";
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 576);
 
   useEffect(() => {
-    // // Auto-refresh logic
-    // if (!localStorage.getItem("firstLoadDone")) {
-    //   localStorage.setItem("firstLoadDone", "true");
-    //   window.location.reload();
-    // }
-
     // Matrix canvas animation logic
     const canvas = document.getElementById("matrix-canvas");
     const ctx = canvas.getContext("2d");
@@ -46,10 +39,10 @@ function App() {
     }
 
     const draw = () => {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = "#0F0";
+      ctx.fillStyle = "rgba(0, 255, 0, 0.4)";
       ctx.font = fontSize + "px monospace";
 
       for (let i = 0; i < rainDrops.length; i++) {
@@ -83,7 +76,6 @@ function App() {
 
   return (
     <Router>
-      <ScrollToTop />
       <canvas
         id="matrix-canvas"
         style={{ position: "fixed", top: 0, left: 0, zIndex: -1 }}
