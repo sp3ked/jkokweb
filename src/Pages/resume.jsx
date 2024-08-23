@@ -7,7 +7,7 @@ function Resume() {
       <h1>Resume</h1>
       <img
         src="/Joe_Kokinda_Resume.jpg"
-        alt="Joey's Resume"
+        alt="Joe's Resume"
         className="resume-image"
       />
       <p>To download click here:</p>
