@@ -3,7 +3,7 @@ import "./projects.css";
 import { Link } from "react-router-dom";
 import scoutLogo from "../images/scout1.jpg";
 import raspberryPiGlasses from "../images/raspi1.jpg";
-import bikeimage from "../images/bike.jpg";
+import bikeimage from "../images/bike5.jpg";
 
 function Projects() {
   return (
