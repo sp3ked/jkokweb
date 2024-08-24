@@ -3,7 +3,7 @@ import "./projects.css";
 import { Link } from "react-router-dom";
 import scoutLogo from "../images/scout1.jpg";
 import raspberryPiGlasses from "../images/raspi1.jpg";
-import bike from "../images/bike.jpg";
+import bikeimage from "../images/bike.jpg";
 
 function Projects() {
   return (
@@ -73,7 +73,7 @@ function Projects() {
           <>
             <div className="projectContent">
               <img
-                src={bike}
+                src={bikeimage}
                 alt="Electric Bike Conversion"
                 className="projectImg"
               />
@@ -91,7 +91,7 @@ function Projects() {
                   features like regenerative braking.
                   <br />
                   <br />
-                  <Link className="seemore" to="/projects/electricbike">
+                  <Link className="seemore" to="/projects/eletricbike">
                     ...see more (click me)
                   </Link>
                 </p>

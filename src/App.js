@@ -9,7 +9,7 @@ import MobileNav from "./Pages/mobilenav";
 import Scout from "./Pages/scout";
 import Raspi from "./Pages/raspi";
 import Langnav from "./Pages/langnav";
-import Bike from "./Pages/bike";
+import EletricBike from "./Pages/bike";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -108,7 +108,7 @@ function App() {
             <Route path="/resume" element={<Resume />} />
             <Route path="/projects/scout" element={<Scout />} />
             <Route path="/projects/raspi" element={<Raspi />} />
-            <Route path="/projects/eletricbike" element={<Bike />} />
+            <Route path="/projects/eletricbike" element={<EletricBike />} />
           </Routes>
         </div>
       </div>

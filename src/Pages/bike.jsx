@@ -26,7 +26,7 @@ function Bike() {
         <a href="/projects" className="backButton">
           back
         </a>
-        <h1>Eletric Bike</h1>
+        <h1>Eletric Bike - Conversion Project</h1>
         <div className="marqueeContainer">
           <div className="marquee">
             {[...images, ...images].map((img, index) => (
@@ -195,3 +195,4 @@ function Bike() {
 }
 
 export default Bike;
+
