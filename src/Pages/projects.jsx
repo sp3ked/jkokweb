@@ -3,6 +3,7 @@ import "./projects.css";
 import { Link } from "react-router-dom";
 import scoutLogo from "../images/scout1.jpg";
 import raspberryPiGlasses from "../images/raspi1.jpg";
+import bike from "../images/bike.jpg";
 
 function Projects() {
   return (
@@ -66,7 +67,40 @@ function Projects() {
           </>
         }
       />
-      <TerminalBox title="Project" content={<p>Coming Soon...</p>} />
+      <TerminalBox
+        title="ElectricBike"
+        content={
+          <>
+            <div className="projectContent">
+              <img
+                src={bike}
+                alt="Electric Bike Conversion"
+                className="projectImg"
+              />
+              <div className="projectText">
+                <p>
+                  <strong className="secondTitle">
+                    Electric Bike - Conversion Project
+                  </strong>
+                  <br />
+                  This project aims to convert a regular bike into an electric
+                  bike to address transportation challenges on large university
+                  campuses. The conversion includes a custom motor mount,
+                  multistage belt drive system, and swappable battery for
+                  extended use. Future plans include waterproofing and advanced
+                  features like regenerative braking.
+                  <br />
+                  <br />
+                  <Link className="seemore" to="/projects/electricbike">
+                    ...see more (click me)
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </>
+        }
+      />
+
       <TerminalBox title="Project" content={<p>Coming Soon...</p>} />
     </div>
   );
