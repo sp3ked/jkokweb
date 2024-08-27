@@ -2,14 +2,14 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "./projectDetails.css";
 import unbolt from "../images/unbolt.png";
-import unbolt1 from "../images/unbolt1.png";
+// import unbolt1 from "../images/unbolt1.png";
 import unbolt2 from "../images/unbolt2.png";
 import unbolt3 from "../images/unbolt3.png";
 import unbolt4 from "../images/unbolt4.png";
 
 
 function Unbolted() {
-  const images = [unbolt, unbolt1, unbolt2, unbolt3, unbolt4];
+  const images = [unbolt, unbolt2, unbolt3, unbolt4];
   const location = useLocation();
 
   useEffect(() => {
@@ -41,6 +41,29 @@ function Unbolted() {
         </div>
         <div className="projectContent">
           <p className="projectDetailsText">
+          <a
+              href="https://github.com/brickhack-gpu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-link"
+            >
+              --CLICK HERE TO SEE GITHUB REPO--
+            </a>
+            <br />
+            <a
+              href="https://devpost.com/software/unbolted"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-link"
+            >
+              --CLICK HERE TO SEE DEVPOST SUBMISSION--
+              
+            </a>
+            <br />
+            (website was taken down to save money)
+            <br />
+            <br />
+            <br />
             <strong>Description:</strong>
             <br />
             Unbolted provides instant access to a fleet of high-end GPUs purpose-made for using, tweaking, or even training AI models. It offers a simple interface for novice users, while still providing advanced control for power users. This project addresses the need for flexible, on-demand GPU computing without the burden of expensive hardware purchases or inflexible subscription models.

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import scoutLogo from "../images/scout1.jpg";
 import raspberryPiGlasses from "../images/raspi1.jpg";
 import bikeimage from "../images/bike5.jpg";
-import unboltedImage from "../images/unbolt1.png";
+import unboltedImage from "../images/unbolt.png";
 
 function Projects() {
   return (

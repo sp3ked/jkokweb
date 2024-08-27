@@ -3,12 +3,14 @@
   width: 100%;
   padding: 1em;
   background-color: rgba(0, 0, 0, 0.76);
+  padding-top: 30px;
 }
 
 .cent-nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .nav-item {
@@ -17,6 +19,9 @@
   text-decoration: none;
   position: relative;
   display: inline-block;
+  border:rgb(0, 184, 0) 1px solid;
+  border-radius: 5px;
+  margin: 5px;  
 }
 
 .nav-item span {
