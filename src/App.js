@@ -10,6 +10,7 @@ import Scout from "./Pages/scout";
 import Raspi from "./Pages/raspi";
 import Langnav from "./Pages/langnav";
 import EletricBike from "./Pages/bike";
+import Unbolted from "./Pages/unbolted";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -109,6 +110,7 @@ function App() {
             <Route path="/projects/scout" element={<Scout />} />
             <Route path="/projects/raspi" element={<Raspi />} />
             <Route path="/projects/eletricbike" element={<EletricBike />} />
+            <Route path="/projects/unbolted" element={<Unbolted />} />
           </Routes>
         </div>
       </div>
