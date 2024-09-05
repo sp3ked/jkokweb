@@ -12,6 +12,7 @@ import Raspi from "./Pages/raspi";
 import Langnav from "./Pages/langnav";
 import EletricBike from "./Pages/bike";
 import Unbolted from "./Pages/unbolted";
+import NotFound from "./Pages/notfound";
 import { AnimationProvider, useAnimationContext } from "./Pages/animationContext";
 
 function App() {
@@ -113,6 +114,7 @@ function App() {
               <Route path="/projects/raspi" element={<Raspi />} />
               <Route path="/projects/eletricbike" element={<EletricBike />} />
               <Route path="/projects/unbolted" element={<Unbolted />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
         </div>

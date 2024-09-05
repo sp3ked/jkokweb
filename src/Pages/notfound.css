@@ -1,0 +1,103 @@
+.nf-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    color: #00ff00;
+    font-family: "Terminus", monospace;
+  }
+  
+  .nf-terminal-box {
+    width: 80%;
+    max-width: 600px;
+    background-color: #000000;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .nf-terminal-header {
+    background-color: #00ff00;
+    color: #000000;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nf-terminal-title {
+    font-weight: bold;
+  }
+  
+  .nf-terminal-controls {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .nf-terminal-control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #000000;
+    display: inline-block;
+  }
+  
+  .nf-terminal-content {
+    padding: 20px;
+  }
+  
+  .nf-terminal-prompt {
+    margin-bottom: 10px;
+  }
+  
+  .nf-error-message {
+    margin-bottom: 20px;
+  }
+  
+  .nf-error-message h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .nf-home-link {
+    color: #00ff00;
+    text-decoration: none;
+    border: 1px solid #00ff00;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .nf-home-link:hover {
+    background-color: #00ff00;
+    color: #000000;
+  }
+  
+  .nf-animations-disabled {
+    background-color: white;
+    color: black;
+  }
+  
+  .nf-animations-disabled .nf-terminal-box {
+    border-color: black;
+  }
+  
+  .nf-animations-disabled .nf-terminal-header {
+    background-color: black;
+    color: white;
+  }
+  
+  .nf-animations-disabled .nf-terminal-control {
+    background-color: white;
+  }
+  
+  .nf-animations-disabled .nf-home-link {
+    color: black;
+    border-color: black;
+  }
+  
+  .nf-animations-disabled .nf-home-link:hover {
+    background-color: black;
+    color: white;
+  }
