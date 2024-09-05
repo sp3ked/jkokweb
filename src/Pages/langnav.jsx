@@ -14,8 +14,9 @@ const languages = [
   'println!("Hello, World!");', // Rust
 ];
 
-function Langnav() {
+function Langnav({ isAnimationDisabled }) {
   const marqueeRef = useRef(null);
+  const animationRef = useRef(null);
 
   useEffect(() => {
     const marquee = marqueeRef.current;
@@ -23,19 +24,31 @@ function Langnav() {
     const speed = 1;
 
     const scroll = () => {
-      position -= speed;
-      if (position <= -marquee.offsetWidth / 2) {
-        position = 0;
+      if (!isAnimationDisabled) {
+        position -= speed;
+        if (position <= -marquee.offsetWidth / 2) {
+          position = 0;
+        }
+        marquee.style.transform = `translateX(${position}px)`;
+        animationRef.current = requestAnimationFrame(scroll);
       }
-      marquee.style.transform = `translateX(${position}px)`;
-      requestAnimationFrame(scroll);
     };
 
-    requestAnimationFrame(scroll);
-  }, []);
+    if (!isAnimationDisabled) {
+      animationRef.current = requestAnimationFrame(scroll);
+    } else {
+      marquee.style.transform = 'translateX(0px)';
+    }
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, [isAnimationDisabled]);
 
   return (
-    <div className="language-marquee-container">
+    <div className={`language-marquee-container ${isAnimationDisabled ? 'animations-disabled' : ''}`}>
       <div className="language-marquee" ref={marqueeRef}>
         {languages.concat(languages).map((code, index) => (
           <span key={index} className="language-item">

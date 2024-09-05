@@ -164,3 +164,15 @@ html {
 .animations-disabled .terminalContent {
   color: #00ff00 !important;
 }
+
+.language-marquee-container {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.animations-disabled .language-marquee-container {
+  background-color: black !important;
+}
+
+.animations-disabled .language-item {
+  color: #00ff00 !important;
+}

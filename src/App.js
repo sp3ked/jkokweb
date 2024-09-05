@@ -88,7 +88,7 @@ function App() {
           {!isMobile && (
             <>
               <div className="langnav">
-                <Langnav />
+                <Langnav isAnimationDisabled={isAnimationDisabled} />
               </div>
               <div className="profile">
                 <LeftNav />
