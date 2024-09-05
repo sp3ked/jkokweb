@@ -137,7 +137,9 @@ html {
 .projectGrid,
 .about-container,
 .resume-container {
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
 }
 
 .animations-disabled {
@@ -166,7 +168,9 @@ html {
 }
 
 .language-marquee-container {
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
 }
 
 .animations-disabled .language-marquee-container {

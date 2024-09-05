@@ -195,4 +195,3 @@ function Bike() {
 }
 
 export default Bike;
-

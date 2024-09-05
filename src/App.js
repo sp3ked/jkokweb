@@ -13,7 +13,11 @@ import Langnav from "./Pages/langnav";
 import EletricBike from "./Pages/bike";
 import Unbolted from "./Pages/unbolted";
 import NotFound from "./Pages/notfound";
-import { AnimationProvider, useAnimationContext } from "./Pages/animationContext";
+import Admin from "./Pages/admin";
+import {
+  AnimationProvider,
+  useAnimationContext,
+} from "./Pages/animationContext";
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 576);
@@ -29,7 +33,8 @@ function App() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const katakana = "アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン";
+    const katakana =
+      "アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン";
     const latin = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const nums = "0123456789";
 
@@ -52,7 +57,9 @@ function App() {
       ctx.font = fontSize + "px monospace";
 
       for (let i = 0; i < rainDrops.length; i++) {
-        const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+        const text = alphabet.charAt(
+          Math.floor(Math.random() * alphabet.length),
+        );
         ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
 
         if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
@@ -80,10 +87,20 @@ function App() {
 
   return (
     <Router>
-      <div className={`app-wrapper ${isAnimationDisabled ? 'animations-disabled' : ''}`}>
+      <div
+        className={`app-wrapper ${
+          isAnimationDisabled ? "animations-disabled" : ""
+        }`}
+      >
         <canvas
           id="matrix-canvas"
-          style={{ position: "fixed", top: 0, left: 0, zIndex: -1, display: isAnimationDisabled ? 'none' : 'block' }}
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            zIndex: -1,
+            display: isAnimationDisabled ? "none" : "block",
+          }}
         ></canvas>
         <div className={`container ${isMobile ? "mobile" : ""}`}>
           {!isMobile && (
@@ -114,6 +131,7 @@ function App() {
               <Route path="/projects/raspi" element={<Raspi />} />
               <Route path="/projects/eletricbike" element={<EletricBike />} />
               <Route path="/projects/unbolted" element={<Unbolted />} />
+              <Route path="/admin" element={<Admin />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>

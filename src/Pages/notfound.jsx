@@ -4,7 +4,11 @@ import "./notfound.css";
 
 function NotFound({ isAnimationDisabled }) {
   return (
-    <div className={`nf-container ${isAnimationDisabled ? 'nf-animations-disabled' : ''}`}>
+    <div
+      className={`nf-container ${
+        isAnimationDisabled ? "nf-animations-disabled" : ""
+      }`}
+    >
       <div className="nf-terminal-box">
         <div className="nf-terminal-header">
           <span className="nf-terminal-title">Terminal</span>
@@ -21,7 +25,9 @@ function NotFound({ isAnimationDisabled }) {
             <p>The requested URL was not found on this server.</p>
             <p>Error: 0x00000404</p>
           </div>
-          <Link to="/" className="nf-home-link">Return to Home</Link>
+          <Link to="/" className="nf-home-link">
+            Return to Home
+          </Link>
         </div>
       </div>
     </div>

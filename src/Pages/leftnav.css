@@ -141,12 +141,10 @@
   }
 }
 
-
 .top-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .animation-toggle {
@@ -158,8 +156,10 @@
   font: inherit;
   padding: 10px 20px;
   margin: 20px 0;
-  
-  transition: background-color 0.3s, color 0.3s;
+
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 .animation-toggle:hover {

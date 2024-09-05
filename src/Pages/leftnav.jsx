@@ -1,7 +1,7 @@
 import React from "react";
 import "./leftnav.css";
 import profilePic from "../images/pfp.png";
-import { useAnimationContext } from '../Pages/animationContext';
+import { useAnimationContext } from "../Pages/animationContext";
 
 function LeftNav() {
   const { isAnimationDisabled, toggleAnimation } = useAnimationContext();
@@ -19,7 +19,7 @@ function LeftNav() {
         </a>
       </div>
       <button onClick={toggleAnimation} className="animation-toggle">
-        {isAnimationDisabled ? 'Enable Animations' : 'Disable Animations'}
+        {isAnimationDisabled ? "Enable Animations" : "Disable Animations"}
       </button>
       <div className="links">
         <a

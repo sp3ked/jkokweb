@@ -102,34 +102,39 @@ function Projects() {
         }
       />
 
-<TerminalBox
-      title="Unbolted"
-      content={
-        <>
-          <div className="projectContent">
-            <img
-              src={unboltedImage}
-              alt="Unbolted - On-Demand GPU Computing"
-              className="projectImg"
-            />
-            <div className="projectText">
-              <p>
-                <strong className="secondTitle">
-                  Unbolted - On-Demand GPU Computing
-                </strong>
-                <br />
-                Unbolted provides instant access to a fleet of high-end GPUs for using, tweaking, or training AI models. It offers a simple interface for novices and advanced control for power users. The project addresses the need for flexible, on-demand GPU computing without expensive hardware purchases or inflexible subscriptions.
-                <br />
-                <br />
-                <Link className="seemore" to="/projects/unbolted">
-                  ...see more (click me)
-                </Link>
-              </p>
+      <TerminalBox
+        title="Unbolted"
+        content={
+          <>
+            <div className="projectContent">
+              <img
+                src={unboltedImage}
+                alt="Unbolted - On-Demand GPU Computing"
+                className="projectImg"
+              />
+              <div className="projectText">
+                <p>
+                  <strong className="secondTitle">
+                    Unbolted - On-Demand GPU Computing
+                  </strong>
+                  <br />
+                  Unbolted provides instant access to a fleet of high-end GPUs
+                  for using, tweaking, or training AI models. It offers a simple
+                  interface for novices and advanced control for power users.
+                  The project addresses the need for flexible, on-demand GPU
+                  computing without expensive hardware purchases or inflexible
+                  subscriptions.
+                  <br />
+                  <br />
+                  <Link className="seemore" to="/projects/unbolted">
+                    ...see more (click me)
+                  </Link>
+                </p>
+              </div>
             </div>
-          </div>
-        </>
-      }
-    />
+          </>
+        }
+      />
     </div>
   );
 }

@@ -37,7 +37,7 @@ function Langnav({ isAnimationDisabled }) {
     if (!isAnimationDisabled) {
       animationRef.current = requestAnimationFrame(scroll);
     } else {
-      marquee.style.transform = 'translateX(0px)';
+      marquee.style.transform = "translateX(0px)";
     }
 
     return () => {
@@ -48,7 +48,11 @@ function Langnav({ isAnimationDisabled }) {
   }, [isAnimationDisabled]);
 
   return (
-    <div className={`language-marquee-container ${isAnimationDisabled ? 'animations-disabled' : ''}`}>
+    <div
+      className={`language-marquee-container ${
+        isAnimationDisabled ? "animations-disabled" : ""
+      }`}
+    >
       <div className="language-marquee" ref={marqueeRef}>
         {languages.concat(languages).map((code, index) => (
           <span key={index} className="language-item">
