@@ -131,3 +131,36 @@ html {
   scrollbar-width: thin; /* "auto" or "thin" */
   scrollbar-color: #00ff00 #000000; /* scroll thumb and track */
 }
+
+/* ... (your existing styles remain the same) */
+
+.projectGrid,
+.about-container,
+.resume-container {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.animations-disabled {
+  background-color: black !important;
+  color: white !important;
+}
+
+.animations-disabled a,
+.animations-disabled .seemore,
+.animations-disabled .underline-link,
+.animations-disabled .download-link {
+  color: #00ff00 !important;
+}
+
+.animations-disabled .terminalBox {
+  background-color: #111 !important;
+  border-color: #00ff00 !important;
+}
+
+.animations-disabled .terminalHeader {
+  background-color: #222 !important;
+}
+
+.animations-disabled .terminalContent {
+  color: #00ff00 !important;
+}

@@ -1,11 +1,14 @@
 import React from "react";
 import "./leftnav.css";
 import profilePic from "../images/pfp.png";
+import { useAnimationContext } from '../Pages/animationContext';
 
 function LeftNav() {
+  const { isAnimationDisabled, toggleAnimation } = useAnimationContext();
+
   return (
     <div className="Profile">
-      <div>
+      <div className="top-content">
         <div className="circular--landscape">
           <img src={profilePic} alt="Profile" className="profile-pic" />
         </div>
@@ -15,6 +18,9 @@ function LeftNav() {
           ...see more (click me)
         </a>
       </div>
+      <button onClick={toggleAnimation} className="animation-toggle">
+        {isAnimationDisabled ? 'Enable Animations' : 'Disable Animations'}
+      </button>
       <div className="links">
         <a
           href="https://github.com/sp3ked"

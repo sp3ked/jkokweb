@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Pages/navbar";
 import Projects from "./Pages/projects";
@@ -11,12 +12,15 @@ import Raspi from "./Pages/raspi";
 import Langnav from "./Pages/langnav";
 import EletricBike from "./Pages/bike";
 import Unbolted from "./Pages/unbolted";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AnimationProvider, useAnimationContext } from "./Pages/animationContext";
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 576);
+  const { isAnimationDisabled } = useAnimationContext();
 
   useEffect(() => {
+    if (isAnimationDisabled) return;
+
     // Matrix canvas animation logic
     const canvas = document.getElementById("matrix-canvas");
     const ctx = canvas.getContext("2d");
@@ -24,8 +28,7 @@ function App() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const katakana =
-      "アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン";
+    const katakana = "アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン";
     const latin = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const nums = "0123456789";
 
@@ -48,9 +51,7 @@ function App() {
       ctx.font = fontSize + "px monospace";
 
       for (let i = 0; i < rainDrops.length; i++) {
-        const text = alphabet.charAt(
-          Math.floor(Math.random() * alphabet.length),
-        );
+        const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
         ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
 
         if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
@@ -74,48 +75,58 @@ function App() {
       clearInterval(interval);
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [isAnimationDisabled]);
 
   return (
     <Router>
-      <canvas
-        id="matrix-canvas"
-        style={{ position: "fixed", top: 0, left: 0, zIndex: -1 }}
-      ></canvas>
-      <div className={`container ${isMobile ? "mobile" : ""}`}>
-        {!isMobile && (
-          <>
-            <div className="langnav">
-              <Langnav />
+      <div className={`app-wrapper ${isAnimationDisabled ? 'animations-disabled' : ''}`}>
+        <canvas
+          id="matrix-canvas"
+          style={{ position: "fixed", top: 0, left: 0, zIndex: -1, display: isAnimationDisabled ? 'none' : 'block' }}
+        ></canvas>
+        <div className={`container ${isMobile ? "mobile" : ""}`}>
+          {!isMobile && (
+            <>
+              <div className="langnav">
+                <Langnav />
+              </div>
+              <div className="profile">
+                <LeftNav />
+              </div>
+            </>
+          )}
+          {isMobile && (
+            <div className="mobile-nav">
+              <MobileNav />
             </div>
-            <div className="profile">
-              <LeftNav />
-            </div>
-          </>
-        )}
-        {isMobile && (
-          <div className="mobile-nav">
-            <MobileNav />
+          )}
+          <div className="navbar">
+            <Navbar />
           </div>
-        )}
-        <div className="navbar">
-          <Navbar />
-        </div>
-        <div className="content">
-          <Routes>
-            <Route path="/" element={<Projects />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/resume" element={<Resume />} />
-            <Route path="/projects/scout" element={<Scout />} />
-            <Route path="/projects/raspi" element={<Raspi />} />
-            <Route path="/projects/eletricbike" element={<EletricBike />} />
-            <Route path="/projects/unbolted" element={<Unbolted />} />
-          </Routes>
+          <div className="content">
+            <Routes>
+              <Route path="/" element={<Projects />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/resume" element={<Resume />} />
+              <Route path="/projects/scout" element={<Scout />} />
+              <Route path="/projects/raspi" element={<Raspi />} />
+              <Route path="/projects/eletricbike" element={<EletricBike />} />
+              <Route path="/projects/unbolted" element={<Unbolted />} />
+            </Routes>
+          </div>
         </div>
       </div>
     </Router>
   );
 }
 
-export default App;
+function AppWrapper() {
+  return (
+    <AnimationProvider>
+      <App />
+    </AnimationProvider>
+  );
+}
+
+export default AppWrapper;
