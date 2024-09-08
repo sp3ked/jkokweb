@@ -46,6 +46,13 @@ function Scout() {
               className="underline-link"
             >
               --CLICK HERE TO SEE GITHUB REPO--
+            </a><a
+              href="https://apps.apple.com/us/app/scout-shop-sell-with-camera/id6502788045"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-link"
+            >
+              --CLICK HERE FOR APP--
             </a>
             <br></br>
             <br></br>
@@ -154,6 +161,8 @@ function Scout() {
             </a>{" "}
             if it is even approved for the app store
             <br />
+            <br />
+            Update: it is in the App Store click the link at the top
           </p>
         </div>
       </div>
