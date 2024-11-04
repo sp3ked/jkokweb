@@ -2,12 +2,14 @@ import { useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import "./projectDetails.css";
 import scout1 from "../images/scout1.jpg";
-import scout2 from "../images/scout2.jpg";
-import scout3 from "../images/scout3.jpg";
-import scout4 from "../images/scout4.jpg";
+import scout2 from "../images/scout2.png";
+import scout3 from "../images/scout3.png";
+import scout4 from "../images/scout4.png";
+import scout5 from "../images/scout5.png";
+import scout6 from "../images/scout6.png";
 
 function Scout() {
-  const images = [scout1, scout2, scout3, scout4];
+  const images = [scout1, scout2, scout3, scout4, scout5, scout6];
   const location = useLocation();
 
   useEffect(() => {
