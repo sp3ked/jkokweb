@@ -51,7 +51,7 @@ function ToolsWebsite() {
             <br />
             <strong>Description:</strong>
             <br />
-            This Tools website provides an all-in-one collection of essential utilities to simplify everyday tasks. It’s designed to save time and keep all tools accessible in one location.
+            This Tools website provides an all-in-one collection of essential utilities to simplify everyday tasks. It’s designed to save time and keep all tools accessible in one location. Was created because I was annoyed of alwasy havign to lookup simple needed tools.
             <br />
             <br />
             <strong>Features:</strong>
@@ -66,7 +66,9 @@ function ToolsWebsite() {
               <li>Font Pairing Generator - Get font pair suggestions with previews.</li>
               <li>Coin Flip - Flip a virtual coin with animation and sound effects.</li>
               <li>Bill Splitter - Easily split bills with tip calculation per person.</li>
+              <li>More being added as fit visit the website to see all of them</li>
             </ul>
+
             <br />
             <br />
             <strong>Technical Specifications:</strong>
@@ -85,7 +87,7 @@ function ToolsWebsite() {
             <ul>
               <li>Search functionality to quickly find tools.</li>
               <li>Responsive design to ensure usability on all devices.</li>
-              <li>Dynamic animations for enhanced user experience.</li>
+              <li>Simple, Efficent, Easy</li>
             </ul>
           </p>
         </div>
