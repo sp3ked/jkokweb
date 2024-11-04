@@ -1,0 +1,87 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import "./projectDetails.css";
+import toolImage1 from "../images/tool.png";
+import toolImage2 from "../images/tool2.png";
+import toolImage3 from "../images/tool3.png";
+import toolImage4 from "../images/tool1.png";
+
+function ToolsWebsite() {
+  const images = [toolImage1, toolImage2, toolImage3, toolImage4];
+  const location = useLocation();
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
+  }, [location]);
+
+  return (
+    <div className="fullProjectContainer">
+      <div className="fullProjectDetails">
+        <a href="/tools" className="backButton">
+          Back
+        </a>
+        <h1>Tools Website - Useful Tools Collection</h1>
+        <div className="marqueeContainer">
+          <div className="marquee">
+            {[...images, ...images].map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`Tool Image ${(index % 4) + 1}`}
+                className="marqueeImage"
+              />
+            ))}
+          </div>
+        </div>
+        <div className="projectContent">
+          <p className="projectDetailsText">
+            <strong>Description:</strong>
+            <br />
+            This Tools website provides an all-in-one collection of essential utilities to simplify everyday tasks. It’s designed to save time and keep all tools accessible in one location.
+            <br />
+            <br />
+            <strong>Features:</strong>
+            <br />
+            <ul>
+              <li>QR Code Generator - Create custom QR codes for URLs and text.</li>
+              <li>Password Generator - Generate strong, customizable passwords.</li>
+              <li>Unit Converter - Convert between units like length, weight, and volume.</li>
+              <li>Word Counter - Get word, character, and sentence counts for any text.</li>
+              <li>Lorem Ipsum Generator - Generate placeholder text in different formats.</li>
+              <li>JSON Formatter - Format and validate JSON for development purposes.</li>
+              <li>Font Pairing Generator - Get font pair suggestions with previews.</li>
+              <li>Coin Flip - Flip a virtual coin with animation and sound effects.</li>
+              <li>Bill Splitter - Easily split bills with tip calculation per person.</li>
+            </ul>
+            <br />
+            <br />
+            <strong>Technical Specifications:</strong>
+            <br />
+            <strong>Platform:</strong> React and React Router for navigation
+            <br />
+            <strong>Styling:</strong> Custom CSS for consistent theming and responsiveness
+            <br />
+            <strong>State Management:</strong> React Hooks for handling tool settings and options
+            <br />
+            <strong>Data Persistence:</strong> Local storage for saving settings like dark/light mode
+            <br />
+            <br />
+            <strong>Key Features:</strong>
+            <br />
+            <ul>
+              <li>Search functionality to quickly find tools.</li>
+              <li>Responsive design to ensure usability on all devices.</li>
+              <li>Dynamic animations for enhanced user experience.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default ToolsWebsite;

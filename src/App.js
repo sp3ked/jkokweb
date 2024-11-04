@@ -14,6 +14,7 @@ import EletricBike from "./Pages/bike";
 import Unbolted from "./Pages/unbolted";
 import NotFound from "./Pages/notfound";
 import Admin from "./Pages/admin";
+import Tool from "./Pages/tools";
 import {
   AnimationProvider,
   useAnimationContext,
@@ -131,6 +132,7 @@ function App() {
               <Route path="/projects/raspi" element={<Raspi />} />
               <Route path="/projects/eletricbike" element={<EletricBike />} />
               <Route path="/projects/unbolted" element={<Unbolted />} />
+              <Route path="/projects/tool" element={<Tool />} />
               <Route path="/admin" element={<Admin />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

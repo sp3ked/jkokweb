@@ -5,6 +5,7 @@ import scoutLogo from "../images/scout1.jpg";
 import raspberryPiGlasses from "../images/raspi1.jpg";
 import bikeimage from "../images/bike5.jpg";
 import unboltedImage from "../images/unbolt.png";
+import toolsImage from "../images/tool.png";
 
 function Projects() {
   return (
@@ -101,7 +102,6 @@ function Projects() {
           </>
         }
       />
-
       <TerminalBox
         title="Unbolted"
         content={
@@ -127,6 +127,36 @@ function Projects() {
                   <br />
                   <br />
                   <Link className="seemore" to="/projects/unbolted">
+                    ...see more (click me)
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </>
+        }
+      />
+      {/* New TerminalBox for the Tools Website project */}
+      <TerminalBox
+        title="ToolsWebsite"
+        content={
+          <>
+            <div className="projectContent">
+              <img
+                src={toolsImage}
+                alt="Tools Website"
+                className="projectImg"
+              />
+              <div className="projectText">
+                <p>
+                  <strong className="secondTitle">Tools Website</strong>
+                  <br />
+                  This website consolidates various essential tools for
+                  developers and daily tasks in one place, allowing users to
+                  access a QR code generator, password generator, unit converter,
+                  and more without searching for individual tools every time.
+                  <br />
+                  <br />
+                  <Link className="seemore" to="/projects/toolswebsite">
                     ...see more (click me)
                   </Link>
                 </p>
