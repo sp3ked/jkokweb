@@ -132,7 +132,7 @@ function App() {
               <Route path="/projects/raspi" element={<Raspi />} />
               <Route path="/projects/eletricbike" element={<EletricBike />} />
               <Route path="/projects/unbolted" element={<Unbolted />} />
-              <Route path="/projects/tool" element={<Tool />} />
+              <Route path="/projects/tools" element={<Tool />} />
               <Route path="/admin" element={<Admin />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

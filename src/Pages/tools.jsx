@@ -31,7 +31,7 @@ function ToolsWebsite() {
               <img
                 key={index}
                 src={img}
-                alt={`Tool Image ${(index % 4) + 1}`}
+                alt={`Tool ${(index % 4) + 1}`}
                 className="marqueeImage"
               />
             ))}
@@ -39,6 +39,16 @@ function ToolsWebsite() {
         </div>
         <div className="projectContent">
           <p className="projectDetailsText">
+            <a
+              href="https://kokinda.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-link"
+            >
+              <strong>-- Visit the site (kokinda.dev) --</strong>
+            </a>
+            <br />
+            <br />
             <strong>Description:</strong>
             <br />
             This Tools website provides an all-in-one collection of essential utilities to simplify everyday tasks. It’s designed to save time and keep all tools accessible in one location.

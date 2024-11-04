@@ -156,7 +156,7 @@ function Projects() {
                   and more without searching for individual tools every time.
                   <br />
                   <br />
-                  <Link className="seemore" to="/projects/toolswebsite">
+                  <Link className="seemore" to="/projects/tools">
                     ...see more (click me)
                   </Link>
                 </p>

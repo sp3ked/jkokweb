@@ -46,7 +46,9 @@ function Scout() {
               className="underline-link"
             >
               --CLICK HERE TO SEE GITHUB REPO--
-            </a><a
+            </a>
+            <br></br>
+            <a
               href="https://apps.apple.com/us/app/scout-shop-sell-with-camera/id6502788045"
               target="_blank"
               rel="noopener noreferrer"
