@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import "./projectDetails.css";
 import unbolt from "../images/unbolt.png";
 // import unbolt1 from "../images/unbolt1.png";
@@ -22,9 +22,9 @@ function Unbolted() {
   return (
     <div className="fullProjectContainer">
       <div className="fullProjectDetails">
-        <a href="/projects" className="backButton">
-          back
-        </a>
+      <Link to="/projects" className="backButton">
+  back
+</Link>
         <h1>Unbolted - On-Demand GPU Computing</h1>
         <div className="marqueeContainer">
           <div className="marquee">

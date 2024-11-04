@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import "./projectDetails.css";
 import scout1 from "../images/scout1.jpg";
 import scout2 from "../images/scout2.jpg";
@@ -21,9 +21,9 @@ function Scout() {
   return (
     <div className="fullProjectContainer">
       <div className="fullProjectDetails">
-        <a href="/projects" className="backButton">
-          back
-        </a>
+      <Link to="/projects" className="backButton">
+  back
+</Link>
         <h1>Scout - Shopping and Selling App</h1>
         <div className="marqueeContainer">
           <div className="marquee">

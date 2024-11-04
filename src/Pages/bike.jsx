@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import "./projectDetails.css";
 import bike from "../images/bike.jpg";
 import bike1 from "../images/bike1.png";
@@ -23,9 +23,9 @@ function Bike() {
   return (
     <div className="fullProjectContainer">
       <div className="fullProjectDetails">
-        <a href="/projects" className="backButton">
-          back
-        </a>
+      <Link to="/projects" className="backButton">
+  back
+</Link>
         <h1>Eletric Bike - Conversion Project</h1>
         <div className="marqueeContainer">
           <div className="marquee">
