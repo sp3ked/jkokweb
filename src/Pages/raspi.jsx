@@ -1,4 +1,4 @@
-import React from "react";
+  
 import { Link } from "react-router-dom";
 import "./projectDetails.css";
 import raspi1 from "../images/raspi1.jpg";

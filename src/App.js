@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+import ScrollToTop from './Pages/scrollToTop';
 import Navbar from "./Pages/navbar";
 import Projects from "./Pages/projects";
 import About from "./Pages/about";
@@ -88,6 +89,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div
         className={`app-wrapper ${
           isAnimationDisabled ? "animations-disabled" : ""

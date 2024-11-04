@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import "./projectDetails.css";
 import toolImage1 from "../images/tool.png";
 import toolImage2 from "../images/tool2.png";
@@ -21,9 +21,9 @@ function ToolsWebsite() {
   return (
     <div className="fullProjectContainer">
       <div className="fullProjectDetails">
-        <a href="/tools" className="backButton">
-          Back
-        </a>
+      <Link to="/projects" className="backButton">
+  back
+</Link>
         <h1>Tools Website - Useful Tools Collection</h1>
         <div className="marqueeContainer">
           <div className="marquee">
