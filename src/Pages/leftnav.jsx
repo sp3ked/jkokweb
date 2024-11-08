@@ -12,7 +12,7 @@ function LeftNav() {
         <div className="circular--landscape">
           <img src={profilePic} alt="Profile" className="profile-pic" />
         </div>
-        <h1>Joe Kokinda</h1>
+        <h1>Joey Kokinda</h1>
         <p className="description">Student studying AI at Purdue University</p>
         <a href="/about" className="seemore">
           ...see more (click me)
