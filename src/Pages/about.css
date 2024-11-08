@@ -9,7 +9,7 @@
 .about-content {
   flex: 1;
   text-align: left;
-  color: green;
+  color: #00ff00;
   font-size: 20px;
   background-color: black;
   padding: 40px;
@@ -19,7 +19,7 @@
 .title {
   flex: 1;
   text-align: left;
-  color: green;
+  color: #00ff00;
   font-size: 40px;
 }
 

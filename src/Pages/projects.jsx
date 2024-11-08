@@ -115,7 +115,7 @@ function Projects() {
               <div className="projectText">
                 <p>
                   <strong className="secondTitle">
-                    Unbolted - On-Demand GPU Computing
+                    Unbolted - On-Demand GPU Computing (Hackathon)
                   </strong>
                   <br />
                   Unbolted provides instant access to a fleet of high-end GPUs
@@ -148,7 +148,7 @@ function Projects() {
               />
               <div className="projectText">
                 <p>
-                  <strong className="secondTitle">Tools Website</strong>
+                  <strong className="secondTitle">Tools - Website With Useful Tools</strong>
                   <br />
                   This website consolidates various essential tools for
                   developers and daily tasks in one place, allowing users to
