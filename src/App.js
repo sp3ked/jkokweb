@@ -9,9 +9,12 @@ import Unbolted from "./Pages/unbolted";
 import Tool from "./Pages/tools";
 import NotFound from "./Pages/notfound";
 // import Langnav from "./Pages/langnav";
-import { AnimationProvider, useAnimationContext } from "./Pages/animationContext";
+import {
+  AnimationProvider,
+  useAnimationContext,
+} from "./Pages/animationContext";
 import Navbar from "./Pages/navbar";
-import Footer from "./Pages/footer"; 
+import Footer from "./Pages/footer";
 import "./App.css";
 
 function MatrixBackground() {
@@ -26,7 +29,8 @@ function MatrixBackground() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const katakana = "アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン";
+    const katakana =
+      "アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン";
     const latin = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const nums = "0123456789";
     const alphabet = katakana + latin + nums;
@@ -43,7 +47,9 @@ function MatrixBackground() {
       ctx.font = fontSize + "px monospace";
 
       for (let i = 0; i < rainDrops.length; i++) {
-        const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+        const text = alphabet.charAt(
+          Math.floor(Math.random() * alphabet.length),
+        );
         ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
 
         if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
@@ -88,7 +94,7 @@ function App() {
       <AnimationProvider>
         <div className="app">
           <MatrixBackground />
-          <Navbar /> 
+          <Navbar />
           {/* <Langnav /> */}
           <Routes>
             <Route path="/" element={<HomePage />} />

@@ -200,7 +200,7 @@ h2 {
 }
 
 @media (max-width: 480px) {
-  .projectImg{
+  .projectImg {
     max-width: 100%;
   }
 }

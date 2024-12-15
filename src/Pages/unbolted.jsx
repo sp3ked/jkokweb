@@ -22,9 +22,9 @@ function Unbolted() {
   return (
     <div className="fullProjectContainer">
       <div className="fullProjectDetails">
-      <Link to="/" className="backButton">
-  back
-</Link>
+        <Link to="/" className="backButton">
+          back
+        </Link>
         <h1>Unbolted - On-Demand GPU Computing</h1>
         <div className="marqueeContainer">
           <div className="marquee">

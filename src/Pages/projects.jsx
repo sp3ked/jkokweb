@@ -40,7 +40,7 @@ function Projects() {
           </>
         }
       />
-      
+
       <TerminalBox
         title="Unbolted"
         content={
@@ -72,7 +72,6 @@ function Projects() {
               </div>
             </div>
           </>
-          
         }
       />
       <TerminalBox
@@ -87,12 +86,15 @@ function Projects() {
               />
               <div className="projectText">
                 <p>
-                  <strong className="secondTitle">Tools - Website With Useful Tools</strong>
+                  <strong className="secondTitle">
+                    Tools - Website With Useful Tools
+                  </strong>
                   <br />
                   This website consolidates various essential tools for
                   developers and daily tasks in one place, allowing users to
-                  access a QR code generator, password generator, unit converter,
-                  and more without searching for individual tools every time.
+                  access a QR code generator, password generator, unit
+                  converter, and more without searching for individual tools
+                  every time.
                   <br />
                   <br />
                   <Link className="seemore" to="/projects/tools">
@@ -104,7 +106,7 @@ function Projects() {
           </>
         }
       />
-      
+
       <h2>Hardware</h2>
       <TerminalBox
         title="Raspi"
@@ -169,8 +171,6 @@ function Projects() {
           </>
         }
       />
-     
-      
     </div>
   );
 }

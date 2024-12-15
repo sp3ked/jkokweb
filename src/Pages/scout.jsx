@@ -23,9 +23,9 @@ function Scout() {
   return (
     <div className="fullProjectContainer">
       <div className="fullProjectDetails">
-      <Link to="/" className="backButton">
-  back
-</Link>
+        <Link to="/" className="backButton">
+          back
+        </Link>
         <h1>Scout - Shopping and Selling App</h1>
         <div className="marqueeContainer">
           <div className="marquee">

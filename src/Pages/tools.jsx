@@ -21,9 +21,9 @@ function ToolsWebsite() {
   return (
     <div className="fullProjectContainer">
       <div className="fullProjectDetails">
-      <Link to="/" className="backButton">
-  back
-</Link>
+        <Link to="/" className="backButton">
+          back
+        </Link>
         <h1>Tools Website - Useful Tools Collection</h1>
         <div className="marqueeContainer">
           <div className="marquee">
@@ -51,35 +51,67 @@ function ToolsWebsite() {
             <br />
             <strong>Description:</strong>
             <br />
-            This Tools website provides an all-in-one collection of essential utilities to simplify everyday tasks. It’s designed to save time and keep all tools accessible in one location. Was created because I was annoyed of alwasy havign to lookup simple needed tools.
+            This Tools website provides an all-in-one collection of essential
+            utilities to simplify everyday tasks. It’s designed to save time and
+            keep all tools accessible in one location. Was created because I was
+            annoyed of alwasy havign to lookup simple needed tools.
             <br />
             <br />
             <strong>Features:</strong>
             <br />
             <ul>
-              <li>QR Code Generator - Create custom QR codes for URLs and text.</li>
-              <li>Password Generator - Generate strong, customizable passwords.</li>
-              <li>Unit Converter - Convert between units like length, weight, and volume.</li>
-              <li>Word Counter - Get word, character, and sentence counts for any text.</li>
-              <li>Lorem Ipsum Generator - Generate placeholder text in different formats.</li>
-              <li>JSON Formatter - Format and validate JSON for development purposes.</li>
-              <li>Font Pairing Generator - Get font pair suggestions with previews.</li>
-              <li>Coin Flip - Flip a virtual coin with animation and sound effects.</li>
-              <li>Bill Splitter - Easily split bills with tip calculation per person.</li>
-              <li>More being added as fit visit the website to see all of them</li>
+              <li>
+                QR Code Generator - Create custom QR codes for URLs and text.
+              </li>
+              <li>
+                Password Generator - Generate strong, customizable passwords.
+              </li>
+              <li>
+                Unit Converter - Convert between units like length, weight, and
+                volume.
+              </li>
+              <li>
+                Word Counter - Get word, character, and sentence counts for any
+                text.
+              </li>
+              <li>
+                Lorem Ipsum Generator - Generate placeholder text in different
+                formats.
+              </li>
+              <li>
+                JSON Formatter - Format and validate JSON for development
+                purposes.
+              </li>
+              <li>
+                Font Pairing Generator - Get font pair suggestions with
+                previews.
+              </li>
+              <li>
+                Coin Flip - Flip a virtual coin with animation and sound
+                effects.
+              </li>
+              <li>
+                Bill Splitter - Easily split bills with tip calculation per
+                person.
+              </li>
+              <li>
+                More being added as fit visit the website to see all of them
+              </li>
             </ul>
-
             <br />
             <br />
             <strong>Technical Specifications:</strong>
             <br />
             <strong>Platform:</strong> React and React Router for navigation
             <br />
-            <strong>Styling:</strong> Custom CSS for consistent theming and responsiveness
+            <strong>Styling:</strong> Custom CSS for consistent theming and
+            responsiveness
             <br />
-            <strong>State Management:</strong> React Hooks for handling tool settings and options
+            <strong>State Management:</strong> React Hooks for handling tool
+            settings and options
             <br />
-            <strong>Data Persistence:</strong> Local storage for saving settings like dark/light mode
+            <strong>Data Persistence:</strong> Local storage for saving settings
+            like dark/light mode
             <br />
             <br />
             <strong>Key Features:</strong>

@@ -5,7 +5,6 @@ import "./resume.css";
 function Resume() {
   return (
     <div className="resume-container">
-      <h1>Resume</h1>
       <Link to="/" className="backButton">
         back
       </Link>

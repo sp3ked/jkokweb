@@ -1,4 +1,3 @@
-  
 import { Link } from "react-router-dom";
 import "./projectDetails.css";
 import raspi1 from "../images/raspi1.jpg";
@@ -12,9 +11,9 @@ function RaspberryPiGlasses() {
   return (
     <div className="fullProjectContainer">
       <div className="fullProjectDetails">
-      <Link to="/" className="backButton">
-  back
-</Link>
+        <Link to="/" className="backButton">
+          back
+        </Link>
         <h1>Raspi - AI-Powered Smart Glasses</h1>
         <div className="marqueeContainer">
           <div className="marquee">

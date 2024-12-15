@@ -13,8 +13,8 @@
 }
 
 .intro-section {
-  padding: 4rem 2rem;
-  margin-bottom: 2rem;
+  padding: 3.5rem 1rem;
+  padding-top: 3rem,
 }
 
 .content-wrapper {
@@ -172,6 +172,7 @@ p {
 .terminal-window {
   max-width: 800px;
   margin: 2rem auto;
+  margin-top: 2rem;
   background-color: rgba(0, 0, 0, 0.9);
   border: 1px solid #00ff00;
 }
