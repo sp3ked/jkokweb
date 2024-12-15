@@ -1,0 +1,96 @@
+.experienceBox {
+  background-color: rgba(0, 0, 0, 0.925);
+  border: 1px solid #00ff00;
+  border-radius: 5px;
+  font-family: "Consolas", "Courier New", monospace;
+  color: #00ff00;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+h3 {
+  color: white;
+}
+.experienceHeader {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 8px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #00ff00;
+}
+
+.terminalTitle {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.terminalControls {
+  display: flex;
+  gap: 5px;
+}
+
+.terminalControl {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #00ff00;
+  border-radius: 50%;
+  font-size: 10px;
+  cursor: not-allowed;
+}
+
+.experienceContent {
+  padding: 15px;
+  line-height: 1.6;
+}
+
+.experienceContent h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #00ff00;
+}
+
+.experience-role {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.experienceContent p {
+  margin: 10px 0;
+}
+
+.experience-list {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.experience-list li {
+  margin-bottom: 5px;
+  color: #00ff00;
+}
+
+.experienceFooter {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px;
+  border-top: 1px solid #00ff00;
+  text-align: center;
+}
+
+.contact-text {
+  margin: 0;
+  color: #00ff00;
+}
+
+.contact-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}

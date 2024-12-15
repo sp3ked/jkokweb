@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./projects.css";
 import { Link } from "react-router-dom";
 import scoutLogo from "../images/scout1.jpg";
@@ -11,33 +11,36 @@ function Carousel({ projects, title }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  const handleNext = () => {
+  // Wrap handleNext in useCallback
+  const handleNext = useCallback(() => {
     if (!isAnimating) {
       setIsAnimating(true);
       setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
     }
-  };
+  }, [isAnimating, projects.length]);
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     if (!isAnimating) {
       setIsAnimating(true);
       setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+        prevIndex === 0 ? projects.length - 1 : prevIndex - 1,
       );
     }
-  };
+  }, [isAnimating, projects.length]);
 
+  // Smooth animations: Reset `isAnimating` after transition
   useEffect(() => {
-    const timer = setTimeout(() => setIsAnimating(false), 500);
+    const timer = setTimeout(() => setIsAnimating(false), 500); // Match CSS transition duration
     return () => clearTimeout(timer);
   }, [currentIndex]);
 
+  // Auto-rotate every 7 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 7000);
+    }, 5000); //5sec
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, [handleNext]);
 
   return (
     <div className="carousel">
@@ -71,11 +74,10 @@ function Projects() {
               </strong>
               <br />
               Scout is an innovative mobile application designed to
-              revolutionize the way users shop and sell items. The app
-              utilizes "google scan" to recognize items and compare prices
-              across 100+ retailers. Additionally, Scout features an
-              automated selling tool that creates and uploads listings to
-              eBay within seconds.
+              revolutionize the way users shop and sell items. The app utilizes
+              "google scan" to recognize items and compare prices across 100+
+              retailers. Additionally, Scout features an automated selling tool
+              that creates and uploads listings to eBay within seconds.
               <br />
               <br />
               <Link className="seemore" to="/projects/scout">
@@ -101,12 +103,11 @@ function Projects() {
                 Unbolted - On-Demand GPU Computing
               </strong>
               <br />
-              Unbolted provides instant access to a fleet of high-end GPUs
-              for using, tweaking, or training AI models. It offers a simple
-              interface for novices and advanced control for power users.
-              The project addresses the need for flexible, on-demand GPU
-              computing without expensive hardware purchases or inflexible
-              subscriptions.
+              Unbolted provides instant access to a fleet of high-end GPUs for
+              using, tweaking, or training AI models. It offers a simple
+              interface for novices and advanced control for power users. The
+              project addresses the need for flexible, on-demand GPU computing
+              without expensive hardware purchases or inflexible subscriptions.
               <br />
               <br />
               <Link className="seemore" to="/projects/unbolted">
@@ -121,21 +122,17 @@ function Projects() {
       title="ToolsWebsite"
       content={
         <div className="projectContent">
-          <img
-            src={toolsImage}
-            alt="Tools Website"
-            className="projectImg"
-          />
+          <img src={toolsImage} alt="Tools Website" className="projectImg" />
           <div className="projectText">
             <p>
               <strong className="secondTitle">
                 Tools - Website With Useful Tools
               </strong>
               <br />
-              This website consolidates various essential tools for
-              developers and daily tasks in one place, allowing users to
-              access a QR code generator, password generator, unit converter,
-              and more without searching for individual tools every time.
+              This website consolidates various essential tools for developers
+              and daily tasks in one place, allowing users to access a QR code
+              generator, password generator, unit converter, and more without
+              searching for individual tools every time.
               <br />
               <br />
               <Link className="seemore" to="/projects/tools">
@@ -163,10 +160,10 @@ function Projects() {
               <strong className="secondTitle">Raspi - Smart Glasses</strong>
               <br />
               Using a Raspberry Pi, my brother and I created "smart" glasses
-              that capture images, process them using the Inception v3
-              model, and display the predicted object on a screen. This
-              project is based around the topics of computer vision, machine
-              learning, and wearable technology.
+              that capture images, process them using the Inception v3 model,
+              and display the predicted object on a screen. This project is
+              based around the topics of computer vision, machine learning, and
+              wearable technology.
               <br />
               <br />
               <Link className="seemore" to="/projects/raspi">
@@ -192,12 +189,12 @@ function Projects() {
                 Electric Bike - Conversion Project
               </strong>
               <br />
-              This project aims to convert a regular bike into an electric
-              bike to address transportation challenges on large university
-              campuses. The conversion includes a custom motor mount,
-              multistage belt drive system, and swappable battery for
-              extended use. Future plans include waterproofing and advanced
-              features like regenerative braking.
+              This project aims to convert a regular bike into an electric bike
+              to address transportation challenges on large university campuses.
+              The conversion includes a custom motor mount, multistage belt
+              drive system, and swappable battery for extended use. Future plans
+              include waterproofing and advanced features like regenerative
+              braking.
               <br />
               <br />
               <Link className="seemore" to="/projects/electricbike">
@@ -215,7 +212,7 @@ function Projects() {
       <Carousel projects={softwareProjects} title="Software Projects" />
       <Carousel projects={hardwareProjects} title="Hardware Projects" />
       <div className="project-buttons">
-        <h3>Explore All Projects:</h3>
+        <h3>Quick links to Projects:</h3>
         <Link to="/projects/scout" className="projectButton">
           Scout - Shopping and Selling App
         </Link>

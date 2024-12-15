@@ -20,7 +20,6 @@ function Navbar() {
         <button onClick={toggleAnimation} className="toggle-animations">
           {isAnimationDisabled ? "Enable Animations" : "Disable Animations"}
         </button>
-    
       </div>
     </nav>
   );

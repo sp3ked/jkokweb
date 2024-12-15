@@ -13,7 +13,7 @@
 
 .intro-section {
   padding: 3.5rem 1rem;
-  padding-top: 3rem,
+  padding-top: 3rem;
 }
 
 .content-wrapper {
@@ -168,55 +168,6 @@ p {
   }
 }
 
-.terminal-window {
-  max-width: 800px;
-  margin: 2rem auto;
-  margin-top: 2rem;
-  background-color: rgba(0, 0, 0, 0.9);
-  border: 1px solid #00ff00;
-}
-
-.terminal-header {
-  padding: 8px 16px;
-  background: rgba(0, 255, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #00ff00;
-}
-
-.terminal-title {
-  color: #00ff00;
-  font-family: monospace;
-}
-
-.terminal-buttons {
-  display: flex;
-  gap: 8px;
-}
-
-.terminal-button {
-  width: 12px;
-  height: 12px;
-  border: 1px solid #00ff00;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-  color: #00ff00;
-}
-
-.terminal-content {
-  padding: 1.5rem;
-  color: #00ff00;
-  line-height: 1.6;
-}
-
-.terminal-content p {
-  margin: 0;
-}
-
 .skills-section {
   padding: 2rem;
   max-width: 800px;
@@ -248,4 +199,55 @@ p {
   width: 50px;
   height: 50px;
   object-fit: contain;
+}
+
+.aboutBox {
+  background-color: rgba(0, 0, 0, 0.925); /* Same as terminalBox */
+  border: 1px solid #00ff00;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: "Consolas", "Courier New", monospace;
+  color: #00ff00;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px; /* Ensure same width */
+  margin: 20px auto;
+}
+
+.aboutBox .terminalHeader {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 8px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #00ff00;
+}
+
+.aboutBox .terminalTitle {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.aboutBox .terminalControls {
+  display: flex;
+  gap: 5px;
+}
+
+.aboutBox .terminalControl {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #00ff00;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  cursor: not-allowed;
+}
+
+.aboutBox .terminalContent {
+  padding: 15px;
+  line-height: 1.6;
+  word-wrap: break-word;
+  color: #00ff00;
 }

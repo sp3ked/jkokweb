@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import profilePic from "../images/pfp.png";
 import { useAnimationContext } from "./animationContext";
-
+import Experiences from "./experiences";
 import Projects from "./projects";
 import "./home.css";
 
@@ -15,6 +15,7 @@ function HomePage() {
         isAnimationDisabled ? "animations-disabled" : ""
       }`}
     >
+      {/* Intro Section */}
       <section className="intro-section">
         <div className="content-wrapper">
           <div className="text-content">
@@ -68,25 +69,28 @@ function HomePage() {
         </div>
       </section>
 
-      <div className="terminal-window">
-        <div className="terminal-header">
-          <span className="terminal-title">C:\Users\About>_</span>
-          <div className="terminal-buttons">
-            <span className="terminal-button">−</span>
-            <span className="terminal-button">□</span>
-            <span className="terminal-button">×</span>
+      <div className="aboutBox">
+        <div className="terminalHeader">
+          <span className="terminalTitle">C:\Users\About&gt;</span>
+          <div className="terminalControls">
+            <span className="terminalControl">−</span>
+            <span className="terminalControl">□</span>
+            <span className="terminalControl">×</span>
           </div>
         </div>
-        <div className="terminal-content">
+        <div className="terminalContent">
           <p>
-            Hey, I'm Joey and I'm studying AI at Purdue University. My passion
+            Hey, I'm Joey and I'm studying AI at Purdue University. I have
+            experience building web applications and mobile apps. My passion
             lies in AI and robotics - I love building things that push the
             boundaries of what's possible. Currently exploring the blockchain.
+            Let's connect and explore new opportunities!
           </p>
         </div>
       </div>
 
-      <div className="skills-section section">
+      {/* Technical Skills */}
+      <section className="skills-section section">
         <h2>Technical Skills</h2>
         <div className="skills-grid">
           <div className="skill-item">
@@ -118,8 +122,14 @@ function HomePage() {
             <span>TypeScript</span>
           </div>
         </div>
-      </div>
+      </section>
 
+      {/* Experiences */}
+      <section id="experiences" className="section">
+        <Experiences />
+      </section>
+
+      {/* Projects */}
       <section id="projects" className="skills-section section">
         <h2>Projects - </h2>
         <Projects />
