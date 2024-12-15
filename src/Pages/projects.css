@@ -1,14 +1,75 @@
+/* Container for the Projects section */
+.projects-container {
+  padding: 60px 20px; /* Adjust padding as needed */
+  background-color: rgba(0, 0, 0, 0.95);
+  color: #00ff00;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 5px;
+  color: #00ff00;
+  font-family: "Terminus", monospace;
+}
+
+/* Projects title */
+.projects-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+  font-family: "Terminus", monospace;
+}
+
+/* Project Grid - Single Column */
 .projectGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr; /* Single column */
   gap: 20px;
-  padding: 40px;
+  padding: 0 20px;
   width: 100%;
   box-sizing: border-box;
   position: relative;
   z-index: 3;
   margin-top: 20px;
 }
+
+/* Optional: Remove or Adjust Media Queries for Multi-column Layout */
+@media (min-width: 1400px) {
+  .projectGrid {
+    grid-template-columns: 1fr; /* Keep single column even on larger screens */
+  }
+
+  .terminalBox {
+    height: auto;
+  }
+}
+
+/* Optional: Remove the min-width constraint if needed */
+@media (min-width: 1200px) {
+  .projectContent {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .projectImg {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Additional Styles for the "Projects" Container and Title */
+
+.projects-container {
+  /* Already defined above */
+}
+
+.projects-title {
+  /* Already defined above */
+}
+
+/* Existing styles remain unchanged */
 
 .terminalBox {
   background-color: rgba(0, 0, 0, 0.925);
@@ -103,6 +164,7 @@
   text-decoration: underline;
 }
 
+/* Responsive Adjustments */
 @media (min-width: 1200px) {
   .projectContent {
     flex-direction: row;
@@ -117,10 +179,28 @@
 
 @media (min-width: 1400px) {
   .projectGrid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr; /* Override to single column */
   }
 
   .terminalBox {
     height: auto;
+  }
+}
+
+/* Additional Responsive Styles */
+
+@media (max-width: 768px) {
+  .projectContent {
+    flex-direction: column;
+  }
+
+  .projectImg {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectImg{
+    max-width: 100%;
   }
 }

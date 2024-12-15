@@ -10,6 +10,7 @@ import toolsImage from "../images/tool.png";
 function Projects() {
   return (
     <div className="projectGrid">
+      <h2>Software</h2>
       <TerminalBox
         title="Scout"
         content={
@@ -39,6 +40,72 @@ function Projects() {
           </>
         }
       />
+      
+      <TerminalBox
+        title="Unbolted"
+        content={
+          <>
+            <div className="projectContent">
+              <img
+                src={unboltedImage}
+                alt="Unbolted - On-Demand GPU Computing"
+                className="projectImg"
+              />
+              <div className="projectText">
+                <p>
+                  <strong className="secondTitle">
+                    Unbolted - On-Demand GPU Computing (Hackathon)
+                  </strong>
+                  <br />
+                  Unbolted provides instant access to a fleet of high-end GPUs
+                  for using, tweaking, or training AI models. It offers a simple
+                  interface for novices and advanced control for power users.
+                  The project addresses the need for flexible, on-demand GPU
+                  computing without expensive hardware purchases or inflexible
+                  subscriptions.
+                  <br />
+                  <br />
+                  <Link className="seemore" to="/projects/unbolted">
+                    ...see more (click me)
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </>
+          
+        }
+      />
+      <TerminalBox
+        title="ToolsWebsite"
+        content={
+          <>
+            <div className="projectContent">
+              <img
+                src={toolsImage}
+                alt="Tools Website"
+                className="projectImg"
+              />
+              <div className="projectText">
+                <p>
+                  <strong className="secondTitle">Tools - Website With Useful Tools</strong>
+                  <br />
+                  This website consolidates various essential tools for
+                  developers and daily tasks in one place, allowing users to
+                  access a QR code generator, password generator, unit converter,
+                  and more without searching for individual tools every time.
+                  <br />
+                  <br />
+                  <Link className="seemore" to="/projects/tools">
+                    ...see more (click me)
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </>
+        }
+      />
+      
+      <h2>Hardware</h2>
       <TerminalBox
         title="Raspi"
         content={
@@ -102,69 +169,8 @@ function Projects() {
           </>
         }
       />
-      <TerminalBox
-        title="Unbolted"
-        content={
-          <>
-            <div className="projectContent">
-              <img
-                src={unboltedImage}
-                alt="Unbolted - On-Demand GPU Computing"
-                className="projectImg"
-              />
-              <div className="projectText">
-                <p>
-                  <strong className="secondTitle">
-                    Unbolted - On-Demand GPU Computing (Hackathon)
-                  </strong>
-                  <br />
-                  Unbolted provides instant access to a fleet of high-end GPUs
-                  for using, tweaking, or training AI models. It offers a simple
-                  interface for novices and advanced control for power users.
-                  The project addresses the need for flexible, on-demand GPU
-                  computing without expensive hardware purchases or inflexible
-                  subscriptions.
-                  <br />
-                  <br />
-                  <Link className="seemore" to="/projects/unbolted">
-                    ...see more (click me)
-                  </Link>
-                </p>
-              </div>
-            </div>
-          </>
-        }
-      />
-      {/* New TerminalBox for the Tools Website project */}
-      <TerminalBox
-        title="ToolsWebsite"
-        content={
-          <>
-            <div className="projectContent">
-              <img
-                src={toolsImage}
-                alt="Tools Website"
-                className="projectImg"
-              />
-              <div className="projectText">
-                <p>
-                  <strong className="secondTitle">Tools - Website With Useful Tools</strong>
-                  <br />
-                  This website consolidates various essential tools for
-                  developers and daily tasks in one place, allowing users to
-                  access a QR code generator, password generator, unit converter,
-                  and more without searching for individual tools every time.
-                  <br />
-                  <br />
-                  <Link className="seemore" to="/projects/tools">
-                    ...see more (click me)
-                  </Link>
-                </p>
-              </div>
-            </div>
-          </>
-        }
-      />
+     
+      
     </div>
   );
 }

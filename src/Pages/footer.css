@@ -1,0 +1,16 @@
+.footer {
+    width: 100%;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    color: #00ff00; /* Green text color */
+    text-align: center; /* Center-align the text */
+    font-family: "Courier New", monospace; /* Monospace font for aesthetic consistency */
+    font-size: 1rem; /* Adjust font size as needed */
+    margin-top: 40px; /* Space above the footer */
+    border-top: 1px solid #00ff00; /* Optional: border to separate footer */
+  }
+  
+  .footer-text {
+    margin: 0;
+  }
+  

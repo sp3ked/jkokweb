@@ -23,7 +23,7 @@ function Bike() {
   return (
     <div className="fullProjectContainer">
       <div className="fullProjectDetails">
-      <Link to="/projects" className="backButton">
+      <Link to="/" className="backButton">
   back
 </Link>
         <h1>Eletric Bike - Conversion Project</h1>

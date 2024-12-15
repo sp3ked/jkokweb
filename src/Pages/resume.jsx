@@ -1,10 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./resume.css";
 
 function Resume() {
   return (
     <div className="resume-container">
       <h1>Resume</h1>
+      <Link to="/" className="backButton">
+        back
+      </Link>
       <img
         src="/Joe_Kokinda_Resume.jpg"
         alt="Joe's Resume"

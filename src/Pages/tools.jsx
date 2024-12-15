@@ -21,7 +21,7 @@ function ToolsWebsite() {
   return (
     <div className="fullProjectContainer">
       <div className="fullProjectDetails">
-      <Link to="/projects" className="backButton">
+      <Link to="/" className="backButton">
   back
 </Link>
         <h1>Tools Website - Useful Tools Collection</h1>

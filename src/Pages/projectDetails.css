@@ -19,6 +19,7 @@
   left: 0px;
   text-decoration: none;
   color: #00ff00;
+  z-index: 2;
 }
 
 .backButton:hover {

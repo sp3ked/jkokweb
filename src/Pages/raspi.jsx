@@ -12,7 +12,7 @@ function RaspberryPiGlasses() {
   return (
     <div className="fullProjectContainer">
       <div className="fullProjectDetails">
-      <Link to="/projects" className="backButton">
+      <Link to="/" className="backButton">
   back
 </Link>
         <h1>Raspi - AI-Powered Smart Glasses</h1>

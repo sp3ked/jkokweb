@@ -23,7 +23,7 @@ function Scout() {
   return (
     <div className="fullProjectContainer">
       <div className="fullProjectDetails">
-      <Link to="/projects" className="backButton">
+      <Link to="/" className="backButton">
   back
 </Link>
         <h1>Scout - Shopping and Selling App</h1>
@@ -156,7 +156,7 @@ function Scout() {
             doing this so we decided to dump this project... but it was a great
             learning expirence. You can find the app{" "}
             <a
-              href="https://www.apple.com/app-store/scout"
+              href="https://apps.apple.com/us/app/scout-shop-sell-with-camera/id6502788045"
               target="_blank"
               rel="noopener noreferrer"
               className="underline-link"
