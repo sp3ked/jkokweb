@@ -27,13 +27,11 @@ function Carousel({ projects, title }) {
     }
   };
 
-  // Smooth animations: Reset `isAnimating` after transition
   useEffect(() => {
-    const timer = setTimeout(() => setIsAnimating(false), 500); // Match CSS transition duration
+    const timer = setTimeout(() => setIsAnimating(false), 500);
     return () => clearTimeout(timer);
   }, [currentIndex]);
 
-  // Auto-rotate every 7 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
@@ -75,7 +73,14 @@ function Projects() {
               Scout is an innovative mobile application designed to
               revolutionize the way users shop and sell items. The app
               utilizes "google scan" to recognize items and compare prices
-              across 100+ retailers.
+              across 100+ retailers. Additionally, Scout features an
+              automated selling tool that creates and uploads listings to
+              eBay within seconds.
+              <br />
+              <br />
+              <Link className="seemore" to="/projects/scout">
+                ...see more (click me)
+              </Link>
             </p>
           </div>
         </div>
@@ -97,7 +102,16 @@ function Projects() {
               </strong>
               <br />
               Unbolted provides instant access to a fleet of high-end GPUs
-              for using, tweaking, or training AI models.
+              for using, tweaking, or training AI models. It offers a simple
+              interface for novices and advanced control for power users.
+              The project addresses the need for flexible, on-demand GPU
+              computing without expensive hardware purchases or inflexible
+              subscriptions.
+              <br />
+              <br />
+              <Link className="seemore" to="/projects/unbolted">
+                ...see more (click me)
+              </Link>
             </p>
           </div>
         </div>
@@ -119,7 +133,14 @@ function Projects() {
               </strong>
               <br />
               This website consolidates various essential tools for
-              developers and daily tasks in one place.
+              developers and daily tasks in one place, allowing users to
+              access a QR code generator, password generator, unit converter,
+              and more without searching for individual tools every time.
+              <br />
+              <br />
+              <Link className="seemore" to="/projects/tools">
+                ...see more (click me)
+              </Link>
             </p>
           </div>
         </div>
@@ -143,7 +164,14 @@ function Projects() {
               <br />
               Using a Raspberry Pi, my brother and I created "smart" glasses
               that capture images, process them using the Inception v3
-              model, and display the predicted object on a screen.
+              model, and display the predicted object on a screen. This
+              project is based around the topics of computer vision, machine
+              learning, and wearable technology.
+              <br />
+              <br />
+              <Link className="seemore" to="/projects/raspi">
+                ...see more (click me)
+              </Link>
             </p>
           </div>
         </div>
@@ -166,7 +194,15 @@ function Projects() {
               <br />
               This project aims to convert a regular bike into an electric
               bike to address transportation challenges on large university
-              campuses.
+              campuses. The conversion includes a custom motor mount,
+              multistage belt drive system, and swappable battery for
+              extended use. Future plans include waterproofing and advanced
+              features like regenerative braking.
+              <br />
+              <br />
+              <Link className="seemore" to="/projects/electricbike">
+                ...see more (click me)
+              </Link>
             </p>
           </div>
         </div>
@@ -178,27 +214,23 @@ function Projects() {
     <div className="projects">
       <Carousel projects={softwareProjects} title="Software Projects" />
       <Carousel projects={hardwareProjects} title="Hardware Projects" />
-      <div className="project-links">
+      <div className="project-buttons">
         <h3>Explore All Projects:</h3>
-        <ul>
-          <li>
-            <Link to="/projects/scout">Scout - Shopping and Selling App</Link>
-          </li>
-          <li>
-            <Link to="/projects/unbolted">
-              Unbolted - On-Demand GPU Computing
-            </Link>
-          </li>
-          <li>
-            <Link to="/projects/tools">Tools - Website with Useful Tools</Link>
-          </li>
-          <li>
-            <Link to="/projects/raspi">Raspi - Smart Glasses</Link>
-          </li>
-          <li>
-            <Link to="/projects/eletricbike">Electric Bike Conversion</Link>
-          </li>
-        </ul>
+        <Link to="/projects/scout" className="projectButton">
+          Scout - Shopping and Selling App
+        </Link>
+        <Link to="/projects/unbolted" className="projectButton">
+          Unbolted - On-Demand GPU Computing
+        </Link>
+        <Link to="/projects/tools" className="projectButton">
+          Tools - Website with Useful Tools
+        </Link>
+        <Link to="/projects/raspi" className="projectButton">
+          Raspi - Smart Glasses
+        </Link>
+        <Link to="/projects/electricbike" className="projectButton">
+          Electric Bike Conversion
+        </Link>
       </div>
     </div>
   );

@@ -205,12 +205,39 @@ h2 {
   }
 }
 
-
-.projects {
-  padding: 20px;
+.projectButton {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: 1px solid #00ff00;
+  background: transparent;
   color: #00ff00;
-  font-family: "Courier New", monospace;
+  font-family: "Terminus", monospace;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
+
+.projectButton:hover {
+  background: #00ff00;
+  color: black;
+}
+
+.project-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+.terminalFooter {
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-top: 1px solid #00ff00;
+}
+
 
 .carousel {
   margin-bottom: 40px;
@@ -232,7 +259,6 @@ h2 {
 
 .carousel-item {
   width: 80%; /* Adjust size */
-  text-align: center;
   animation: fade-in 0.5s ease-in-out;
 }
 
