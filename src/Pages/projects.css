@@ -204,3 +204,83 @@ h2 {
     max-width: 100%;
   }
 }
+
+
+.projects {
+  padding: 20px;
+  color: #00ff00;
+  font-family: "Courier New", monospace;
+}
+
+.carousel {
+  margin-bottom: 40px;
+}
+
+.carousel h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item {
+  width: 80%; /* Adjust size */
+  text-align: center;
+  animation: fade-in 0.5s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.carousel-button {
+  background: transparent;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.carousel-button:hover {
+  background-color: #00ff00;
+  color: black;
+}
+
+.carousel-button.prev {
+  position: absolute;
+  left: 10px;
+}
+
+.carousel-button.next {
+  position: absolute;
+  right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-item {
+    width: 95%;
+  }
+
+  .carousel-button {
+    font-size: 18px;
+    padding: 8px;
+  }
+}
