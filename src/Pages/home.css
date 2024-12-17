@@ -57,7 +57,7 @@ p {
 .link {
   font-size: 1.1rem;
   margin: 1rem 0;
-  color: #00ff00;
+  color: #ffffff;
 }
 
 .social-links {
@@ -250,4 +250,8 @@ p {
   line-height: 1.6;
   word-wrap: break-word;
   color: #00ff00;
+}
+
+.whiteText {
+  color: #ffffff; /* White color */
 }
