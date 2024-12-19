@@ -238,37 +238,23 @@ h2 {
 }
 
 .carousel {
-  margin-bottom: 40px;
-}
-
-.carousel h2 {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.8rem;
 }
 
 .carousel-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
-  overflow: hidden;
 }
 
 .carousel-item {
-  width: 80%; /* Adjust size */
-  animation: fade-in 0.5s ease-in-out;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  flex: 1;
+  margin: 0 10px;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel-button {
@@ -287,24 +273,40 @@ h2 {
   color: black;
 }
 
-.carousel-button.prev {
-  position: absolute;
-  left: 10px;
+.carousel-progress-bar {
+  height: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
 }
 
-.carousel-button.next {
-  position: absolute;
-  right: 10px;
+.carousel-progress {
+  height: 100%;
+  background: #00ff00;
+  transition: width 0.05s ease-out;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .carousel-item {
-    width: 95%;
-  }
+.carousel-tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
 
-  .carousel-button {
-    font-size: 18px;
-    padding: 8px;
-  }
+.carousel-tab {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-tab.active {
+  background: #00ff00;
 }

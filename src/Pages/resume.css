@@ -6,6 +6,7 @@
 }
 
 .resume-image {
+  margin-top: 50px;
   max-width: 100%;
   height: auto;
   margin-bottom: 20px;
@@ -33,4 +34,16 @@
 
 .download-link:hover {
   background-color: #0a5300;
+}
+
+.resbackButton {
+  position: absolute;
+  top: 30px;
+  text-decoration: none;
+  color: #00ff00;
+  z-index: 2;
+}
+
+.resbackButton:hover {
+  text-decoration: underline;
 }

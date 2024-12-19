@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React from "react";
 import "./projects.css";
 import { Link } from "react-router-dom";
 import scoutLogo from "../images/scout1.jpg";
@@ -8,59 +8,7 @@ import unboltedImage from "../images/unbolt.png";
 import toolsImage from "../images/tool.png";
 // import pythonLogo from "../images/python.png";
 // import jsLogo from "../images/javascript.png";
-
-function Carousel({ projects, title }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  // Wrap handleNext in useCallback
-  const handleNext = useCallback(() => {
-    if (!isAnimating) {
-      setIsAnimating(true);
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
-    }
-  }, [isAnimating, projects.length]);
-
-  const handlePrev = useCallback(() => {
-    if (!isAnimating) {
-      setIsAnimating(true);
-      setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? projects.length - 1 : prevIndex - 1,
-      );
-    }
-  }, [isAnimating, projects.length]);
-
-  // Smooth animations: Reset `isAnimating` after transition
-  useEffect(() => {
-    const timer = setTimeout(() => setIsAnimating(false), 500); // Match CSS transition duration
-    return () => clearTimeout(timer);
-  }, [currentIndex]);
-
-  // Auto-rotate every 7 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      handleNext();
-    }, 5000); //5sec
-    return () => clearInterval(interval);
-  }, [handleNext]);
-
-  return (
-    <div className="carousel">
-      <h2>{title}</h2>
-      <div className="carousel-container">
-        <button className="carousel-button prev" onClick={handlePrev}>
-          &lt;
-        </button>
-        <div className={`carousel-item ${isAnimating ? "animating" : ""}`}>
-          {projects[currentIndex]}
-        </div>
-        <button className="carousel-button next" onClick={handleNext}>
-          &gt;
-        </button>
-      </div>
-    </div>
-  );
-}
+import Carousel from "./Carousel";
 
 function Projects() {
   const softwareProjects = [
@@ -207,8 +155,13 @@ function Projects() {
 
   return (
     <div className="projects">
+      {/* Software Projects Carousel */}
       <Carousel projects={softwareProjects} title="Software Projects" />
+
+      {/* Hardware Projects Carousel */}
       <Carousel projects={hardwareProjects} title="Hardware Projects" />
+
+      {/* Quick Links Section */}
       <div className="project-buttons">
         <h3>Quick links to Projects:</h3>
         <Link to="/projects/scout" className="projectButton">
