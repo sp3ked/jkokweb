@@ -22,7 +22,7 @@ h2 {
   font-family: "Terminus", monospace;
 }
 
-/* Project Grid - Single Column */
+
 .projectGrid {
   display: grid;
   grid-template-columns: 1fr; /* Single column */
@@ -241,7 +241,6 @@ h2 {
   position: relative;
   max-width: 800px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .carousel-container {
