@@ -86,6 +86,10 @@ html {
   color: white !important;
 }
 
+#matrix-canvas {
+  background-color: black;
+}
+
 .animations-disabled a,
 .animations-disabled .seemore,
 .animations-disabled .underline-link,
