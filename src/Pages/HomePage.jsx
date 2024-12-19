@@ -70,24 +70,27 @@ function HomePage() {
       </section>
 
       <div className="aboutBox">
-        <div className="terminalHeader">
-          <span className="terminalTitle">C:\Users\About&gt;</span>
-          <div className="terminalControls">
-            <span className="terminalControl">−</span>
-            <span className="terminalControl">□</span>
-            <span className="terminalControl">×</span>
-          </div>
-        </div>
-        <div className="terminalContent">
-          <p>
-            Hey, I'm Joey and I'm studying AI at Purdue University. I have
-            experience building web applications and mobile apps. My passion
-            lies in AI and robotics - I love building things that push the
-            boundaries of what's possible. Currently exploring the blockchain.
-            Let's connect and explore new opportunities!
-          </p>
-        </div>
-      </div>
+  <div className="terminalHeader">
+    <span className="terminalTitle">C:\Users\About&gt;</span>
+    <div className="terminalControls">
+      <span className="terminalControl">−</span>
+      <span className="terminalControl">□</span>
+      <span className="terminalControl">×</span>
+    </div>
+  </div>
+  <div className="terminalContent">
+    <p>
+      Hey, I'm Joey and I'm studying AI at Purdue University. I have experience{" "}
+      <span className="whiteText">
+        building web applications and mobile apps.
+      </span>{" "}
+      My passion lies in AI and robotics - I love building things that push the
+      boundaries of what's possible. Currently exploring the blockchain. Let's
+      connect and explore new opportunities!
+    </p>
+  </div>
+</div>
+
 
       {/* Technical Skills */}
       <section className="skills-section section">

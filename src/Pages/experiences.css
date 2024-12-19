@@ -10,9 +10,7 @@
   margin: 20px auto;
   overflow: hidden;
 }
-h3 {
-  color: white;
-}
+
 .experienceHeader {
   background-color: rgba(0, 0, 0, 0.9);
   padding: 8px 10px;
@@ -49,7 +47,7 @@ h3 {
 .experienceContent h3 {
   margin: 0;
   font-size: 1.4rem;
-  color: #00ff00;
+  color: #ffffff;
 }
 
 .experience-role {
