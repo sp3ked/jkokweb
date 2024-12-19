@@ -5,6 +5,8 @@ import { useAnimationContext } from "./animationContext";
 import Experiences from "./experiences";
 import Projects from "./projects";
 import "./home.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faXTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 function HomePage() {
   const { isAnimationDisabled } = useAnimationContext();
@@ -33,34 +35,34 @@ function HomePage() {
             </p>
 
             <div className="social-links">
-              <a
-                href="https://github.com/sp3ked"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-              >
-                GitHub
-              </a>
-              <a
-                href="https://x.com/sp3ked"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-              >
-                X
-              </a>
-              <a
-                href="https://www.linkedin.com/in/jkokinda/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-              >
-                LinkedIn
-              </a>
-              <Link to="/resume" className="social-link">
-                Resume
-              </Link>
-            </div>
+  <a
+    href="https://github.com/sp3ked"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-link"
+  >
+    <FontAwesomeIcon icon={faGithub} size="2x" />
+  </a>
+  <a
+    href="https://x.com/sp3ked"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-link"
+  >
+    <FontAwesomeIcon icon={faXTwitter} size="2x" />
+  </a>
+  <a
+    href="https://www.linkedin.com/in/jkokinda/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-link"
+  >
+    <FontAwesomeIcon icon={faLinkedin} size="2x" />
+  </a>
+  <Link to="/resume" className="social-link resume">
+    Resume
+  </Link>
+</div>
           </div>
 
           <div className="profile-section">
