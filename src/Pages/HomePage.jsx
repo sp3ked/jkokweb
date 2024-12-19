@@ -6,7 +6,12 @@ import Experiences from "./experiences";
 import Projects from "./projects";
 import "./home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faXTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faXTwitter,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+import Footer from "./footer";
 
 function HomePage() {
   const { isAnimationDisabled } = useAnimationContext();
@@ -35,34 +40,34 @@ function HomePage() {
             </p>
 
             <div className="social-links">
-  <a
-    href="https://github.com/sp3ked"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="social-link"
-  >
-    <FontAwesomeIcon icon={faGithub} size="2x" />
-  </a>
-  <a
-    href="https://x.com/sp3ked"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="social-link"
-  >
-    <FontAwesomeIcon icon={faXTwitter} size="2x" />
-  </a>
-  <a
-    href="https://www.linkedin.com/in/jkokinda/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="social-link"
-  >
-    <FontAwesomeIcon icon={faLinkedin} size="2x" />
-  </a>
-  <Link to="/resume" className="social-link resume">
-    Resume
-  </Link>
-</div>
+              <a
+                href="https://github.com/sp3ked"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <FontAwesomeIcon icon={faGithub} size="2x" />
+              </a>
+              <a
+                href="https://x.com/sp3ked"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <FontAwesomeIcon icon={faXTwitter} size="2x" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jkokinda/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <FontAwesomeIcon icon={faLinkedin} size="2x" />
+              </a>
+              <Link to="/resume" className="social-link resume">
+                Resume
+              </Link>
+            </div>
           </div>
 
           <div className="profile-section">
@@ -72,27 +77,27 @@ function HomePage() {
       </section>
 
       <div className="aboutBox">
-  <div className="terminalHeader">
-    <span className="terminalTitle">C:\Users\About&gt;</span>
-    <div className="terminalControls">
-      <span className="terminalControl">−</span>
-      <span className="terminalControl">□</span>
-      <span className="terminalControl">×</span>
-    </div>
-  </div>
-  <div className="terminalContent">
-    <p>
-      Hey, I'm Joey and I'm studying AI at Purdue University. I have experience{" "}
-      <span className="whiteText">
-        building web applications and mobile apps.
-      </span>{" "}
-      My passion lies in AI and robotics - I love building things that push the
-      boundaries of what's possible. Currently exploring the blockchain. Let's
-      connect and explore new opportunities!
-    </p>
-  </div>
-</div>
-
+        <div className="terminalHeader">
+          <span className="terminalTitle">C:\Users\About&gt;</span>
+          <div className="terminalControls">
+            <span className="terminalControl">−</span>
+            <span className="terminalControl">□</span>
+            <span className="terminalControl">×</span>
+          </div>
+        </div>
+        <div className="terminalContent">
+          <p>
+            Hey, I'm Joey and I'm studying AI at Purdue University. I have
+            experience{" "}
+            <span className="whiteText">
+              building web applications and mobile apps.
+            </span>{" "}
+            My passion lies in AI and robotics - I love building things that
+            push the boundaries of what's possible. Currently exploring the
+            blockchain. Let's connect and explore new opportunities!
+          </p>
+        </div>
+      </div>
 
       {/* Technical Skills */}
       <section className="skills-section section">
@@ -139,6 +144,8 @@ function HomePage() {
         <h2>Projects - </h2>
         <Projects />
       </section>
+
+      <Footer />
     </div>
   );
 }

@@ -4,17 +4,18 @@ import HomePage from "./Pages/HomePage";
 import Resume from "./Pages/resume";
 import Scout from "./Pages/scout";
 import Raspi from "./Pages/raspi";
-import EletricBike from "./Pages/bike";
+import Bike from "./Pages/bike";
 import Unbolted from "./Pages/unbolted";
 import Tool from "./Pages/tools";
 import NotFound from "./Pages/notfound";
+import Contact from "./Pages/contact";
+import Admin from "./Pages/admin";
 // import Langnav from "./Pages/langnav";
 import {
   AnimationProvider,
   useAnimationContext,
 } from "./Pages/animationContext";
 import Navbar from "./Pages/navbar";
-import Footer from "./Pages/footer";
 import "./App.css";
 
 function MatrixBackground() {
@@ -99,15 +100,16 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/resume" element={<Resume />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/projects/scout" element={<Scout />} />
             <Route path="/projects/raspi" element={<Raspi />} />
-            <Route path="/projects/eletricbike" element={<EletricBike />} />
+            <Route path="/projects/bike" element={<Bike />} />
             <Route path="/projects/unbolted" element={<Unbolted />} />
             <Route path="/projects/tools" element={<Tool />} />
+            <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
-        <Footer />
       </AnimationProvider>
     </Router>
   );

@@ -1,0 +1,97 @@
+.contact-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.contact-container {
+  width: 90%;
+  max-width: 600px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid #00ff00;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  color: #00ff00;
+  font-family: "Courier New", monospace;
+}
+
+.contact-back-button {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #00ff00;
+  background: transparent;
+  color: #00ff00;
+  text-decoration: none;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-back-button:hover {
+  background-color: #00ff00;
+  color: black;
+}
+
+.contact-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.contact-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #00ff00;
+}
+
+.contact-details {
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-icon {
+  color: #00ff00;
+}
+
+.contact-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.contact-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.contact-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.contact-social-link {
+  color: #00ff00;
+  transition: transform 0.3s ease;
+}
+
+.contact-social-link:hover {
+  transform: scale(1.1);
+}

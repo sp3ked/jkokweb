@@ -6,6 +6,8 @@ import raspberryPiGlasses from "../images/raspi1.jpg";
 import bikeimage from "../images/bike5.jpg";
 import unboltedImage from "../images/unbolt.png";
 import toolsImage from "../images/tool.png";
+// import pythonLogo from "../images/python.png";
+// import jsLogo from "../images/javascript.png";
 
 function Carousel({ projects, title }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -92,11 +94,7 @@ function Projects() {
       title="Unbolted"
       content={
         <div className="projectContent">
-          <img
-            src={unboltedImage}
-            alt="Unbolted - On-Demand GPU Computing"
-            className="projectImg"
-          />
+          <img src={unboltedImage} alt="Unbolted Logo" className="projectImg" />
           <div className="projectText">
             <p>
               <strong className="secondTitle">
@@ -197,7 +195,7 @@ function Projects() {
               braking.
               <br />
               <br />
-              <Link className="seemore" to="/projects/electricbike">
+              <Link className="seemore" to="/projects/bike">
                 ...see more (click me)
               </Link>
             </p>
@@ -225,7 +223,7 @@ function Projects() {
         <Link to="/projects/raspi" className="projectButton">
           Raspi - Smart Glasses
         </Link>
-        <Link to="/projects/electricbike" className="projectButton">
+        <Link to="/projects/bike" className="projectButton">
           Electric Bike Conversion
         </Link>
       </div>
@@ -233,7 +231,7 @@ function Projects() {
   );
 }
 
-function TerminalBox({ title, content }) {
+function TerminalBox({ title, content, langLogo }) {
   return (
     <div className="terminalBox">
       <div className="terminalHeader">
@@ -243,6 +241,9 @@ function TerminalBox({ title, content }) {
           <span className="terminalControl">☐</span>
           <span className="terminalControl">✕</span>
         </div>
+        {langLogo && (
+          <img src={langLogo} alt="Language Logo" className="langLogo" />
+        )}
       </div>
       <div className="terminalContent">
         <p className="terminalPrompt">C:\Users\Projects\{title}&gt;</p>
