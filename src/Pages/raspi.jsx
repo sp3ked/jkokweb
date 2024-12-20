@@ -1,12 +1,24 @@
-import { Link } from "react-router-dom";
+import { Link }  from "react-router-dom";
 import "./projectDetails.css";
 import raspi1 from "../images/raspi1.jpg";
 import raspi2 from "../images/raspi2.jpg";
 import raspi3 from "../images/raspi3.jpg";
 import raspi4 from "../images/raspi4.jpg";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function RaspberryPiGlasses() {
   const images = [raspi1, raspi2, raspi3, raspi4];
+const location = useLocation();
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
+  }, [location]);
+
 
   return (
     <div className="fullProjectContainer">
