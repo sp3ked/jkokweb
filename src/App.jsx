@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import Resume from "./Pages/resume";
@@ -16,6 +16,7 @@ import {
   useAnimationContext,
 } from "./Pages/animationContext";
 import Navbar from "./Pages/navbar";
+import IntroAnimation from "./Pages/IntroAnimation";
 import "./App.css";
 
 function MatrixBackground() {
@@ -90,25 +91,37 @@ function MatrixBackground() {
 }
 
 function App() {
+  const [showIntro, setShowIntro] = useState(true);
+
+  const handleIntroComplete = () => {
+    setShowIntro(false);
+  };
+
   return (
     <Router>
       <AnimationProvider>
         <div className="app">
-          <MatrixBackground />
-          <Navbar />
-          {/* <Langnav /> */}
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/resume" element={<Resume />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/projects/scout" element={<Scout />} />
-            <Route path="/projects/raspi" element={<Raspi />} />
-            <Route path="/projects/bike" element={<Bike />} />
-            <Route path="/projects/unbolted" element={<Unbolted />} />
-            <Route path="/projects/tools" element={<Tool />} />
-            <Route path="/admin" element={<Admin />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          {showIntro ? (
+            <IntroAnimation onComplete={handleIntroComplete} />
+          ) : (
+            <>
+              <MatrixBackground />
+              <Navbar />
+              {/* <Langnav /> */}
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/resume" element={<Resume />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/projects/scout" element={<Scout />} />
+                <Route path="/projects/raspi" element={<Raspi />} />
+                <Route path="/projects/bike" element={<Bike />} />
+                <Route path="/projects/unbolted" element={<Unbolted />} />
+                <Route path="/projects/tools" element={<Tool />} />
+                <Route path="/admin" element={<Admin />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </>
+          )}
         </div>
       </AnimationProvider>
     </Router>
