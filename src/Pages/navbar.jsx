@@ -8,13 +8,13 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <pre className="ascii-art">{`
+        {/* <pre className="ascii-art">{`
  ●●●   ●●●  ●●● ●  ●  ●●●● ●●●  
 ●     ●  ●    ● ●  ●  ●    ●  ● 
  ●●●  ●●●   ●●● ●●●   ●●●  ●  ● 
     ● ●       ● ●  ●  ●    ●  ● 
 ●●●●  ●     ●●● ●   ● ●●●● ●●●  
-`}</pre>
+`}</pre> */}
       </div>
       <div className="navbar-right">
         <button onClick={toggleAnimation} className="toggle-animations">

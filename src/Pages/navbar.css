@@ -1,12 +1,13 @@
 .navbar {
-  width: 100%;
+  width: auto; /* changed from 100% */
   padding: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end; /* align button to the right */
   position: fixed;
   top: 0;
-  left: 0;
-  z-index: -1;
+  right: 1rem;
+  left: auto;
+  z-index: 9999; /* changed from -1 */
 }
 
 .navbar-left {
@@ -30,6 +31,7 @@
   align-items: center;
   margin-bottom: 40px;
   margin-right: 40px;
+  z-index: 10000000;
 }
 
 .toggle-animations {

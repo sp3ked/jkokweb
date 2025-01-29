@@ -42,10 +42,10 @@ function MatrixBackground() {
     const rainDrops = Array.from({ length: columns }).fill(1);
 
     const draw = () => {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.16)";
+      ctx.fillStyle = "rgba(0, 0, 0, 0.116)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = "rgba(0, 255, 0, 0.14)";
+      ctx.fillStyle = "rgba(0, 255, 0, 0.199)";
       ctx.font = fontSize + "px monospace";
 
       for (let i = 0; i < rainDrops.length; i++) {
