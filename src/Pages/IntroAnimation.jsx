@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useMemo } from "react";
 import { Search, Chrome, Terminal, Volume2, Wifi, Battery, MonitorUp, Folder, FileText, Globe } from "lucide-react";
 import './IntroAnimation.css';
 
@@ -8,7 +8,7 @@ const IntroAnimation = ({ onComplete }) => {
   const terminalRefs = useRef({});
   const [currentTime, setCurrentTime] = useState(new Date());
 
-  const initialCommands = [
+  const initialCommands = useMemo(() => [
     [
       "C:\\>systeminfo",
       "HOST NAME:                 DESKTOP-USER",
@@ -48,9 +48,9 @@ const IntroAnimation = ({ onComplete }) => {
       "Round Trip Times:",
       "    Minimum = 11ms, Maximum = 13ms, Average = 12ms"
     ]
-  ];
+  ], []);
 
-  const randomCommands = [
+  const randomCommands = useMemo(() => [
     "Scanning system files...",
     "Checking registry entries...",
     "Verifying system integrity...",
@@ -63,7 +63,7 @@ const IntroAnimation = ({ onComplete }) => {
     "Loading user profiles...",
     "Checking file permissions...",
     "Initializing system services...",
-  ];
+  ], []);
 
   // Auto-scroll function
   const scrollToBottom = (id) => {
@@ -75,8 +75,6 @@ const IntroAnimation = ({ onComplete }) => {
 
   // Initial terminals and loading sequence
   useEffect(() => {
-    let currentPhase = 0;
-    
     const phases = [
       // Phase 1: First three terminals
       () => {
@@ -195,12 +193,10 @@ const IntroAnimation = ({ onComplete }) => {
     ];
 
     const startLoading = () => {
-      currentPhase = 1;
       phases[1]();
     };
 
     const startChaos = () => {
-      currentPhase = 2;
       phases[2]();
     };
 
