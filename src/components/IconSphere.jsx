@@ -48,4 +48,5 @@ const IconSphere = () => {
   );
 };
 
-export default IconSphere;
+// Change to named export
+export { IconSphere };

@@ -12,7 +12,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import Footer from "./footer";
-import IconSphere from '../components/IconSphere';
+import { IconSphere } from '../components/IconSphere';
 import { Canvas } from '@react-three/fiber';
 
 function HomePage() {
@@ -66,6 +66,9 @@ function HomePage() {
                 <Link to="/resume" className="social-link resume">
                   Resume
                 </Link>
+                <Link to="/contact" className="social-link resume">
+                  Contact
+                </Link>
               </div>
             </div>
 
@@ -111,13 +114,13 @@ function HomePage() {
 
         {/* Experiences */}
         <section id="experiences" className="skills-section section">
-          <h2>Experiences - </h2>
+          <h2> - Experiences - </h2>
           <Experiences />
         </section>
 
         {/* Projects */}
-        <section id="projects" className="skills-section section">
-          <h2>Projects - </h2>
+        <section id="projects" className="section full-width">
+          <h2 className="projects-title"> - Projects - </h2>
           <Projects />
         </section>
       </div>

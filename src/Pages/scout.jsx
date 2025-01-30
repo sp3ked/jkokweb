@@ -154,7 +154,7 @@ function Scout() {
             <strong>Comments:</strong> Currently working on getting it in the
             app store, a couple months after creation we noticed someone also
             doing this so we decided to dump this project... but it was a great
-            learning expirence. You can find the app{" "}
+            learning experience. You can find the app{" "}
             <a
               href="https://apps.apple.com/us/app/scout-shop-sell-with-camera/id6502788045"
               target="_blank"
