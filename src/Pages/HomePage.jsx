@@ -69,15 +69,14 @@ function HomePage() {
               </div>
             </div>
 
-            <div className="sphere-container">
-              <Canvas camera={{ position: [0, 0, 5] }}>
-                <ambientLight intensity={0.5} />
-                <pointLight position={[10, 10, 10]} />
-                <IconSphere />
-              </Canvas>
-            </div>
-
             <div className="profile-section">
+              <div className="sphere-container">
+                <Canvas camera={{ position: [0, 0, 3] }}>
+                  <ambientLight intensity={0.5} />
+                  <pointLight position={[10, 10, 10]} />
+                  <IconSphere />
+                </Canvas>
+              </div>
               <img src={profilePic} alt="Profile" className="profile-image" />
             </div>
           </div>
