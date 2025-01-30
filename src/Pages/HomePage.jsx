@@ -12,6 +12,8 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import Footer from "./footer";
+import IconSphere from '../components/IconSphere';
+import { Canvas } from '@react-three/fiber';
 
 function HomePage() {
   const { isAnimationDisabled } = useAnimationContext();
@@ -67,6 +69,14 @@ function HomePage() {
               </div>
             </div>
 
+            <div className="sphere-container">
+              <Canvas camera={{ position: [0, 0, 5] }}>
+                <ambientLight intensity={0.5} />
+                <pointLight position={[10, 10, 10]} />
+                <IconSphere />
+              </Canvas>
+            </div>
+
             <div className="profile-section">
               <img src={profilePic} alt="Profile" className="profile-image" />
             </div>
@@ -96,42 +106,13 @@ function HomePage() {
         </div>
 
         {/* Technical Skills */}
-        <section className="skills-section section">
+         {/* <section className="skills-section section">
           <h2>Technical Skills</h2>
-          <div className="skills-grid">
-            <div className="skill-item">
-              <img src={require("../images/python.png")} alt="Python" />
-              <span>Python</span>
-            </div>
-            <div className="skill-item">
-              <img src={require("../images/react.png")} alt="React" />
-              <span>React</span>
-            </div>
-            <div className="skill-item">
-              <img src={require("../images/javascript.png")} alt="JavaScript" />
-              <span>JavaScript</span>
-            </div>
-            <div className="skill-item">
-              <img src={require("../images/html.png")} alt="HTML" />
-              <span>HTML</span>
-            </div>
-            <div className="skill-item">
-              <img src={require("../images/solidity.png")} alt="Solidity" />
-              <span>Solidity</span>
-            </div>
-            <div className="skill-item">
-              <img src={require("../images/arduino.png")} alt="Arduino" />
-              <span>Arduino</span>
-            </div>
-            <div className="skill-item">
-              <img src={require("../images/typescript.png")} alt="TypeScript" />
-              <span>TypeScript</span>
-            </div>
-          </div>
-        </section>
+        </section> */}
 
         {/* Experiences */}
-        <section id="experiences" className="section">
+        <section id="experiences" className="skills-section section">
+          <h2>Experiences - </h2>
           <Experiences />
         </section>
 

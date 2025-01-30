@@ -4,9 +4,9 @@ import './IntroAnimation.css';
 
 const IntroAnimation = ({ onComplete }) => {
   const [terminals, setTerminals] = useState([]);
-  const [currentTime, setCurrentTime] = useState(new Date());
   const [loadingProgress, setLoadingProgress] = useState(0);
   const terminalRefs = useRef({});
+  const [currentTime, setCurrentTime] = useState(new Date());
 
   const initialCommands = [
     [
@@ -194,26 +194,6 @@ const IntroAnimation = ({ onComplete }) => {
       }
     ];
 
-    // Add faster text update for chaos terminals
-    const fastTextUpdate = (terminalId) => {
-      const updateInterval = setInterval(() => {
-        setTerminals(prev => {
-          const terminal = prev.find(t => t.id === terminalId);
-          if (!terminal || terminal.text.length > 50) {
-            clearInterval(updateInterval);
-            return prev;
-          }
-          const randomMessage = randomCommands[Math.floor(Math.random() * randomCommands.length)];
-          return prev.map(term => 
-            term.id === terminalId 
-              ? { ...term, text: [...term.text, randomMessage] }
-              : term
-          );
-        });
-        scrollToBottom(terminalId);
-      }, 50);
-    };
-
     const startLoading = () => {
       currentPhase = 1;
       phases[1]();
@@ -226,7 +206,16 @@ const IntroAnimation = ({ onComplete }) => {
 
     // Start the sequence
     phases[0]();
-  }, [onComplete]);
+  }, [initialCommands, randomCommands, onComplete]);
+
+  // Add time update effect
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="windows-container">

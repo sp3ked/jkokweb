@@ -23,6 +23,7 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
+  position: relative; /* Add this */
 }
 
 .text-content {
@@ -173,7 +174,7 @@ p {
 
 .skills-section {
   padding: 2rem;
-  max-width: 800px;
+  max-width: 1200px; 
   margin: 0 auto;
   margin-bottom: 1rem;
 }
@@ -257,4 +258,24 @@ p {
 
 .whiteText {
   color: #ffffff; /* White color */
+}
+
+.sphere-container {
+  position: absolute;
+  width: 400px;  /* increased width */
+  height: 400px; /* increased height */
+  top: -125px;   /* moved up */
+  left: 200px;   /* moved right */
+  background: transparent;
+}
+
+@media (max-width: 1024px) {
+  .sphere-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    top: 0;
+    left: 0;
+    margin: 1rem auto;
+  }
 }
