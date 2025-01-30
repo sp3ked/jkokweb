@@ -29,7 +29,7 @@ const IconSphere = () => {
   });
 
   return (
-    <group ref={sphereRef} position={[0, 0, 0]} scale={0.6}> {/* reduced scale from 0.8 to 0.6 */}
+    <group ref={sphereRef} position={[0, 0, 0]} scale={0.9}> 
       {icons.map((icon, index) => {
         const angle = (index / icons.length) * Math.PI * 2;
         const radius = 1.8; 
