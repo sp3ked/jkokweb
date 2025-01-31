@@ -1,13 +1,13 @@
 .navbar {
-  width: auto; /* changed from 100% */
+  width: auto; 
   padding: 1rem;
   display: flex;
-  justify-content: flex-end; /* align button to the right */
+  justify-content: flex-end; 
   position: fixed;
   top: 0;
-  right: 1rem;
-  left: auto;
-  z-index: 9999; /* changed from -1 */
+  right: 0;
+  left: 0;
+  z-index: 9999; 
 }
 
 .navbar-left {
@@ -16,15 +16,6 @@
   margin-left: 10px;
 }
 
-.ascii-art {
-  font-size: 14px;
-  line-height: 1.2;
-  color: #00ff00;
-  margin: 0;
-  font-family: "Courier New", monospace;
-  white-space: pre;
-  letter-spacing: 0;
-}
 
 .navbar-right {
   display: flex;
@@ -35,7 +26,12 @@
 }
 
 .toggle-animations {
-  padding: 8px 16px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 4px 8px;
+  font-size: 0.7rem;
+  z-index: 9999;
   background: transparent;
   border: 1px solid #00ff00;
   color: #00ff00;
@@ -75,5 +71,9 @@
     width: 80%; /* Make buttons smaller */
     padding: 8px 16px; /* Reduce padding */
     font-size: 14px; /* Adjust font size */
+  }
+  .toggle-animations {
+    position: static;
+    margin-top: 10px; /* Place below social links on mobile */
   }
 }
