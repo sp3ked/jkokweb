@@ -99,15 +99,15 @@ const IntroAnimation = ({ onComplete }) => {
             } else {
               clearInterval(typeInterval);
               if (index < 2) {
-                setTimeout(() => createTerminal(index + 1), 1000);
+                setTimeout(() => createTerminal(index + 1), 200);
               } else {
-                setTimeout(() => startLoading(), 1000);
+                setTimeout(() => startLoading(), 200);
               }
             }
-          }, 20); // decreased from 100 to 50 for faster typing
+          }, 20); 
         };
 
-        setTimeout(() => createTerminal(0), 5); // decreased from 10 to 5
+        setTimeout(() => createTerminal(0), 1); 
       },
 
       // Phase 2: Loading terminal with simultaneous chaos
@@ -134,7 +134,7 @@ const IntroAnimation = ({ onComplete }) => {
             // Complete sequence when loading reaches 100%
             if (newProgress >= 100) {
               clearInterval(loadingInterval);
-              setTimeout(onComplete, 500); // Quicker transition to website
+              setTimeout(onComplete, 100); // Quicker transition to website
               return 100;
             }
             return newProgress;
