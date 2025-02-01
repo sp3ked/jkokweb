@@ -11,6 +11,7 @@ import NotFound from "./Pages/notfound";
 import Contact from "./Pages/contact";
 import Admin from "./Pages/admin";
 import Docu from "./Pages/docu";
+import Meta from "./Pages/meta";
 // import Langnav from "./Pages/langnav";
 import {
   AnimationProvider,
@@ -119,6 +120,7 @@ function App() {
                 <Route path="/projects/unbolted" element={<Unbolted />} />
                 <Route path="/projects/tools" element={<Tool />} />
                 <Route path="/projects/docu" element={<Docu />} />
+                <Route path="/projects/meta" element={<Meta />} />
                 <Route path="/admin" element={<Admin />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>

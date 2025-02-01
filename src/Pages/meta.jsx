@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import "./projectDetails.css";
-import meta1 from "../images/meta1.png";
+import meta1 from "../images/meta.png";
 import meta2 from "../images/meta2.png";
-import meta3 from "../images/meta3.png";
+
 
 function Meta() {
-  const images = [meta1, meta2, meta3];
+  const images = [meta1, meta2];
   
   return (
     <div className="project-details-container">
@@ -43,7 +43,7 @@ function Meta() {
                 <h2>Overview</h2>
                 <p>An advanced AI system that provides meta-level analysis of questions and problems, focusing on the approach and methodology rather than just the answer.</p>
                 
-                <h2>Features</h2>
+                <h2>Features link https://www.youtube.com/watch?v=eCDWHQe8cE0&t=77s</h2>
                 <ul>
                   <li>Problem-solving strategy analysis</li>
                   <li>Step-by-step reasoning explanation</li>
