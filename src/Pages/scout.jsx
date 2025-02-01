@@ -43,7 +43,7 @@ function Scout() {
 
       <div className="app-gallery">
         {images.map((img, idx) => (
-          <div key={idx} className="gallery-item">
+          <div key={idx} className="gallery-item mobile-screenshot">
             <img src={img} alt={`Scout App ${idx + 1}`} />
           </div>
         ))}

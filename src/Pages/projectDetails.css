@@ -160,13 +160,18 @@
 
 .gallery-item {
   flex: 0 0 auto;
-  width: 300px;
-  height: 600px;
+  width: 600px; /* increased from 300px */
+  height: 400px; /* decreased from 600px */
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid #ffffff;
   scroll-snap-align: start;
   transition: transform 0.3s ease;
+}
+
+.gallery-item.mobile-screenshot {
+  width: 300px;
+  height: 600px;
 }
 
 .gallery-item:hover {
@@ -181,6 +186,11 @@
 
 @media (max-width: 768px) {
   .gallery-item {
+    width: 300px; /* decreased from previous mobile size */
+    height: 200px; /* decreased from previous mobile size */
+  }
+  
+  .gallery-item.mobile-screenshot {
     width: 200px;
     height: 400px;
   }

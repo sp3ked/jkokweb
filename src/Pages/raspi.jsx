@@ -21,26 +21,25 @@ const location = useLocation();
 
 
   return (
-    <div className="fullProjectContainer">
-      <div className="fullProjectDetails">
-        <Link to="/" className="backButton">
-          back
-        </Link>
+    <div className="project-details-container">
+      <Link to="/" className="back-button">
+        ← Back to Projects
+      </Link>
+      
+      <div className="project-header">
         <h1>Raspi - AI-Powered Smart Glasses</h1>
-        <div className="marqueeContainer">
-          <div className="marquee">
-            {[...images, ...images].map((img, index) => (
-              <img
-                key={index}
-                src={img}
-                alt={`Raspberry Pi Glasses ${(index % 3) + 1}`}
-                className="marqueeImage"
-              />
-            ))}
+      </div>
+
+      <div className="app-gallery">
+        {images.map((img, idx) => (
+          <div key={idx} className="gallery-item">
+            <img src={img} alt={`Raspberry Pi Glasses ${idx + 1}`} />
           </div>
-        </div>
-        <div className="projectContent">
-          <p className="projectDetailsText">
+        ))}
+      </div>
+
+      <div className="project-content">
+        <p className="projectDetailsText">
             <strong>Description:</strong>
             <br />
             Using a Raspberry Pi, my brother and I created "smart" glasses that
@@ -126,7 +125,6 @@ const location = useLocation();
             the tasks I set in the future dev section. I am excited to see where
             this project goes and how it can be improved.
           </p>
-        </div>
       </div>
     </div>
   );

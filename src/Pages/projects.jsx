@@ -6,7 +6,7 @@ import raspberryPiGlasses from "../images/raspi1.jpg";
 import bikeimage from "../images/bike5.jpg";
 import unboltedImage from "../images/unbolt.png";
 import toolsImage from "../images/tool.png";
-import docuImage from "../images/docu.png"; // Add this image
+import docuImage from "../images/docu1.png"; // Add this image
 import metaImage from "../images/meta.png"; // Add this image
 
 function Projects() {
