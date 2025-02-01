@@ -387,6 +387,7 @@ h2 {
   border-color: #00ff00;
 }
 
+/* Remove or comment out any conflicting image styles */
 .project-card img {
   width: 100%;
   height: 220px;
@@ -407,17 +408,18 @@ h2 {
   object-fit: contain;
 }
 
+/* Updated styles for desktop project images */
 .project-card[data-id="tools"] img,
 .project-card[data-id="unbolted"] img,
 .project-card[data-id="meta"] img,
 .project-card[data-id="raspi"] img,
 .project-card[data-id="bike"] img {
-  padding: 20px;
+  padding: 20px 40px 20px 20px;
   background: rgba(0, 0, 0, 0.8);
-  width: 90%;
-  height: auto;
+  width: 85%;
+  height: 180px;
   display: block;
-  margin: 10px auto;
+  margin: 20px auto;
   object-fit: contain;
 }
 
