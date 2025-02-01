@@ -57,6 +57,139 @@
   }
 }
 
+.project-details-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.95);
+  border: 1px solid #fafafa;
+  border-radius: 8px;
+  color: #00ff00;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+}
+
+.back-button {
+  display: inline-block;
+  color: #00ff00;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  font-family: 'Courier New', monospace;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  text-decoration: underline;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.live-link {
+  color: #00ff00;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #00ff00;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.live-link:hover {
+  background: #00ff00;
+  color: black;
+}
+
+.carousel-wrapper {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-card {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #00ff00;
+  border-radius: 4px;
+  overflow: hidden;
+  background: rgba(10, 25, 10, 0.8);
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+}
+
+.carousel-card:hover {
+  transform: scale(1.05);
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.app-gallery {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+  margin: 20px -20px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: #00ff00 rgba(0, 255, 0, 0.1);
+}
+
+.app-gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.app-gallery::-webkit-scrollbar-track {
+  background: rgba(0, 255, 0, 0.1);
+  border-radius: 4px;
+}
+
+.app-gallery::-webkit-scrollbar-thumb {
+  background: #00ff00;
+  border-radius: 4px;
+}
+
+.gallery-item {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ffffff;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    width: 200px;
+    height: 400px;
+  }
+  
+  .app-gallery {
+    gap: 15px;
+  }
+}
+
 @media (max-width: 1200px) {
   .fullProjectContainer {
     padding: 10px;
@@ -90,5 +223,63 @@
   p {
     font-size: 14px;
     line-height: 1.5;
+  }
+}
+
+.image-carousel,
+.carousel-content,
+.carousel-btn,
+.carousel-indicators {
+  display: none;
+}
+
+.app-title-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.app-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.app-title-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.app-title-content h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+/* Remove the app-meta styles since we're not using them anymore */
+.app-meta,
+.app-divider {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .app-title-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .app-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+  }
+
+  .app-title-content h1 {
+    font-size: 1.5rem;
   }
 }
