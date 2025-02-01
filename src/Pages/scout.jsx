@@ -13,12 +13,8 @@ function Scout() {
   const location = useLocation();
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 100);
-
-    return () => clearTimeout(timeoutId);
-  }, [location]);
+    window.scrollTo(0, 0); // Scroll to top when entering project page
+  }, []);
 
   return (
     <div className="project-details-container">

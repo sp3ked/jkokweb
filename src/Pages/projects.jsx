@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./projects.css";
 import { Link, useNavigate } from "react-router-dom";
 import scoutLogo from "../images/scout1.jpg";
@@ -11,6 +11,23 @@ import metaImage from "../images/meta.png"; // Add this image
 
 function Projects() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Only restore scroll position if coming back from a project
+    const savedPosition = sessionStorage.getItem('projectsScrollPosition');
+    if (savedPosition) {
+      window.scrollTo(0, parseInt(savedPosition));
+      sessionStorage.removeItem('projectsScrollPosition');
+    }
+  }, []);
+
+  const handleProjectClick = (link) => {
+    // Save current scroll position before navigating
+    sessionStorage.setItem('projectsScrollPosition', window.pageYOffset.toString());
+    window.scrollTo(0, 0); // Scroll to top immediately
+    navigate(link);
+  };
+
   const projectsList = [
     {
       id: "scout",
@@ -108,7 +125,7 @@ function Projects() {
                 className="project-card"
                 data-type={project.type}
                 data-id={project.id}  // Add this attribute
-                onClick={() => navigate(project.link)}
+                onClick={() => handleProjectClick(project.link)}
               >
                 <div className="project-status">
                   {project.status === 'live' && (
