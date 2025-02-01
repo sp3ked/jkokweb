@@ -16,6 +16,7 @@ function Projects() {
       id: "scout",
       title: "Scout - Shopping and Selling App",
       image: scoutLogo,
+      type: "mobile-app", // Add this field
       status: "live",
       liveUrl: "https://apps.apple.com/us/app/scout-shop-sell-with-camera/id6502788045?platform=iphone",  
       description: "Scout is an innovative mobile application designed to revolutionize the way users shop and sell items. The app utilizes \"google scan\" to recognize items and compare prices across 100+ retailers.",
@@ -36,6 +37,7 @@ function Projects() {
       id: "docu",
       title: "Documentation Generator",
       image: docuImage,
+      type: "mobile-app", // Add this field
       status: "live",
       liveUrl: "https://apps.apple.com/us/app/docu-ai-scanner-analyzer/id6739954302?platform=iphone",
       description: "An AI-powered tool that automatically generates comprehensive documentation for codebases. Utilizing LLMs to analyze code structure and create clear, accurate documentation.",
@@ -104,6 +106,8 @@ function Projects() {
               <div
                 key={project.id}
                 className="project-card"
+                data-type={project.type}
+                data-id={project.id}  // Add this attribute
                 onClick={() => navigate(project.link)}
               >
                 <div className="project-status">

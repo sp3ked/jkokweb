@@ -378,6 +378,7 @@ h2 {
   flex-direction: column;
   height: 100%;
   position: relative;
+  align-items: center;
 }
 
 .project-card:hover {
@@ -392,6 +393,32 @@ h2 {
   object-fit: cover;
   border-bottom: 1px solid #00ff00;
   transition: all 0.3s ease;
+}
+
+/* Add new styles for app icons */
+.project-card[data-type="mobile-app"] img {
+  width: 120px;
+  height: 120px;
+  border-radius: 24px;
+  margin: 20px auto;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.15);
+  object-fit: contain;
+}
+
+.project-card[data-id="tools"] img,
+.project-card[data-id="unbolted"] img,
+.project-card[data-id="meta"] img,
+.project-card[data-id="raspi"] img,
+.project-card[data-id="bike"] img {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  object-fit: contain;
 }
 
 .project-card:hover img {

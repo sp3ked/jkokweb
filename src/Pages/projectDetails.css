@@ -293,3 +293,16 @@
     font-size: 1.5rem;
   }
 }
+
+/* Add padding and zoom adjustments for specific projects */
+[data-project="tools"] .gallery-item,
+[data-project="unbolted"] .gallery-item {
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+[data-project="meta"] .gallery-item img {
+  object-fit: contain;
+  transform: scale(0.9);
+  background: rgba(0, 0, 0, 0.8);
+}

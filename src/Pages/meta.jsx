@@ -9,7 +9,7 @@ function Meta() {
   const images = [meta1, meta2];
   
   return (
-    <div className="project-details-container">
+    <div className="project-details-container" data-project="meta">
       <Link to="/" className="back-button">
         ← Back to Projects
       </Link>
