@@ -398,10 +398,10 @@ h2 {
 
 /* Add new styles for app icons */
 .project-card[data-type="mobile-app"] img {
-  width: 120px;
-  height: 120px;
-  border-radius: 24px;
-  margin: 20px auto;
+  width: 140px;  /* increased from 120px */
+  height: 140px; /* increased from 120px */
+  border-radius: 28px; /* increased from 24px */
+  margin: 30px auto; /* increased from 20px */
   display: block;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 12px rgba(0, 255, 0, 0.15);

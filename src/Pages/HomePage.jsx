@@ -95,15 +95,13 @@ function HomePage() {
             </div>
           </div>
           <div className="terminalContent">
-            <p>
-              Hey, I'm Joey and I'm studying AI at Purdue University. I have
-              experience{" "}
-              <span className="whiteText">
-                building web applications and mobile apps.
-              </span>{" "}
-              My passion lies in AI and robotics - I love building things that
-              push the boundaries of what's possible.
-            </p>
+          <p>
+  Hey, Im Joey and Im studying AI at Purdue University. I have experience{" "}
+  <span className="whiteText">
+  developing AI-powered applications across web, mobile, and embedded systems.
+  </span>{" "}
+  My passion lies in AI, computer vision, and robotics – I love building things that push the boundaries of whats possible.
+</p>
           </div>
         </div>
 
