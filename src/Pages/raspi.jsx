@@ -18,7 +18,7 @@ function RaspberryPiGlasses() {
       <Link to="/" className="back-button">
         ← Back to Projects
       </Link>
-      
+
       <div className="project-header">
         <h1>Raspi - AI-Powered Smart Glasses</h1>
       </div>
@@ -35,18 +35,29 @@ function RaspberryPiGlasses() {
         <div className="projectDetailsText">
           <section className="project-section">
             <h2>Overview</h2>
-            <p>A wearable device built using a Raspberry Pi that captures images and identifies objects 
-            in real-time using the Inception v3 model. The project combines computer vision, 
-            machine learning, and custom hardware design into a functional prototype.</p>
+            <p>
+              A wearable device built using a Raspberry Pi that captures images
+              and identifies objects in real-time using the Inception v3 model.
+              The project combines computer vision, machine learning, and custom
+              hardware design into a functional prototype.
+            </p>
           </section>
 
           <section className="project-section">
             <h2>Hardware Components</h2>
             <ul>
-              <li><strong>Core Unit:</strong> Raspberry Pi 4 for processing</li>
-              <li><strong>Vision:</strong> Raspberry Pi Camera Module</li>
-              <li><strong>Display:</strong> OLED Screen for results</li>
-              <li><strong>Housing:</strong> Custom 3D-printed frame and case</li>
+              <li>
+                <strong>Core Unit:</strong> Raspberry Pi 4 for processing
+              </li>
+              <li>
+                <strong>Vision:</strong> Raspberry Pi Camera Module
+              </li>
+              <li>
+                <strong>Display:</strong> OLED Screen for results
+              </li>
+              <li>
+                <strong>Housing:</strong> Custom 3D-printed frame and case
+              </li>
             </ul>
           </section>
 

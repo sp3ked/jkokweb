@@ -20,7 +20,7 @@ function Bike() {
       <Link to="/" className="back-button">
         ← Back to Projects
       </Link>
-      
+
       <div className="project-header">
         <h1>Electric Bike - Conversion Project</h1>
       </div>
@@ -37,18 +37,29 @@ function Bike() {
         <div className="projectDetailsText">
           <section className="project-section">
             <h2>Overview</h2>
-            <p>A custom electric bike conversion project designed to address transportation 
-            challenges on large university campuses. The project features a custom motor mount, 
-            multistage belt drive system, and swappable battery solution.</p>
+            <p>
+              A custom electric bike conversion project designed to address
+              transportation challenges on large university campuses. The
+              project features a custom motor mount, multistage belt drive
+              system, and swappable battery solution.
+            </p>
           </section>
 
           <section className="project-section">
             <h2>Technical Components</h2>
             <ul>
-              <li><strong>Motor:</strong> Flipsky 190kV with 75100 controller</li>
-              <li><strong>Power:</strong> Swappable Ryobi battery system</li>
-              <li><strong>Drive:</strong> Multistage belt drive system</li>
-              <li><strong>Mount:</strong> Custom designed motor mount</li>
+              <li>
+                <strong>Motor:</strong> Flipsky 190kV with 75100 controller
+              </li>
+              <li>
+                <strong>Power:</strong> Swappable Ryobi battery system
+              </li>
+              <li>
+                <strong>Drive:</strong> Multistage belt drive system
+              </li>
+              <li>
+                <strong>Mount:</strong> Custom designed motor mount
+              </li>
             </ul>
           </section>
 

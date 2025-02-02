@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
 import "./projectDetails.css";
 import meta1 from "../images/meta.png";
@@ -7,13 +7,13 @@ import meta3 from "../images/meta3.png";
 
 function Meta() {
   const images = [meta1, meta3];
-  
+
   return (
     <div className="project-details-container" data-project="meta">
       <Link to="/" className="back-button">
         ← Back to Projects
       </Link>
-      
+
       <div className="project-header">
         <div className="app-title-section">
           <div className="app-title-content">
@@ -21,16 +21,20 @@ function Meta() {
           </div>
         </div>
         <div className="header-links">
-          <a href="https://www.youtube.com/watch?v=eCDWHQe8cE0" 
-             target="_blank" 
-             rel="noopener noreferrer"
-             className="live-link">
+          <a
+            href="https://www.youtube.com/watch?v=eCDWHQe8cE0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="live-link"
+          >
             Watch Demo ↗
           </a>
-          <a href="https://github.com/sp3ked/MetaGlassesAnswerer"
-             target="_blank"
-             rel="noopener noreferrer"
-             className="live-link github-link">
+          <a
+            href="https://github.com/sp3ked/MetaGlassesAnswerer"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="live-link github-link"
+          >
             View GitHub ↗
           </a>
         </div>
@@ -48,9 +52,14 @@ function Meta() {
         <div className="projectDetailsText">
           <section className="project-section">
             <h2>Overview</h2>
-            <p>LiveAnswer is an automation tool that enhances real-time quiz answering using an Instagram live stream. 
-            Stream form your Meta Glasses and get the answer to the quiz/question you are looking at ion your ear using an instagram comment. Uses Selenium WebDriver, Pillow, and the OpenAI API to 
-            automate login, navigation, screen capturing, quiz answering, and commenting in real-time.</p>
+            <p>
+              LiveAnswer is an automation tool that enhances real-time quiz
+              answering using an Instagram live stream. Stream form your Meta
+              Glasses and get the answer to the quiz/question you are looking at
+              ion your ear using an instagram comment. Uses Selenium WebDriver,
+              Pillow, and the OpenAI API to automate login, navigation, screen
+              capturing, quiz answering, and commenting in real-time.
+            </p>
           </section>
 
           <section className="project-section">

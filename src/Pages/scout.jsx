@@ -9,10 +9,10 @@ import scout5 from "../images/scout5.png";
 import scout6 from "../images/scout6.png";
 
 function Scout() {
-  const images = [scout2, scout3, scout4, scout5, scout6]; 
+  const images = [scout2, scout3, scout4, scout5, scout6];
 
   useEffect(() => {
-    window.scrollTo(0, 0); 
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -20,7 +20,7 @@ function Scout() {
       <Link to="/" className="back-button">
         ← Back to Projects
       </Link>
-      
+
       <div className="project-header">
         <div className="app-title-section">
           <img src={scout1} alt="Scout App Icon" className="app-icon" />
@@ -29,16 +29,20 @@ function Scout() {
           </div>
         </div>
         <div className="header-links">
-          <a href="https://apps.apple.com/us/app/scout-shop-sell-with-camera/id6502788045" 
-             target="_blank" 
-             rel="noopener noreferrer"
-             className="live-link">
+          <a
+            href="https://apps.apple.com/us/app/scout-shop-sell-with-camera/id6502788045"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="live-link"
+          >
             View Live App ↗
           </a>
-          <a href="https://github.com/scoutfinder/app"
-             target="_blank"
-             rel="noopener noreferrer"
-             className="live-link github-link">
+          <a
+            href="https://github.com/scoutfinder/app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="live-link github-link"
+          >
             See Repo ↗
           </a>
         </div>
@@ -56,8 +60,12 @@ function Scout() {
         <div className="projectDetailsText">
           <section className="project-section">
             <h2>Overview</h2>
-            <p>Scout is an innovative mobile application that revolutionizes shopping and selling. 
-            Using Google Lens technology, it scans items to compare prices across 100+ retailers. Users can use to find an item that they are looking for but dont knwo the name.</p>
+            <p>
+              Scout is an innovative mobile application that revolutionizes
+              shopping and selling. Using Google Lens technology, it scans items
+              to compare prices across 100+ retailers. Users can use to find an
+              item that they are looking for but dont knwo the name.
+            </p>
           </section>
 
           <section className="project-section">
@@ -72,17 +80,27 @@ function Scout() {
           <section className="project-section">
             <h2>Technical Details</h2>
             <ul>
-              <li><strong>Platform:</strong> React Native (iOS & Android)</li>
-              <li><strong>Item Recognition:</strong> Google Lens Integration</li>
-              <li><strong>State Management:</strong> React Hooks</li>
-              <li><strong>Data Storage:</strong> AsyncStorage</li>
+              <li>
+                <strong>Platform:</strong> React Native (iOS & Android)
+              </li>
+              <li>
+                <strong>Item Recognition:</strong> Google Lens Integration
+              </li>
+              <li>
+                <strong>State Management:</strong> React Hooks
+              </li>
+              <li>
+                <strong>Data Storage:</strong> AsyncStorage
+              </li>
             </ul>
           </section>
 
           <section className="project-section">
             <h2>Current Status</h2>
-            <p>Available on the App Store. Development is paused, 
-            but project served as excellent learning experience in mobile development.</p>
+            <p>
+              Available on the App Store. Development is paused, but project
+              served as excellent learning experience in mobile development.
+            </p>
           </section>
         </div>
       </div>

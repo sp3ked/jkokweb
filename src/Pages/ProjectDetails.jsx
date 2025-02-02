@@ -16,7 +16,7 @@ function ProjectDetails() {
       <h1>{projectId.charAt(0).toUpperCase() + projectId.slice(1)} Details</h1>
       <h2>Project Title</h2>
       <p>
-        Detailed description of your project. Explain features, challenges, or 
+        Detailed description of your project. Explain features, challenges, or
         anything relevant to the project.
       </p>
       <div className="carousel-wrapper">

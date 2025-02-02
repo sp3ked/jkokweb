@@ -73,7 +73,7 @@
   color: #00ff00;
   text-decoration: none;
   margin-bottom: 2rem;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   transition: all 0.3s ease;
 }
 
@@ -189,12 +189,12 @@
     width: 300px; /* decreased from previous mobile size */
     height: 200px; /* decreased from previous mobile size */
   }
-  
+
   .gallery-item.mobile-screenshot {
     width: 200px;
     height: 400px;
   }
-  
+
   .app-gallery {
     gap: 15px;
   }

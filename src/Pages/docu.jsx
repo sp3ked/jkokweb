@@ -64,10 +64,11 @@ function Docu() {
         <p className="projectDetailsText">
           <strong>Description:</strong>
           <br />
-          Docu is an AI-powered document scanning and analysis tool that enables users to easily
-          digitize, organize, and summarize their documents. With advanced OCR capabilities,
-          the app can extract critical information, create searchable text, and generate
-          concise summaries for quick insights.
+          Docu is an AI-powered document scanning and analysis tool that enables
+          users to easily digitize, organize, and summarize their documents.
+          With advanced OCR capabilities, the app can extract critical
+          information, create searchable text, and generate concise summaries
+          for quick insights.
           <br />
           <br />
           <strong>Core Features:</strong>
@@ -80,11 +81,13 @@ function Docu() {
           <br />
           <strong>Technical Details:</strong>
           <ul>
-            <li><strong>Platform:</strong> React Native (iOS & Android)</li>
-            <li><strong>AI:</strong> OpenAI API, currently using gpt4-turbo</li>
-    
+            <li>
+              <strong>Platform:</strong> React Native (iOS & Android)
+            </li>
+            <li>
+              <strong>AI:</strong> OpenAI API, currently using gpt4-turbo
+            </li>
           </ul>
-
         </p>
       </div>
     </div>

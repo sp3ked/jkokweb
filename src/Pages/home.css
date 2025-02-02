@@ -168,7 +168,7 @@ p {
 
 .skills-section {
   padding: 2rem;
-  max-width: 1200px; 
+  max-width: 1200px;
   margin: 0 auto;
   margin-bottom: 1rem;
 }
@@ -302,7 +302,7 @@ p {
   color: #00ff00;
   font-size: 2.5rem;
   font-weight: normal;
-  
+
   text-align: center;
 }
 
@@ -317,7 +317,7 @@ p {
   .project-grid {
     grid-template-columns: 1fr; /* 1 column on mobile */
   }
-  
+
   .projects-terminal {
     width: 95%; /* wider on mobile */
   }

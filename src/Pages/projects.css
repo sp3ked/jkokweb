@@ -342,7 +342,7 @@ h2 {
 
 .terminal-title {
   color: #00ff00;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
 }
 
 .terminal-controls {
@@ -398,7 +398,7 @@ h2 {
 
 /* Add new styles for app icons */
 .project-card[data-type="mobile-app"] img {
-  width: 140px;  /* increased from 120px */
+  width: 140px; /* increased from 120px */
   height: 140px; /* increased from 120px */
   border-radius: 28px; /* increased from 24px */
   margin: 30px auto; /* increased from 20px */
@@ -455,7 +455,7 @@ h2 {
   display: inline-block;
   color: #00ff00;
   text-decoration: none;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   padding: 8px 16px;
   border: 1px solid #00ff00;
   border-radius: 4px;
@@ -553,11 +553,11 @@ h2 {
   .project-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .projects-terminal {
     width: 92%;
   }
-  
+
   .projects-section-title {
     font-size: 2rem;
   }

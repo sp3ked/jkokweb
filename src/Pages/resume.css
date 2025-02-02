@@ -93,7 +93,7 @@
   border: 1px solid #00ff00;
   border-radius: 4px;
   text-decoration: none;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   transition: all 0.3s ease;
 }
 
@@ -107,7 +107,7 @@
   .resume-image-container {
     padding: 0.5rem;
   }
-  
+
   .resume-content h1 {
     font-size: 1.5rem;
   }

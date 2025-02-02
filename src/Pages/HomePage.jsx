@@ -12,15 +12,19 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import Footer from "./footer";
-import { IconSphere } from '../components/IconSphere';
-import { Canvas } from '@react-three/fiber';
+import { IconSphere } from "../components/IconSphere";
+import { Canvas } from "@react-three/fiber";
 
 function HomePage() {
   const { isAnimationDisabled } = useAnimationContext();
 
   return (
     <div className="home-page">
-      <div className={`animated-sections ${isAnimationDisabled ? "animations-disabled" : ""}`}>
+      <div
+        className={`animated-sections ${
+          isAnimationDisabled ? "animations-disabled" : ""
+        }`}
+      >
         {/* Intro Section */}
         <section className="intro-section">
           <div className="content-wrapper">
@@ -95,18 +99,21 @@ function HomePage() {
             </div>
           </div>
           <div className="terminalContent">
-          <p>
-  Hey, Im Joey and Im studying AI at Purdue University. I have experience{" "}
-  <span className="whiteText">
-  developing AI-powered applications across web, mobile, and embedded systems.
-  </span>{" "}
-  My passion lies in AI, computer vision, and robotics – I love building things that push the boundaries of whats possible.
-</p>
+            <p>
+              Hey, Im Joey and Im studying AI at Purdue University. I have
+              experience{" "}
+              <span className="whiteText">
+                developing AI-powered applications across web, mobile, and
+                embedded systems.
+              </span>{" "}
+              My passion lies in AI, computer vision, and robotics – I love
+              building things that push the boundaries of whats possible.
+            </p>
           </div>
         </div>
 
         {/* Technical Skills */}
-         {/* <section className="skills-section section">
+        {/* <section className="skills-section section">
           <h2>Technical Skills</h2>
         </section> */}
 

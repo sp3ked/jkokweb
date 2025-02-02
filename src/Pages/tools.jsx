@@ -18,20 +18,24 @@ function ToolsWebsite() {
       <Link to="/" className="back-button">
         ← Back to Projects
       </Link>
-      
+
       <div className="project-header">
         <h1>Tools - Website With Useful Tools</h1>
         <div className="header-links">
-          <a href="https://kokinda.dev"
-             target="_blank"
-             rel="noopener noreferrer"
-             className="live-link">
+          <a
+            href="https://kokinda.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="live-link"
+          >
             Visit Website ↗
           </a>
-          <a href="https://github.com/sp3ked/tool"
-             target="_blank"
-             rel="noopener noreferrer"
-             className="live-link github-link">
+          <a
+            href="https://github.com/sp3ked/tool"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="live-link github-link"
+          >
             View GitHub ↗
           </a>
         </div>
@@ -49,17 +53,26 @@ function ToolsWebsite() {
         <div className="projectDetailsText">
           <section className="project-section">
             <h2>Overview</h2>
-            <p>A consolidated collection of essential developer tools in one place, 
-            eliminating the need to search for individual tools across different websites. 
-            Built to solve the common frustration of accessing frequently needed utilities.</p>
+            <p>
+              A consolidated collection of essential developer tools in one
+              place, eliminating the need to search for individual tools across
+              different websites. Built to solve the common frustration of
+              accessing frequently needed utilities.
+            </p>
           </section>
 
           <section className="project-section">
             <h2>Available Tools</h2>
             <ul>
-              <li>QR Code Generator - Create custom QR codes for URLs and text</li>
-              <li>Password Generator - Generate secure, customizable passwords</li>
-              <li>Unit Converter - Convert between various units of measurement</li>
+              <li>
+                QR Code Generator - Create custom QR codes for URLs and text
+              </li>
+              <li>
+                Password Generator - Generate secure, customizable passwords
+              </li>
+              <li>
+                Unit Converter - Convert between various units of measurement
+              </li>
               <li>Word Counter - Count words, characters, and sentences</li>
               <li>Lorem Ipsum Generator - Create placeholder text</li>
               <li>JSON Formatter - Format and validate JSON data</li>
@@ -67,7 +80,6 @@ function ToolsWebsite() {
               <li>Bill Splitter - Calculate individual shares with tip</li>
             </ul>
           </section>
-
         </div>
       </div>
     </div>

@@ -24,20 +24,24 @@ function Unbolted() {
       <Link to="/" className="back-button">
         ← Back to Projects
       </Link>
-      
+
       <div className="project-header">
         <h1>Unbolted - On-Demand GPU Computing</h1>
         <div className="header-links">
-          <a href="https://devpost.com/software/unbolted"
-             target="_blank"
-             rel="noopener noreferrer"
-             className="live-link">
+          <a
+            href="https://devpost.com/software/unbolted"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="live-link"
+          >
             View DevPost ↗
           </a>
-          <a href="https://github.com/brickhack-gpu"
-             target="_blank"
-             rel="noopener noreferrer"
-             className="live-link github-link">
+          <a
+            href="https://github.com/brickhack-gpu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="live-link github-link"
+          >
             View GitHub ↗
           </a>
         </div>
@@ -55,18 +59,30 @@ function Unbolted() {
         <div className="projectDetailsText">
           <section className="project-section">
             <h2>Overview</h2>
-            <p>Unbolted provides instant access to high-end GPUs for AI model usage and training. 
-            Built during a hackathon, it offers both a simple interface for novices and advanced 
-            controls for power users, addressing the need for flexible, on-demand GPU computing.</p>
+            <p>
+              Unbolted provides instant access to high-end GPUs for AI model
+              usage and training. Built during a hackathon, it offers both a
+              simple interface for novices and advanced controls for power
+              users, addressing the need for flexible, on-demand GPU computing.
+            </p>
           </section>
 
           <section className="project-section">
             <h2>Technical Stack</h2>
             <ul>
-              <li><strong>Backend:</strong> Golang for efficient server performance</li>
-              <li><strong>Database:</strong> PostgreSQL with Bun ORM</li>
-              <li><strong>Frontend:</strong> Vite/React.js</li>
-              <li><strong>Cloud:</strong> GCP Compute Engine</li>
+              <li>
+                <strong>Backend:</strong> Golang for efficient server
+                performance
+              </li>
+              <li>
+                <strong>Database:</strong> PostgreSQL with Bun ORM
+              </li>
+              <li>
+                <strong>Frontend:</strong> Vite/React.js
+              </li>
+              <li>
+                <strong>Cloud:</strong> GCP Compute Engine
+              </li>
             </ul>
           </section>
 
@@ -82,11 +98,13 @@ function Unbolted() {
 
           <section className="project-section">
             <h2>Development Notes</h2>
-            <p>Built during a 24-hour hackathon, demonstrating rapid prototyping and MVP development. 
-            The project showcases our team's ability to quickly learn and implement new technologies 
-            under time constraints.</p>
+            <p>
+              Built during a 24-hour hackathon, demonstrating rapid prototyping
+              and MVP development. The project showcases our team's ability to
+              quickly learn and implement new technologies under time
+              constraints.
+            </p>
           </section>
-
         </div>
       </div>
     </div>
