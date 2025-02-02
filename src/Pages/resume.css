@@ -49,8 +49,10 @@
 }
 
 .resume-content {
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .resume-content h1 {
@@ -60,17 +62,17 @@
 }
 
 .resume-image-container {
-  max-width: 900px;
+  width: fit-content;
   margin: 0 auto 2rem;
   border: 1px solid #00ff00;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 0.5rem;
   background: rgba(0, 0, 0, 0.3);
 }
 
 .resume-image {
-  width: 100%;
-  height: auto;
+  max-height: 80vh;
+  width: auto;
   display: block;
 }
 
