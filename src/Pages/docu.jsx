@@ -24,7 +24,7 @@ function Docu() {
       <Link to="/" className="back-button">
         ← Back to Projects
       </Link>
-      
+
       <div className="project-header">
         <div className="app-title-section">
           <img src={docu1} alt="Docu App Icon" className="app-icon" />
@@ -32,12 +32,24 @@ function Docu() {
             <h1>Docu - AI Scanner & Analyzer</h1>
           </div>
         </div>
-        <a href="https://apps.apple.com/us/app/docu-ai-scanner-analyzer/id6739954302?platform=iphone" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           className="live-link">
-          View Live App ↗
-        </a>
+        <div className="header-links">
+          <a
+            href="https://apps.apple.com/us/app/docu-ai-scanner-analyzer/id6739954302?platform=iphone"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="live-link"
+          >
+            View Live App ↗
+          </a>
+          <a
+            href="https://github.com/docu-docu/docu-app-img"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="live-link github-link"
+          >
+            View GitHub ↗
+          </a>
+        </div>
       </div>
 
       <div className="app-gallery">
@@ -50,13 +62,29 @@ function Docu() {
 
       <div className="project-content">
         <p className="projectDetailsText">
-          {/* Add Docu's detailed description here */}
           <strong>Description:</strong>
           <br />
-          Docu is an AI-powered document scanning and analysis tool that helps users digitize, 
-          organize, and understand their documents. Using advanced OCR and AI technology, 
-          it can extract key information, generate summaries, and make documents searchable.
-          {/* Add more content sections as needed */}
+          Docu is an AI-powered document scanning and analysis tool that enables users to easily
+          digitize, organize, and summarize their documents. With advanced OCR capabilities,
+          the app can extract critical information, create searchable text, and generate
+          concise summaries for quick insights.
+          <br />
+          <br />
+          <strong>Core Features:</strong>
+          <ul>
+            <li>AI-based OCR for accurate text extraction</li>
+            <li>Automated summarization of lengthy documents</li>
+            <li>Secure cloud storage for document management</li>
+            <li>Search functionality for quick access to stored files</li>
+          </ul>
+          <br />
+          <strong>Technical Details:</strong>
+          <ul>
+            <li><strong>Platform:</strong> React Native (iOS & Android)</li>
+            <li><strong>AI:</strong> OpenAI API, currently using gpt4-turbo</li>
+    
+          </ul>
+
         </p>
       </div>
     </div>

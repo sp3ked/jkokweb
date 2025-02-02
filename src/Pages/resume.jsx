@@ -1,26 +1,35 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./resume.css";
+import resumeImage from "../images/kokindajoeyresume.png"; // Import the image directly
 
 function Resume() {
   return (
-    <div className="resume-container">
-      <Link to="/" className="resbackButton">
-        back
+    <div className="project-details-container">
+      <Link to="/" className="back-button">
+        ← Back to Home
       </Link>
-      <img
-        src="/Joe_Kokinda_Resume.jpg"
-        alt="Joe's Resume"
-        className="resume-image"
-      />
-      <p>To download click here:</p>
-      <a
-        href="/Joe_Kokinda_Resume.pdf"
-        download="Joe_Kokinda_Resume.pdf"
-        className="download-link"
-      >
-        Download Resume
-      </a>
+      
+      <div className="resume-content">
+        <h1>Resume</h1>
+        <div className="resume-image-container">
+          <img
+            src={resumeImage}
+            alt="Joey's Resume"
+            className="resume-image"
+          />
+        </div>
+        <div className="download-section">
+          <p>Want a copy?</p>
+          <a
+            href="/Joe_Kokinda_Resume.pdf"
+            download="Joe_Kokinda_Resume.pdf"
+            className="download-button"
+          >
+            Download Resume ↓
+          </a>
+        </div>
+      </div>
     </div>
   );
 }

@@ -47,3 +47,66 @@
 .resbackButton:hover {
   text-decoration: underline;
 }
+
+.resume-content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.resume-content h1 {
+  color: #ffffff;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.resume-image-container {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  border: 1px solid #00ff00;
+  border-radius: 8px;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.resume-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.download-section {
+  margin-top: 2rem;
+}
+
+.download-section p {
+  color: #00ff00;
+  margin-bottom: 1rem;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: transparent;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+  transition: all 0.3s ease;
+}
+
+.download-button:hover {
+  background: #00ff00;
+  color: black;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .resume-image-container {
+    padding: 0.5rem;
+  }
+  
+  .resume-content h1 {
+    font-size: 1.5rem;
+  }
+}

@@ -178,7 +178,7 @@ p {
   font-size: 2rem;
   font-weight: normal;
   margin-bottom: 2rem;
-  text-align: center; /* Add this line */
+  text-align: center;
 }
 
 .skills-grid {
@@ -299,14 +299,11 @@ p {
 }
 
 .projects-title {
-  text-align: center;
   color: #00ff00;
   font-size: 2.5rem;
-  margin: 2rem 0;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-  width: 100%;
+  font-weight: normal;
+  
+  text-align: center;
 }
 
 /* Responsive adjustments */

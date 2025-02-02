@@ -9,16 +9,10 @@ import { useLocation } from "react-router-dom";
 
 function RaspberryPiGlasses() {
   const images = [raspi1, raspi2, raspi3, raspi4];
-const location = useLocation();
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 100);
-
-    return () => clearTimeout(timeoutId);
-  }, [location]);
-
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="project-details-container">
@@ -39,92 +33,34 @@ const location = useLocation();
       </div>
 
       <div className="project-content">
-        <p className="projectDetailsText">
-            <strong>Description:</strong>
-            <br />
-            Using a Raspberry Pi, my brother and I created "smart" glasses that
-            capture images, process them using the Inception v3 model, and
-            display the predicted object on a screen. This project is based
-            around the topics of computer vision, machine learning, and wearable
-            technology.
-            <br />
-            <br />
-            <strong>Technical Specifications:</strong>
-            <br />
-            <strong>Hardware:</strong> Raspberry Pi 4<br />
-            Core processing unit responsible for image capture, processing, and
-            display output.
-            <br />
-            <strong>Camera:</strong> Raspberry Pi Camera Module
-            <br />
-            Used for real-time image capture from the wearer's perspective.
-            <br />
-            <strong>Display:</strong> OLED Screen
-            <br />
-            Compact display for showing the text of the results to the user.
-            <br />
-            <strong>Machine Learning Model:</strong> Inception v3
-            <br />
-            Pre-trained model avaible on the Raspberry Pi used for object
-            recognition in captured images.
-            <br />
-            <strong>Frame:</strong> 3D-printed Frame and case
-            <br />
-            Custom-designed frame to house all components used in the glasses
-            <br />
-            <br />
-            <strong>Key Features:</strong>
-            <br />
-            Real-time Image Processing: Captures and processes images in
-            real-time for immediate feedback.
-            <br />
-            Object Recognition: Utilizes Inception v3 for accurate
-            identification of objects in the wearer's view.
-            <br />
-            Wearable Design: Yes you can wear it, is it comfortable and sleak...
-            no.
-            <br />
-            <strong>Developer Contributions:</strong>
-            <br />
-            Designed and Printed the glasses and casing for the compontents.
-            <br />
-            Helped implement the image processing pipeline using Python.
-            <br />
-            Developed the interface between the camera module, processing unit,
-            and OLED display.
-            <br />
-            Optimized power consumption and processing efficiency for extended
-            use.
-            <br />
-            <br />
-            <strong>Learning and Development:</strong>
-            <br />
-            Gained experience in hardware desgin and integration.
-            <br />
-            Enhanced skills in computer vision techniques and machine learning
-            model deployment.
-            <br />
-            Learned about the challenges of design in wearable technology.
-            <br />
-            <br />
-            <strong>Future Development:</strong>
-            <br />
-            Implementing more advanced computer vision models for improved
-            accuracy.
-            <br />
-            Making it alot smaller and alot more lightweight. Also making it
-            alot more sleak.
-            <br />
-            Improving it to be a battery power device as we didnt get to that.
-            <br />
-            <br />
-            <br />
-            <br />
-            <strong>Notes:</strong>
-            <br />I am currently working on a V2 Raspi Glasses and taking in all
-            the tasks I set in the future dev section. I am excited to see where
-            this project goes and how it can be improved.
-          </p>
+        <div className="projectDetailsText">
+          <section className="project-section">
+            <h2>Overview</h2>
+            <p>A wearable device built using a Raspberry Pi that captures images and identifies objects 
+            in real-time using the Inception v3 model. The project combines computer vision, 
+            machine learning, and custom hardware design into a functional prototype.</p>
+          </section>
+
+          <section className="project-section">
+            <h2>Hardware Components</h2>
+            <ul>
+              <li><strong>Core Unit:</strong> Raspberry Pi 4 for processing</li>
+              <li><strong>Vision:</strong> Raspberry Pi Camera Module</li>
+              <li><strong>Display:</strong> OLED Screen for results</li>
+              <li><strong>Housing:</strong> Custom 3D-printed frame and case</li>
+            </ul>
+          </section>
+
+          <section className="project-section">
+            <h2>Key Features</h2>
+            <ul>
+              <li>Real-time image capture and processing</li>
+              <li>Object recognition using Inception v3</li>
+              <li>Instant visual feedback via OLED display</li>
+              <li>Wearable form factor</li>
+            </ul>
+          </section>
+        </div>
       </div>
     </div>
   );

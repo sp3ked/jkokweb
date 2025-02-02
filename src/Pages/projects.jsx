@@ -33,20 +33,20 @@ function Projects() {
       id: "scout",
       title: "Scout - Shopping and Selling App",
       image: scoutLogo,
-      type: "mobile-app", // Add this field
+      type: "mobile-app",
       status: "live",
       liveUrl: "https://apps.apple.com/us/app/scout-shop-sell-with-camera/id6502788045?platform=iphone",  
       description: "Scout is an innovative mobile application designed to revolutionize the way users shop and sell items. The app utilizes \"google scan\" to recognize items and compare prices across 100+ retailers.",
       link: "/projects/scout",
-      tags: ["React Native", "Node.js", "Computer Vision"]
+      tags: ["React Native", "Web Scraping", "Computer Vision"]
     },
     {
       id: "meta",
-      title: "Meta Answerer",
+      title: "LiveAnswer - For Meta Glasses",
       image: metaImage,
       status: "completed",
       completionDate: "Winter 2025",
-      description: "Utizlizing the livestream function of the Meta Glasses I created a way to stream this info to chatGPT to then comment on the stream with an answer. Which you can then hear in your ear.",
+      description: "Utilizing the livestream feature of Meta Glasses, I developed a system that streams real-time video to ChatGPT, which then analyzes the content and generates a response. The response is posted as a comment on the stream, allowing you to hear the answer directly through your earpiece.",
       link: "/projects/meta",
       tags: ["Selenium", "Python", "Computer Vision"]
     },
@@ -54,10 +54,10 @@ function Projects() {
       id: "docu",
       title: "Documentation Generator",
       image: docuImage,
-      type: "mobile-app", // Add this field
+      type: "mobile-app",
       status: "live",
       liveUrl: "https://apps.apple.com/us/app/docu-ai-scanner-analyzer/id6739954302?platform=iphone",
-      description: "An AI-powered tool that automatically generates comprehensive documentation for codebases. Utilizing LLMs to analyze code structure and create clear, accurate documentation.",
+      description: "Docu is your go-to app for capturing, securely storing, and summarizing important documents with the power of AI and seamless usability.",
       link: "/projects/docu",
       tags: ["React Native", "Computer Vision"]
     },
@@ -67,9 +67,9 @@ function Projects() {
       title: "Unbolted - On-Demand GPU Computing",
       image: unboltedImage,
       status: "inactive",
-      description: "Unbolted provides instant access to a fleet of high-end GPUs for using, tweaking, or training AI models. It offers a simple interface for novices and advanced control for power users.",
+      description: "Unbolted (a hackathon project) simplifies the GPU rental process, making it easy for new users to spin up high-performance GPUs for AI workloads while offering advanced controls for experienced users.",
       link: "/projects/unbolted",
-      tags: ["Python", "CUDA", "TensorFlow", "Kubernetes"]
+      tags: ["React", "API Integration", "Stripe Payments", "Kubernetes"]
     },
     {
       id: "tools",
@@ -77,9 +77,9 @@ function Projects() {
       image: toolsImage,
       status: "live",
       liveUrl: "https://kokinda.dev/",
-      description: "This website consolidates various essential tools for developers and daily tasks in one place, allowing users to access a QR code generator, password generator, unit converter, and more without searching for individual tools every time.",
+      description: "This website consolidates various essential tools for developers (me), such things as allowing users to access a QR code generator, password generator, unit converter, and more without searching for individual tools every time.",
       link: "/projects/tools",
-      tags: ["JavaScript", "React", "Web Development"]
+      tags: ["React"]
     },
     {
       id: "raspi",
@@ -87,9 +87,9 @@ function Projects() {
       image: raspberryPiGlasses,
       status: "completed",
       completionDate: "Winter 2023",
-      description: "Using a Raspberry Pi, my brother and I created \"smart\" glasses that capture images, process them using the Inception v3 model, and display the predicted object on a screen. This project is based around the topics of computer vision, machine learning, and wearable technology.",
+      description: "Custom-built smart glasses using a Raspberry Pi that use computer vision to identify objects in real-time. Features a compact OLED display, camera module, and 3D-printed housing for a fully wearable experience.",
       link: "/projects/raspi",
-      tags: ["Raspberry Pi", "Python", "Machine Learning", "Computer Vision"]
+      tags: ["Raspberry Pi", "Python", "Computer Vision"]
     },
     {
       id: "bike",
@@ -97,7 +97,7 @@ function Projects() {
       image: bikeimage,
       status: "completed",
       completionDate: "Summer 2024",
-      description: "This project aims to convert a regular bike into an electric bike to address transportation challenges on large university campuses. The conversion includes a custom motor mount, multistage belt drive system, and swappable battery for extended use. Future plans include waterproofing and advanced features like regenerative braking.",
+      description: "Custom electric bike conversion featuring a Flipsky motor, multistage belt drive system, and swappable Ryobi battery. Designed to solve campus transportation with a focus on efficiency and easy maintenance.",
       link: "/projects/bike",
       tags: ["Mechanical Engineering", "Electrical Engineering", "CAD"]
     },

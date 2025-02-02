@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import "./projectDetails.css";
 import meta1 from "../images/meta.png";
-import meta2 from "../images/meta2.png";
 
+import meta3 from "../images/meta3.png";
 
 function Meta() {
-  const images = [meta1, meta2];
+  const images = [meta1, meta3];
   
   return (
     <div className="project-details-container" data-project="meta">
@@ -15,7 +15,25 @@ function Meta() {
       </Link>
       
       <div className="project-header">
-        <h1>Meta Answerer</h1>
+        <div className="app-title-section">
+          <div className="app-title-content">
+            <h1>LiveAnswer - For Meta Glasses</h1>
+          </div>
+        </div>
+        <div className="header-links">
+          <a href="https://www.youtube.com/watch?v=eCDWHQe8cE0" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             className="live-link">
+            Watch Demo ↗
+          </a>
+          <a href="https://github.com/sp3ked/MetaGlassesAnswerer"
+             target="_blank"
+             rel="noopener noreferrer"
+             className="live-link github-link">
+            View GitHub ↗
+          </a>
+        </div>
       </div>
 
       <div className="app-gallery">
@@ -27,40 +45,31 @@ function Meta() {
       </div>
 
       <div className="project-content">
-        <div className="project-page">
-          <div className="terminal-box">
-            <div className="terminal-header">
-              <span className="terminal-title">C:\Users\Projects\Meta-Answerer></span>
-              <div className="terminal-controls">
-                <span>−</span>
-                <span>□</span>
-                <span>×</span>
-              </div>
-            </div>
-            <div className="terminal-content">
-              <h1>Meta Answerer</h1>
-              <div className="project-details">
-                <h2>Overview</h2>
-                <p>An advanced AI system that provides meta-level analysis of questions and problems, focusing on the approach and methodology rather than just the answer.</p>
-                
-                <h2>Features link https://www.youtube.com/watch?v=eCDWHQe8cE0&t=77s</h2>
-                <ul>
-                  <li>Problem-solving strategy analysis</li>
-                  <li>Step-by-step reasoning explanation</li>
-                  <li>Multiple perspective consideration</li>
-                  <li>Interactive learning paths</li>
-                </ul>
+        <div className="projectDetailsText">
+          <section className="project-section">
+            <h2>Overview</h2>
+            <p>LiveAnswer is an automation tool that enhances real-time quiz answering using an Instagram live stream. 
+            Stream form your Meta Glasses and get the answer to the quiz/question you are looking at ion your ear using an instagram comment. Uses Selenium WebDriver, Pillow, and the OpenAI API to 
+            automate login, navigation, screen capturing, quiz answering, and commenting in real-time.</p>
+          </section>
 
-                <h2>Technologies Used</h2>
-                <ul>
-                  <li>Python</li>
-                  <li>Large Language Models</li>
-                  <li>React.js</li>
-                  <li>Node.js</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <section className="project-section">
+            <h2>How It Works</h2>
+            <h3>Two Accounts Setup:</h3>
+            <ul>
+              <li>Account 1: Hosts the livestream via Meta Glasses</li>
+              <li>Account 2: Watches and processes the livestream</li>
+            </ul>
+
+            <h3>Automated Flow:</h3>
+            <ul>
+              <li>Automated Instagram login</li>
+              <li>Livestream navigation and initialization</li>
+              <li>Periodic screenshot capture (every 15 seconds)</li>
+              <li>OpenAI API integration for quiz analysis</li>
+              <li>Automated answer posting in comments</li>
+            </ul>
+          </section>
         </div>
       </div>
     </div>
