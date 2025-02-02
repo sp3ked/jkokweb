@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./resume.css";
-import resumeImage from "../images/kokindajoeyresume.png"; // Import the image directly
+
 
 function Resume() {
   return (
@@ -14,7 +14,7 @@ function Resume() {
         <h1>Resume</h1>
         <div className="resume-image-container">
           <img
-            src={resumeImage}
+            src="/kokindajoeyresume.png" 
             alt="Joey's Resume"
             className="resume-image"
           />

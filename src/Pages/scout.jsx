@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./projectDetails.css";
 import scout1 from "../images/scout1.jpg";
 import scout2 from "../images/scout2.png";
@@ -9,11 +9,10 @@ import scout5 from "../images/scout5.png";
 import scout6 from "../images/scout6.png";
 
 function Scout() {
-  const images = [scout2, scout3, scout4, scout5, scout6]; // Removed scout1 from gallery
-  const location = useLocation();
+  const images = [scout2, scout3, scout4, scout5, scout6]; 
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to top when entering project page
+    window.scrollTo(0, 0); 
   }, []);
 
   return (

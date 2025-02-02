@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./projectDetails.css";
 import toolImage1 from "../images/tool.png";
 import toolImage2 from "../images/tool2.png";
@@ -8,7 +8,6 @@ import toolImage4 from "../images/tool1.png";
 
 function ToolsWebsite() {
   const images = [toolImage1, toolImage2, toolImage3, toolImage4];
-  const location = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);

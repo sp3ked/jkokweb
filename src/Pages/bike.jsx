@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./projectDetails.css";
 import bike from "../images/bike.jpg";
 import bike1 from "../images/bike1.png";
