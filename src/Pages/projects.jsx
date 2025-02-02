@@ -41,7 +41,7 @@ function Projects() {
       liveUrl:
         "https://apps.apple.com/us/app/docu-ai-scanner-analyzer/id6739954302?platform=iphone",
       description:
-        "Docu is your go-to app for capturing, securely storing, and summarizing important documents with the power of AI and seamless usability.",
+        "Docu is an AI-powered document scanning and analysis tool that enables users to easily digitize, organize, and summarize their documents. The app can extract critical information, create searchable text, and generate concise summaries for quick insights.",
       link: "/projects/docu",
       tags: ["React Native", "Computer Vision"],
     },

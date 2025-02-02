@@ -370,7 +370,7 @@ h2 {
 }
 
 .project-card {
-  background: rgba(10, 25, 10, 0.8);
+  background: #040a04cc;
   border: 1px solid #1a4a1a;
   overflow: hidden;
   transition: all 0.3s ease;

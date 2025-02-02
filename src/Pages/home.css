@@ -285,8 +285,7 @@ p {
 }
 
 .project-card {
-  /* ...existing styles... */
-  height: 100%; /* ensure consistent height */
+  height: 100%; 
   display: flex;
   flex-direction: column;
 }
