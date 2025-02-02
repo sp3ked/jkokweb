@@ -33,17 +33,17 @@ function Projects() {
 
   const projectsList = [
     {
-      id: "scout",
-      title: "Scout - Shopping and Selling App",
-      image: scoutLogo,
+      id: "docu",
+      title: "Docu - Document Scanner & AI Analyzer",
+      image: docuImage,
       type: "mobile-app",
       status: "live",
       liveUrl:
-        "https://apps.apple.com/us/app/scout-shop-sell-with-camera/id6502788045?platform=iphone",
+        "https://apps.apple.com/us/app/docu-ai-scanner-analyzer/id6739954302?platform=iphone",
       description:
-        'Scout is an innovative mobile application designed to revolutionize the way users shop and sell items. The app utilizes "google scan" to recognize items and compare prices across 100+ retailers.',
-      link: "/projects/scout",
-      tags: ["React Native", "Web Scraping", "Computer Vision"],
+        "Docu is your go-to app for capturing, securely storing, and summarizing important documents with the power of AI and seamless usability.",
+      link: "/projects/docu",
+      tags: ["React Native", "Computer Vision"],
     },
     {
       id: "meta",
@@ -56,30 +56,22 @@ function Projects() {
       link: "/projects/meta",
       tags: ["Selenium", "Python", "Computer Vision"],
     },
+    
     {
-      id: "docu",
-      title: "Documentation Generator",
-      image: docuImage,
+      id: "scout",
+      title: "Scout - Shopping and Selling App",
+      image: scoutLogo,
       type: "mobile-app",
       status: "live",
       liveUrl:
-        "https://apps.apple.com/us/app/docu-ai-scanner-analyzer/id6739954302?platform=iphone",
+        "https://apps.apple.com/us/app/scout-shop-sell-with-camera/id6502788045?platform=iphone",
       description:
-        "Docu is your go-to app for capturing, securely storing, and summarizing important documents with the power of AI and seamless usability.",
-      link: "/projects/docu",
-      tags: ["React Native", "Computer Vision"],
+        'Scout is an innovative mobile application designed to revolutionize the way users shop and sell items. The app utilizes "google scan" to recognize items and compare prices across 100+ retailers.',
+      link: "/projects/scout",
+      tags: ["React Native", "Web Scraping", "Computer Vision"],
     },
 
-    {
-      id: "unbolted",
-      title: "Unbolted - On-Demand GPU Computing",
-      image: unboltedImage,
-      status: "inactive",
-      description:
-        "Unbolted (a hackathon project) simplifies the GPU rental process, making it easy for new users to spin up high-performance GPUs for AI workloads while offering advanced controls for experienced users.",
-      link: "/projects/unbolted",
-      tags: ["React", "API Integration", "Stripe Payments", "Kubernetes"],
-    },
+    
     {
       id: "tools",
       title: "Tools - Website With Useful Tools",
@@ -90,6 +82,16 @@ function Projects() {
         "This website consolidates various essential tools for developers (me), such things as allowing users to access a QR code generator, password generator, unit converter, and more without searching for individual tools every time.",
       link: "/projects/tools",
       tags: ["React"],
+    },
+    {
+      id: "unbolted",
+      title: "Unbolted - On-Demand GPU Computing",
+      image: unboltedImage,
+      status: "inactive",
+      description:
+        "Unbolted (a hackathon project) simplifies the GPU rental process, making it easy for new users to spin up high-performance GPUs for AI workloads while offering advanced controls for experienced users.",
+      link: "/projects/unbolted",
+      tags: ["React", "API Integration", "Stripe Payments", "Kubernetes"],
     },
     {
       id: "raspi",

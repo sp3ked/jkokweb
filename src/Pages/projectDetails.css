@@ -89,6 +89,14 @@
   margin-bottom: 3rem;
 }
 
+.project-header h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin: 0;
+  font-weight: normal;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
 .live-link {
   color: #00ff00;
   text-decoration: none;

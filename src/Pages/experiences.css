@@ -85,10 +85,5 @@
 
 .contact-link {
   color: #ffffff;
-  text-decoration: none;
-}
-
-.contact-link:hover {
-  color: #ffffff;
   text-decoration: underline;
 }
