@@ -100,8 +100,8 @@ function HomePage() {
           </div>
           <div className="terminalContent">
             <p>
-              Hey, Im Joey and Im studying AI at Purdue University. I have
-              experience{" "}
+              <span className="first-line">Hey, im joey and im studying ai at purdue university.</span>{" "}
+              I have experience{" "}
               <span className="whiteText">
                 developing AI-powered applications across web, mobile, and
                 embedded systems.
