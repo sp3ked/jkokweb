@@ -21,8 +21,8 @@ function Resume() {
         <div className="download-section">
           <p>Want a copy?</p>
           <a
-            href="/Joe_Kokinda_Resume.pdf"
-            download="Joe_Kokinda_Resume.pdf"
+            href="/KokindaJoeyResume.pdf"
+            download="KokindaJoeyResume.pdf"
             className="download-button"
           >
             Download Resume ↓
