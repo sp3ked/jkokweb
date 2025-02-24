@@ -12,6 +12,8 @@ import Contact from "./Pages/contact";
 import Admin from "./Pages/admin";
 import Docu from "./Pages/docu";
 import Meta from "./Pages/meta";
+import LocalLens from "./Pages/LocalLens";
+import Projects from "./Pages/projects";
 // import Langnav from "./Pages/langnav";
 import {
   AnimationProvider,
@@ -121,6 +123,8 @@ function App() {
                 <Route path="/projects/tools" element={<Tool />} />
                 <Route path="/projects/docu" element={<Docu />} />
                 <Route path="/projects/meta" element={<Meta />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/projects/locallens" element={<LocalLens />} />
                 <Route path="/admin" element={<Admin />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>

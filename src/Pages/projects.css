@@ -423,6 +423,32 @@ h2 {
   object-fit: contain;
 }
 
+/* Updated styles for LocalLens project images */
+.project-card[data-id="locallens"] img {
+  padding: 20px 40px 20px 20px;
+  background: rgba(0, 0, 0, 0.8);
+  width: 85%;
+  height: 180px;
+  display: block;
+  margin: 20px auto;
+  object-fit: contain;
+}
+
+.project-card[data-id="locallens"] iframe {
+  width: 85%;
+  height: 315px;
+  display: block;
+  margin: 20px auto;
+}
+
+.gallery-item.no-hover {
+  pointer-events: none;
+}
+
+.gallery-item.no-hover iframe {
+  pointer-events: auto;
+}
+
 .project-card:hover img {
   transform: scale(1.05);
   filter: brightness(1.1);
@@ -525,6 +551,15 @@ h2 {
 .status-dot.completed {
   background-color: #ffd700;
   color: #000;
+}
+
+.status-dot.hackathon {
+  background-color: #ff00ff;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  margin-left: 5px;
 }
 
 .project-card a {

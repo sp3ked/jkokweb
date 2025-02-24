@@ -100,7 +100,9 @@ function HomePage() {
           </div>
           <div className="terminalContent">
             <p>
-              <span className="first-line">Hey, im joey and im studying ai at purdue university.</span>{" "}
+              <span className="first-line">
+                Hey, im joey and im studying ai at purdue university.
+              </span>{" "}
               I have experience{" "}
               <span className="whiteText">
                 developing AI-powered applications across web, mobile, and

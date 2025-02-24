@@ -8,6 +8,7 @@ import unboltedImage from "../images/unbolt.png";
 import toolsImage from "../images/tool.png";
 import docuImage from "../images/docu1.png"; // Add this image
 import metaImage from "../images/meta.png"; // Add this image
+import mlh1 from "../images/mlh1.png";
 
 function Projects() {
   const navigate = useNavigate();
@@ -56,7 +57,7 @@ function Projects() {
       link: "/projects/meta",
       tags: ["Selenium", "Python", "Computer Vision"],
     },
-    
+
     {
       id: "scout",
       title: "Scout - Shopping and Selling App",
@@ -71,7 +72,6 @@ function Projects() {
       tags: ["React Native", "Web Scraping", "Computer Vision"],
     },
 
-    
     {
       id: "tools",
       title: "Tools - Website With Useful Tools",
@@ -92,6 +92,7 @@ function Projects() {
         "Unbolted (a hackathon project) simplifies the GPU rental process, making it easy for new users to spin up high-performance GPUs for AI workloads while offering advanced controls for experienced users.",
       link: "/projects/unbolted",
       tags: ["React", "API Integration", "Stripe Payments", "Kubernetes"],
+      hackathon: true,
     },
     {
       id: "raspi",
@@ -114,6 +115,18 @@ function Projects() {
         "Custom electric bike conversion featuring a Flipsky motor, multistage belt drive system, and swappable Ryobi battery. Designed to solve campus transportation with a focus on efficiency and easy maintenance.",
       link: "/projects/bike",
       tags: ["Mechanical Engineering", "Electrical Engineering", "CAD"],
+    },
+    {
+      id: "locallens",
+      title: "LocalLens",
+      image: mlh1,
+      status: "completed",
+      completionDate: "Winter 2025",
+      description:
+        "LocalLens is a hands-free, real-time campus tour system designed for Meta Glasses. It uses location-based audio narration to provide users with contextual insights about their surroundings without the need to look at a screen. By leveraging geofencing, live streaming, and text-to-speech technology, LocalLens enables an immersive exploration experience—whether on a college campus or any tour-like setting.",
+      link: "/projects/locallens",
+      tags: ["React Native", "Express JS", "Selenium"],
+      hackathon: true,
     },
   ];
 
@@ -157,6 +170,12 @@ function Projects() {
                     <span className="status-dot completed">
                       Completed {project.completionDate}
                     </span>
+                  )}
+                  {project.status === "in-progress" && (
+                    <span className="status-dot in-progress">In Progress</span>
+                  )}
+                  {project.hackathon && (
+                    <span className="status-dot hackathon">Hackathon</span>
                   )}
                 </div>
                 <img src={project.image} alt={project.title} />
