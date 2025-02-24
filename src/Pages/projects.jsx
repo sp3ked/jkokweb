@@ -71,7 +71,18 @@ function Projects() {
       link: "/projects/scout",
       tags: ["React Native", "Web Scraping", "Computer Vision"],
     },
-
+    {
+      id: "locallens",
+      title: "LocalLens",
+      image: mlh1,
+      status: "completed",
+      completionDate: "Winter 2025",
+      description:
+        "LocalLens is a hands-free, real-time campus tour system designed for Meta Glasses. It uses location-based audio narration to provide users with contextual insights about their surroundings without the need to look at a screen. By leveraging geofencing, live streaming, and text-to-speech technology, LocalLens enables an immersive exploration experience—whether on a college campus or any tour-like setting.",
+      link: "/projects/locallens",
+      tags: ["React Native", "Express JS", "Selenium"],
+      hackathon: true,
+    },
     {
       id: "tools",
       title: "Tools - Website With Useful Tools",
@@ -116,18 +127,7 @@ function Projects() {
       link: "/projects/bike",
       tags: ["Mechanical Engineering", "Electrical Engineering", "CAD"],
     },
-    {
-      id: "locallens",
-      title: "LocalLens",
-      image: mlh1,
-      status: "completed",
-      completionDate: "Winter 2025",
-      description:
-        "LocalLens is a hands-free, real-time campus tour system designed for Meta Glasses. It uses location-based audio narration to provide users with contextual insights about their surroundings without the need to look at a screen. By leveraging geofencing, live streaming, and text-to-speech technology, LocalLens enables an immersive exploration experience—whether on a college campus or any tour-like setting.",
-      link: "/projects/locallens",
-      tags: ["React Native", "Express JS", "Selenium"],
-      hackathon: true,
-    },
+    
   ];
 
   return (
