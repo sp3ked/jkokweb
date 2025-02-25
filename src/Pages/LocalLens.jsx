@@ -137,8 +137,7 @@ function LocalLens() {
               included working around Meta Glasses' closed ecosystem and
               ensuring smooth location-based updates. Despite these hurdles, the
               project successfully delivers a functional hands-free tour system.
-dates. Despite these hurdles, 
-              the project successfully delivers a functional hands-free tour system.
+dates.
             </p>
           </section>
         </div>
