@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import "./projects.css";
 import { Link, useNavigate } from "react-router-dom";
 import scoutLogo from "../images/scout1.jpg";
@@ -6,33 +6,26 @@ import raspberryPiGlasses from "../images/raspi1.jpg";
 import bikeimage from "../images/bike5.jpg";
 import unboltedImage from "../images/unbolt.png";
 import toolsImage from "../images/tool.png";
-import docuImage from "../images/docu1.png"; // Add this image
-import metaImage from "../images/meta.png"; // Add this image
+import docuImage from "../images/docu1.png"; 
+import metaImage from "../images/meta.png"; 
 import mlh1 from "../images/mlh1.png";
 
 function Projects() {
   const navigate = useNavigate();
+  const [activeFilter, setActiveFilter] = useState("all");
+  const [filteredProjects, setFilteredProjects] = useState([]);
 
-  useEffect(() => {
-    // Only restore scroll position if coming back from a project
-    const savedPosition = sessionStorage.getItem("projectsScrollPosition");
-    if (savedPosition) {
-      window.scrollTo(0, parseInt(savedPosition));
-      sessionStorage.removeItem("projectsScrollPosition");
-    }
-  }, []);
+  const filterCategories = useMemo(() => ({
+    all: [],
+    hardware: ["raspi", "bike"],
+    software: ["docu", "scout", "tools"],
+    hackathon: ["unbolted", "locallens"],
+    active: ["docu", "scout", "tools"],
+    inactive: ["unbolted"],
+    oneTime: ["meta", "raspi", "bike", "locallens", "unbolted"],
+  }), []);
 
-  const handleProjectClick = (link) => {
-    // Save current scroll position before navigating
-    sessionStorage.setItem(
-      "projectsScrollPosition",
-      window.pageYOffset.toString(),
-    );
-    window.scrollTo(0, 0); // Scroll to top immediately
-    navigate(link);
-  };
-
-  const projectsList = [
+  const projectsList = useMemo(() => ([
     {
       id: "docu",
       title: "Docu - Document Scanner & AI Analyzer",
@@ -128,7 +121,35 @@ function Projects() {
       tags: ["Mechanical Engineering", "Electrical Engineering", "CAD"],
     },
     
-  ];
+  ]), []);
+
+  useEffect(() => {
+    const savedPosition = sessionStorage.getItem("projectsScrollPosition");
+    if (savedPosition) {
+      window.scrollTo(0, parseInt(savedPosition));
+      sessionStorage.removeItem("projectsScrollPosition");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (activeFilter === "all") {
+      setFilteredProjects(projectsList);
+    } else {
+      const selectedIds = filterCategories[activeFilter] || [];
+      setFilteredProjects(
+        projectsList.filter((project) => selectedIds.includes(project.id))
+      );
+    }
+  }, [activeFilter, filterCategories, projectsList]);
+
+  const handleProjectClick = (link) => {
+    sessionStorage.setItem(
+      "projectsScrollPosition",
+      window.pageYOffset.toString(),
+    );
+    window.scrollTo(0, 0);
+    navigate(link);
+  };
 
   return (
     <>
@@ -143,13 +164,59 @@ function Projects() {
         </div>
 
         <div className="terminal-content">
+          <div className="project-filters">
+            <span className="filter-label">Sort by: </span>
+            <button 
+              className={`filter-btn ${activeFilter === 'all' ? 'active' : ''}`}
+              onClick={() => setActiveFilter('all')}
+            >
+              All
+            </button>
+            <button 
+              className={`filter-btn ${activeFilter === 'hardware' ? 'active' : ''}`}
+              onClick={() => setActiveFilter('hardware')}
+            >
+              Hardware
+            </button>
+            <button 
+              className={`filter-btn ${activeFilter === 'software' ? 'active' : ''}`}
+              onClick={() => setActiveFilter('software')}
+            >
+              Software
+            </button>
+            <button 
+              className={`filter-btn ${activeFilter === 'hackathon' ? 'active' : ''}`}
+              onClick={() => setActiveFilter('hackathon')}
+            >
+              Hackathons
+            </button>
+            <button 
+              className={`filter-btn ${activeFilter === 'active' ? 'active' : ''}`}
+              onClick={() => setActiveFilter('active')}
+            >
+              Active
+            </button>
+            <button 
+              className={`filter-btn ${activeFilter === 'inactive' ? 'active' : ''}`}
+              onClick={() => setActiveFilter('inactive')}
+            >
+              Inactive
+            </button>
+            <button 
+              className={`filter-btn ${activeFilter === 'oneTime' ? 'active' : ''}`}
+              onClick={() => setActiveFilter('oneTime')}
+            >
+              One Time Completion
+            </button>
+          </div>
+          
           <div className="project-grid">
-            {projectsList.map((project) => (
+            {filteredProjects.map((project) => (
               <div
                 key={project.id}
                 className="project-card"
                 data-type={project.type}
-                data-id={project.id} // Add this attribute
+                data-id={project.id}
                 onClick={() => handleProjectClick(project.link)}
               >
                 <div className="project-status">

@@ -597,3 +597,76 @@ h2 {
     font-size: 2rem;
   }
 }
+
+/* Enhanced styling for the filter buttons */
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 15px 30px 25px 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+.filter-label {
+  color: #00ff00;
+  font-family: "Courier New", monospace;
+  margin-right: 15px;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.filter-btn {
+  background: rgba(0, 0, 0, 0.7);
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  padding: 8px 14px;
+  font-family: "Courier New", monospace;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0, 255, 0, 0.1);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  outline: none;
+}
+
+.filter-btn:hover {
+  background: rgba(0, 255, 0, 0.2);
+  box-shadow: 0 0 12px rgba(0, 255, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.filter-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.2);
+}
+
+.filter-btn.active {
+  background: #00ff00;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .project-filters {
+    justify-content: center;
+    margin: 10px 10px 20px 10px;
+    gap: 8px;
+  }
+  
+  .filter-btn {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+  }
+  
+  .filter-label {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
