@@ -441,6 +441,18 @@ h2 {
   margin: 20px auto;
 }
 
+/* Special handling for Cosmos project image */
+.project-card[data-id="cosmos"] img {
+  padding: 20px 40px 20px 20px;
+  background: rgba(0, 0, 0, 0.8);
+  width: 85%;
+  height: 180px;
+  display: block;
+  margin: 20px auto;
+  object-fit: contain;
+  object-position: center;
+}
+
 .gallery-item.no-hover {
   pointer-events: none;
 }

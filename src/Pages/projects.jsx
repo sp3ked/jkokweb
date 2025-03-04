@@ -9,6 +9,7 @@ import toolsImage from "../images/tool.png";
 import docuImage from "../images/docu1.png"; 
 import metaImage from "../images/meta.png"; 
 import mlh1 from "../images/mlh1.png";
+import cosmosImage from "../images/cosmosLogo.png"; // Changed to cosmosLogo.png
 
 function Projects() {
   const navigate = useNavigate();
@@ -18,14 +19,26 @@ function Projects() {
   const filterCategories = useMemo(() => ({
     all: [],
     hardware: ["raspi", "bike"],
-    software: ["docu", "scout", "tools"],
-    hackathon: ["unbolted", "locallens"],
-    active: ["docu", "scout", "tools"],
-    inactive: ["unbolted"],
+    software: ["docu", "scout", "tools", "cosmos"],
+    hackathon: ["unbolted", "locallens", "cosmos"],
+    active: ["docu", "scout", "tools", "cosmos"],
+    inactive: ["unbolted", "raspi", "bike" ],
     oneTime: ["meta", "raspi", "bike", "locallens", "unbolted"],
   }), []);
 
   const projectsList = useMemo(() => ([
+    {
+      id: "cosmos",
+      title: "CosmosPool - DeFi Liquidity Protocol",
+      image: cosmosImage,
+      status: "live",
+      liveUrl: "https://www.cosmospool.xyz/",
+      description:
+        "CosmosPool is a decentralized liquidity provision system built on Unichain that simplifies DeFi participation. It enables users to deposit single-sided assets (e.g. WETH or USDC) into concentrated liquidity pools, automating the matching process with complementary deposits for optimal liquidity provision.",
+      link: "/projects/cosmos",
+      tags: ["DeFi", "Smart Contracts", "Uniswap", "Blockchain"],
+      hackathon: true,
+    },
     {
       id: "docu",
       title: "Docu - Document Scanner & AI Analyzer",
