@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./projectDetails.css";
 import meta1 from "../images/meta.png";
-
 import meta3 from "../images/meta3.png";
 
 function Meta() {
   const images = [meta1, meta3];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="project-details-container" data-project="meta">
@@ -56,11 +59,21 @@ function Meta() {
               LiveAnswer is an automation tool that enhances real-time quiz
               answering using an Instagram live stream. Stream form your Meta
               Glasses and get the answer to the quiz/question you are looking at
-              ion your ear using an instagram comment. Uses Selenium WebDriver,
+              in your ear using an instagram comment. Uses Selenium WebDriver,
               Pillow, and the OpenAI API to automate login, navigation, screen
               capturing, quiz answering, and commenting in real-time.
             </p>
           </section>
+          
+          <div className="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/hPqTC9NUZ_c"
+              title="LiveAnswer Demo Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
 
           <section className="project-section">
             <h2>How It Works</h2>

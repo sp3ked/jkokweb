@@ -19,10 +19,10 @@ function Projects() {
   const filterCategories = useMemo(() => ({
     all: [],
     hardware: ["raspi", "bike"],
-    software: ["docu", "scout", "tools", "cosmos"],
+    software: ["docu", "scout", "tools", "cosmos", "locallens", "unbolted", ],
     hackathon: ["unbolted", "locallens", "cosmos"],
     active: ["docu", "scout", "tools", "cosmos"],
-    inactive: ["unbolted", "raspi", "bike" ],
+    inactive: ["unbolted", "raspi", "bike", "locallens" ],
     oneTime: ["meta", "raspi", "bike", "locallens", "unbolted"],
   }), []);
 

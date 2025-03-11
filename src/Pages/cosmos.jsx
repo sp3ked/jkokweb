@@ -83,7 +83,7 @@ function Cosmos() {
               participation more accessible to everyday users.
             </p>
             <p>
-              <strong>Hackathon Project:</strong> CosmosPool was built during the ETHDenver 2023 hackathon, 
+              <strong>Hackathon Project:</strong> CosmosPool was built during the ETHDenver 2025 hackathon, 
               where it showcased innovative approaches to DeFi liquidity provision challenges.
             </p>
           </section>
@@ -179,7 +179,9 @@ function Cosmos() {
           <section className="project-section">
             <h2>Development Notes</h2>
             <p>
-              CosmosPool was built during the ETHDenver 2023 hackathon, showcasing what's possible in DeFi 
+              For this project I did all of the frontend.
+
+              CosmosPool was built during the ETHDenver 2025 hackathon, showcasing what's possible in DeFi 
               innovation. The current implementation uses a mock position manager for testing and includes hardcoded 
               price ranges (±10% of the current price). Despite these limitations, the project demonstrates a 
               viable solution to a significant problem in DeFi liquidity provision.
