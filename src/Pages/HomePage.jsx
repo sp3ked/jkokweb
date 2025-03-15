@@ -4,6 +4,7 @@ import profilePic from "../images/pfp.png";
 import { useAnimationContext } from "./animationContext";
 import Experiences from "./experiences";
 import Projects from "./projects";
+import Education from "./education";
 import "./home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -114,10 +115,7 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Technical Skills */}
-        {/* <section className="skills-section section">
-          <h2>Technical Skills</h2>
-        </section> */}
+        
 
         {/* Experiences */}
         <section id="experiences" className="skills-section section">
@@ -130,6 +128,13 @@ function HomePage() {
           <h2 className="projects-title"> - Projects - </h2>
           <Projects />
         </section>
+
+        {/* Education */}
+        <section id="education" className="skills-section section">
+          <h2> - Education - </h2>
+          <Education />
+        </section>
+
       </div>
 
       <Footer />

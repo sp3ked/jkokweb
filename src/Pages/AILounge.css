@@ -1,0 +1,164 @@
+.ai-lounge-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    font-family: "Courier New", monospace;
+}
+
+.ai-lounge-container .back-button {
+    display: inline-block;
+    color: #00ff00;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    font-family: "Courier New", monospace;
+    transition: all 0.3s ease;
+}
+
+.ai-lounge-container .back-button:hover {
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    text-decoration: underline;
+}
+
+.ai-lounge-container .terminal {
+    font-family: "Courier New", monospace;
+    background-color: #0c0c0c;
+    color: #33ff33;
+    line-height: 1.5;
+    border: 1px solid #33ff33;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(51, 255, 51, 0.5);
+}
+
+.ai-lounge-container .header {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ai-lounge-container .ascii-art {
+    white-space: pre;
+    text-align: center;
+    margin: 20px 0;
+    line-height: 1.2;
+    font-size: 0.8em;
+    overflow: auto;
+}
+
+.ai-lounge-container .section {
+    margin: 20px 0;
+    padding: 10px;
+    border-left: 2px solid #33ff33;
+}
+
+.ai-lounge-container .terminal-output {
+    margin: 10px 0;
+}
+
+.ai-lounge-container .terminal-line {
+    margin-bottom: 5px;
+}
+
+.ai-lounge-container .terminal-line.user {
+    color: #ffffff;
+}
+
+.ai-lounge-container .terminal-line.error {
+    color: #ff5555;
+}
+
+.ai-lounge-container .command-form {
+    margin-top: 15px;
+}
+
+.ai-lounge-container .command-prompt {
+    display: flex;
+    align-items: center;
+}
+
+.ai-lounge-container .command-input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    color: #33ff33;
+    font-family: "Courier New", monospace;
+    margin-left: 5px;
+    outline: none;
+    caret-color: #33ff33;
+}
+
+.ai-lounge-container .contact-form {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px dashed #33ff33;
+}
+
+.ai-lounge-container .contact-form input,
+.ai-lounge-container .contact-form textarea {
+    background-color: #1a1a1a;
+    border: 1px solid #33ff33;
+    color: #33ff33;
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: "Courier New", monospace;
+    box-sizing: border-box;
+}
+
+.ai-lounge-container .contact-form button {
+    background-color: #33ff33;
+    color: #0c0c0c;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+}
+
+.ai-lounge-container .contact-form button:hover {
+    background-color: #2bdb2b;
+}
+
+.ai-lounge-container .visitor-log {
+    margin-top: 15px;
+    height: 150px;
+    overflow-y: scroll;
+    padding: 10px;
+    border: 1px solid #33ff33;
+    background-color: #0a0a0a;
+    font-size: 0.9em;
+}
+
+.ai-lounge-container .visitor-log div {
+    margin-bottom: 5px;
+}
+
+.ai-lounge-container .blink {
+    animation: blinking 1.5s infinite;
+}
+
+@keyframes blinking {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .ai-lounge-container {
+        padding: 10px;
+        margin: 20px auto;
+    }
+    
+    .ai-lounge-container .terminal {
+        padding: 15px;
+    }
+    
+    .ai-lounge-container .ascii-art {
+        font-size: 0.6em;
+    }
+    
+    .ai-lounge-container .section {
+        padding: 5px 10px;
+    }
+}

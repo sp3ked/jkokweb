@@ -15,6 +15,7 @@ import Meta from "./Pages/meta";
 import LocalLens from "./Pages/LocalLens";
 import Projects from "./Pages/projects";
 import Cosmos from "./Pages/cosmos";
+import AILounge from "./Pages/AILounge";
 // import Langnav from "./Pages/langnav";
 import {
   AnimationProvider,
@@ -127,6 +128,7 @@ function App() {
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/projects/locallens" element={<LocalLens />} />
                 <Route path="/projects/cosmos" element={<Cosmos />} />
+                <Route path="/ai" element={<AILounge />} />
                 <Route path="/admin" element={<Admin />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
