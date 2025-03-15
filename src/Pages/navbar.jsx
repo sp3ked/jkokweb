@@ -13,7 +13,6 @@ function Navbar() {
         </button>
       </div>
       <div className="navbar-right">
-        {/* Empty or can be used for other controls */}
       </div>
     </nav>
   );

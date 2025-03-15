@@ -176,6 +176,16 @@
     margin-right: 0;
     margin-bottom: 15px;
     max-width: 100px; /* Increased from 60px to 100px for mobile */
+    /* Center the logo container */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .education-logo img {
+    /* Center the image within the container */
+    display: block;
+    margin: 0 auto;
+    max-width: 80%; /* Make RIT logo smaller */
   }
 
   .education-details h3 {
@@ -184,6 +194,13 @@
   
   .education-item {
     flex-direction: column;
+    align-items: center; /* Center children horizontally */
+    text-align: center; /* Center text */
+  }
+  
+  .education-info {
+    width: 100%;
+    text-align: center; /* Center all text in the info section */
   }
   
   .education-info h3 {

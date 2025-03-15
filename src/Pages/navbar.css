@@ -6,14 +6,15 @@
   position: fixed;
   top: 0;
   right: 0;
-  left: 0;
   z-index: 9999;
+  pointer-events: none;
 }
 
 .navbar-left {
   display: flex;
   align-items: center;
   margin-left: 10px;
+  pointer-events: auto;
 }
 
 .navbar-right {
@@ -22,6 +23,7 @@
   margin-bottom: 40px;
   margin-right: 40px;
   z-index: 10000000;
+  pointer-events: auto;
 }
 
 .toggle-animations {
@@ -37,6 +39,7 @@
   cursor: pointer;
   font-family: inherit;
   transition: all 0.3s ease;
+  pointer-events: auto;
 }
 
 .toggle-animations:hover {
