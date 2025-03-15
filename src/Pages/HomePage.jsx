@@ -115,8 +115,6 @@ function HomePage() {
           </div>
         </div>
 
-        
-
         {/* Experiences */}
         <section id="experiences" className="skills-section section">
           <h2> - Experiences - </h2>
@@ -134,7 +132,6 @@ function HomePage() {
           <h2> - Education - </h2>
           <Education />
         </section>
-
       </div>
 
       <Footer />

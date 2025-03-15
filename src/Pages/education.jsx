@@ -29,11 +29,15 @@ function Education() {
             </span>
             <span className="education-duration">Aug 2024 - May 2027</span>
             <p className="education-activities">
-              <strong>Activities:</strong> Boiler Blockchain Club (dev team), Purdue Hackers, 
-              ML@Purdue, and Intramural (Basketball, Wiffleball, Ultimate Frisbee).
+              <strong>Activities:</strong> Boiler Blockchain Club (dev team),
+              Purdue Hackers, ML@Purdue, and Intramural (Basketball, Wiffleball,
+              Ultimate Frisbee).
             </p>
           </div>
         </div>
+
+        {/* Divider line */}
+        <div className="education-divider"></div>
 
         {/* Rochester Institute of Technology Education */}
         <div className="education-item">
@@ -47,8 +51,9 @@ function Education() {
             </span>
             <span className="education-duration">2023 - 2024</span>
             <p className="education-activities">
-              <strong>Activities and societies:</strong> MDRC (Multi-Disciplinary Robotics Club, Pacbot), 
-              Artificial Intelligence Club, Business and Technology Professionals Club, 
+              <strong>Activities and societies:</strong> MDRC
+              (Multi-Disciplinary Robotics Club, Pacbot), Artificial
+              Intelligence Club, Business and Technology Professionals Club,
               Flag Football, Intramural Basketball
             </p>
           </div>

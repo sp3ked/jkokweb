@@ -13,7 +13,9 @@
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .education-card:hover {
@@ -148,6 +150,14 @@
   line-height: 1.5;
 }
 
+.education-divider {
+  height: 1px;
+  background-color: #00ff00;
+  margin: 25px 0;
+  width: 100%;
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
 .educationFooter {
   background-color: rgba(0, 0, 0, 0.9);
   padding: 10px;
@@ -180,7 +190,7 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .education-logo img {
     /* Center the image within the container */
     display: block;
@@ -191,30 +201,34 @@
   .education-details h3 {
     font-size: 1.2rem;
   }
-  
+
   .education-item {
     flex-direction: column;
     align-items: center; /* Center children horizontally */
     text-align: center; /* Center text */
   }
-  
+
   .education-info {
     width: 100%;
     text-align: center; /* Center all text in the info section */
   }
-  
+
   .education-info h3 {
     font-size: 1.2rem;
   }
-  
+
   .education-degree {
     font-size: 0.9rem;
   }
-  
+
   .educationContent {
     padding: 10px;
   }
-  
+
+  .education-divider {
+    margin: 20px 0;
+  }
+
   .educationFooter {
     padding: 8px;
     font-size: 0.9rem;

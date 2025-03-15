@@ -64,7 +64,7 @@ function Meta() {
               capturing, quiz answering, and commenting in real-time.
             </p>
           </section>
-          
+
           <div className="video-container">
             <iframe
               src="https://www.youtube.com/embed/hPqTC9NUZ_c"

@@ -12,8 +12,7 @@ function Navbar() {
           {isAnimationDisabled ? "Enable Animations" : "Disable Animations"}
         </button>
       </div>
-      <div className="navbar-right">
-      </div>
+      <div className="navbar-right"></div>
     </nav>
   );
 }
