@@ -1,6 +1,7 @@
 /* Container for the Projects section */
 .projects-container {
-  padding: 60px 20px; /* Adjust padding as needed */
+  padding: 60px 20px;
+  /* Adjust padding as needed */
   background-color: rgba(0, 0, 0, 0.95);
   color: #00ff00;
   box-sizing: border-box;
@@ -34,7 +35,8 @@ h2 {
 
 .projectGrid {
   display: grid;
-  grid-template-columns: 1fr; /* Single column */
+  grid-template-columns: 1fr;
+  /* Single column */
   gap: 20px;
   padding: 0 20px;
   width: 100%;
@@ -47,7 +49,8 @@ h2 {
 /* Optional: Remove or Adjust Media Queries for Multi-column Layout */
 @media (min-width: 1400px) {
   .projectGrid {
-    grid-template-columns: 1fr; /* Keep single column even on larger screens */
+    grid-template-columns: 1fr;
+    /* Keep single column even on larger screens */
   }
 
   .terminalBox {
@@ -70,9 +73,11 @@ h2 {
 
 .langLogo {
   position: absolute;
-  top: 8px; /* Adjust as necessary for positioning */
+  top: 8px;
+  /* Adjust as necessary for positioning */
   right: 10px;
-  width: 25px; /* Adjust size */
+  width: 25px;
+  /* Adjust size */
   height: 25px;
   object-fit: contain;
   z-index: 2;
@@ -188,7 +193,8 @@ h2 {
 
 @media (min-width: 1400px) {
   .projectGrid {
-    grid-template-columns: 1fr; /* Override to single column */
+    grid-template-columns: 1fr;
+    /* Override to single column */
   }
 
   .terminalBox {
@@ -324,7 +330,8 @@ h2 {
   border: 1px solid #00ff00;
   border-radius: 5px;
   width: 85%;
-  max-width: 1800px; /* increased from 1400px */
+  max-width: 1800px;
+  /* increased from 1400px */
   margin: 20px auto;
   min-height: 80vh;
   box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
@@ -398,10 +405,14 @@ h2 {
 
 /* Add new styles for app icons */
 .project-card[data-type="mobile-app"] img {
-  width: 140px; /* increased from 120px */
-  height: 140px; /* increased from 120px */
-  border-radius: 28px; /* increased from 24px */
-  margin: 30px auto; /* increased from 20px */
+  width: 140px;
+  /* increased from 120px */
+  height: 140px;
+  /* increased from 120px */
+  border-radius: 28px;
+  /* increased from 24px */
+  margin: 30px auto;
+  /* increased from 20px */
   display: block;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 12px rgba(0, 255, 0, 0.15);
@@ -582,9 +593,11 @@ h2 {
   0% {
     box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.4);
   }
+
   70% {
     box-shadow: 0 0 0 10px rgba(0, 255, 0, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
   }
@@ -681,4 +694,27 @@ h2 {
     text-align: center;
     margin-bottom: 10px;
   }
+}
+
+.see-all-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.see-all-btn {
+  background-color: var(--color-primary);
+  color: var(--text-color);
+  border: 1px solid var(--color-primary-dark);
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.see-all-btn:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

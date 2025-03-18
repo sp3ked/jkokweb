@@ -10,19 +10,22 @@ import docuImage from "../images/docu1.png";
 import metaImage from "../images/meta.png";
 import mlh1 from "../images/mlh1.png";
 import cosmosImage from "../images/cosmosLogo.png"; // Changed to cosmosLogo.png
+import blockImage from "../images/block1.png"; // Added Boiler Blockchain image
 
 function Projects() {
   const navigate = useNavigate();
   const [activeFilter, setActiveFilter] = useState("all");
   const [filteredProjects, setFilteredProjects] = useState([]);
+  const [showAll, setShowAll] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   const filterCategories = useMemo(
     () => ({
       all: [],
       hardware: ["raspi", "bike"],
-      software: ["docu", "scout", "tools", "cosmos", "locallens", "unbolted"],
+      software: ["docu", "scout", "tools", "cosmos", "locallens", "unbolted", "block"],
       hackathon: ["unbolted", "locallens", "cosmos"],
-      active: ["docu", "scout", "tools", "cosmos"],
+      active: ["docu", "scout", "tools", "cosmos", "block"],
       inactive: ["unbolted", "raspi", "bike", "locallens"],
       oneTime: ["meta", "raspi", "bike", "locallens", "unbolted"],
     }),
@@ -31,6 +34,17 @@ function Projects() {
 
   const projectsList = useMemo(
     () => [
+      {
+        id: "block",
+        title: "Boiler Blockchain - Web Development",
+        image: blockImage,
+        status: "live",
+        liveUrl: "https://www.boilerblockchain.org/",
+        description:
+          "Boiler Blockchain is Purdue University's premier blockchain and Web3 organization. I contributed to the development of their website, which serves as a hub for blockchain education, community building, and showcasing their events and initiatives on campus.",
+        link: "/projects/block",
+        tags: ["React", "Tailwind CSS", "Node.js", "Web3"],
+      },
       {
         id: "cosmos",
         title: "CosmosPool - DeFi Liquidity Protocol",
@@ -147,6 +161,14 @@ function Projects() {
       window.scrollTo(0, parseInt(savedPosition));
       sessionStorage.removeItem("projectsScrollPosition");
     }
+
+    // Add window resize listener to detect mobile/desktop
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   useEffect(() => {
@@ -167,6 +189,24 @@ function Projects() {
     );
     window.scrollTo(0, 0);
     navigate(link);
+  };
+
+  // Get visible projects based on showAll state and device type
+  const visibleProjects = useMemo(() => {
+    const limit = isMobile ? 3 : 9;
+    return showAll ? filteredProjects : filteredProjects.slice(0, limit);
+  }, [filteredProjects, showAll, isMobile]);
+
+  // Toggle function for See All/See Less button
+  const toggleShowAll = () => {
+    setShowAll(!showAll);
+    // If collapsing, scroll back to the top of the projects section
+    if (showAll) {
+      const projectsSection = document.querySelector('.projects-terminal');
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   };
 
   return (
@@ -191,49 +231,43 @@ function Projects() {
               All
             </button>
             <button
-              className={`filter-btn ${
-                activeFilter === "hardware" ? "active" : ""
-              }`}
+              className={`filter-btn ${activeFilter === "hardware" ? "active" : ""
+                }`}
               onClick={() => setActiveFilter("hardware")}
             >
               Hardware
             </button>
             <button
-              className={`filter-btn ${
-                activeFilter === "software" ? "active" : ""
-              }`}
+              className={`filter-btn ${activeFilter === "software" ? "active" : ""
+                }`}
               onClick={() => setActiveFilter("software")}
             >
               Software
             </button>
             <button
-              className={`filter-btn ${
-                activeFilter === "hackathon" ? "active" : ""
-              }`}
+              className={`filter-btn ${activeFilter === "hackathon" ? "active" : ""
+                }`}
               onClick={() => setActiveFilter("hackathon")}
             >
               Hackathons
             </button>
             <button
-              className={`filter-btn ${
-                activeFilter === "active" ? "active" : ""
-              }`}
+              className={`filter-btn ${activeFilter === "active" ? "active" : ""
+                }`}
               onClick={() => setActiveFilter("active")}
             >
               Active
             </button>
             <button
-              className={`filter-btn ${
-                activeFilter === "inactive" ? "active" : ""
-              }`}
+              className={`filter-btn ${activeFilter === "inactive" ? "active" : ""
+                }`}
               onClick={() => setActiveFilter("inactive")}
             >
               Inactive
             </button>
             <button
-              className={`filter-btn ${
-                activeFilter === "oneTime" ? "active" : ""
-              }`}
+              className={`filter-btn ${activeFilter === "oneTime" ? "active" : ""
+                }`}
               onClick={() => setActiveFilter("oneTime")}
             >
               One Time Completion
@@ -241,7 +275,7 @@ function Projects() {
           </div>
 
           <div className="project-grid">
-            {filteredProjects.map((project) => (
+            {visibleProjects.map((project) => (
               <div
                 key={project.id}
                 className="project-card"
@@ -295,6 +329,23 @@ function Projects() {
               </div>
             ))}
           </div>
+
+          {(() => {
+            const threshold = isMobile ? 3 : 9;
+            if (filteredProjects.length > threshold) {
+              return (
+                <div className="see-all-container">
+                  <button
+                    className="see-all-btn"
+                    onClick={toggleShowAll}
+                  >
+                    {showAll ? "See Less ↑" : "See All ↓"}
+                  </button>
+                </div>
+              );
+            }
+            return null;
+          })()}
         </div>
       </div>
     </>
