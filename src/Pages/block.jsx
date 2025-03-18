@@ -49,6 +49,11 @@ function Block() {
             </Link>
 
             <div className="project-header">
+                <div className="app-title-section">
+                    <div className="app-title-content">
+                        <h1>Boiler Blockchain - Web Development</h1>
+                    </div>
+                </div>
                 <div className="header-links">
                     <a
                         href="https://www.boilerblockchain.org/"
