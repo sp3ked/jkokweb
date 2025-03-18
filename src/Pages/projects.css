@@ -212,6 +212,57 @@ h2 {
   .projectImg {
     max-width: 100%;
   }
+
+  /* Specific adjustments for Boiler Blockchain image */
+  .project-card[data-id="block"] img {
+    margin: 0 auto;
+    padding: 8px;
+    height: 130px;
+    /* Reduced height specifically for this image */
+    width: 80%;
+  }
+
+  /* General card improvements for mobile */
+  .project-card {
+    padding-bottom: 15px;
+  }
+
+  /* Improve spacing and alignment for text elements */
+  .project-info h3 {
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .project-info p {
+    text-align: left;
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+
+  /* Improve button positioning */
+  .see-more {
+    align-self: flex-start;
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  /* Adjust project status indicators */
+  .project-status {
+    top: 5px;
+    right: 5px;
+  }
+
+  .status-dot {
+    padding: 3px 8px;
+    font-size: 0.75rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    padding: 15px;
+    gap: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -621,6 +672,45 @@ h2 {
   .projects-section-title {
     font-size: 2rem;
   }
+
+  /* Reduce spacing for images on mobile */
+  .project-card img,
+  .project-card[data-type="mobile-app"] img,
+  .project-card[data-id="tools"] img,
+  .project-card[data-id="unbolted"] img,
+  .project-card[data-id="meta"] img,
+  .project-card[data-id="raspi"] img,
+  .project-card[data-id="bike"] img,
+  .project-card[data-id="locallens"] img,
+  .project-card[data-id="cosmos"] img,
+  .project-card[data-id="block"] img {
+    margin: 10px auto;
+    padding: 10px;
+    height: 150px;
+  }
+
+  /* Left align text on mobile */
+  .project-info {
+    text-align: left;
+    padding: 15px;
+  }
+
+  .project-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-info p {
+    font-size: 0.95rem;
+  }
+
+  /* Adjust tag display on mobile */
+  .project-tags {
+    justify-content: flex-start;
+  }
+
+  .see-all-container {
+    margin: 20px 0;
+  }
 }
 
 /* Enhanced styling for the filter buttons */
@@ -727,4 +817,14 @@ h2 {
 .see-all-btn:active {
   transform: translateY(1px);
   box-shadow: 0 0 5px rgba(0, 255, 0, 0.2);
+}
+
+.project-card[data-id="block"] img {
+  padding: 20px 40px 20px 20px;
+  background: rgba(0, 0, 0, 0.8);
+  width: 85%;
+  height: 180px;
+  display: block;
+  margin: 20px auto;
+  object-fit: contain;
 }

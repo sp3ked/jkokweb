@@ -24,7 +24,8 @@
 }
 
 .education-logo {
-  flex: 0 0 120px; /* Increased from 80px to 120px */
+  flex: 0 0 120px;
+  /* Increased from 80px to 120px */
   margin-right: 20px;
 }
 
@@ -33,8 +34,10 @@
   height: auto;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  background-color: white; /* Add white background for the Purdue logo */
-  padding: 10px; /* Add some padding to give the logo some breathing room */
+  background-color: white;
+  /* Add white background for the Purdue logo */
+  padding: 10px;
+  /* Add some padding to give the logo some breathing room */
 }
 
 .education-details {
@@ -185,17 +188,21 @@
   .education-logo {
     margin-right: 0;
     margin-bottom: 15px;
-    max-width: 100px; /* Increased from 60px to 100px for mobile */
+    max-width: 100px;
     /* Center the logo container */
     margin-left: auto;
     margin-right: auto;
+    margin-top: 15px;
+    /* Add more space at the top */
   }
 
   .education-logo img {
     /* Center the image within the container */
     display: block;
     margin: 0 auto;
-    max-width: 80%; /* Make RIT logo smaller */
+    max-width: 80%;
+    margin-top: 10px;
+    /* Move image down */
   }
 
   .education-details h3 {
@@ -204,21 +211,41 @@
 
   .education-item {
     flex-direction: column;
-    align-items: center; /* Center children horizontally */
-    text-align: center; /* Center text */
+    align-items: flex-start;
+    /* Left align instead of center */
+    text-align: left;
+    /* Left align text */
+    padding: 0 10px;
+    /* Add some padding */
   }
 
   .education-info {
     width: 100%;
-    text-align: center; /* Center all text in the info section */
+    text-align: left;
+    /* Left align all text in the info section */
+    margin-top: 15px;
+    /* Add space between logo and info */
   }
 
   .education-info h3 {
     font-size: 1.2rem;
+    text-align: left;
+    margin-bottom: 8px;
   }
 
   .education-degree {
     font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .education-duration {
+    text-align: left;
+    margin-bottom: 8px;
+  }
+
+  .education-activities {
+    text-align: left;
+    line-height: 1.4;
   }
 
   .educationContent {
