@@ -21,18 +21,15 @@ function Experiences() {
         </span>
         <p>
           At Zerogon Consulting, I developed and maintained responsive user
-          interfaces for web applications. I worked with modern JavaScript
-          frameworks, optimized front-end performance, and collaborated with
-          designers and back-end developers to deliver seamless user
+          interfaces for web applications. I worked mainly with react and durign this expirence I
+          collaborated with back-end developers to deliver seamless user
           experiences.
         </p>
         <ul className="experience-list">
-          <li>Implemented reusable components using React.js.</li>
-          <li>Optimized UI for mobile and desktop platforms.</li>
-          <li>
-            Collaborated with cross-functional teams to meet client
-            requirements.
-          </li>
+          <li>Leveraged custom hooks to consume REST/GraphQL endpoints</li>
+          <li>Optimized UI for different sized displays</li>
+          <li>Enhanced animations (using framer motion) for immersive ux</li>
+          <li>Built modular React components using custom hooks</li>
         </ul>
       </div>
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./projectDetails.css";
 import block1 from "../images/block1.png";
@@ -8,10 +8,39 @@ import block4 from "../images/block4.png";
 
 function Block() {
     const images = [block1, block2, block3, block4];
+    const [showSwipeHint, setShowSwipeHint] = useState(true);
+    const galleryRef = useRef(null);
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, []);
+
+        const handleGalleryScroll = () => {
+            if (showSwipeHint) {
+                setShowSwipeHint(false);
+            }
+        };
+
+        const handleTouchStart = () => {
+            if (showSwipeHint) {
+                setShowSwipeHint(false);
+            }
+        };
+
+        // HELLO WORLDS HEHEHEHA
+        const galleryElement = galleryRef.current;
+        if (galleryElement) {
+            galleryElement.addEventListener('scroll', handleGalleryScroll);
+            galleryElement.addEventListener('touchstart', handleTouchStart);
+        }
+
+        // Clean up event listeners
+        return () => {
+            if (galleryElement) {
+                galleryElement.removeEventListener('scroll', handleGalleryScroll);
+                galleryElement.removeEventListener('touchstart', handleTouchStart);
+            }
+        };
+    }, [showSwipeHint]);
 
     return (
         <div className="project-details-container">
@@ -20,12 +49,6 @@ function Block() {
             </Link>
 
             <div className="project-header">
-                <div className="app-title-section">
-                    <img src={block1} alt="Boiler Blockchain Logo" className="app-icon" />
-                    <div className="app-title-content">
-                        <h1>Boiler Blockchain - Web Development</h1>
-                    </div>
-                </div>
                 <div className="header-links">
                     <a
                         href="https://www.boilerblockchain.org/"
@@ -36,7 +59,7 @@ function Block() {
                         View Live Website ↗
                     </a>
                     <a
-                        href="https://github.com/Boiler-Blockchain-Club"
+                        href="https://github.com/BoilerBlockchainWebsite"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="live-link github-link"
@@ -46,7 +69,7 @@ function Block() {
                 </div>
             </div>
 
-            <div className="app-gallery">
+            <div className={`app-gallery ${showSwipeHint ? 'show-hint' : ''}`} ref={galleryRef}>
                 {images.map((img, idx) => (
                     <div key={idx} className="gallery-item">
                         <img src={img} alt={`Boiler Blockchain ${idx + 1}`} />
@@ -59,11 +82,9 @@ function Block() {
                     <section className="project-section">
                         <h2>Overview</h2>
                         <p>
-                            Boiler Blockchain is Purdue University's premier blockchain and
-                            Web3 organization. I contributed to the development of their
-                            website, which serves as a hub for blockchain education,
-                            community building, and showcasing their events and initiatives
-                            on campus.
+                            Boiler Blockchain is Purdue University's blockchain and
+                            Web3 club. I contributed to majority of the development of the
+                            website as we upgraded it from v2 to v3.
                         </p>
                     </section>
 
@@ -71,8 +92,7 @@ function Block() {
                         <h2>Core Features</h2>
                         <ul>
                             <li>Responsive design optimized for all device sizes</li>
-                            <li>Event calendar and registration system</li>
-                            <li>Resources section for blockchain education</li>
+                            <li>Clean animated ui</li>
                             <li>Team member profiles and contact information</li>
                         </ul>
                     </section>
@@ -84,13 +104,7 @@ function Block() {
                                 <strong>Frontend:</strong> React.js, Tailwind CSS
                             </li>
                             <li>
-                                <strong>Backend:</strong> Node.js
-                            </li>
-                            <li>
                                 <strong>Deployment:</strong> Vercel
-                            </li>
-                            <li>
-                                <strong>Version Control:</strong> Git/GitHub
                             </li>
                         </ul>
                     </section>
@@ -98,9 +112,8 @@ function Block() {
                     <section className="project-section">
                         <h2>Current Status</h2>
                         <p>
-                            The website is live and actively maintained. It continues to evolve
-                            with new features and content updates to support Boiler Blockchain's
-                            mission of blockchain education and community building at Purdue.
+                            The website is live and actively maintained by me and one other person. It will continue to evolve
+                            with new features and updates as the club grows.
                         </p>
                     </section>
                 </div>
