@@ -18,6 +18,7 @@ function Projects() {
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [showAll, setShowAll] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [showMoreFilters, setShowMoreFilters] = useState(false);
 
   const filterCategories = useMemo(
     () => ({
@@ -225,53 +226,59 @@ function Projects() {
           <div className="project-filters">
             <span className="filter-label">Sort by: </span>
             <button
-              className={`filter-btn ${activeFilter === "all" ? "active" : ""}`}
-              onClick={() => setActiveFilter("all")}
-            >
-              All
-            </button>
-            <button
-              className={`filter-btn ${activeFilter === "hardware" ? "active" : ""
-                }`}
+              className={`filter-btn ${activeFilter === "hardware" ? "active" : ""}`}
               onClick={() => setActiveFilter("hardware")}
             >
               Hardware
             </button>
             <button
-              className={`filter-btn ${activeFilter === "software" ? "active" : ""
-                }`}
+              className={`filter-btn ${activeFilter === "software" ? "active" : ""}`}
               onClick={() => setActiveFilter("software")}
             >
               Software
             </button>
             <button
-              className={`filter-btn ${activeFilter === "hackathon" ? "active" : ""
-                }`}
+              className={`filter-btn ${activeFilter === "hackathon" ? "active" : ""}`}
               onClick={() => setActiveFilter("hackathon")}
             >
               Hackathons
             </button>
-            <button
-              className={`filter-btn ${activeFilter === "active" ? "active" : ""
-                }`}
-              onClick={() => setActiveFilter("active")}
-            >
-              Active
-            </button>
-            <button
-              className={`filter-btn ${activeFilter === "inactive" ? "active" : ""
-                }`}
-              onClick={() => setActiveFilter("inactive")}
-            >
-              Inactive
-            </button>
-            <button
-              className={`filter-btn ${activeFilter === "oneTime" ? "active" : ""
-                }`}
-              onClick={() => setActiveFilter("oneTime")}
-            >
-              One Time Completion
-            </button>
+            {!showMoreFilters && (
+              <span
+                onClick={() => setShowMoreFilters(true)}
+                className="filter-link"
+              >
+                Show More
+              </span>
+            )}
+            {showMoreFilters && (
+              <>
+                <button
+                  className={`filter-btn ${activeFilter === "active" ? "active" : ""}`}
+                  onClick={() => setActiveFilter("active")}
+                >
+                  Active
+                </button>
+                <button
+                  className={`filter-btn ${activeFilter === "inactive" ? "active" : ""}`}
+                  onClick={() => setActiveFilter("inactive")}
+                >
+                  Inactive
+                </button>
+                <button
+                  className={`filter-btn ${activeFilter === "oneTime" ? "active" : ""}`}
+                  onClick={() => setActiveFilter("oneTime")}
+                >
+                  One Time Completion
+                </button>
+                <span
+                  onClick={() => setShowMoreFilters(false)}
+                  className="filter-link"
+                >
+                  Show Less
+                </span>
+              </>
+            )}
           </div>
 
           <div className="project-grid">

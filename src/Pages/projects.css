@@ -766,6 +766,16 @@ h2 {
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
 }
 
+.filter-link {
+  color: #00ff00;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.filter-link:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .project-filters {
     justify-content: center;
