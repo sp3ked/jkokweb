@@ -17,6 +17,7 @@ import Projects from "./Pages/projects";
 import Cosmos from "./Pages/cosmos";
 import Block from "./Pages/block";
 import AILounge from "./Pages/AILounge";
+import Trip from "./Pages/trip";
 // import Langnav from "./Pages/langnav";
 import {
   AnimationProvider,
@@ -119,6 +120,7 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/resume" element={<Resume />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/projects/trip" element={<Trip />} />
                 <Route path="/projects/scout" element={<Scout />} />
                 <Route path="/projects/raspi" element={<Raspi />} />
                 <Route path="/projects/bike" element={<Bike />} />

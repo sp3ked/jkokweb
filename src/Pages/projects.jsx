@@ -9,8 +9,9 @@ import toolsImage from "../images/tool.png";
 import docuImage from "../images/docu1.png";
 import metaImage from "../images/meta.png";
 import mlh1 from "../images/mlh1.png";
-import cosmosImage from "../images/cosmosLogo.png"; // Changed to cosmosLogo.png
-import blockImage from "../images/block1.png"; // Added Boiler Blockchain image
+import cosmosImage from "../images/cosmosLogo.png";
+import blockImage from "../images/block1.png";
+import tripImage from "../images/trip.jpg";
 
 function Projects() {
   const navigate = useNavigate();
@@ -24,17 +25,27 @@ function Projects() {
     () => ({
       all: [],
       hardware: ["raspi", "bike"],
-      software: ["docu", "scout", "tools", "cosmos", "locallens", "unbolted", "block"],
-      hackathon: ["unbolted", "locallens", "cosmos"],
+      software: ["docu", "scout", "tools", "cosmos", "locallens", "unbolted", "block", "trip"],
+      hackathon: ["unbolted", "locallens", "cosmos", "trip"],
       active: ["docu", "scout", "tools", "cosmos", "block"],
       inactive: ["unbolted", "raspi", "bike", "locallens"],
-      oneTime: ["meta", "raspi", "bike", "locallens", "unbolted"],
+      oneTime: ["meta", "raspi", "bike", "locallens", "unbolted", "trip"],
     }),
     [],
   );
 
   const projectsList = useMemo(
     () => [
+      {
+        id: "trip",
+        title: "Trippian - AI Travel Assistant",
+        image: tripImage,
+        description:
+          "Built a sophisticated multi-agent AI system where autonomous agents collaborate to handle travel planning. Each specialized agent (Calendar, Flights, Hotels, Travel Assistant) maintains its own memory and reasoning while sharing a unified ItineraryState, demonstrating advanced agent-to-agent communication and autonomous decision making.",
+        link: "/projects/trip",
+        tags: ["AI Agents", "Python", "Flask", "React Native"],
+        hackathon: true,
+      },
       {
         id: "block",
         title: "Boiler Blockchain - Web Development",
@@ -82,7 +93,6 @@ function Projects() {
         link: "/projects/meta",
         tags: ["Selenium", "Python", "Computer Vision"],
       },
-
       {
         id: "scout",
         title: "Scout - Shopping and Selling App",
@@ -152,6 +162,7 @@ function Projects() {
         link: "/projects/bike",
         tags: ["Mechanical Engineering", "Electrical Engineering", "CAD"],
       },
+      
     ],
     [],
   );
@@ -163,13 +174,12 @@ function Projects() {
       sessionStorage.removeItem("projectsScrollPosition");
     }
 
-    // Add window resize listener to detect mobile/desktop
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
@@ -192,20 +202,17 @@ function Projects() {
     navigate(link);
   };
 
-  // Get visible projects based on showAll state and device type
   const visibleProjects = useMemo(() => {
     const limit = isMobile ? 3 : 9;
     return showAll ? filteredProjects : filteredProjects.slice(0, limit);
   }, [filteredProjects, showAll, isMobile]);
 
-  // Toggle function for See All/See Less button
   const toggleShowAll = () => {
     setShowAll(!showAll);
-    // If collapsing, scroll back to the top of the projects section
     if (showAll) {
-      const projectsSection = document.querySelector('.projects-terminal');
+      const projectsSection = document.querySelector(".projects-terminal");
       if (projectsSection) {
-        projectsSection.scrollIntoView({ behavior: 'smooth' });
+        projectsSection.scrollIntoView({ behavior: "smooth" });
       }
     }
   };
@@ -241,7 +248,7 @@ function Projects() {
               className={`filter-btn ${activeFilter === "hackathon" ? "active" : ""}`}
               onClick={() => setActiveFilter("hackathon")}
             >
-              Hackathons
+              Hackathon
             </button>
             {!showMoreFilters && (
               <span
@@ -336,7 +343,6 @@ function Projects() {
               </div>
             ))}
           </div>
-
           {(() => {
             const threshold = isMobile ? 3 : 9;
             if (filteredProjects.length > threshold) {
