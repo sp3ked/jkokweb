@@ -56,6 +56,16 @@ function Trip() {
         ))}
       </div>
 
+      <div className="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/a6xSKq2aFh4"
+          title="Trippian Demo Video"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+
       <div className="project-content">
         <div className="projectDetailsText">
           <section className="project-section">
