@@ -18,6 +18,7 @@ import Cosmos from "./Pages/cosmos";
 import Block from "./Pages/block";
 import AILounge from "./Pages/AILounge";
 import Trip from "./Pages/trip";
+import Promptr from "./Pages/promptr";
 // import Langnav from "./Pages/langnav";
 import {
   AnimationProvider,
@@ -132,6 +133,7 @@ function App() {
                 <Route path="/projects/locallens" element={<LocalLens />} />
                 <Route path="/projects/cosmos" element={<Cosmos />} />
                 <Route path="/projects/block" element={<Block />} />
+                <Route path="/projects/promptr" element={<Promptr />} />
                 <Route path="/ai" element={<AILounge />} />
                 <Route path="/admin" element={<Admin />} />
                 <Route path="*" element={<NotFound />} />

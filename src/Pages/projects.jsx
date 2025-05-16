@@ -12,6 +12,7 @@ import mlh1 from "../images/mlh1.png";
 import cosmosImage from "../images/cosmosLogo.png";
 import blockImage from "../images/block1.png";
 import tripImage from "../images/trip.jpg";
+import promptr1 from "../images/promptr1.png";
 
 function Projects() {
   const navigate = useNavigate();
@@ -25,9 +26,9 @@ function Projects() {
     () => ({
       all: [],
       hardware: ["raspi", "bike"],
-      software: ["docu", "scout", "tools", "cosmos", "locallens", "unbolted", "block", "trip"],
+      software: ["promptr", "docu", "scout", "tools", "cosmos", "locallens", "unbolted", "block", "trip"],
       hackathon: ["unbolted", "locallens", "cosmos", "trip"],
-      active: ["docu", "scout", "tools", "cosmos", "block"],
+      active: ["promptr", "docu", "scout", "tools", "cosmos", "block"],
       inactive: ["unbolted", "raspi", "bike", "locallens"],
       oneTime: ["meta", "raspi", "bike", "locallens", "unbolted", "trip"],
     }),
@@ -36,6 +37,17 @@ function Projects() {
 
   const projectsList = useMemo(
     () => [
+      {
+        id: "promptr",
+        title: "Promptr - AI Prompt Management",
+        image: promptr1,
+        status: "live",
+        liveUrl: "https://chromewebstore.google.com/detail/promptr/onkoaammdlfaebbncpbjofmcjkilgpbp",
+        description: 
+          "A Chrome extension for managing and injecting AI prompts across multiple LLM platforms (ChatGPT, Claude, Grok, etc). Features include prompt library management, one-click injection, and cross-platform support with a focus on streamlined workflows.",
+        link: "/projects/promptr",
+        tags: ["Chrome Extension"],
+      },
       {
         id: "trip",
         title: "Trippian - AI Travel Assistant",
