@@ -9,9 +9,10 @@ const AILounge = () => {
   const [message, setMessage] = useState("");
   const [terminalOutput, setTerminalOutput] = useState([]);
   const [inputCommand, setInputCommand] = useState("");
+  const [openaiKey, setOpenaiKey] = useState("");
+  const [showApiInput, setShowApiInput] = useState(false);
 
   useEffect(() => {
-    // Initialize terminal with welcome message
     setTerminalOutput([
       { type: "system", content: "Terminal initialized." },
       {
@@ -36,6 +37,82 @@ const AILounge = () => {
     setMessages(initialLogs);
   }, []);
 
+  const commands = {
+    about: {
+      description: "About AI Lounge",
+      action: () => ([
+        { type: "system", content: "=== AI Lounge - Research & Development Hub ===" },
+        { type: "system", content: "\nCurrent Active Research Areas:" },
+        { type: "system", content: "1. Large Language Models" },
+        { type: "system", content: "   - Prompt Engineering & Chain-of-Thought" },
+        { type: "system", content: "   - Fine-tuning & Model Alignment" },
+        { type: "system", content: "   - Context Window Optimization" },
+        { type: "system", content: "\n2. Computer Vision" },
+        { type: "system", content: "   - Real-time Object Detection" },
+        { type: "system", content: "   - Smart Glasses Implementation" },
+        { type: "system", content: "   - Scene Understanding" },
+        { type: "system", content: "\n3. AI Agents" },
+        { type: "system", content: "   - Autonomous Decision Making" },
+        { type: "system", content: "   - Multi-Agent Systems" },
+        { type: "system", content: "   - Task Planning & Execution" },
+        { type: "system", content: "\nActive Projects:" },
+        { type: "system", content: "- Scout: Computer Vision for Product Recognition" },
+        { type: "system", content: "- Docu: Document Analysis & Understanding" },
+        { type: "system", content: "- Trippian: Multi-Agent Travel Planning" },
+        { type: "system", content: "- Promptr: LLM Interaction Framework" },
+        { type: "system", content: "\nTechnology Stack:" },
+        { type: "system", content: "- OpenAI GPT-4 & GPT-3.5" },
+        { type: "system", content: "- TensorFlow & PyTorch" },
+        { type: "system", content: "- LangChain & AutoGPT" },
+        { type: "system", content: "- Custom Agent Frameworks" },
+      ])
+    },
+    help: {
+      description: "Show available commands",
+      action: () => ([
+        { type: "system", content: "Available commands:" },
+        { type: "system", content: "help   - Show this help message" },
+        { type: "system", content: "clear  - Clear terminal" },
+        { type: "system", content: "about  - View AI research areas and tech stack" },
+      ])
+    },
+    clear: {
+      description: "Clear terminal",
+      action: () => {
+        setTerminalOutput([{ type: "system", content: "Terminal cleared." }]);
+        return [];
+      }
+    },
+    models: {
+      description: "List AI models",
+      action: () => ([
+        { type: "system", content: "Available AI Models:" },
+        { type: "system", content: "- GPT-4 (Latest)" },
+        { type: "system", content: "- GPT-3.5-Turbo" },
+        { type: "system", content: "- Claude 2.1" },
+        { type: "system", content: "- Gemini Pro" },
+        { type: "system", content: "- Local Models (Coming soon)" },
+      ])
+    },
+    setkey: {
+      description: "Set OpenAI API key",
+      action: () => {
+        setShowApiInput(true);
+        return [{ type: "system", content: "Enter your OpenAI API key:" }];
+      }
+    },
+    status: {
+      description: "System status",
+      action: () => ([
+        { type: "system", content: "System Status:" },
+        { type: "system", content: `API Key: ${openaiKey ? "Configured" : "Not Set"}` },
+        { type: "system", content: `Active Models: ${openaiKey ? "All" : "Limited"}` },
+        { type: "system", content: "System Load: Normal" },
+        { type: "system", content: "Connection: Active" },
+      ])
+    }
+  };
+
   const handleInputChange = (e) => {
     setInputCommand(e.target.value);
   };
@@ -45,72 +122,37 @@ const AILounge = () => {
 
     if (!inputCommand.trim()) return;
 
-    // Add user command to terminal
     const newOutput = [
       ...terminalOutput,
-      { type: "user", content: `> ${inputCommand}` },
+      { type: "user", content: `> ${inputCommand}` }
     ];
 
-    // Process command
     const command = inputCommand.toLowerCase().trim();
 
-    if (command === "help") {
-      newOutput.push({
-        type: "system",
-        content: "Available commands: help, clear, about, projects, contact",
-      });
-    } else if (command === "clear") {
-      setTerminalOutput([{ type: "system", content: "Terminal cleared." }]);
-      setInputCommand("");
-      return;
-    } else if (command === "about") {
-      newOutput.push({
-        type: "system",
-        content: "AI Lounge - A space for exploring AI concepts and projects.",
-      });
-      newOutput.push({
-        type: "system",
-        content:
-          "This terminal provides access to information about AI research and applications.",
-      });
-    } else if (command === "projects") {
-      newOutput.push({ type: "system", content: "Current AI projects:" });
-      newOutput.push({
-        type: "system",
-        content: "- Natural language processing research",
-      });
-      newOutput.push({
-        type: "system",
-        content: "- Computer vision implementations",
-      });
-      newOutput.push({
-        type: "system",
-        content: "- Reinforcement learning experiments",
-      });
-    } else if (command === "contact") {
-      newOutput.push({
-        type: "system",
-        content: "Scroll down to use the contact form or visit /contact",
-      });
+    if (commands[command]) {
+      const result = commands[command].action();
+      newOutput.push(...result);
     } else {
-      newOutput.push({
-        type: "error",
-        content: `Command not recognized: ${inputCommand}`,
-      });
+      newOutput.push({ type: "error", content: `Command not recognized: ${inputCommand}` });
     }
 
     setTerminalOutput(newOutput);
     setInputCommand("");
 
-    // Log interaction
     const now = new Date();
     const timeStr = now.toISOString().replace("T", " ").substring(0, 19);
     setMessages([
       ...messages,
-      {
-        time: timeStr,
-        message: `User executed: ${command}`,
-      },
+      { time: timeStr, message: `User executed: ${command}` }
+    ]);
+  };
+
+  const handleApiKeySubmit = (key) => {
+    setOpenaiKey(key);
+    setShowApiInput(false);
+    setTerminalOutput(prev => [
+      ...prev,
+      { type: "success", content: "API key configured successfully!" }
     ]);
   };
 
@@ -177,6 +219,18 @@ const AILounge = () => {
             {terminalOutput.map((line, index) => (
               <div key={index} className={`terminal-line ${line.type}`}>
                 {line.content}
+                {line.type === "system" && line.content.includes("Enter your OpenAI API key:") && showApiInput && (
+                  <input
+                    type="password"
+                    placeholder="sk-..."
+                    className="api-key-input"
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        handleApiKeySubmit(e.target.value);
+                      }
+                    }}
+                  />
+                )}
               </div>
             ))}
           </div>
