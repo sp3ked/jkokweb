@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import Resume from "./Pages/resume";
 import Scout from "./Pages/scout";
@@ -9,6 +9,7 @@ import Unbolted from "./Pages/unbolted";
 import Tool from "./Pages/tools";
 import NotFound from "./Pages/notfound";
 import Contact from "./Pages/contact";
+import ContactPageSimple from "./Pages/contactpage";
 import Admin from "./Pages/admin";
 import Docu from "./Pages/docu";
 import Meta from "./Pages/meta";
@@ -99,48 +100,65 @@ function MatrixBackground() {
   );
 }
 
-function App() {
+function AppContent() {
   const [showIntro, setShowIntro] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    // Skip intro animation for /contactpage route
+    if (location.pathname === '/contactpage') {
+      setShowIntro(false);
+    } else {
+      setShowIntro(true);
+    }
+  }, [location.pathname]);
 
   const handleIntroComplete = () => {
     setShowIntro(false);
   };
 
   return (
+    <div className="app">
+      {showIntro && location.pathname !== '/contactpage' ? (
+        <IntroAnimation onComplete={handleIntroComplete} />
+      ) : (
+        <>
+          <MatrixBackground />
+          <Navbar />
+          {/* <Langnav /> */}
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/contactpage" element={<ContactPageSimple />} />
+            <Route path="/projects/trip" element={<Trip />} />
+            <Route path="/projects/scout" element={<Scout />} />
+            <Route path="/projects/raspi" element={<Raspi />} />
+            <Route path="/projects/bike" element={<Bike />} />
+            <Route path="/projects/unbolted" element={<Unbolted />} />
+            <Route path="/projects/tools" element={<Tool />} />
+            <Route path="/projects/docu" element={<Docu />} />
+            <Route path="/projects/meta" element={<Meta />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/locallens" element={<LocalLens />} />
+            <Route path="/projects/cosmos" element={<Cosmos />} />
+            <Route path="/projects/block" element={<Block />} />
+            <Route path="/projects/promptr" element={<Promptr />} />
+            <Route path="/ai" element={<AILounge />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </>
+      )}
+    </div>
+  );
+}
+
+function App() {
+  return (
     <Router>
       <AnimationProvider>
-        <div className="app">
-          {showIntro ? (
-            <IntroAnimation onComplete={handleIntroComplete} />
-          ) : (
-            <>
-              <MatrixBackground />
-              <Navbar />
-              {/* <Langnav /> */}
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/resume" element={<Resume />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/projects/trip" element={<Trip />} />
-                <Route path="/projects/scout" element={<Scout />} />
-                <Route path="/projects/raspi" element={<Raspi />} />
-                <Route path="/projects/bike" element={<Bike />} />
-                <Route path="/projects/unbolted" element={<Unbolted />} />
-                <Route path="/projects/tools" element={<Tool />} />
-                <Route path="/projects/docu" element={<Docu />} />
-                <Route path="/projects/meta" element={<Meta />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/projects/locallens" element={<LocalLens />} />
-                <Route path="/projects/cosmos" element={<Cosmos />} />
-                <Route path="/projects/block" element={<Block />} />
-                <Route path="/projects/promptr" element={<Promptr />} />
-                <Route path="/ai" element={<AILounge />} />
-                <Route path="/admin" element={<Admin />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </>
-          )}
-        </div>
+        <AppContent />
       </AnimationProvider>
     </Router>
   );

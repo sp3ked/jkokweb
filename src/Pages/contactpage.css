@@ -1,0 +1,277 @@
+.contactpage-wrapper {
+    min-height: 100vh;
+    background-color: black;
+    color: #00ff00;
+    font-family: "Terminus", monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.contactpage-container {
+    width: 100%;
+    max-width: none;
+    background-color: rgba(0, 0, 0, 0.95);
+    border: 2px solid #00ff00;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.contactpage-back-button {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #00ff00;
+    background: transparent;
+    color: #00ff00;
+    text-decoration: none;
+    font-family: "Terminus", monospace;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    touch-action: manipulation;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactpage-back-button:hover,
+.contactpage-back-button:active {
+    background-color: #00ff00;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.contactpage-title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.contactpage-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #00ff00;
+    line-height: 1.4;
+}
+
+.contactpage-details {
+    margin-bottom: 2rem;
+}
+
+.contactpage-item {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: 1px solid rgba(0, 255, 0, 0.3);
+    border-radius: 6px;
+    background-color: rgba(0, 255, 0, 0.05);
+}
+
+.contactpage-icon {
+    color: #00ff00;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contactpage-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.contactpage-label {
+    font-size: 0.9rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.contactpage-link {
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    padding: 0.25rem;
+    border-radius: 4px;
+}
+
+.contactpage-link:hover,
+.contactpage-link:active {
+    color: #ffffff;
+    background-color: rgba(0, 255, 0, 0.2);
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.8);
+}
+
+.contactpage-social {
+    border-top: 1px solid rgba(0, 255, 0, 0.3);
+    padding-top: 1.5rem;
+}
+
+.contactpage-social-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.contactpage-social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contactpage-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(0, 255, 0, 0.5);
+    background-color: rgba(0, 255, 0, 0.05);
+    color: #00ff00;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    min-height: 44px;
+    touch-action: manipulation;
+}
+
+.contactpage-social-link:hover,
+.contactpage-social-link:active {
+    background-color: rgba(0, 255, 0, 0.2);
+    border-color: #00ff00;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.contactpage-social-link svg {
+    font-size: 1.2rem;
+}
+
+/* iPhone specific optimizations */
+@media screen and (max-width: 430px) {
+    .contactpage-wrapper {
+        padding: 0.5rem;
+    }
+
+    .contactpage-container {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .contactpage-title {
+        font-size: 1.8rem;
+    }
+
+    .contactpage-description {
+        font-size: 0.9rem;
+    }
+
+    .contactpage-item {
+        padding: 0.75rem;
+    }
+
+    .contactpage-social-links {
+        gap: 0.75rem;
+    }
+
+    .contactpage-social-link {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* iPhone SE and smaller screens */
+@media screen and (max-width: 375px) {
+    .contactpage-title {
+        font-size: 1.6rem;
+    }
+
+    .contactpage-description {
+        font-size: 0.85rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contactpage-container {
+        padding: 0.75rem;
+    }
+}
+
+/* Larger screens */
+@media screen and (min-width: 768px) {
+    .contactpage-wrapper {
+        padding: 2rem;
+    }
+
+    .contactpage-container {
+        padding: 2rem;
+    }
+
+    .contactpage-title {
+        font-size: 2.5rem;
+    }
+
+    .contactpage-description {
+        font-size: 1.1rem;
+    }
+}
+
+/* Very large screens */
+@media screen and (min-width: 1200px) {
+    .contactpage-wrapper {
+        padding: 3rem;
+    }
+
+    .contactpage-container {
+        padding: 3rem;
+    }
+
+    .contactpage-title {
+        font-size: 3rem;
+    }
+
+    .contactpage-description {
+        font-size: 1.2rem;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .contactpage-wrapper {
+        padding: 0.5rem;
+    }
+
+    .contactpage-container {
+        padding: 1rem;
+    }
+
+    .contactpage-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .contactpage-description {
+        margin-bottom: 1rem;
+    }
+
+    .contactpage-details {
+        margin-bottom: 1rem;
+    }
+
+    .contactpage-item {
+        margin: 0.75rem 0;
+        padding: 0.5rem;
+    }
+}
