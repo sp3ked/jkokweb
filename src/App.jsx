@@ -105,8 +105,8 @@ function AppContent() {
   const location = useLocation();
 
   useEffect(() => {
-    // Skip intro animation for /contactpage route
-    if (location.pathname === '/contactpage') {
+    // Skip intro animation for /contactcard route
+    if (location.pathname === '/contactcard') {
       setShowIntro(false);
     } else {
       setShowIntro(true);
@@ -119,7 +119,7 @@ function AppContent() {
 
   return (
     <div className="app">
-      {showIntro && location.pathname !== '/contactpage' ? (
+      {showIntro && location.pathname !== '/contactcard' ? (
         <IntroAnimation onComplete={handleIntroComplete} />
       ) : (
         <>
@@ -130,7 +130,7 @@ function AppContent() {
             <Route path="/" element={<HomePage />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/contactpage" element={<ContactPageSimple />} />
+            <Route path="/contactcard" element={<ContactPageSimple />} />
             <Route path="/projects/trip" element={<Trip />} />
             <Route path="/projects/scout" element={<Scout />} />
             <Route path="/projects/raspi" element={<Raspi />} />
