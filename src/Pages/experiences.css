@@ -44,6 +44,12 @@
   line-height: 1.6;
 }
 
+.experience-divider {
+  height: 1px;
+  background-color: rgba(0, 255, 0, 0.2);
+  margin: 0 15px;
+}
+
 .experienceContent h3 {
   margin: 0;
   font-size: 1.4rem;

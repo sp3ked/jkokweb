@@ -15,6 +15,20 @@ function Experiences() {
       </div>
 
       <div className="experienceContent">
+        <h3>Boiler Blockchain</h3>
+        <span className="experience-role">
+          Developer | Sep 2024 - Present
+        </span>
+        <ul className="experience-list">
+          <li>Represent Boiler Blockchain at hackathons and events (most recently at EthDenver 2025)</li>
+          <li>Collaborate with peers to develop innovative blockchain solutions and promote the club's presence</li>
+          <li>Built and maintain the official Boiler Blockchain website (boilerblockchain.org). Helped upgrade the site by designing, creating, and integrating dynamic pages/content</li>
+        </ul>
+      </div>
+
+      <div className="experience-divider"></div>
+
+      <div className="experienceContent">
         <h3>Zerogon Consulting</h3>
         <span className="experience-role">
           Front-End Developer | Jan 2024 - Aug 2024
