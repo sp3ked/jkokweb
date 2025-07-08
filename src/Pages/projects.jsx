@@ -42,6 +42,7 @@ function Projects() {
         title: "Promptr - AI Prompt Management",
         image: promptr1,
         status: "live",
+        year: "2025",
         liveUrl: "https://chromewebstore.google.com/detail/promptr/onkoaammdlfaebbncpbjofmcjkilgpbp",
         description: 
           "A Chrome extension for managing and injecting AI prompts across multiple LLM platforms (ChatGPT, Claude, Grok, etc). Features include prompt library management, one-click injection, and cross-platform support with a focus on streamlined workflows.",
@@ -52,6 +53,7 @@ function Projects() {
         id: "trip",
         title: "Trippian - AI Travel Assistant",
         image: tripImage,
+        year: "2025",
         description:
           "Built a sophisticated multi-agent AI system where autonomous agents collaborate to handle travel planning. Each specialized agent (Calendar, Flights, Hotels, Travel Assistant) maintains its own memory and reasoning while sharing a unified ItineraryState, demonstrating advanced agent-to-agent communication and autonomous decision making.",
         link: "/projects/trip",
@@ -63,6 +65,7 @@ function Projects() {
         title: "Boiler Blockchain - Web Development",
         image: blockImage,
         status: "live",
+        year: "2025",
         liveUrl: "https://www.boilerblockchain.org/",
         description:
           "Boiler Blockchain is Purdue University's premier blockchain and Web3 organization. I contributed to the development of their website, which serves as a hub for blockchain education, community building, and showcasing their events and initiatives on campus.",
@@ -74,6 +77,7 @@ function Projects() {
         title: "CosmosPool - DeFi Liquidity Protocol",
         image: cosmosImage,
         status: "live",
+        year: "2025",
         liveUrl: "https://www.cosmospool.xyz/",
         description:
           "CosmosPool is a decentralized liquidity provision system built on Unichain that simplifies DeFi participation. It enables users to deposit single-sided assets (e.g. WETH or USDC) into concentrated liquidity pools, automating the matching process with complementary deposits for optimal liquidity provision.",
@@ -87,6 +91,7 @@ function Projects() {
         image: docuImage,
         type: "mobile-app",
         status: "live",
+        year: "2025",
         liveUrl:
           "https://apps.apple.com/us/app/docu-ai-scanner-analyzer/id6739954302?platform=iphone",
         description:
@@ -95,10 +100,24 @@ function Projects() {
         tags: ["React Native", "Computer Vision"],
       },
       {
+        id: "locallens",
+        title: "LocalLens",
+        image: mlh1,
+        status: "completed",
+        year: "2025",
+        completionDate: "Winter 2025",
+        description:
+          "LocalLens is a hands-free, real-time campus tour system designed for Meta Glasses. It uses location-based audio narration to provide users with contextual insights about their surroundings without the need to look at a screen. By leveraging geofencing, live streaming, and text-to-speech technology, LocalLens enables an immersive exploration experience—whether on a college campus or any tour-like setting.",
+        link: "/projects/locallens",
+        tags: ["React Native", "Express JS", "Selenium"],
+        hackathon: true,
+      },
+      {
         id: "meta",
         title: "LiveAnswer - For Meta Glasses",
         image: metaImage,
         status: "completed",
+        year: "2025",
         completionDate: "Winter 2025",
         description:
           "Utilizing the livestream feature of Meta Glasses, I developed a system that streams real-time video to ChatGPT, which then analyzes the content and generates a response. The response is posted as a comment on the stream, allowing you to hear the answer directly through your earpiece.",
@@ -111,6 +130,7 @@ function Projects() {
         image: scoutLogo,
         type: "mobile-app",
         status: "live",
+        year: "2024",
         liveUrl:
           "https://apps.apple.com/us/app/scout-shop-sell-with-camera/id6502788045?platform=iphone",
         description:
@@ -119,22 +139,11 @@ function Projects() {
         tags: ["React Native", "Web Scraping", "Computer Vision"],
       },
       {
-        id: "locallens",
-        title: "LocalLens",
-        image: mlh1,
-        status: "completed",
-        completionDate: "Winter 2025",
-        description:
-          "LocalLens is a hands-free, real-time campus tour system designed for Meta Glasses. It uses location-based audio narration to provide users with contextual insights about their surroundings without the need to look at a screen. By leveraging geofencing, live streaming, and text-to-speech technology, LocalLens enables an immersive exploration experience—whether on a college campus or any tour-like setting.",
-        link: "/projects/locallens",
-        tags: ["React Native", "Express JS", "Selenium"],
-        hackathon: true,
-      },
-      {
         id: "tools",
         title: "Tools - Website With Useful Tools",
         image: toolsImage,
         status: "live",
+        year: "2024",
         liveUrl: "https://kokinda.dev/",
         description:
           "This website consolidates various essential tools for developers (me), such things as allowing users to access a QR code generator, password generator, unit converter, and more without searching for individual tools every time.",
@@ -146,6 +155,7 @@ function Projects() {
         title: "Unbolted - On-Demand GPU Computing",
         image: unboltedImage,
         status: "inactive",
+        year: "2024",
         description:
           "Unbolted (a hackathon project) simplifies the GPU rental process, making it easy for new users to spin up high-performance GPUs for AI workloads while offering advanced controls for experienced users.",
         link: "/projects/unbolted",
@@ -153,28 +163,29 @@ function Projects() {
         hackathon: true,
       },
       {
-        id: "raspi",
-        title: "Raspi - Smart Glasses",
-        image: raspberryPiGlasses,
-        status: "completed",
-        completionDate: "Winter 2023",
-        description:
-          "Custom-built smart glasses using a Raspberry Pi that use computer vision to identify objects in real-time. Features a compact OLED display, camera module, and 3D-printed housing for a fully wearable experience.",
-        link: "/projects/raspi",
-        tags: ["Raspberry Pi", "Python", "Computer Vision"],
-      },
-      {
         id: "bike",
         title: "Electric Bike - Conversion Project",
         image: bikeimage,
         status: "completed",
+        year: "2024",
         completionDate: "Summer 2024",
         description:
           "Custom electric bike conversion featuring a Flipsky motor, multistage belt drive system, and swappable Ryobi battery. Designed to solve campus transportation with a focus on efficiency and easy maintenance.",
         link: "/projects/bike",
         tags: ["Mechanical Engineering", "Electrical Engineering", "CAD"],
       },
-      
+      {
+        id: "raspi",
+        title: "Raspi - Smart Glasses",
+        image: raspberryPiGlasses,
+        status: "completed",
+        year: "2023",
+        completionDate: "Winter 2023",
+        description:
+          "Custom-built smart glasses using a Raspberry Pi that use computer vision to identify objects in real-time. Features a compact OLED display, camera module, and 3D-printed housing for a fully wearable experience.",
+        link: "/projects/raspi",
+        tags: ["Raspberry Pi", "Python", "Computer Vision"],
+      },
     ],
     [],
   );
@@ -309,6 +320,10 @@ function Projects() {
                 data-id={project.id}
                 onClick={() => handleProjectClick(project.link)}
               >
+                <div className="project-year-tag">
+                  <span className="year-badge"></span>
+                  {project.year}
+                </div>
                 <div className="project-status">
                   {project.status === "live" && (
                     <a
