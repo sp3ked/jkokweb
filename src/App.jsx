@@ -101,20 +101,25 @@ function MatrixBackground() {
 }
 
 function AppContent() {
-  const [showIntro, setShowIntro] = useState(true);
+  const [showIntro, setShowIntro] = useState(() => {
+    // Check if this is the first visit
+    const hasSeenIntro = localStorage.getItem('hasSeenIntro');
+    return !hasSeenIntro;
+  });
   const location = useLocation();
 
   useEffect(() => {
-    // Skip intro animation for /contactcard route
-    if (location.pathname === '/contactcard') {
+    // Check both the stored value and current path
+    const hasSeenIntro = localStorage.getItem('hasSeenIntro');
+    if (location.pathname === '/contactcard' || hasSeenIntro) {
       setShowIntro(false);
-    } else {
-      setShowIntro(true);
     }
   }, [location.pathname]);
 
   const handleIntroComplete = () => {
     setShowIntro(false);
+    // Save that user has seen the intro
+    localStorage.setItem('hasSeenIntro', 'true');
   };
 
   return (
