@@ -45,7 +45,7 @@ function HomePage() {
 
               <div className="social-links">
                 <a
-                  href="https://github.com/sp3ked"
+                  href="https://github.com/joeykokinda"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-link"
