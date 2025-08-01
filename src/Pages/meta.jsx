@@ -33,7 +33,7 @@ function Meta() {
             Watch Demo ↗
           </a>
           <a
-            href="https://github.com/sp3ked/MetaGlassesAnswerer"
+            href="https://github.com/joeykokinda/MetaGlassesAnswerer"
             target="_blank"
             rel="noopener noreferrer"
             className="live-link github-link"

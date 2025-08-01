@@ -5,6 +5,7 @@ import { useAnimationContext } from "./animationContext";
 import Experiences from "./experiences";
 import Projects from "./projects";
 import Education from "./education";
+import GitHub from "./github";
 import "./home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -22,9 +23,8 @@ function HomePage() {
   return (
     <div className="home-page">
       <div
-        className={`animated-sections ${
-          isAnimationDisabled ? "animations-disabled" : ""
-        }`}
+        className={`animated-sections ${isAnimationDisabled ? "animations-disabled" : ""
+          }`}
       >
         {/* Intro Section */}
         <section className="intro-section">
@@ -45,7 +45,7 @@ function HomePage() {
 
               <div className="social-links">
                 <a
-                  href="https://github.com/sp3ked"
+                  href="https://github.com/joeykokinda"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-link"
@@ -131,6 +131,12 @@ function HomePage() {
         <section id="education" className="skills-section section">
           <h2> - Education - </h2>
           <Education />
+        </section>
+
+        {/* GitHub */}
+        <section id="github" className="skills-section section">
+          <h2> - GitHub - </h2>
+          <GitHub />
         </section>
       </div>
 

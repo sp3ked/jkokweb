@@ -40,7 +40,7 @@ function ContactPage() {
         <h2 className="contact-subtitle">Social Links</h2>
         <div className="contact-social-links">
           <a
-            href="https://github.com/sp3ked"
+            href="https://github.com/joeykokinda"
             target="_blank"
             rel="noopener noreferrer"
             className="contact-social-link"

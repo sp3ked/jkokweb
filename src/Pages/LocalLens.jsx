@@ -31,7 +31,7 @@ function LocalLens() {
             View DevPost ↗
           </a>
           <a
-            href="https://github.com/sp3ked/MLH"
+            href="https://github.com/joeykokinda/MLH"
             target="_blank"
             rel="noopener noreferrer"
             className="live-link github-link"

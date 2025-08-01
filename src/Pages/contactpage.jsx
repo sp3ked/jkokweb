@@ -47,7 +47,7 @@ function ContactPageSimple() {
                     <h2 className="contactpage-social-title">Connect</h2>
                     <div className="contactpage-social-links">
                         <a
-                            href="https://github.com/sp3ked"
+                            href="https://github.com/joeykokinda"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="contactpage-social-link"

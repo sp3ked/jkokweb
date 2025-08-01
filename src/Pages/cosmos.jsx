@@ -39,7 +39,7 @@ function Cosmos() {
             Website ↗
           </a>
           <a
-            href="https://github.com/sp3ked/CosmosPoolDenver"
+            href="https://github.com/joeykokinda/CosmosPoolDenver"
             target="_blank"
             rel="noopener noreferrer"
             className="live-link github-link"
