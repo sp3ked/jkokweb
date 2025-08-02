@@ -1,0 +1,345 @@
+/* GitHub Terminal Component Styles */
+.githubBox {
+    background-color: rgba(0, 0, 0, 0.925);
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    font-family: "Courier New", monospace;
+    color: #00ff00;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.githubHeader {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 8px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #00ff00;
+}
+
+.terminalTitle {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.terminalControls {
+    display: flex;
+    gap: 5px;
+}
+
+.terminalControl {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #00ff00;
+    border-radius: 50%;
+    font-size: 10px;
+    cursor: not-allowed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.githubContent {
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.loading,
+.error {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2rem;
+}
+
+.error {
+    color: #ff4444;
+}
+
+/* Rate Limit Error Styling */
+.rate-limit-error {
+    padding: 30px;
+    text-align: center;
+}
+
+.rate-limit-message {
+    background-color: rgba(255, 68, 68, 0.1);
+    border: 1px solid #ff4444;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 15px;
+}
+
+.rate-limit-message p {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.rate-limit-message p:first-child {
+    color: #ff4444;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.rate-limit-info {
+    color: #cccccc;
+    font-size: 0.95rem;
+}
+
+.rate-limit-suggestion {
+    color: #00ff00;
+    font-size: 0.95rem;
+}
+
+.rate-limit-suggestion strong {
+    color: #ffffff;
+}
+
+.retry-button {
+    background-color: rgba(0, 255, 0, 0.1);
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Courier New", monospace;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.retry-button:hover {
+    background-color: rgba(0, 255, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Section Titles */
+.github-section-title {
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin: 0 0 15px 0;
+    border-bottom: 1px solid #00ff00;
+    padding-bottom: 5px;
+}
+
+
+
+
+
+/* Contribution Section */
+.github-contribution-section {
+    margin-bottom: 30px;
+}
+
+.contribution-graph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.contribution-activity,
+.contribution-streak {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.contribution-activity {
+    width: 100%;
+}
+
+/* Repositories Section */
+.github-repos-section {
+    margin-bottom: 20px;
+}
+
+.repos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.repo-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(0, 255, 0, 0.3);
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.repo-card:hover {
+    border-color: #00ff00;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.2);
+}
+
+.repo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.repo-name {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.repo-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.repo-link:hover {
+    color: #00ff00;
+}
+
+.repo-visibility {
+    background-color: rgba(0, 255, 0, 0.2);
+    color: #00ff00;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(0, 255, 0, 0.5);
+}
+
+.repo-description {
+    color: #cccccc;
+    margin: 10px 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.repo-stats {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.repo-stat {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #00ff00;
+    font-size: 0.9rem;
+}
+
+.repo-stat-icon {
+    font-size: 0.8rem;
+}
+
+.language-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.repo-updated {
+    color: #888888;
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Footer */
+.githubFooter {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+    border-top: 1px solid #00ff00;
+    text-align: center;
+}
+
+.github-footer-text {
+    margin: 0;
+    color: #00ff00;
+}
+
+.github-link {
+    color: #ffffff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.github-link:hover {
+    color: #00ff00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .githubBox {
+        margin: 10px;
+        max-width: calc(100% - 20px);
+    }
+
+    .githubContent {
+        padding: 15px;
+    }
+
+
+
+
+
+    .repos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .repo-stats {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .repo-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .rate-limit-error {
+        padding: 20px;
+    }
+
+    .rate-limit-message {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .terminalTitle {
+        font-size: 12px;
+    }
+
+    .github-section-title {
+        font-size: 1.1rem;
+    }
+
+
+
+    .repo-card {
+        padding: 15px;
+    }
+
+    .rate-limit-error {
+        padding: 15px;
+    }
+
+    .rate-limit-message {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .retry-button {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}

@@ -31,7 +31,7 @@ function Promptr() {
             View in Chrome Store ↗
           </a>
           <a
-            href="https://github.com/sp3ked/promptEx"
+            href="https://github.com/joeykokinda/promptEx"
             target="_blank"
             rel="noopener noreferrer"
             className="live-link github-link"
@@ -54,9 +54,9 @@ function Promptr() {
           <section className="project-section">
             <h2>Overview</h2>
             <p>
-              Promptr is a Chrome extension that streamlines AI interactions by providing a central hub 
-              for managing and injecting prompts across multiple LLM platforms. It enables users to maintain 
-              a personal library of prompts that can be instantly deployed to ChatGPT, Claude, Grok, 
+              Promptr is a Chrome extension that streamlines AI interactions by providing a central hub
+              for managing and injecting prompts across multiple LLM platforms. It enables users to maintain
+              a personal library of prompts that can be instantly deployed to ChatGPT, Claude, Grok,
               Deepseek, or Gemini.
             </p>
           </section>

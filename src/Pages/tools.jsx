@@ -31,7 +31,7 @@ function ToolsWebsite() {
             Visit Website ↗
           </a>
           <a
-            href="https://github.com/sp3ked/tool"
+            href="https://github.com/joeykokinda/tool"
             target="_blank"
             rel="noopener noreferrer"
             className="live-link github-link"
