@@ -9,6 +9,7 @@ const pageLinks = [
   { type: "internal", to: "/experience", label: "experience" },
   { type: "internal", to: "/resume", label: "resume" },
   { type: "internal", to: "/blog", label: "blog" },
+  { type: "internal", to: "/books", label: "books" },
 ];
 
 const socialLinks = [

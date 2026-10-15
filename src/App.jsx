@@ -37,6 +37,7 @@ import PhoneFarm from "./Pages/phonefarm";
 import CurrentSetup from "./Pages/CurrentSetup";
 import BlogIndex from "./Pages/Blog/BlogIndex";
 import BlogPost from "./Pages/Blog/BlogPost";
+import Books from "./Pages/Books";
 // import Langnav from "./Pages/langnav";
 import ScrollRestoration from "./Pages/scrollToTop";
 import "./App.css";
@@ -103,6 +104,7 @@ function AppContent() {
             <Route path="/projects/phonefarm" element={<PhoneFarm />} />
             <Route path="/blog" element={<BlogIndex />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/books" element={<Books />} />
             <Route path="/ai" element={<AILounge />} />
             <Route path="/freemoney" element={<FreeMoney />} />
             <Route path="/admin" element={<Admin />} />
