@@ -491,3 +491,67 @@
   object-fit: contain;
   background: #11151c;
 }
+
+/* Featured: two wide tiles per row, image beside the text */
+.project-grid.featured {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-grid.featured .project-card {
+  flex-direction: row;
+}
+
+.project-grid.featured .project-thumb {
+  width: 50%;
+  aspect-ratio: auto;
+  min-height: 220px;
+  border-bottom: none;
+  border-right: var(--border);
+}
+
+.project-grid.featured .project-info {
+  width: 50%;
+  justify-content: flex-start;
+}
+
+/* Pills sit on the image's top-right corner instead of over the title */
+.project-grid.featured .project-status {
+  right: calc(50% + 10px);
+}
+
+.project-grid.featured .project-info h3 {
+  font-size: 1.1rem;
+}
+
+.project-grid.featured .project-info p {
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+}
+
+@media (max-width: 860px) {
+  .project-grid.featured {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .project-grid.featured .project-card {
+    flex-direction: column;
+  }
+
+  .project-grid.featured .project-thumb,
+  .project-grid.featured .project-info {
+    width: 100%;
+  }
+
+  .project-grid.featured .project-status {
+    right: 10px;
+  }
+
+  .project-grid.featured .project-thumb {
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+    border-right: none;
+    border-bottom: var(--border);
+  }
+}
