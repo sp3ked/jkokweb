@@ -23,7 +23,6 @@ import Trip from "./Pages/trip";
 import Promptr from "./Pages/promptr";
 import FreeMoney from "./Pages/FreeMoney";
 import TruNorth from "./Pages/trunorth";
-import Exoform from "./Pages/exoform";
 import PolyTerm from "./Pages/polyterm";
 import YouVest from "./Pages/youvest";
 import StakLabs from "./Pages/staklabs";
@@ -31,6 +30,7 @@ import Jaeger from "./Pages/jaeger";
 import AgentTrust from "./Pages/agenttrust";
 import Pyras from "./Pages/pyras";
 import Veridex from "./Pages/veridex";
+import MoreProject from "./Pages/moreProjects";
 import Creou from "./Pages/creou";
 import Ward from "./Pages/ward";
 import PhoneFarm from "./Pages/phonefarm";
@@ -91,7 +91,6 @@ function AppContent() {
             <Route path="/projects/block" element={<Block />} />
             <Route path="/projects/promptr" element={<Promptr />} />
             <Route path="/projects/trunorth" element={<TruNorth />} />
-            <Route path="/projects/exoform" element={<Exoform />} />
             <Route path="/projects/polyterm" element={<PolyTerm />} />
             <Route path="/projects/youvest" element={<YouVest />} />
             <Route path="/projects/staklabs" element={<StakLabs />} />
@@ -102,6 +101,7 @@ function AppContent() {
             <Route path="/projects/creou" element={<Creou />} />
             <Route path="/projects/ward" element={<Ward />} />
             <Route path="/projects/phonefarm" element={<PhoneFarm />} />
+            <Route path="/projects/:id" element={<MoreProject />} />
             <Route path="/blog" element={<BlogIndex />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/books" element={<Books />} />

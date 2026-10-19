@@ -14,7 +14,7 @@ import blockImage from "../images/block1.png";
 import tripImage from "../images/trip.jpg";
 import promptr1 from "../images/promptr1.png";
 import trunorthImage from "../images/TruNorth/Screenshot 2025-10-22 at 14-38-20 HVAC Contractor Chester County PA - Heating & Air Conditioning Tru North Heating and Air Inc.png";
-import exoformImage from "../images/Exoform/Screenshot 2025-10-22 at 14-49-22 Exoform - Digitally Crafted 3D Printed Sculptures.png";
+import exoformImage from "../images/Exoform/exo-1.jpg";
 import polytermImage from "../images/polyterm/2025-10-22T15:01:20,845467989-04:00.png";
 import youvestImage from "../images/YouVest/youvest1.png";
 import staklabsImage from "../images/Staklabs/2025-11-17T13:14:09,510007741-05:00.png";
@@ -25,10 +25,17 @@ import veridexImage from "../images/veridex/veridex1.png";
 import creouImage from "../images/Creou/landing.png";
 import wardImage from "../images/Ward/00-intro.png";
 import phonefarmImage from "../images/PhoneFarm/phonefarm-dashboard.png";
-import skillscopeImage from "../images/skillscope.png";
+import skillscopeImage from "../images/SkillScope/skillscope1.png";
+import aimemImage from "../images/Aimem/aimem2.png";
+import airlockImage from "../images/Airlock/airlock1.png";
+import acceptImage from "../images/Accept/accept-request.png";
+import corecImage from "../images/CoRec/corec1.png";
+import nightdialImage from "../images/Nightdial/nightdial1.jpg";
+import detectImage from "../images/TurtosaDetect/detect1.png";
+import cellImage from "../images/CELL/cell1.png";
 
 // Featured projects, in display order. Everything else lands in "Other".
-const FEATURED_IDS = ["creou", "phonefarm", "ward", "veridex", "aimem", "pyras", "exoform", "agenttrust", "youvest", "jaeger", "docu", "polyterm"];
+const FEATURED_IDS = ["creou", "phonefarm", "veridex", "jaeger", "aimem", "exoform"];
 
 function Projects() {
   const navigate = useNavigate();
@@ -110,13 +117,14 @@ function Projects() {
       },
       {
         id: "aimem",
+        image: aimemImage,
         title: "Aimem - Local-First Memory for Coding Agents",
         year: "2026",
         status: "in-progress",
         description:
           "Memory layer between my Obsidian vault and every coding agent I run. Generates a compact index of every project, repo, and decision, serves it over an MCP server with ranked search, and enforces a three-tier privacy boundary so agents get context without seeing the journal. Agent writes are quarantined until reviewed. Two small Go binaries, zero third-party dependencies.",
-        link: "https://github.com/joeykokinda/aimem",
         tags: ["Go", "MCP", "AI Agents", "Obsidian", "CLI"],
+        link: "/projects/aimem",
       },
       {
         id: "pyras",
@@ -179,15 +187,15 @@ function Projects() {
       },
       {
         id: "exoform",
-        title: "Exoform - 3D Printing Shop",
+        title: "Exoform - 3D Printed National Parks",
         image: exoformImage,
         status: "live",
-        year: "2025",
-        liveUrl: "https://exoform.shop",
+        year: "2026",
+        liveUrl: "https://www.exoform.shop",
         description:
-          "Personal e-commerce platform for selling 3D printed items with a clean, straightforward approach. Built with Next.js and Tailwind CSS, featuring a 360-degree rotating image carousel, Stripe payment integration, and custom API routes for product and order management.",
+          "Full-colour 3D printed terrain of US national parks, generated from real elevation and land-cover data with landmarks at true scale and your hike raised on the trail. Build-your-own lets anyone pick a spot on the map, upload a GPX route, and get a printable piece. Next.js + Three.js storefront with a Python terrain generator, batch print planning, and Shippo labels, self-hosted behind Cloudflare.",
         link: "/projects/exoform",
-        tags: ["Next.js", "Tailwind CSS", "Stripe", "E-commerce"],
+        tags: ["Next.js", "Three.js", "Python", "Prisma", "Stripe", "3D Printing"],
       },
       {
         id: "skillscope",
@@ -198,57 +206,64 @@ function Projects() {
         liveUrl: "https://www.npmjs.com/package/skillscope",
         description:
           "\"Google Analytics for your Claude Code skills.\" Shows which skills actually fire, what they cost in context, and which are dead weight. Published to npm, runs with npx.",
-        link: "https://github.com/joeykokinda/SkillScope",
         tags: ["Node.js", "npm", "Claude Code", "CLI"],
+        link: "/projects/skillscope",
       },
       {
         id: "airlock",
+        image: airlockImage,
         title: "Agent Airlock - Policy Firewall for Ledger",
         year: "2026",
         description:
           "Go policy firewall between an autonomous agent and a Ledger hardware wallet. The agent proposes a transaction, the airlock decides if it may reach the device, and a human approves on the device screen. If the agent holds the key, a prompt injection holds the key; this takes it away.",
-        link: "https://github.com/joeykokinda/LedgerAgentStack",
         tags: ["Go", "Ledger", "AI Agents", "Security"],
+        link: "/projects/airlock",
       },
       {
         id: "accept",
+        image: acceptImage,
         title: "Accept - Physical Approve Button for AI Agents",
         year: "2026",
         description:
           "USB device on the desk that intercepts Claude Code commands before they run. Nothing executes until a human presses APPROVE or REJECT, every decision is logged, and an unplugged device always means no. ESP32 + OLED firmware, Python daemon, OpenSCAD enclosure.",
-        link: "https://github.com/joeykokinda/-ACCEPT-",
         tags: ["ESP32", "Firmware", "Python", "Hardware", "AI Agents"],
+        link: "/projects/accept",
       },
       {
         id: "corec",
+        image: corecImage,
         title: "CoRec Tracker - Purdue Gym Busyness",
         year: "2026",
         status: "live",
         liveUrl: "https://corec.jaeger.lol",
         description:
           "Live and historical busyness for every Purdue CoRec area: weekday by hour heatmaps and best times to go, per semester and all time. One Go binary + SQLite, self-hosted behind a Cloudflare tunnel.",
-        link: "https://github.com/joeykokinda/PurdueGymData",
         tags: ["Go", "SQLite", "Docker", "Cloudflare"],
+        link: "/projects/corec",
       },
       {
         id: "nightdial",
+        image: nightdialImage,
         title: "Nightdial - A Radio Between Frequencies",
         year: "2026",
         description:
           "Interactive toy where the whole site is an analog tuner sweeping 87.0 to 108.0 MHz, with eleven living stations hidden in the static: code rain afraid of your cursor, a Game of Life garden, a speaking numbers station. Zero dependencies, vanilla Canvas 2D and WebAudio.",
-        link: "https://github.com/joeykokinda/FableTest",
         tags: ["Canvas", "WebAudio", "JavaScript"],
+        link: "/projects/nightdial",
       },
       {
         id: "turtosadetect",
+        image: detectImage,
         title: "TurtosaDetect - AI Text Detection",
         year: "2026",
         description:
           "AI-generated text detector built on a fine-tuned ModernBERT-large classifier with an ONNX export. FastAPI backend with account-level stylometry, plus a browser extension and paste-a-text web detector.",
         tags: ["Python", "ModernBERT", "FastAPI", "ML", "Chrome Extension"],
+        link: "/projects/turtosadetect",
       },
       {
         id: "cell",
+        image: cellImage,
         title: "CELL - Multiplayer Game of Life on Solana",
         year: "2026",
         status: "live",
@@ -256,6 +271,7 @@ function Projects() {
         description:
           "One persistent, never-wiped Conway's Game of Life board shared by everyone. Holders drop owner-stamped cells that evolve every 500ms; every 15 minutes whoever controls the most living cells wins the pot, settled on-chain.",
         tags: ["Solana", "Socket.IO", "TypeScript", "Web3"],
+        link: "/projects/cell",
       },
       {
         id: "trunorth",

@@ -520,3 +520,9 @@
 .project-card.no-link {
   cursor: default;
 }
+
+.project-card[data-id="aimem"] .project-thumb img,
+.project-card[data-id="accept"] .project-thumb img {
+  object-fit: contain;
+  background: #11151c;
+}
