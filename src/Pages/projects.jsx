@@ -35,7 +35,7 @@ import detectImage from "../images/TurtosaDetect/detect1.png";
 import cellImage from "../images/CELL/cell1.png";
 
 // Featured projects, in display order. Everything else lands in "Other".
-const FEATURED_IDS = ["creou", "phonefarm", "veridex", "jaeger", "aimem", "exoform"];
+const FEATURED_IDS = ["creou", "phonefarm", "veridex", "pyras", "jaeger", "aimem", "exoform"];
 
 function Projects() {
   const navigate = useNavigate();

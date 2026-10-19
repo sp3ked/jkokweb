@@ -101,11 +101,11 @@
 }
 
 /* Project grid */
-/* Horizontal list view: one project per row */
+/* Tile grid: as many columns as fit */
 .project-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
   padding: 0;
 }
 
@@ -116,9 +116,7 @@
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  width: 100%;
+  flex-direction: column;
   position: relative;
   cursor: pointer;
 }
@@ -128,18 +126,13 @@
   box-shadow: 0 16px 40px rgba(31, 111, 176, 0.22);
 }
 
-/* Thumbnail wrapper: stretches to the card's full height, no whitespace */
-.project-card {
-  min-height: 215px;
-}
-
 .project-thumb {
   position: relative;
-  width: 360px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   flex-shrink: 0;
-  align-self: stretch;
   overflow: hidden;
-  border-right: var(--border);
+  border-bottom: var(--border);
 }
 
 .project-thumb img {
@@ -183,15 +176,14 @@
 .project-card[data-id="locallens"] .project-thumb img,
 .project-card[data-id="cosmos"] .project-thumb img,
 .project-card[data-id="block"] .project-thumb img {
-  padding: 24px;
+  padding: 16px;
   object-fit: contain;
 }
 
 .project-card[data-id="locallens"] iframe {
-  width: 300px;
-  flex-shrink: 0;
-  align-self: stretch;
-  border-right: var(--border);
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-bottom: var(--border);
 }
 
 .gallery-item.no-hover {
@@ -204,7 +196,7 @@
 
 /* Card body */
 .project-info {
-  padding: 1.4rem 1.5rem;
+  padding: 0.9rem 1rem 1rem;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -213,16 +205,17 @@
 
 .project-info h3 {
   color: var(--ink);
-  font-size: 1.35rem;
-  margin-bottom: 12px;
+  font-size: 1rem;
+  line-height: 1.35;
+  margin: 0 0 8px;
   font-weight: 700;
 }
 
 .project-info p {
   color: var(--ink-soft);
-  line-height: 1.6;
-  margin-bottom: 20px;
-  font-size: 0.98rem;
+  line-height: 1.5;
+  margin: 0;
+  font-size: 0.85rem;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   line-clamp: 3;
@@ -230,8 +223,9 @@
   overflow: hidden;
 }
 
+/* The whole tile is clickable, so the text link is redundant */
 .see-more {
-  display: inline-block;
+  display: none;
   color: var(--sky-deep);
   text-decoration: none;
   font-weight: 700;
@@ -248,17 +242,20 @@
 /* Tags */
 .project-tags {
   display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 15px;
+  gap: 6px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  margin-bottom: 8px;
 }
 
 .project-tag {
+  white-space: nowrap;
+  flex-shrink: 0;
   background: var(--sun-soft);
   color: var(--ink);
-  padding: 0.2rem 0.7rem;
+  padding: 0.1rem 0.55rem;
   border-radius: 999px;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   font-weight: 600;
 }
 
@@ -301,9 +298,9 @@
 }
 
 .status-dot {
-  padding: 4px 12px;
+  padding: 3px 9px;
   border-radius: 999px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 700;
   text-decoration: none;
   display: inline-block;
@@ -443,25 +440,6 @@
 }
 
 /* Responsive */
-@media (max-width: 860px) {
-  /* Stack the row: image on top, info below */
-  .project-card {
-    flex-direction: column;
-  }
-
-  .project-thumb {
-    width: 100%;
-    height: 200px;
-    align-self: stretch;
-    border-right: none;
-    border-bottom: var(--border);
-  }
-
-  .project-thumb img {
-    min-height: 0;
-  }
-}
-
 @media (max-width: 768px) {
   .projects-terminal {
     width: 92%;
@@ -477,19 +455,6 @@
     font-size: 0.85rem;
   }
 
-  .project-info {
-    text-align: left;
-    padding: 1.2rem;
-  }
-
-  .project-info h3 {
-    font-size: 1.2rem;
-  }
-
-  .project-info p {
-    font-size: 0.95rem;
-  }
-
   .project-tags {
     justify-content: flex-start;
   }
@@ -501,7 +466,7 @@
 }
 
 .other-projects-header {
-  margin: 3rem 0 1.25rem;
+  margin: 2.5rem 0 1rem;
   padding-top: 1.5rem;
   border-top: var(--border);
 }
