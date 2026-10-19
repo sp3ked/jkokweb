@@ -25,9 +25,10 @@ import veridexImage from "../images/veridex/veridex1.png";
 import creouImage from "../images/Creou/landing.png";
 import wardImage from "../images/Ward/00-intro.png";
 import phonefarmImage from "../images/PhoneFarm/phonefarm-dashboard.png";
+import skillscopeImage from "../images/skillscope.png";
 
-// Projects pinned to the top of the list, in this order
-const PINNED_IDS = ["creou", "phonefarm", "pyras", "exoform"];
+// Featured projects, in display order. Everything else lands in "Other".
+const FEATURED_IDS = ["creou", "phonefarm", "ward", "veridex", "aimem", "pyras", "exoform", "agenttrust", "youvest", "jaeger", "docu", "polyterm"];
 
 function Projects() {
   const navigate = useNavigate();
@@ -46,14 +47,14 @@ function Projects() {
   const filterCategories = useMemo(
     () => ({
       all: [],
-      website: ["creou", "ward", "promptr", "tools", "cosmos", "unbolted", "block", "trip", "trunorth", "exoform", "youvest", "staklabs", "agenttrust", "pyras", "veridex"],
-      hardware: ["phonefarm", "raspi", "bike", "pyras"],
-      software: ["phonefarm", "creou", "ward", "promptr", "docu", "scout", "tools", "cosmos", "locallens", "unbolted", "block", "trip", "trunorth", "exoform", "polyterm", "youvest", "staklabs", "jaeger", "agenttrust", "pyras", "veridex"],
-      web3: ["ward", "youvest", "cosmos", "polyterm", "jaeger", "agenttrust", "pyras", "veridex"],
-      hackathon: ["ward", "unbolted", "locallens", "cosmos", "trip", "youvest", "jaeger", "agenttrust"],
-      active: ["phonefarm", "creou", "ward", "promptr", "docu", "scout", "cosmos", "block", "trunorth", "exoform", "polyterm", "youvest", "staklabs", "agenttrust", "pyras", "veridex"],
-      inactive: ["unbolted", "raspi", "bike", "locallens", "tools"],
-      oneTime: ["ward", "meta", "raspi", "bike", "locallens", "unbolted", "trip", "youvest", "jaeger", "agenttrust"],
+      website: ["creou", "ward", "promptr", "tools", "cosmos", "unbolted", "block", "trip", "trunorth", "exoform", "youvest", "staklabs", "agenttrust", "pyras", "veridex", "corec", "nightdial", "cell"],
+      hardware: ["phonefarm", "raspi", "bike", "pyras", "accept"],
+      software: ["phonefarm", "creou", "ward", "promptr", "docu", "scout", "tools", "cosmos", "locallens", "unbolted", "block", "trip", "trunorth", "exoform", "polyterm", "youvest", "staklabs", "jaeger", "agenttrust", "pyras", "veridex", "aimem", "skillscope", "airlock", "accept", "corec", "nightdial", "turtosadetect", "cell"],
+      web3: ["ward", "youvest", "cosmos", "polyterm", "jaeger", "agenttrust", "pyras", "veridex", "airlock", "cell"],
+      hackathon: ["ward", "unbolted", "locallens", "cosmos", "trip", "youvest", "jaeger", "agenttrust", "airlock"],
+      active: ["phonefarm", "creou", "ward", "promptr", "docu", "scout", "cosmos", "block", "trunorth", "exoform", "polyterm", "youvest", "staklabs", "agenttrust", "pyras", "veridex", "aimem", "corec"],
+      inactive: ["unbolted", "raspi", "bike", "locallens", "tools", "airlock", "accept", "turtosadetect", "cell"],
+      oneTime: ["ward", "meta", "raspi", "bike", "locallens", "unbolted", "trip", "youvest", "jaeger", "agenttrust", "skillscope", "nightdial"],
     }),
     [],
   );
@@ -106,6 +107,16 @@ function Projects() {
           "Trust middleware for AI agents. Every action checked before it runs and written to Hedera HCS — pre-execution gate, AES-256-GCM encrypted audit trail, replayable trust scores, operator policies, and ERC-7715 wallet-scoped permissions. 17 agents monitored, 3,900+ actions logged.",
         link: "/projects/veridex",
         tags: ["Hedera", "Node.js", "Next.js", "Solidity", "AI Agents", "Web3"],
+      },
+      {
+        id: "aimem",
+        title: "Aimem - Local-First Memory for Coding Agents",
+        year: "2026",
+        status: "in-progress",
+        description:
+          "Memory layer between my Obsidian vault and every coding agent I run. Generates a compact index of every project, repo, and decision, serves it over an MCP server with ranked search, and enforces a three-tier privacy boundary so agents get context without seeing the journal. Agent writes are quarantined until reviewed. Two small Go binaries, zero third-party dependencies.",
+        link: "https://github.com/joeykokinda/aimem",
+        tags: ["Go", "MCP", "AI Agents", "Obsidian", "CLI"],
       },
       {
         id: "pyras",
@@ -177,6 +188,74 @@ function Projects() {
           "Personal e-commerce platform for selling 3D printed items with a clean, straightforward approach. Built with Next.js and Tailwind CSS, featuring a 360-degree rotating image carousel, Stripe payment integration, and custom API routes for product and order management.",
         link: "/projects/exoform",
         tags: ["Next.js", "Tailwind CSS", "Stripe", "E-commerce"],
+      },
+      {
+        id: "skillscope",
+        title: "SkillScope - Analytics for Claude Code Skills",
+        image: skillscopeImage,
+        year: "2026",
+        status: "live",
+        liveUrl: "https://www.npmjs.com/package/skillscope",
+        description:
+          "\"Google Analytics for your Claude Code skills.\" Shows which skills actually fire, what they cost in context, and which are dead weight. Published to npm, runs with npx.",
+        link: "https://github.com/joeykokinda/SkillScope",
+        tags: ["Node.js", "npm", "Claude Code", "CLI"],
+      },
+      {
+        id: "airlock",
+        title: "Agent Airlock - Policy Firewall for Ledger",
+        year: "2026",
+        description:
+          "Go policy firewall between an autonomous agent and a Ledger hardware wallet. The agent proposes a transaction, the airlock decides if it may reach the device, and a human approves on the device screen. If the agent holds the key, a prompt injection holds the key; this takes it away.",
+        link: "https://github.com/joeykokinda/LedgerAgentStack",
+        tags: ["Go", "Ledger", "AI Agents", "Security"],
+      },
+      {
+        id: "accept",
+        title: "Accept - Physical Approve Button for AI Agents",
+        year: "2026",
+        description:
+          "USB device on the desk that intercepts Claude Code commands before they run. Nothing executes until a human presses APPROVE or REJECT, every decision is logged, and an unplugged device always means no. ESP32 + OLED firmware, Python daemon, OpenSCAD enclosure.",
+        link: "https://github.com/joeykokinda/-ACCEPT-",
+        tags: ["ESP32", "Firmware", "Python", "Hardware", "AI Agents"],
+      },
+      {
+        id: "corec",
+        title: "CoRec Tracker - Purdue Gym Busyness",
+        year: "2026",
+        status: "live",
+        liveUrl: "https://corec.jaeger.lol",
+        description:
+          "Live and historical busyness for every Purdue CoRec area: weekday by hour heatmaps and best times to go, per semester and all time. One Go binary + SQLite, self-hosted behind a Cloudflare tunnel.",
+        link: "https://github.com/joeykokinda/PurdueGymData",
+        tags: ["Go", "SQLite", "Docker", "Cloudflare"],
+      },
+      {
+        id: "nightdial",
+        title: "Nightdial - A Radio Between Frequencies",
+        year: "2026",
+        description:
+          "Interactive toy where the whole site is an analog tuner sweeping 87.0 to 108.0 MHz, with eleven living stations hidden in the static: code rain afraid of your cursor, a Game of Life garden, a speaking numbers station. Zero dependencies, vanilla Canvas 2D and WebAudio.",
+        link: "https://github.com/joeykokinda/FableTest",
+        tags: ["Canvas", "WebAudio", "JavaScript"],
+      },
+      {
+        id: "turtosadetect",
+        title: "TurtosaDetect - AI Text Detection",
+        year: "2026",
+        description:
+          "AI-generated text detector built on a fine-tuned ModernBERT-large classifier with an ONNX export. FastAPI backend with account-level stylometry, plus a browser extension and paste-a-text web detector.",
+        tags: ["Python", "ModernBERT", "FastAPI", "ML", "Chrome Extension"],
+      },
+      {
+        id: "cell",
+        title: "CELL - Multiplayer Game of Life on Solana",
+        year: "2026",
+        status: "live",
+        liveUrl: "https://memecoinbullshit.vercel.app",
+        description:
+          "One persistent, never-wiped Conway's Game of Life board shared by everyone. Holders drop owner-stamped cells that evolve every 500ms; every 15 minutes whoever controls the most living cells wins the pot, settled on-chain.",
+        tags: ["Solana", "Socket.IO", "TypeScript", "Web3"],
       },
       {
         id: "trunorth",
@@ -351,26 +430,30 @@ function Projects() {
   );
 
   const orderedProjects = useMemo(() => {
-    const pinned = PINNED_IDS.map((id) =>
+    const featured = FEATURED_IDS.map((id) =>
       projectsList.find((project) => project.id === id),
     ).filter(Boolean);
     const rest = projectsList.filter(
-      (project) => !PINNED_IDS.includes(project.id),
+      (project) => !FEATURED_IDS.includes(project.id),
     );
-    return [...pinned, ...rest];
+    return [...featured, ...rest];
   }, [projectsList]);
 
   useEffect(() => {
-    if (activeFilter === "all") {
-      // Only apply the pinned order when no sort/filter is active
-      setFilteredProjects(orderedProjects);
-    } else {
-      const selectedIds = filterCategories[activeFilter] || [];
-      setFilteredProjects(
-        projectsList.filter((project) => selectedIds.includes(project.id)),
-      );
-    }
-  }, [activeFilter, filterCategories, orderedProjects, projectsList]);
+    const selectedIds = filterCategories[activeFilter] || [];
+    setFilteredProjects(
+      activeFilter === "all"
+        ? orderedProjects
+        : orderedProjects.filter((project) => selectedIds.includes(project.id)),
+    );
+  }, [activeFilter, filterCategories, orderedProjects]);
+
+  const featuredProjects = filteredProjects.filter((project) =>
+    FEATURED_IDS.includes(project.id),
+  );
+  const otherProjects = filteredProjects.filter(
+    (project) => !FEATURED_IDS.includes(project.id),
+  );
 
   const handleProjectClick = (link) => {
     // Remember the list scroll position so returning from the project
@@ -382,8 +465,100 @@ function Projects() {
       0;
     sessionStorage.setItem("projectsListScroll", scrollY.toString());
 
+    if (!link) return;
+    if (link.startsWith("http")) {
+      window.open(link, "_blank", "noopener,noreferrer");
+      return;
+    }
     navigate(link);
   };
+
+  const renderCard = (project) => (
+    <div
+      key={project.id}
+      className={`project-card${project.link ? "" : " no-link"}`}
+      data-type={project.type}
+      data-id={project.id}
+      onClick={() => handleProjectClick(project.link)}
+    >
+      <div className="project-year-tag">
+        <span className="year-badge"></span>
+        {project.year}
+      </div>
+      <div className="project-status">
+        {project.status === "live" && (
+          project.id === "polyterm" ? (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setShowSSHPopup(true);
+              }}
+              className="status-dot live"
+            >
+              Live ↗
+            </button>
+          ) : (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="status-dot live"
+            >
+              Live ↗
+            </a>
+          )
+        )}
+        {project.status === "inactive" && (
+          <span className="status-dot inactive">Inactive</span>
+        )}
+        {project.status === "completed" && (
+          <span className="status-dot completed">
+            Completed {project.completionDate}
+          </span>
+        )}
+        {project.status === "in-progress" && (
+          <span className="status-dot in-progress">In Progress</span>
+        )}
+        {project.hackathon && (
+          <span className="status-dot hackathon">Hackathon</span>
+        )}
+      </div>
+      {project.image && (
+        <div className="project-thumb">
+          <img src={project.image} alt={project.title} />
+        </div>
+      )}
+      <div className="project-info">
+        <div>
+          <h3>{project.title}</h3>
+          <div className="project-tags">
+            {project.tags?.map((tag) => (
+              <span key={tag} className="project-tag">
+                {tag}
+              </span>
+            ))}
+          </div>
+          <p>{project.description}</p>
+        </div>
+        {project.link?.startsWith("http") ? (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="see-more"
+            onClick={(e) => e.stopPropagation()}
+          >
+            View on GitHub ↗
+          </a>
+        ) : project.link ? (
+          <Link to={project.link} className="see-more">
+            View Project Details →
+          </Link>
+        ) : null}
+      </div>
+    </div>
+  );
 
   return (
     <>
@@ -444,78 +619,24 @@ function Projects() {
           </div>
 
           <div className="project-grid">
-            {filteredProjects.map((project) => (
-              <div
-                key={project.id}
-                className="project-card"
-                data-type={project.type}
-                data-id={project.id}
-                onClick={() => handleProjectClick(project.link)}
-              >
-                <div className="project-year-tag">
-                  <span className="year-badge"></span>
-                  {project.year}
-                </div>
-                <div className="project-status">
-                  {project.status === "live" && (
-                    project.id === "polyterm" ? (
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setShowSSHPopup(true);
-                        }}
-                        className="status-dot live"
-                      >
-                        Live ↗
-                      </button>
-                    ) : (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="status-dot live"
-                      >
-                        Live ↗
-                      </a>
-                    )
-                  )}
-                  {project.status === "inactive" && (
-                    <span className="status-dot inactive">Inactive</span>
-                  )}
-                  {project.status === "completed" && (
-                    <span className="status-dot completed">
-                      Completed {project.completionDate}
-                    </span>
-                  )}
-                  {project.status === "in-progress" && (
-                    <span className="status-dot in-progress">In Progress</span>
-                  )}
-                  {project.hackathon && (
-                    <span className="status-dot hackathon">Hackathon</span>
-                  )}
-                </div>
-                <div className="project-thumb">
-                  <img src={project.image} alt={project.title} />
-                </div>
-                <div className="project-info">
-                  <div>
-                    <h3>{project.title}</h3>
-                    <div className="project-tags">
-                      {project.tags?.map((tag) => (
-                        <span key={tag} className="project-tag">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <p>{project.description}</p>
-                  </div>
-                  <Link to={project.link} className="see-more">
-                    View Project Details →
-                  </Link>
-                </div>
-              </div>
-            ))}
+            {featuredProjects.map(renderCard)}
           </div>
+
+          {otherProjects.length > 0 && (
+            <>
+              <div className="other-projects-header">
+                <h2>Other</h2>
+                <p>
+                  Mostly here so I have a record of everything I've worked on.
+                  Weekend builds, hackathon leftovers, and experiments; none of
+                  them are realistically that impressive.
+                </p>
+              </div>
+              <div className="project-grid">
+                {otherProjects.map(renderCard)}
+              </div>
+            </>
+          )}
         </div>
       </div>
     </>

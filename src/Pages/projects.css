@@ -499,3 +499,24 @@
     font-size: 0.72rem;
   }
 }
+
+.other-projects-header {
+  margin: 3rem 0 1.25rem;
+  padding-top: 1.5rem;
+  border-top: var(--border);
+}
+
+.other-projects-header h2 {
+  margin: 0 0 0.4rem;
+  color: var(--ink);
+}
+
+.other-projects-header p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.project-card.no-link {
+  cursor: default;
+}
