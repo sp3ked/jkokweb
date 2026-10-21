@@ -4,11 +4,12 @@ import { Helmet } from "react-helmet-async";
 import profilePic from "../images/jkokpfp.png";
 import AsciiFactory from "./AsciiFactory";
 import mbcWin from "../images/BoilerBlockchain/mbc-polymarket-win.webp";
-import teachingClass from "../images/BoilerBlockchain/teaching-class.webp";
 import hackathonWinners from "../images/BoilerBlockchain/mbc-hackathon-winners.webp";
 import tolyBreakpoint from "../images/BoilerBlockchain/toly-breakpoint.webp";
 import mbcAfterparty from "../images/BoilerBlockchain/mbc-afterparty.webp";
-import conferenceSelfie from "../images/BoilerBlockchain/conference-selfie.webp";
+import spartan from "../images/Activities/spartan.webp";
+import snowboard from "../images/Activities/snowboard.webp";
+import snowboardSelfie from "../images/Activities/snowboard-selfie.webp";
 import mbcCrew from "../images/BoilerBlockchain/mbc-crew.webp";
 import larpPreview from "../images/Larp/larp6.webp";
 import homelabPhoto from "../images/Setup/full-setup.jpg";
@@ -62,17 +63,29 @@ const boilerTiles = [
   { src: tolyBreakpoint, title: "with toly", tags: "breakpoint '25" },
   { src: hackathonWinners, title: "winners", tags: "mbc '25" },
   { src: mbcAfterparty, title: "afterparty", tags: "mbc '25" },
-  { src: teachingClass, title: "teaching", tags: "club session" },
-  { src: conferenceSelfie, title: "on the road", tags: "conferences" },
 ];
 
-function PhotoTile({ tile }) {
-  return (
-    <Link to="/boilerblockchain" className="home-tile">
+const activityTiles = [
+  { src: spartan, title: "spartan race", tags: "medal", wide: true },
+  { src: snowboard, title: "snowboarding", tags: "mountains" },
+  { src: snowboardSelfie, title: "mid run", tags: "mountains" },
+];
+
+function PhotoTile({ tile, to }) {
+  const className = `home-tile${tile.wide ? " home-tile-wide" : ""}`;
+  const body = (
+    <>
       <img src={tile.src} alt={tile.title} loading="lazy" />
       <strong>{tile.title}</strong>
       <span>{tile.tags}</span>
+    </>
+  );
+  return to ? (
+    <Link to={to} className={className}>
+      {body}
     </Link>
+  ) : (
+    <figure className={className}>{body}</figure>
   );
 }
 
@@ -92,28 +105,27 @@ function HomePage() {
       </Helmet>
 
       <div className="home-layout">
-      <aside className="home-panel home-panel-left glass">
-        <h2 className="home-panel-title">BOILER BLOCKCHAIN</h2>
-        <div className="home-tile-grid">
-          {boilerTiles.map((tile) => (
-            <PhotoTile key={tile.title} tile={tile} />
-          ))}
-          <Link to="/boilerblockchain" className="home-tile home-tile-more">
-            all the photos &rarr;
+      <aside className="home-panel-left">
+        <section className="home-panel glass">
+          <h2 className="home-panel-title">BOILER BLOCKCHAIN</h2>
+          <div className="home-tile-grid">
+            {boilerTiles.map((tile) => (
+              <PhotoTile key={tile.title} tile={tile} to="/boilerblockchain" />
+            ))}
+          </div>
+          <Link to="/boilerblockchain" className="home-panel-button">
+            see all photos &rarr;
           </Link>
-        </div>
-        <p className="home-panel-note">
-          core dev + board member at{" "}
-          <a
-            href="https://www.boilerblockchain.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-link"
-          >
-            boilerblockchain.org
-          </a>
-          .
-        </p>
+        </section>
+
+        <section className="home-panel glass">
+          <h2 className="home-panel-title">ACTIVITIES</h2>
+          <div className="home-tile-grid">
+            {activityTiles.map((tile) => (
+              <PhotoTile key={tile.title} tile={tile} />
+            ))}
+          </div>
+        </section>
       </aside>
 
       <main className="home-card glass">

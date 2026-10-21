@@ -89,3 +89,22 @@
 .ascii-fit pre:first-child {
   line-height: 1.05;
 }
+
+.ascii-factory {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.ascii-factory:hover pre,
+.ascii-factory:focus-visible pre {
+  color: var(--sky-deep);
+}
+
+.ascii-factory:active pre {
+  transform: translateY(1px);
+}

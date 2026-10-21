@@ -2,17 +2,18 @@ import React, { useEffect, useRef, useState } from "react";
 import "./pipeline.css";
 
 // An idea rides the belt as a rock and comes out the other end as a product
-const WIDTH = 80;
-const LEFT_PAD = 5;
-const RIGHT_PAD = 7;
-const STAGES = ["o", "<>", "{}", "{#}", "[#]", "[#]>"];
-// The actual loop: scope it, fan it out to agents, prove it works, ship it, hand it to a cron
+const WIDTH = 86;
+const LEFT_PAD = 4;
+const RIGHT_PAD = 5;
+const STAGES = ["o", "<>", "{}", "{#}", "[#]", "[@]", "[*]"];
+// The actual loop: scope it, fan it out to agents, prove it, ship it, automate it, make it efficient
 const MACHINES = [
-  { label: "spec", verb: "scoped into tasks" },
-  { label: "agents", verb: "built by 3 agents in parallel", parallel: true },
-  { label: "test", verb: "passing" },
-  { label: "deploy", verb: "live" },
-  { label: "automate", verb: "runs itself now" },
+  { label: "spec" },
+  { label: "agents", parallel: true },
+  { label: "test" },
+  { label: "deploy" },
+  { label: "automate" },
+  { label: "optimize" },
 ];
 const SPINNER = ["|", "/", "-", "\\"];
 const SPAWN_EVERY = 12;
@@ -37,28 +38,16 @@ function layoutMachines() {
 const PLACED = layoutMachines();
 
 function createFactory() {
-  return { tick: 0, nextId: 5, shipped: 0, items: [{ id: 1, x: 60 }, { id: 2, x: 42 }, { id: 3, x: 24 }, { id: 4, x: 6 }], log: [] };
+  return { tick: 0, nextId: 5, shipped: 0, items: [{ id: 1, x: 64 }, { id: 2, x: 44 }, { id: 3, x: 24 }, { id: 4, x: 4 }] };
 }
 
 function stepFactory(factory) {
-  const log = [...factory.log];
-  let shipped = factory.shipped;
-  const items = [];
-  factory.items.forEach((item) => {
-    const x = item.x + 1;
-    PLACED.forEach((machine) => {
-      if (x === machine.end + 1) log.push(`${machine.label}: idea #${item.id} ${machine.verb}`);
-    });
-    if (x >= WIDTH) {
-      shipped += 1;
-      log.push(`shipped: idea #${item.id} is a product`);
-    } else {
-      items.push({ ...item, x });
-    }
-  });
+  const moved = factory.items.map((item) => ({ ...item, x: item.x + 1 }));
+  const items = moved.filter((item) => item.x < WIDTH);
+  const shipped = factory.shipped + moved.length - items.length;
   let nextId = factory.nextId;
   if ((factory.tick + 1) % SPAWN_EVERY === 0) items.push({ id: nextId++, x: 0 });
-  return { tick: factory.tick + 1, nextId, shipped, items, log: log.slice(-3) };
+  return { tick: factory.tick + 1, nextId, shipped, items };
 }
 
 function dropIdea(factory) {
@@ -101,6 +90,8 @@ function drawFactory(factory) {
   });
 
   put(4, 0, "idea");
+  const hint = "[ click to drop an idea ]";
+  put(4, Math.floor((WIDTH - hint.length) / 2), hint);
   const shippedLabel = `shipped ${factory.shipped}`;
   put(4, WIDTH - shippedLabel.length, shippedLabel);
   return rows.map((row) => row.join("")).join("\n");
@@ -117,20 +108,16 @@ function AsciiFactory() {
   }, []);
 
   return (
-    <div className="ascii-pipeline ascii-fit">
+    <button
+      type="button"
+      className="ascii-pipeline ascii-fit ascii-factory"
+      onClick={() => setFactory(dropIdea)}
+      aria-label="Drop an idea onto the conveyor belt"
+    >
       <pre aria-hidden="true" style={{ fontSize: `calc(100cqw / ${WIDTH * 0.6})` }}>
         {drawFactory(factory)}
       </pre>
-      <div className="ascii-log-row">
-        <pre className="ascii-log" aria-live="off">
-          {factory.log.map((line) => `> ${line}`).join("\n")}
-          <span className="ascii-cursor">█</span>
-        </pre>
-        <button type="button" className="ascii-button" onClick={() => setFactory(dropIdea)}>
-          [ drop an idea ]
-        </button>
-      </div>
-    </div>
+    </button>
   );
 }
 

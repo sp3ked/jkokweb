@@ -18,6 +18,7 @@ import ethdenver from "../images/BoilerBlockchain/ethdenver-2025.webp";
 import mbcCrew from "../images/BoilerBlockchain/mbc-crew.webp";
 import mbcChecks from "../images/BoilerBlockchain/mbc-bounty-checks.webp";
 import acrossCampusesGroup from "../images/BoilerBlockchain/solana-across-campuses-group.webp";
+import acrossCampusesRound2 from "../images/BoilerBlockchain/solana-across-campuses-round-2.webp";
 import "./gallery.css";
 
 const photos = [
@@ -25,6 +26,7 @@ const photos = [
   { src: teachingClass, caption: "teaching a Boiler Blockchain class" },
   { src: mbcChecks, caption: "bounty checks at MBC '25" },
   { src: acrossCampusesGroup, caption: "Solana Across Campuses @ Purdue" },
+  { src: acrossCampusesRound2, caption: "Solana Across Campuses, round 2" },
   { src: sonic, caption: "club shirts drop" },
   { src: mbcWin, caption: "1st, Polymarket bounty @ MBC '25 with Jaeger" },
   { src: hackathonWinners, caption: "hackathon winners on stage, MBC '25" },
