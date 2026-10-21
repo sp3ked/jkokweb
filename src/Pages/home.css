@@ -528,3 +528,8 @@ figure.home-tile:hover {
 .home-panel-note {
   font-size: 0.8rem;
 }
+
+.home-open {
+  margin-top: 0.3rem;
+  color: #e8650a;
+}
