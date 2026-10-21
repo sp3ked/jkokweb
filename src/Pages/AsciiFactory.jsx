@@ -38,16 +38,15 @@ function layoutMachines() {
 const PLACED = layoutMachines();
 
 function createFactory() {
-  return { tick: 0, nextId: 5, shipped: 0, items: [{ id: 1, x: 64 }, { id: 2, x: 44 }, { id: 3, x: 24 }, { id: 4, x: 4 }] };
+  return { tick: 0, nextId: 5, items: [{ id: 1, x: 64 }, { id: 2, x: 44 }, { id: 3, x: 24 }, { id: 4, x: 4 }] };
 }
 
 function stepFactory(factory) {
   const moved = factory.items.map((item) => ({ ...item, x: item.x + 1 }));
   const items = moved.filter((item) => item.x < WIDTH);
-  const shipped = factory.shipped + moved.length - items.length;
   let nextId = factory.nextId;
   if ((factory.tick + 1) % SPAWN_EVERY === 0) items.push({ id: nextId++, x: 0 });
-  return { tick: factory.tick + 1, nextId, shipped, items };
+  return { tick: factory.tick + 1, nextId, items };
 }
 
 function dropIdea(factory) {
@@ -59,16 +58,12 @@ const glyphAt = (x) => STAGES[PLACED.filter((machine) => x > machine.end).length
 const isInside = (x, machine) => x + glyphAt(x).length > machine.start && x <= machine.end;
 
 function drawFactory(factory) {
-  const rows = Array.from({ length: 5 }, () => Array(WIDTH).fill(" "));
+  const rows = Array.from({ length: 3 }, () => Array(WIDTH).fill(" "));
   const put = (row, x, text) => [...text].forEach((char, i) => {
     if (x + i >= 0 && x + i < WIDTH) rows[row][x + i] = char;
   });
 
-  // Belt on row 2 with rollers under it, both drift with the tick
-  for (let x = 0; x < WIDTH; x++) {
-    rows[2][x] = (x - factory.tick) % 4 === 0 ? "─" : "═";
-    rows[3][x] = (x - factory.tick) % 6 === 0 ? "o" : " ";
-  }
+  for (let x = 0; x < WIDTH; x++) rows[2][x] = (x - factory.tick) % 4 === 0 ? "─" : "═";
 
   PLACED.forEach((machine) => {
     const inner = machine.end - machine.start - 1;
@@ -89,11 +84,6 @@ function drawFactory(factory) {
     if (!PLACED.some((machine) => isInside(item.x, machine))) put(1, item.x, glyphAt(item.x));
   });
 
-  put(4, 0, "idea");
-  const hint = "[ click to drop an idea ]";
-  put(4, Math.floor((WIDTH - hint.length) / 2), hint);
-  const shippedLabel = `shipped ${factory.shipped}`;
-  put(4, WIDTH - shippedLabel.length, shippedLabel);
   return rows.map((row) => row.join("")).join("\n");
 }
 
@@ -113,6 +103,7 @@ function AsciiFactory() {
       className="ascii-pipeline ascii-fit ascii-factory"
       onClick={() => setFactory(dropIdea)}
       aria-label="Drop an idea onto the conveyor belt"
+      title="click to drop an idea"
     >
       <pre aria-hidden="true" style={{ fontSize: `calc(100cqw / ${WIDTH * 0.6})` }}>
         {drawFactory(factory)}

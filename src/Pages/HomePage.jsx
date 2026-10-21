@@ -9,7 +9,13 @@ import tolyBreakpoint from "../images/BoilerBlockchain/toly-breakpoint.webp";
 import mbcAfterparty from "../images/BoilerBlockchain/mbc-afterparty.webp";
 import spartan from "../images/Activities/spartan.webp";
 import snowboard from "../images/Activities/snowboard.webp";
-import snowboardSelfie from "../images/Activities/snowboard-selfie.webp";
+import basketball from "../images/Activities/basketball.webp";
+import pickleball from "../images/Activities/pickleball.webp";
+import hiking from "../images/Activities/hiking.webp";
+import biking from "../images/Activities/biking.webp";
+import poker from "../images/Activities/poker.webp";
+import printing3d from "../images/Setup/printer-centauri.jpg";
+import gpuRig from "../images/Setup/gpu-rig.jpg";
 import mbcCrew from "../images/BoilerBlockchain/mbc-crew.webp";
 import larpPreview from "../images/Larp/larp6.webp";
 import homelabPhoto from "../images/Setup/full-setup.jpg";
@@ -65,10 +71,16 @@ const boilerTiles = [
   { src: mbcAfterparty, title: "afterparty", tags: "mbc '25" },
 ];
 
-const activityTiles = [
-  { src: spartan, title: "spartan race", tags: "medal", wide: true },
-  { src: snowboard, title: "snowboarding", tags: "mountains" },
-  { src: snowboardSelfie, title: "mid run", tags: "mountains" },
+const hobbyTiles = [
+  { src: spartan, title: "racing", wide: true },
+  { src: snowboard, title: "snowboarding" },
+  { src: hiking, title: "hiking + outdoors" },
+  { src: biking, title: "biking" },
+  { src: basketball, title: "basketball" },
+  { src: pickleball, title: "pickleball" },
+  { src: poker, title: "poker" },
+  { src: printing3d, title: "3d printing" },
+  { src: gpuRig, title: "gpus" },
 ];
 
 function PhotoTile({ tile, to }) {
@@ -77,7 +89,7 @@ function PhotoTile({ tile, to }) {
     <>
       <img src={tile.src} alt={tile.title} loading="lazy" />
       <strong>{tile.title}</strong>
-      <span>{tile.tags}</span>
+      {tile.tags && <span>{tile.tags}</span>}
     </>
   );
   return to ? (
@@ -114,17 +126,20 @@ function HomePage() {
             ))}
           </div>
           <Link to="/boilerblockchain" className="home-panel-button">
-            see all photos &rarr;
+            learn more &rarr;
           </Link>
         </section>
 
         <section className="home-panel glass">
-          <h2 className="home-panel-title">ACTIVITIES</h2>
+          <h2 className="home-panel-title">HOBBIES</h2>
           <div className="home-tile-grid">
-            {activityTiles.map((tile) => (
+            {hobbyTiles.map((tile) => (
               <PhotoTile key={tile.title} tile={tile} />
             ))}
           </div>
+          <p className="home-panel-note">
+            and obviously anything tech: servers, systems, crypto, the homelab.
+          </p>
         </section>
       </aside>
 
@@ -145,7 +160,6 @@ function HomePage() {
               </a>
             </p>
             <div className="home-head-links">
-              <LinkRow items={pageLinks} />
               <LinkRow items={socialLinks} />
             </div>
           </div>
@@ -314,6 +328,10 @@ function HomePage() {
           </div>
         </div>
 
+
+        <div className="home-head-links home-bottom-links">
+          <LinkRow items={pageLinks} />
+        </div>
 
         <p className="home-contact">
           contact me at{" "}

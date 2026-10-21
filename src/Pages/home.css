@@ -421,3 +421,14 @@ figure.home-tile:hover {
   flex-wrap: wrap;
   column-gap: 0.45rem;
 }
+
+.home-panel-note {
+  margin: 0.7rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.home-bottom-links {
+  margin-top: 1.2rem;
+}
