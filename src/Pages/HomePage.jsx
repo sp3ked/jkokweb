@@ -369,6 +369,15 @@ function HomePage() {
           contact me at{" "}
           <a href="mailto:j@kokinda.com" className="home-contact-link">
             j @ kokinda . com
+          </a>{" "}
+          or dm me on{" "}
+          <a
+            href="https://x.com/sp3ked"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="home-contact-link"
+          >
+            X
           </a>
         </p>
       </main>
