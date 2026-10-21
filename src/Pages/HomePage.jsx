@@ -160,7 +160,7 @@ function HomePage() {
       <div className="home-layout">
       <aside className="home-panel-left">
         <section className="home-panel glass">
-          <h2 className="home-panel-title">STANDOUT PROJECTS</h2>
+          <h2 className="home-panel-title">PROJECTS</h2>
           <div className="home-tile-grid home-tile-grid-projects">
             {projectTiles.map((tile) => (
               <PhotoTile key={tile.title} tile={tile} to={tile.to} />
