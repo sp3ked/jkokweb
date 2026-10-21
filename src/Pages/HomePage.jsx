@@ -198,7 +198,7 @@ function HomePage() {
                 purdue university
               </a>
             </p>
-            <p className="home-sub home-open">open to summer full-time roles</p>
+            <p className="home-sub home-open">open to summer 2027 full-time roles</p>
             <div className="home-head-links">
               <LinkRow items={socialLinks} />
             </div>
