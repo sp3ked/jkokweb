@@ -1,0 +1,90 @@
+.gallery-page {
+  min-height: 100vh;
+  padding: 5.5rem clamp(1rem, 4vw, 3rem) 4rem;
+  color: var(--ink);
+}
+
+.gallery-main {
+  width: min(1000px, 100%);
+  margin: 0 auto;
+  padding: clamp(1.5rem, 3vw, 2rem);
+}
+
+.gallery-main h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2.2rem, 6vw, 3rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.gallery-main p {
+  margin: 0 0 0.9rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  max-width: 65ch;
+}
+
+.gallery-main strong {
+  color: var(--ink);
+  -webkit-text-stroke: 0.035em currentColor;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-auto-flow: dense;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.photo-item {
+  margin: 0;
+  min-width: 0;
+}
+
+.photo-wide {
+  grid-column: span 2;
+}
+
+.photo-item a {
+  display: block;
+  overflow: hidden;
+  border: 1px solid rgba(38, 51, 31, 0.12);
+  box-shadow: 0 12px 28px rgba(38, 51, 31, 0.14);
+  aspect-ratio: 4 / 3;
+  background: var(--cream-2);
+}
+
+.photo-tall .photo-item a {
+  aspect-ratio: 3 / 4;
+}
+
+.photo-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.photo-item a:hover img {
+  transform: scale(1.04);
+}
+
+.photo-item figcaption {
+  margin-top: 0.5rem;
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 520px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+  }
+
+  .photo-wide {
+    grid-column: 1 / -1;
+  }
+}

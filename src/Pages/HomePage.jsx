@@ -2,6 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import profilePic from "../images/jkokpfp.png";
+import Pipeline from "./Pipeline";
+import mbcWin from "../images/BoilerBlockchain/mbc-polymarket-win.webp";
+import teachingClass from "../images/BoilerBlockchain/teaching-class.webp";
+import boilerCrew from "../images/BoilerBlockchain/boiler-blockchain-sonic.webp";
+import hackathonWinners from "../images/BoilerBlockchain/mbc-hackathon-winners.webp";
+import tolyBreakpoint from "../images/BoilerBlockchain/toly-breakpoint.webp";
+import dogecon from "../images/BoilerBlockchain/dogecon.webp";
+import acrossCampuses from "../images/BoilerBlockchain/solana-across-campuses.webp";
+import larpPreview from "../images/Larp/larp6.webp";
 import "./home.css";
 
 const pageLinks = [
@@ -10,6 +19,8 @@ const pageLinks = [
   { type: "internal", to: "/resume", label: "resume" },
   { type: "internal", to: "/blog", label: "blog" },
   { type: "internal", to: "/books", label: "books" },
+  { type: "internal", to: "/boilerblockchain", label: "boiler blockchain" },
+  { type: "internal", to: "/larp", label: "larp corner" },
 ];
 
 const socialLinks = [
@@ -44,6 +55,25 @@ function LinkRow({ items }) {
   );
 }
 
+const boilerTiles = [
+  { src: teachingClass, title: "teaching classes", tags: "workshops . new members" },
+  { src: boilerCrew, title: "the crew", tags: "board . core dev" },
+  { src: hackathonWinners, title: "mbc '25 winners", tags: "hackathon . stage" },
+  { src: tolyBreakpoint, title: "breakpoint '25", tags: "solana . toly" },
+  { src: acrossCampuses, title: "club sessions", tags: "teaching . solana" },
+  { src: dogecon, title: "dogecon '25", tags: "events . conferences" },
+];
+
+function PhotoTile({ tile }) {
+  return (
+    <Link to="/boilerblockchain" className="home-tile">
+      <img src={tile.src} alt={tile.title} loading="lazy" />
+      <strong>{tile.title}</strong>
+      <span>{tile.tags}</span>
+    </Link>
+  );
+}
+
 function HomePage() {
   return (
     <div className="home-page">
@@ -58,6 +88,31 @@ function HomePage() {
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow, max-image-preview:large" />
       </Helmet>
+
+      <div className="home-layout">
+      <aside className="home-panel home-panel-left glass">
+        <h2 className="home-panel-title">BOILER BLOCKCHAIN</h2>
+        <div className="home-tile-grid">
+          {boilerTiles.map((tile) => (
+            <PhotoTile key={tile.title} tile={tile} />
+          ))}
+          <Link to="/boilerblockchain" className="home-tile home-tile-more">
+            all the photos &rarr;
+          </Link>
+        </div>
+        <p className="home-panel-note">
+          core dev + board member at{" "}
+          <a
+            href="https://www.boilerblockchain.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-link"
+          >
+            boilerblockchain.org
+          </a>
+          . teaching the new kids, running events, shipping onchain.
+        </p>
+      </aside>
 
       <main className="home-card glass">
         <div className="home-head">
@@ -96,7 +151,9 @@ function HomePage() {
             </strong>{" "}
             after I log off.
           </p>
+          <Pipeline steps={["idea", "agents", "pipeline", "fleet", "shipped"]} />
         </div>
+
 
         <p className="home-about-more">
           I've built an AI ad pipeline that generates AI UGC TikTok and IG
@@ -163,6 +220,28 @@ function HomePage() {
           </Link>
           .
         </p>
+
+        <hr className="home-divider" />
+
+        <div className="home-bb">
+          <span className="home-links-label">BOILER BLOCKCHAIN</span>
+          <p className="home-about-more">
+            I'm a <strong>core dev and board member</strong> at{" "}
+            <Link to="/boilerblockchain" className="text-link">
+              Boiler Blockchain
+            </Link>
+            , Purdue's blockchain club. I love teaching the new kids how this
+            stuff actually works, and I help organize and show up to events
+            across the space (MBC, Breakpoint, ETHDenver, DogeCon).
+          </p>
+          <p className="home-about-more">
+            <Link to="/boilerblockchain" className="text-link">
+              [see all the photos]
+            </Link>
+          </p>
+        </div>
+
+        <hr className="home-divider" />
 
         <p className="home-about-more">
           Make sure to check out{" "}
@@ -234,6 +313,24 @@ function HomePage() {
           </a>
         </p>
       </main>
+
+      <aside className="home-panel home-panel-right">
+        <figure className="home-feature glass">
+          <img src={mbcWin} alt="Joey holding the $3,500 Polymarket bounty check at MBC '25" />
+          <figcaption>
+            <strong>1ST PLACE</strong>
+            <span>polymarket bounty . mbc '25 . $3,500</span>
+          </figcaption>
+        </figure>
+        <Link to="/larp" className="home-feature home-feature-link glass">
+          <img src={larpPreview} alt="Laptop and monitors setup" loading="lazy" />
+          <figcaption>
+            <strong>LARP CORNER</strong>
+            <span>terminals in the wild &rarr;</span>
+          </figcaption>
+        </Link>
+      </aside>
+      </div>
     </div>
   );
 }

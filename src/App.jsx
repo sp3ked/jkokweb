@@ -38,6 +38,8 @@ import CurrentSetup from "./Pages/CurrentSetup";
 import BlogIndex from "./Pages/Blog/BlogIndex";
 import BlogPost from "./Pages/Blog/BlogPost";
 import Books from "./Pages/Books";
+import BoilerBlockchain from "./Pages/BoilerBlockchain";
+import Larp from "./Pages/Larp";
 // import Langnav from "./Pages/langnav";
 import ScrollRestoration from "./Pages/scrollToTop";
 import "./App.css";
@@ -105,6 +107,8 @@ function AppContent() {
             <Route path="/blog" element={<BlogIndex />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/books" element={<Books />} />
+            <Route path="/boilerblockchain" element={<BoilerBlockchain />} />
+            <Route path="/larp" element={<Larp />} />
             <Route path="/ai" element={<AILounge />} />
             <Route path="/freemoney" element={<FreeMoney />} />
             <Route path="/admin" element={<Admin />} />
