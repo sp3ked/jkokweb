@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense, lazy, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import profilePic from "../images/jkokpfp.png";
@@ -21,6 +21,13 @@ import larpPreview from "../images/Larp/larp6.webp";
 import homelabPhoto from "../images/Setup/full-setup.jpg";
 import moonshotPitch from "../images/moonshot-pyras.webp";
 import "./home.css";
+
+const Flybys = lazy(() => import("./Flybys"));
+const FIRST_FLYBY_MS = 5000;
+// After the first pass, something flies over every 30-60s
+const nextFlybyDelay = () => 30000 + Math.random() * 30000;
+const FLYBY_LINEUPS = [["f22"], ["drones"], ["heli"], ["f22", "drones", "heli"]];
+const randomLineup = () => FLYBY_LINEUPS[Math.floor(Math.random() * FLYBY_LINEUPS.length)];
 
 const pageLinks = [
   { type: "internal", to: "/projects", label: "projects" },
@@ -102,6 +109,20 @@ function PhotoTile({ tile, to }) {
 }
 
 function HomePage() {
+  const [flyby, setFlyby] = useState(null);
+  const [flybyCount, setFlybyCount] = useState(0);
+
+  // Schedule the next flyby whenever the sky is clear
+  useEffect(() => {
+    if (flyby || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
+    const first = flybyCount === 0;
+    const timer = setTimeout(
+      () => setFlyby(first ? ["drones"] : randomLineup()),
+      first ? FIRST_FLYBY_MS : nextFlybyDelay()
+    );
+    return () => clearTimeout(timer);
+  }, [flyby, flybyCount]);
+
   return (
     <div className="home-page">
       <Helmet>
@@ -115,6 +136,19 @@ function HomePage() {
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow, max-image-preview:large" />
       </Helmet>
+
+      {flyby && (
+        <Suspense fallback={null}>
+          <Flybys
+            key={flybyCount}
+            crafts={flyby}
+            onDone={() => {
+              setFlyby(null);
+              setFlybyCount((count) => count + 1);
+            }}
+          />
+        </Suspense>
+      )}
 
       <div className="home-layout">
       <aside className="home-panel-left">
@@ -178,7 +212,6 @@ function HomePage() {
             </strong>{" "}
             after I log off.
           </p>
-          <AsciiLoop />
         </div>
 
 
@@ -264,17 +297,6 @@ function HomePage() {
 
         <hr className="home-divider" />
 
-        <div className="home-bb">
-          <span className="home-links-label">ABOUT ME</span>
-          <p className="home-about-more">
-            Off the keyboard, I'm usually on a plane to a hackathon or
-            conference with Boiler Blockchain, or teaching a club session. I
-            like being in rooms with people who build, and I like it even more
-            when someone I taught ships their first project.
-          </p>
-        </div>
-
-        <hr className="home-divider" />
 
         <div className="home-recent">
           <span className="home-links-label">RECENT</span>
@@ -306,7 +328,7 @@ function HomePage() {
               The Last-Mile Oracle: how AI agents can verify real-world outcomes,
               with the proof required scaling to the stakes.
             </p>
-            <p className="home-recent-role">
+            <p className="home-recent-role home-recent-bold">
               Intern &middot;{" "}
               <a
                 href="https://10x.so"
@@ -318,7 +340,7 @@ function HomePage() {
               </a>{" "}
               <span className="home-recent-dates">(May&ndash;Jul 2026)</span>
             </p>
-            <p className="home-recent-desc">
+            <p className="home-recent-desc home-recent-bold">
               Owned an AI ad pipeline end to end: parallelized per-avatar
               generation of TikTok/IG slideshows and videos…{" "}
               <Link to="/experience" className="text-link">
@@ -328,6 +350,11 @@ function HomePage() {
           </div>
         </div>
 
+
+        <section className="home-pipeline-box">
+          <span className="home-links-label">PIPELINE</span>
+          <AsciiLoop />
+        </section>
 
         <div className="home-head-links home-bottom-links">
           <LinkRow items={pageLinks} />
@@ -369,6 +396,7 @@ function HomePage() {
           <img src={larpPreview} alt="Laptop and monitors setup" loading="lazy" />
           <figcaption>
             <strong>LARP CORNER</strong>
+            <span>click me &rarr;</span>
           </figcaption>
         </Link>
       </aside>

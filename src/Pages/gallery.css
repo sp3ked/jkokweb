@@ -78,10 +78,3 @@
   }
 }
 
-/* Full-screen overlay for the Larp Corner jet, never blocks clicks */
-.f22-flyby {
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  pointer-events: none;
-}

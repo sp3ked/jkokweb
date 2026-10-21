@@ -191,3 +191,16 @@ a:hover {
     padding: 1rem;
   }
 }
+
+/* Full-screen overlay for the 3D flybys (F-22, drone swarm), never blocks clicks */
+.flyby-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* react-three-fiber sets pointer-events: auto on its wrapper; override it */
+.flyby-overlay * {
+  pointer-events: none !important;
+}

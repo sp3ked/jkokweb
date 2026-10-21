@@ -1,11 +1,11 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Gallery from "./Gallery";
 import "./gallery.css";
 import "./pipeline.css";
 
-const F22Flyby = lazy(() => import("./F22Flyby"));
+const Flybys = lazy(() => import("./Flybys"));
 
 // Every larp shot plus every homelab shot from /setup
 const larpContext = require.context("../images/Larp", false, /\.webp$/);
@@ -18,6 +18,10 @@ const toPhotos = (context) =>
 const photos = [...toPhotos(larpContext), ...toPhotos(homelabContext)];
 
 function Larp() {
+  const [jetFlying, setJetFlying] = useState(
+    () => !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  );
+
   return (
     <div className="gallery-page">
       <Helmet>
@@ -26,9 +30,11 @@ function Larp() {
         <link rel="canonical" href="https://jkok.dev/larp" />
       </Helmet>
 
-      <Suspense fallback={null}>
-        <F22Flyby />
-      </Suspense>
+      {jetFlying && (
+        <Suspense fallback={null}>
+          <Flybys crafts={["f22"]} onDone={() => setJetFlying(false)} />
+        </Suspense>
+      )}
 
       <Link to="/" className="back-btn">← Home</Link>
 

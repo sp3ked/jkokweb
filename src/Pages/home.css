@@ -474,3 +474,20 @@ figure.home-tile:hover {
 .home-panel-subtitle {
   margin-top: 0.4rem;
 }
+
+/* Berkeley Mono has one weight, so bold is a stroke */
+.home-recent-bold {
+  color: var(--ink);
+  -webkit-text-stroke: 0.035em currentColor;
+}
+
+.home-pipeline-box {
+  margin-top: 1.4rem;
+  padding: 0.8rem 0.9rem 0.7rem;
+  border: 1px solid rgba(38, 51, 31, 0.3);
+  background: rgba(255, 253, 246, 0.6);
+}
+
+.home-pipeline-box .ascii-pipeline {
+  margin-top: 0.6rem;
+}
