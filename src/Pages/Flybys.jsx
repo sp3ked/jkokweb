@@ -84,60 +84,6 @@ function Quadcopter({ ledColor }) {
   );
 }
 
-function Helicopter() {
-  const mainRotor = useRef();
-  const tailRotor = useRef();
-  useFrame((_, delta) => {
-    mainRotor.current.rotation.y += delta * 22;
-    tailRotor.current.rotation.z += delta * 30;
-  });
-  const skin = <meshStandardMaterial color="#4b5320" metalness={0.3} roughness={0.7} />;
-
-  return (
-    <group>
-      <mesh scale={[1.9, 0.95, 0.95]}>
-        <sphereGeometry args={[1, 20, 14]} />
-        {skin}
-      </mesh>
-      <mesh position={[1.2, 0.25, 0]} scale={[0.75, 0.55, 0.7]}>
-        <sphereGeometry args={[1, 16, 10]} />
-        <meshStandardMaterial color="#9fc3d6" metalness={0.8} roughness={0.1} />
-      </mesh>
-      <mesh position={[-3.2, 0.3, 0]} rotation={[0, 0, Math.PI / 2 - 0.08]}>
-        <cylinderGeometry args={[0.14, 0.32, 3.4, 10]} />
-        {skin}
-      </mesh>
-      <mesh position={[-4.8, 0.9, 0]}>
-        <boxGeometry args={[0.6, 1.0, 0.08]} />
-        {skin}
-      </mesh>
-      <group ref={tailRotor} position={[-4.8, 0.9, 0.12]}>
-        <mesh>
-          <boxGeometry args={[0.1, 1.3, 0.03]} />
-          <meshStandardMaterial color="#222" />
-        </mesh>
-      </group>
-      <mesh position={[0, 1.05, 0]}>
-        <cylinderGeometry args={[0.1, 0.1, 0.3, 8]} />
-        <meshStandardMaterial color="#222" />
-      </mesh>
-      <group ref={mainRotor} position={[0, 1.2, 0]}>
-        {[0, Math.PI / 2].map((angle) => (
-          <mesh key={angle} rotation={[0, angle, 0]}>
-            <boxGeometry args={[7, 0.04, 0.22]} />
-            <meshStandardMaterial color="#222" />
-          </mesh>
-        ))}
-      </group>
-      {[0.75, -0.75].map((z) => (
-        <mesh key={z} position={[0, -1.25, z]}>
-          <boxGeometry args={[3, 0.08, 0.08]} />
-          <meshStandardMaterial color="#222" />
-        </mesh>
-      ))}
-    </group>
-  );
-}
 
 // Moves its child from start to end over `seconds`, then reports done
 function Crossing({ seconds, start, end, pose, children, onDone }) {
@@ -213,18 +159,6 @@ const CRAFTS = {
           <Quadcopter ledColor={index % 2 ? "#ff4040" : "#40ff7a"} />
         </group>
       ))}
-    </Crossing>
-  ),
-  heli: (onDone) => (
-    <Crossing
-      key="heli"
-      seconds={9}
-      start={[42, -5, -6]}
-      end={[-42, -2, -6]}
-      onDone={onDone}
-      pose={(craft, _, elapsed) => craft.rotation.set(0, Math.PI, -0.12 + Math.sin(elapsed * 1.3) * 0.04)}
-    >
-      <Helicopter />
     </Crossing>
   ),
 };

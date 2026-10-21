@@ -25,11 +25,7 @@ import jaegerShot from "../images/Jaeger/jaeger1.jpg";
 import "./home.css";
 
 const Flybys = lazy(() => import("./Flybys"));
-const FIRST_FLYBY_MS = 5000;
-// After the first pass, something flies over every 30-60s
-const nextFlybyDelay = () => 30000 + Math.random() * 30000;
-const FLYBY_LINEUPS = [["f22"], ["drones"], ["heli"], ["f22", "drones", "heli"]];
-const randomLineup = () => FLYBY_LINEUPS[Math.floor(Math.random() * FLYBY_LINEUPS.length)];
+const SWARM_DELAY_MS = 8000;
 
 const pageLinks = [
   { type: "internal", to: "/projects", label: "projects" },
@@ -116,19 +112,14 @@ function PhotoTile({ tile, to }) {
 }
 
 function HomePage() {
-  const [flyby, setFlyby] = useState(null);
-  const [flybyCount, setFlybyCount] = useState(0);
+  // One drone swarm, once, a few seconds after the page opens
+  const [swarmFlying, setSwarmFlying] = useState(false);
 
-  // Schedule the next flyby whenever the sky is clear
   useEffect(() => {
-    if (flyby || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
-    const first = flybyCount === 0;
-    const timer = setTimeout(
-      () => setFlyby(first ? ["drones"] : randomLineup()),
-      first ? FIRST_FLYBY_MS : nextFlybyDelay()
-    );
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
+    const timer = setTimeout(() => setSwarmFlying(true), SWARM_DELAY_MS);
     return () => clearTimeout(timer);
-  }, [flyby, flybyCount]);
+  }, []);
 
   return (
     <div className="home-page">
@@ -144,16 +135,9 @@ function HomePage() {
         <meta name="robots" content="index, follow, max-image-preview:large" />
       </Helmet>
 
-      {flyby && (
+      {swarmFlying && (
         <Suspense fallback={null}>
-          <Flybys
-            key={flybyCount}
-            crafts={flyby}
-            onDone={() => {
-              setFlyby(null);
-              setFlybyCount((count) => count + 1);
-            }}
-          />
+          <Flybys crafts={["drones"]} onDone={() => setSwarmFlying(false)} />
         </Suspense>
       )}
 
