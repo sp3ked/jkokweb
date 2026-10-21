@@ -521,3 +521,9 @@ figure.home-tile:hover {
   padding: 0.25rem 0.3rem;
   font-size: 0.62rem;
 }
+
+.home-open {
+  margin-top: 0.3rem;
+  color: var(--ink);
+  -webkit-text-stroke: 0.035em currentColor;
+}

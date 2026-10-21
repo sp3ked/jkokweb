@@ -194,6 +194,7 @@ function HomePage() {
                 purdue university
               </a>
             </p>
+            <p className="home-sub home-open">open to summer full-time roles</p>
             <div className="home-head-links">
               <LinkRow items={socialLinks} />
             </div>
@@ -204,14 +205,18 @@ function HomePage() {
 
         <div className="home-tldr-block">
           <p className="home-about">
-            I build systems that build things:{" "}
-            <strong>
-              <span className="grad-text">
-                agent orchestration, automation pipelines,
-              </span>{" "}
-              and fleets of machines that keep working
-            </strong>{" "}
-            after I log off.
+            I build automation that replaces manual work end to end:{" "}
+            <strong>agents, pipelines, and the infra they run on.</strong> At{" "}
+            <a
+              href="https://10x.so"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-link"
+            >
+              10x
+            </a>{" "}
+            I owned the AI ad pipeline from prototype to production.{" "}
+            <strong>Automate everything.</strong>
           </p>
         </div>
 
@@ -266,12 +271,20 @@ function HomePage() {
           <Link to="/projects" className="text-link">
             etc
           </Link>
-          . <strong>Automate everything.</strong>
+          .
         </p>
 
         <p className="home-about-more">
-          I pitched twice in Purdue's Moonshot Pitch Challenge in front of an
-          audience of 200.
+          I pitched twice in Purdue's{" "}
+          <a
+            href="https://www.purdue.edu/newsroom/2026/Q3/innovative-solutions-abound-at-moonshot-pitch-challenge/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-link"
+          >
+            Moonshot Pitch Challenge
+          </a>{" "}
+          in front of an audience of 200.
         </p>
 
         <p className="home-about-more">
