@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import profilePic from "../images/jkokpfp.png";
-import AsciiFactory from "./AsciiFactory";
+import AsciiLoop from "./AsciiLoop";
 import mbcWin from "../images/BoilerBlockchain/mbc-polymarket-win.webp";
 import hackathonWinners from "../images/BoilerBlockchain/mbc-hackathon-winners.webp";
 import tolyBreakpoint from "../images/BoilerBlockchain/toly-breakpoint.webp";
@@ -178,7 +178,7 @@ function HomePage() {
             </strong>{" "}
             after I log off.
           </p>
-          <AsciiFactory />
+          <AsciiLoop />
         </div>
 
 
@@ -364,6 +364,7 @@ function HomePage() {
             <span>pyras . purdue moonshot pitch challenge</span>
           </figcaption>
         </figure>
+        <h2 className="home-panel-title home-panel-subtitle">ETC</h2>
         <Link to="/larp" className="home-feature home-feature-link">
           <img src={larpPreview} alt="Laptop and monitors setup" loading="lazy" />
           <figcaption>
