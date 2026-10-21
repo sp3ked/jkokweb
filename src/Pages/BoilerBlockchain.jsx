@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Gallery from "./Gallery";
-import Pipeline from "./Pipeline";
+import AsciiPipeline from "./AsciiPipeline";
 import mbcWin from "../images/BoilerBlockchain/mbc-polymarket-win.webp";
 import teachingClass from "../images/BoilerBlockchain/teaching-class.webp";
 import sonic from "../images/BoilerBlockchain/boiler-blockchain-sonic.webp";
@@ -65,7 +65,7 @@ function BoilerBlockchain() {
           Breakpoint, ETHDenver, DogeCon, and more.
         </p>
 
-        <Pipeline steps={["new member", "class", "first build", "hackathon", "onchain"]} />
+        <AsciiPipeline steps={["new member", "class", "first build", "hackathon", "onchain"]} />
 
         <Gallery photos={photos} />
       </main>

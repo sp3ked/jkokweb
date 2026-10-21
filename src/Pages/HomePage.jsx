@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import profilePic from "../images/jkokpfp.png";
-import Pipeline from "./Pipeline";
+import AsciiPipeline from "./AsciiPipeline";
 import mbcWin from "../images/BoilerBlockchain/mbc-polymarket-win.webp";
 import teachingClass from "../images/BoilerBlockchain/teaching-class.webp";
 import boilerCrew from "../images/BoilerBlockchain/boiler-blockchain-sonic.webp";
@@ -11,6 +11,8 @@ import tolyBreakpoint from "../images/BoilerBlockchain/toly-breakpoint.webp";
 import dogecon from "../images/BoilerBlockchain/dogecon.webp";
 import acrossCampuses from "../images/BoilerBlockchain/solana-across-campuses.webp";
 import larpPreview from "../images/Larp/larp6.webp";
+import homelabPhoto from "../images/Setup/full-setup.jpg";
+import moonshotPitch from "../images/moonshot-pyras.webp";
 import "./home.css";
 
 const pageLinks = [
@@ -54,6 +56,18 @@ function LinkRow({ items }) {
     </p>
   );
 }
+
+// What the fleet is up to, rendered as a rolling log under the pipeline
+const automationLog = [
+  "phonefarm: 12 devices online, warming feeds",
+  "creou: queued 4 slideshows per avatar",
+  "agents: orchestrator handed off 6 tasks",
+  "pyras: btc + xmr nodes synced",
+  "pipeline: render -> caption -> publish ok",
+  "homelab: nightly backups complete",
+  "veridex: proof verified, payout released",
+  "ward: repair job dispatched to a real human",
+];
 
 const boilerTiles = [
   { src: teachingClass, title: "teaching classes", tags: "workshops . new members" },
@@ -130,11 +144,6 @@ function HomePage() {
                 purdue university
               </a>
             </p>
-            <p className="home-sub home-setup-link">
-              <Link to="/setup" className="text-link">
-                [see my homelab]
-              </Link>
-            </p>
           </div>
         </div>
 
@@ -151,7 +160,10 @@ function HomePage() {
             </strong>{" "}
             after I log off.
           </p>
-          <Pipeline steps={["idea", "agents", "pipeline", "fleet", "shipped"]} />
+          <AsciiPipeline
+            steps={["idea", "agents", "pipeline", "fleet", "shipped"]}
+            log={automationLog}
+          />
         </div>
 
 
@@ -209,6 +221,20 @@ function HomePage() {
         </p>
 
         <p className="home-about-more">
+          I pitched{" "}
+          <a
+            href="https://pyras.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-link"
+          >
+            Pyras
+          </a>{" "}
+          on stage at Purdue's Moonshot Pitch Challenge: two minutes, a panel
+          of judges, and a GPU marketplace idea.
+        </p>
+
+        <p className="home-about-more">
           I placed 3rd in the AI agent bounty at Hello Apex Hedera with{" "}
           <Link to="/projects/veridex" className="text-link">
             Veridex
@@ -220,6 +246,22 @@ function HomePage() {
           </Link>
           .
         </p>
+
+        <hr className="home-divider" />
+
+        <div className="home-bb">
+          <span className="home-links-label">ABOUT ME</span>
+          <p className="home-about-more">
+            Off the keyboard, I'm usually on a plane to a hackathon or
+            conference with Boiler Blockchain, teaching a club session to new
+            members, or working through{" "}
+            <Link to="/books" className="text-link">
+              my reading list
+            </Link>
+            . I like being in rooms with people who build, and I like it even
+            more when someone I taught ships their first project.
+          </p>
+        </div>
 
         <hr className="home-divider" />
 
@@ -240,16 +282,6 @@ function HomePage() {
             </Link>
           </p>
         </div>
-
-        <hr className="home-divider" />
-
-        <p className="home-about-more">
-          Make sure to check out{" "}
-          <Link to="/setup" className="text-link">
-            [my homelab]
-          </Link>{" "}
-          if you have not already.
-        </p>
 
         <hr className="home-divider" />
 
@@ -320,6 +352,20 @@ function HomePage() {
           <figcaption>
             <strong>1ST PLACE</strong>
             <span>polymarket bounty . mbc '25 . $3,500</span>
+          </figcaption>
+        </figure>
+        <Link to="/setup" className="home-feature home-feature-link glass">
+          <img src={homelabPhoto} alt="Joey's homelab" loading="lazy" />
+          <figcaption>
+            <strong>HOMELAB</strong>
+            <span>where everything gets built &rarr;</span>
+          </figcaption>
+        </Link>
+        <figure className="home-feature glass">
+          <img src={moonshotPitch} alt="Joey pitching Pyras at Purdue's Moonshot Pitch Challenge" loading="lazy" className="home-feature-wide" />
+          <figcaption>
+            <strong>MOONSHOT PITCH</strong>
+            <span>pyras . purdue moonshot pitch challenge</span>
           </figcaption>
         </figure>
         <Link to="/larp" className="home-feature home-feature-link glass">
