@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import profilePic from "../images/jkokpfp.png";
 import AsciiLoop from "./AsciiLoop";
 import mbcWin from "../images/BoilerBlockchain/mbc-polymarket-win.webp";
+import hackathonWinners from "../images/BoilerBlockchain/mbc-hackathon-winners.webp";
 import teachingClass from "../images/BoilerBlockchain/teaching-class.webp";
 import spartan from "../images/Activities/spartan.webp";
 import snowboard from "../images/Activities/snowboard.webp";
@@ -14,7 +15,6 @@ import biking from "../images/Activities/biking.webp";
 import poker from "../images/Activities/poker.webp";
 import printing3d from "../images/Setup/printer-centauri.jpg";
 import gpuRig from "../images/Setup/gpu-rig.jpg";
-import mbcCrew from "../images/BoilerBlockchain/mbc-crew.webp";
 import larpPreview from "../images/Larp/larp6.webp";
 import homelabPhoto from "../images/Setup/full-setup.jpg";
 import moonshotPitch from "../images/moonshot-pyras.webp";
@@ -81,8 +81,8 @@ const projectTiles = [
 ];
 
 const boilerTiles = [
-  { src: mbcCrew, title: "the crew", tags: "mbc '25" },
-  { src: teachingClass, title: "teaching", tags: "club session" },
+  { src: hackathonWinners, title: "hacking", tags: "1st . mbc '25" },
+  { src: teachingClass, title: "guiding", tags: "club sessions" },
 ];
 
 const hobbyTiles = [
