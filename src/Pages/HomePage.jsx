@@ -4,8 +4,6 @@ import { Helmet } from "react-helmet-async";
 import profilePic from "../images/jkokpfp.png";
 import AsciiLoop from "./AsciiLoop";
 import mbcWin from "../images/BoilerBlockchain/mbc-polymarket-win.webp";
-import hackathonWinners from "../images/BoilerBlockchain/mbc-hackathon-winners.webp";
-import tolyBreakpoint from "../images/BoilerBlockchain/toly-breakpoint.webp";
 import teachingClass from "../images/BoilerBlockchain/teaching-class.webp";
 import spartan from "../images/Activities/spartan.webp";
 import snowboard from "../images/Activities/snowboard.webp";
@@ -20,6 +18,10 @@ import mbcCrew from "../images/BoilerBlockchain/mbc-crew.webp";
 import larpPreview from "../images/Larp/larp6.webp";
 import homelabPhoto from "../images/Setup/full-setup.jpg";
 import moonshotPitch from "../images/moonshot-pyras.webp";
+import creouShot from "../images/Creou/landing.png";
+import phonefarmShot from "../images/PhoneFarm/phonefarm-dashboard.png";
+import veridexShot from "../images/veridex/veridex1.png";
+import jaegerShot from "../images/Jaeger/jaeger1.jpg";
 import "./home.css";
 
 const Flybys = lazy(() => import("./Flybys"));
@@ -71,10 +73,15 @@ function LinkRow({ items }) {
   );
 }
 
+const projectTiles = [
+  { src: creouShot, title: "creou", tags: "ai ugc pipeline", to: "/projects/creou" },
+  { src: phonefarmShot, title: "phonefarm", tags: "agent-run phones", to: "/projects/phonefarm" },
+  { src: veridexShot, title: "veridex", tags: "3rd . hedera", to: "/projects/veridex" },
+  { src: jaegerShot, title: "jaeger", tags: "1st . mbc '25", to: "/projects/jaeger" },
+];
+
 const boilerTiles = [
   { src: mbcCrew, title: "the crew", tags: "mbc '25" },
-  { src: tolyBreakpoint, title: "with toly", tags: "breakpoint '25" },
-  { src: hackathonWinners, title: "winners", tags: "mbc '25" },
   { src: teachingClass, title: "teaching", tags: "club session" },
 ];
 
@@ -152,6 +159,18 @@ function HomePage() {
 
       <div className="home-layout">
       <aside className="home-panel-left">
+        <section className="home-panel glass">
+          <h2 className="home-panel-title">STANDOUT PROJECTS</h2>
+          <div className="home-tile-grid home-tile-grid-projects">
+            {projectTiles.map((tile) => (
+              <PhotoTile key={tile.title} tile={tile} to={tile.to} />
+            ))}
+          </div>
+          <Link to="/projects" className="home-panel-button">
+            more projects &rarr;
+          </Link>
+        </section>
+
         <section className="home-panel glass">
           <h2 className="home-panel-title">BOILER BLOCKCHAIN</h2>
           <div className="home-tile-grid">

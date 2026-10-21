@@ -491,3 +491,9 @@ figure.home-tile:hover {
 .home-pipeline-box .ascii-pipeline {
   margin-top: 0.6rem;
 }
+
+/* Project screenshots are landscape UI, so keep the top of the frame */
+.home-tile-grid-projects .home-tile img {
+  aspect-ratio: 4 / 3;
+  object-position: top;
+}
