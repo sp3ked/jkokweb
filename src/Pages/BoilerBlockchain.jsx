@@ -15,11 +15,22 @@ import dogecon from "../images/BoilerBlockchain/dogecon.webp";
 import tolyBreakpoint from "../images/BoilerBlockchain/toly-breakpoint.webp";
 import breakpoint from "../images/BoilerBlockchain/breakpoint.webp";
 import ethdenver from "../images/BoilerBlockchain/ethdenver-2025.webp";
+import mbcCrew from "../images/BoilerBlockchain/mbc-crew.webp";
+import mbcChecks from "../images/BoilerBlockchain/mbc-bounty-checks.webp";
+import calHacks from "../images/BoilerBlockchain/cal-hacks.webp";
+import acrossCampusesGroup from "../images/BoilerBlockchain/solana-across-campuses-group.webp";
+import clubSession1 from "../images/BoilerBlockchain/club-session-1.webp";
+import clubSession2 from "../images/BoilerBlockchain/club-session-2.webp";
+import clubSession3 from "../images/BoilerBlockchain/club-session-3.webp";
+import clubPresentation from "../images/BoilerBlockchain/club-presentation.webp";
 import "./gallery.css";
 
 const photos = [
-  { src: teachingClass, caption: "teaching a Boiler Blockchain class", wide: true },
-  { src: sonic, caption: "the Boiler Blockchain crew" },
+  { src: mbcCrew, caption: "the whole crew at MBC '25", wide: true },
+  { src: teachingClass, caption: "teaching a Boiler Blockchain class" },
+  { src: mbcChecks, caption: "bounty checks at MBC '25" },
+  { src: acrossCampusesGroup, caption: "Solana Across Campuses @ Purdue", wide: true },
+  { src: sonic, caption: "club shirts drop" },
   { src: mbcWin, caption: "1st, Polymarket bounty @ MBC '25 with Jaeger" },
   { src: hackathonWinners, caption: "hackathon winners on stage, MBC '25" },
   { src: acrossCampuses, caption: "packed room for a club session", wide: true },
@@ -30,6 +41,11 @@ const photos = [
   { src: dogecon, caption: "DogeCon 2025" },
   { src: conferenceSelfie, caption: "on the conference circuit" },
   { src: ethdenver, caption: "ETHDenver 2025" },
+  { src: calHacks, caption: "Boiler Blockchain at Cal Hacks 12.0" },
+  { src: clubSession1, caption: "club session" },
+  { src: clubSession2, caption: "club session" },
+  { src: clubSession3, caption: "club session" },
+  { src: clubPresentation, caption: "member presentation" },
 ];
 
 function BoilerBlockchain() {
@@ -62,7 +78,7 @@ function BoilerBlockchain() {
           I also help organize and attend events across the space: the Midwest
           Blockchain Conference (where we took 1st in the Polymarket bounty with{" "}
           <Link to="/projects/jaeger" className="text-link">Jaeger</Link>),
-          Breakpoint, ETHDenver, DogeCon, and more.
+          Solana Breakpoint, ETHDenver 2025 and 2026, DogeCon, and more.
         </p>
 
         <AsciiPipeline steps={["new member", "class", "first build", "hackathon", "onchain"]} />

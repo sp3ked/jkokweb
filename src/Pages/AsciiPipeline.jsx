@@ -1,32 +1,60 @@
 import React, { useEffect, useState } from "react";
 import "./pipeline.css";
 
-const PIPE_LENGTH = 4;
 const NO_LOG = [];
+const SPACING = 13;
+const HOP_FRAMES = 9;
+const CHEER_FRAMES = 8;
+const GROUND = 5;
+
+const POSES = {
+  idle: [" o ", "/|\\", "/ \\"],
+  throw: [" o/", "/| ", "/ \\"],
+  catch: ["\\o ", " |\\", "/ \\"],
+  cheer: ["\\o/", " | ", "/ \\"],
+};
 
 const reducedMotion =
   typeof window !== "undefined" &&
   window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-// Box-drawn nodes joined by pipes, a packet travels each pipe offset from the last
-function drawDiagram(steps, frame) {
-  const top = [];
-  const middle = [];
-  const bottom = [];
-  steps.forEach((step, index) => {
-    const width = step.length + 2;
-    if (index > 0) {
-      const packetAt = (frame + index * 2) % PIPE_LENGTH;
-      const pipe = Array.from({ length: PIPE_LENGTH }, (_, i) => (i === packetAt ? "●" : "─")).join("");
-      top.push(" ".repeat(PIPE_LENGTH));
-      middle.push(pipe);
-      bottom.push(" ".repeat(PIPE_LENGTH));
-    }
-    top.push(`┌${"─".repeat(width)}┐`);
-    middle.push(`│ ${step} │`);
-    bottom.push(`└${"─".repeat(width)}┘`);
+// One worker per step; the work packet gets tossed down the line in an arc
+function drawScene(steps, frame) {
+  const width = steps.length * SPACING;
+  const rows = Array.from({ length: GROUND + 2 }, () => Array(width).fill(" "));
+  const put = (x, y, text) => {
+    [...text].forEach((char, i) => {
+      if (char !== " " && rows[y] && x + i >= 0 && x + i < width) rows[y][x + i] = char;
+    });
+  };
+  const centerOf = (index) => index * SPACING + Math.floor(SPACING / 2);
+
+  const hops = steps.length - 1;
+  const step = frame % (hops * HOP_FRAMES + CHEER_FRAMES);
+  const hop = Math.floor(step / HOP_FRAMES);
+  const progress = (step % HOP_FRAMES) / (HOP_FRAMES - 1);
+  const done = hop >= hops;
+
+  steps.forEach((label, index) => {
+    let pose = "idle";
+    if (done && index === hops) pose = "cheer";
+    else if (!done && index === hop && progress < 0.4) pose = "throw";
+    else if (!done && index === hop + 1 && progress > 0.6) pose = "catch";
+    POSES[pose].forEach((line, row) => put(centerOf(index) - 1, GROUND - 2 + row, line));
+    put(centerOf(index) - Math.floor(label.length / 2), GROUND + 1, label);
   });
-  return [top.join(""), middle.join(""), bottom.join("")].join("\n");
+
+  if (done) {
+    put(centerOf(hops) - 1, GROUND - 4, step % 2 ? "*✓*" : " ✓ ");
+  } else {
+    const fromX = centerOf(hop) + 2;
+    const toX = centerOf(hop + 1) - 2;
+    const x = Math.round(fromX + (toX - fromX) * progress);
+    const y = GROUND - 2 - Math.round(Math.sin(Math.PI * progress) * 3);
+    put(x, y, "■");
+  }
+
+  return rows.map((row) => row.join("").replace(/\s+$/, "")).join("\n");
 }
 
 function timestamp() {
@@ -41,7 +69,7 @@ function AsciiPipeline({ steps, log = NO_LOG }) {
 
   useEffect(() => {
     if (reducedMotion) return undefined;
-    const pipeTimer = setInterval(() => setFrame((current) => current + 1), 220);
+    const pipeTimer = setInterval(() => setFrame((current) => current + 1), 110);
     if (log.length === 0) return () => clearInterval(pipeTimer);
     let nextLine = 3;
     const logTimer = setInterval(() => {
@@ -57,7 +85,7 @@ function AsciiPipeline({ steps, log = NO_LOG }) {
 
   return (
     <div className="ascii-pipeline" aria-label={steps.join(" to ")}>
-      <pre aria-hidden="true">{drawDiagram(steps, frame)}</pre>
+      <pre aria-hidden="true">{drawScene(steps, frame)}</pre>
       {logLines.length > 0 && (
         <pre className="ascii-log" aria-hidden="true">
           {logLines.map((line) => `> ${line}`).join("\n")}

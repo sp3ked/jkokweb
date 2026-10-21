@@ -5,10 +5,10 @@ import profilePic from "../images/jkokpfp.png";
 import AsciiPipeline from "./AsciiPipeline";
 import mbcWin from "../images/BoilerBlockchain/mbc-polymarket-win.webp";
 import teachingClass from "../images/BoilerBlockchain/teaching-class.webp";
-import boilerCrew from "../images/BoilerBlockchain/boiler-blockchain-sonic.webp";
 import hackathonWinners from "../images/BoilerBlockchain/mbc-hackathon-winners.webp";
 import tolyBreakpoint from "../images/BoilerBlockchain/toly-breakpoint.webp";
 import dogecon from "../images/BoilerBlockchain/dogecon.webp";
+import mbcCrew from "../images/BoilerBlockchain/mbc-crew.webp";
 import acrossCampuses from "../images/BoilerBlockchain/solana-across-campuses.webp";
 import larpPreview from "../images/Larp/larp6.webp";
 import homelabPhoto from "../images/Setup/full-setup.jpg";
@@ -71,7 +71,7 @@ const automationLog = [
 
 const boilerTiles = [
   { src: teachingClass, title: "teaching classes", tags: "workshops . new members" },
-  { src: boilerCrew, title: "the crew", tags: "board . core dev" },
+  { src: mbcCrew, title: "the crew", tags: "mbc '25 . everyone" },
   { src: hackathonWinners, title: "mbc '25 winners", tags: "hackathon . stage" },
   { src: tolyBreakpoint, title: "breakpoint '25", tags: "solana . toly" },
   { src: acrossCampuses, title: "club sessions", tags: "teaching . solana" },
@@ -274,7 +274,8 @@ function HomePage() {
             </Link>
             , Purdue's blockchain club. I love teaching the new kids how this
             stuff actually works, and I help organize and show up to events
-            across the space (MBC, Breakpoint, ETHDenver, DogeCon).
+            across the space: MBC 2025, Solana Breakpoint, and ETHDenver 2025
+            and 2026.
           </p>
           <p className="home-about-more">
             <Link to="/boilerblockchain" className="text-link">
