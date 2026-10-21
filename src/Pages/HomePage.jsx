@@ -270,17 +270,8 @@ function HomePage() {
         </p>
 
         <p className="home-about-more">
-          I've pitched twice at Purdue's Moonshot Pitch Challenge:{" "}
-          <a
-            href="https://pyras.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-link"
-          >
-            Pyras
-          </a>{" "}
-          (2025), a GPU marketplace, and Perigee (2026), manufacturing in
-          orbit.
+          I pitched twice in Purdue's Moonshot Pitch Challenge in front of an
+          audience of 200.
         </p>
 
         <p className="home-about-more">
