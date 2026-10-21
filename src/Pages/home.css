@@ -247,7 +247,7 @@
 
 .home-tile:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 3px 3px 0 var(--sun);
+  box-shadow: 3px 3px 0 rgba(38, 51, 31, 0.35);
 }
 
 .home-tile img {
@@ -371,4 +371,27 @@
   .home-tile-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+
+.home-head-links {
+  margin-top: 0.45rem;
+}
+
+.home-head-links .link-row {
+  font-size: clamp(0.8rem, 3.2vw, 0.92rem);
+  line-height: 1.7;
+}
+
+.home-head-links .link-row {
+  overflow-wrap: normal;
+}
+
+.home-head-links .text-link {
+  white-space: nowrap;
+}
+
+.home-head-links .link-row {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.45rem;
 }

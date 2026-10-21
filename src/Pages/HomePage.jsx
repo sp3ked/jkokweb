@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import profilePic from "../images/jkokpfp.png";
-import AsciiPipeline from "./AsciiPipeline";
+import AsciiFactory from "./AsciiFactory";
 import mbcWin from "../images/BoilerBlockchain/mbc-polymarket-win.webp";
 import teachingClass from "../images/BoilerBlockchain/teaching-class.webp";
 import hackathonWinners from "../images/BoilerBlockchain/mbc-hackathon-winners.webp";
 import tolyBreakpoint from "../images/BoilerBlockchain/toly-breakpoint.webp";
-import dogecon from "../images/BoilerBlockchain/dogecon.webp";
+import mbcAfterparty from "../images/BoilerBlockchain/mbc-afterparty.webp";
+import conferenceSelfie from "../images/BoilerBlockchain/conference-selfie.webp";
 import mbcCrew from "../images/BoilerBlockchain/mbc-crew.webp";
-import acrossCampuses from "../images/BoilerBlockchain/solana-across-campuses.webp";
 import larpPreview from "../images/Larp/larp6.webp";
 import homelabPhoto from "../images/Setup/full-setup.jpg";
 import moonshotPitch from "../images/moonshot-pyras.webp";
@@ -35,8 +35,7 @@ function LinkRow({ items }) {
   return (
     <p className="link-row">
       {items.map((item, i) => (
-        <React.Fragment key={item.label}>
-          {i > 0 && <span className="link-sep">.</span>}
+        <span key={item.label} className="link-item">
           {item.type === "internal" ? (
             <Link to={item.to} className="text-link">
               {item.label}
@@ -51,31 +50,20 @@ function LinkRow({ items }) {
               {item.label}
             </a>
           )}
-        </React.Fragment>
+          {i < items.length - 1 && <span className="link-sep"> .</span>}
+        </span>
       ))}
     </p>
   );
 }
 
-// What the fleet is up to, rendered as a rolling log under the pipeline
-const automationLog = [
-  "phonefarm: 12 devices online, warming feeds",
-  "creou: queued 4 slideshows per avatar",
-  "agents: orchestrator handed off 6 tasks",
-  "pyras: btc + xmr nodes synced",
-  "pipeline: render -> caption -> publish ok",
-  "homelab: nightly backups complete",
-  "veridex: proof verified, payout released",
-  "ward: repair job dispatched to a real human",
-];
-
 const boilerTiles = [
-  { src: teachingClass, title: "teaching classes", tags: "workshops . new members" },
-  { src: mbcCrew, title: "the crew", tags: "mbc '25 . everyone" },
-  { src: hackathonWinners, title: "mbc '25 winners", tags: "hackathon . stage" },
-  { src: tolyBreakpoint, title: "breakpoint '25", tags: "solana . toly" },
-  { src: acrossCampuses, title: "club sessions", tags: "teaching . solana" },
-  { src: dogecon, title: "dogecon '25", tags: "events . conferences" },
+  { src: mbcCrew, title: "the crew", tags: "mbc '25" },
+  { src: tolyBreakpoint, title: "with toly", tags: "breakpoint '25" },
+  { src: hackathonWinners, title: "winners", tags: "mbc '25" },
+  { src: mbcAfterparty, title: "afterparty", tags: "mbc '25" },
+  { src: teachingClass, title: "teaching", tags: "club session" },
+  { src: conferenceSelfie, title: "on the road", tags: "conferences" },
 ];
 
 function PhotoTile({ tile }) {
@@ -124,7 +112,7 @@ function HomePage() {
           >
             boilerblockchain.org
           </a>
-          . teaching the new kids, running events, shipping onchain.
+          .
         </p>
       </aside>
 
@@ -144,6 +132,10 @@ function HomePage() {
                 purdue university
               </a>
             </p>
+            <div className="home-head-links">
+              <LinkRow items={pageLinks} />
+              <LinkRow items={socialLinks} />
+            </div>
           </div>
         </div>
 
@@ -160,10 +152,7 @@ function HomePage() {
             </strong>{" "}
             after I log off.
           </p>
-          <AsciiPipeline
-            steps={["idea", "agents", "pipeline", "fleet", "shipped"]}
-            log={automationLog}
-          />
+          <AsciiFactory />
         </div>
 
 
@@ -253,34 +242,9 @@ function HomePage() {
           <span className="home-links-label">ABOUT ME</span>
           <p className="home-about-more">
             Off the keyboard, I'm usually on a plane to a hackathon or
-            conference with Boiler Blockchain, teaching a club session to new
-            members, or working through{" "}
-            <Link to="/books" className="text-link">
-              my reading list
-            </Link>
-            . I like being in rooms with people who build, and I like it even
-            more when someone I taught ships their first project.
-          </p>
-        </div>
-
-        <hr className="home-divider" />
-
-        <div className="home-bb">
-          <span className="home-links-label">BOILER BLOCKCHAIN</span>
-          <p className="home-about-more">
-            I'm a <strong>core dev and board member</strong> at{" "}
-            <Link to="/boilerblockchain" className="text-link">
-              Boiler Blockchain
-            </Link>
-            , Purdue's blockchain club. I love teaching the new kids how this
-            stuff actually works, and I help organize and show up to events
-            across the space: MBC 2025, Solana Breakpoint, and ETHDenver 2025
-            and 2026.
-          </p>
-          <p className="home-about-more">
-            <Link to="/boilerblockchain" className="text-link">
-              [see all the photos]
-            </Link>
+            conference with Boiler Blockchain, or teaching a club session. I
+            like being in rooms with people who build, and I like it even more
+            when someone I taught ships their first project.
           </p>
         </div>
 
@@ -289,6 +253,17 @@ function HomePage() {
         <div className="home-recent">
           <span className="home-links-label">RECENT</span>
           <div className="home-recent-body">
+            <p className="home-recent-role">
+              Core dev + board &middot;{" "}
+              <Link to="/boilerblockchain" className="text-link">
+                Boiler Blockchain
+              </Link>{" "}
+              <span className="home-recent-dates">(active)</span>
+            </p>
+            <p className="home-recent-desc home-recent-gap">
+              Bringing in new members, landing sponsor funding, and organizing
+              our trips: MBC 2025, Solana Breakpoint, ETHDenver 2025 and 2026.
+            </p>
             <p className="home-recent-role">
               Published &middot;{" "}
               <a
@@ -327,17 +302,6 @@ function HomePage() {
           </div>
         </div>
 
-        <hr className="home-divider" />
-
-        <div className="home-links">
-          <span className="home-links-label">PAGES</span>
-          <LinkRow items={pageLinks} />
-        </div>
-
-        <div className="home-links">
-          <span className="home-links-label">LINKS</span>
-          <LinkRow items={socialLinks} />
-        </div>
 
         <p className="home-contact">
           contact me at{" "}
@@ -373,7 +337,6 @@ function HomePage() {
           <img src={larpPreview} alt="Laptop and monitors setup" loading="lazy" />
           <figcaption>
             <strong>LARP CORNER</strong>
-            <span>terminals in the wild &rarr;</span>
           </figcaption>
         </Link>
       </aside>

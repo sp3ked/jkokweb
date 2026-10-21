@@ -29,21 +29,16 @@
   -webkit-text-stroke: 0.035em currentColor;
 }
 
+/* Masonry columns so every photo keeps its own shape, nothing cropped */
 .photo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  grid-auto-flow: dense;
-  gap: 1rem;
+  columns: 3 220px;
+  column-gap: 1rem;
   margin-top: 1.5rem;
 }
 
 .photo-item {
-  margin: 0;
-  min-width: 0;
-}
-
-.photo-wide {
-  grid-column: span 2;
+  margin: 0 0 1rem;
+  break-inside: avoid;
 }
 
 .photo-item a {
@@ -51,24 +46,18 @@
   overflow: hidden;
   border: 1px solid rgba(38, 51, 31, 0.12);
   box-shadow: 0 12px 28px rgba(38, 51, 31, 0.14);
-  aspect-ratio: 4 / 3;
   background: var(--cream-2);
-}
-
-.photo-tall .photo-item a {
-  aspect-ratio: 3 / 4;
 }
 
 .photo-item img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   transition: transform 0.35s ease;
 }
 
 .photo-item a:hover img {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
 .photo-item figcaption {
@@ -80,11 +69,19 @@
 
 @media (max-width: 520px) {
   .photo-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.6rem;
+    columns: 2;
+    column-gap: 0.6rem;
   }
 
-  .photo-wide {
-    grid-column: 1 / -1;
+  .photo-item {
+    margin-bottom: 0.6rem;
   }
+}
+
+/* Full-screen overlay for the Larp Corner jet, never blocks clicks */
+.f22-flyby {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  pointer-events: none;
 }

@@ -41,26 +41,51 @@
   overflow: hidden;
 }
 
-/* Every home divider becomes a pipe with data flowing through it */
-.home-divider {
-  height: 6px;
-  border: none !important;
-  border-block: 1.5px solid rgba(38, 51, 31, 0.35) !important;
-  background: repeating-linear-gradient(90deg, var(--sun-deep) 0 8px, transparent 8px 22px);
-  background-size: 22px 100%;
-  animation: pipe-flow-wide 1.1s linear infinite;
-  opacity: 0.8;
-}
-
-@keyframes pipe-flow-wide {
-  to {
-    background-position: 22px 0;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .home-divider,
   .ascii-cursor {
     animation: none;
   }
+}
+
+.ascii-log-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: stretch;
+  margin-top: 0.5rem;
+}
+
+.ascii-log-row .ascii-log {
+  flex: 1;
+  min-width: 0;
+  margin-top: 0 !important;
+  overflow: hidden;
+}
+
+.ascii-button {
+  flex-shrink: 0;
+  padding: 0 0.6rem;
+  border: 1.5px solid var(--ink);
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: clamp(0.62rem, 2.4vw, 0.78rem);
+  cursor: pointer;
+}
+
+.ascii-button:hover {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.ascii-button:active {
+  transform: translateY(1px);
+}
+
+/* Scale the scene so its full width always fits the card */
+.ascii-fit {
+  container-type: inline-size;
+}
+
+.ascii-fit pre:first-child {
+  line-height: 1.05;
 }
