@@ -14,7 +14,7 @@ function ExperienceEducation() {
           name="description"
           content="Joey Kokinda's professional experience and education — Turtosa, Boiler Blockchain, Zerogon Consulting, Purdue University, and RIT."
         />
-        <link rel="canonical" href="https://jkok.dev/experience" />
+        <link rel="canonical" href="https://jkokinda.com/experience" />
         <meta name="robots" content="index, follow" />
       </Helmet>
 

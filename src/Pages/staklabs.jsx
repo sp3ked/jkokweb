@@ -37,7 +37,7 @@ function StakLabs() {
       <Helmet>
         <title>StakLabs Project - Joey Kokinda</title>
         <meta name="description" content="StakLabs is a student-run web development company from Downingtown STEM Academy. A project by Joey Kokinda." />
-        <link rel="canonical" href="https://jkok.dev/projects/staklabs" />
+        <link rel="canonical" href="https://jkokinda.com/projects/staklabs" />
         <meta name="robots" content="index, follow, noarchive" />
       </Helmet>
       <Link to="/projects" className="back-button">

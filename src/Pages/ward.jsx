@@ -38,7 +38,7 @@ function Ward() {
             name="description"
             content="WARD is rails for an autonomous system to hire and pay a verified human for physically-verifiable work, settled on-chain. A home agent fixes what it can in software and, when the fault is physical, hires a verified worker and pays them in USDC the moment a sensor attests the repair. A working implementation of ERC-8183 on Arc, with worker identity on ENS and attestation by Chainlink CRE."
           />
-          <link rel="canonical" href="https://jkok.dev/projects/ward" />
+          <link rel="canonical" href="https://jkokinda.com/projects/ward" />
           <meta name="robots" content="index, follow, noarchive" />
         </Helmet>
 

@@ -489,6 +489,14 @@ function Projects() {
     navigate(link);
   };
 
+  const handleProjectKeyDown = (event, link) => {
+    if (event.target !== event.currentTarget) return;
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      handleProjectClick(link);
+    }
+  };
+
   const renderCard = (project) => (
     <div
       key={project.id}
@@ -496,6 +504,10 @@ function Projects() {
       data-type={project.type}
       data-id={project.id}
       onClick={() => handleProjectClick(project.link)}
+      onKeyDown={(event) => handleProjectKeyDown(event, project.link)}
+      role={project.link ? "link" : undefined}
+      tabIndex={project.link ? 0 : undefined}
+      aria-label={project.link ? `View ${project.title}` : undefined}
     >
       <div className="project-year-tag">
         <span className="year-badge"></span>
@@ -542,7 +554,7 @@ function Projects() {
       </div>
       {project.image && (
         <div className="project-thumb">
-          <img src={project.image} alt={project.title} />
+          <img src={project.image} alt={project.title} loading="lazy" />
         </div>
       )}
       <div className="project-info">
@@ -613,11 +625,11 @@ function Projects() {
 
         <div className="terminal-content">
           <div className="project-filters">
-            <label className="filter-label" htmlFor="project-sort">
-              Sort by:
+            <label className="filter-label" htmlFor="project-filter">
+              Filter:
             </label>
             <select
-              id="project-sort"
+              id="project-filter"
               className="filter-select"
               value={activeFilter}
               onChange={(e) => setActiveFilter(e.target.value)}
@@ -643,9 +655,7 @@ function Projects() {
               <div className="other-projects-header">
                 <h2>Other</h2>
                 <p>
-                  Mostly here so I have a record of everything I've worked on.
-                  Weekend builds, hackathon leftovers, and experiments; none of
-                  them are realistically that impressive.
+                  An archive of weekend builds, hackathon projects, and experiments.
                 </p>
               </div>
               <div className="project-grid">

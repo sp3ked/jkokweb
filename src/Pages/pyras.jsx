@@ -37,7 +37,7 @@ function Pyras() {
             name="description"
             content="Pyras is a production-grade Ethereum infrastructure platform serving decentralized applications and blockchain developers. Features full archive node, Pocket Network relay mining, and Igniter staking platform."
           />
-          <link rel="canonical" href="https://jkok.dev/projects/pyras" />
+          <link rel="canonical" href="https://jkokinda.com/projects/pyras" />
           <meta name="robots" content="index, follow, noarchive" />
         </Helmet>
 

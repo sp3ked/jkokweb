@@ -38,7 +38,7 @@ function Creou() {
             name="description"
             content="Creou is an AI UGC platform for faceless creators. Generate TikTok-style slideshow decks, clone viral formats, schedule posts, and track save rate — one Next.js app on Supabase with a Python generation worker."
           />
-          <link rel="canonical" href="https://jkok.dev/projects/creou" />
+          <link rel="canonical" href="https://jkokinda.com/projects/creou" />
           <meta name="robots" content="index, follow, noarchive" />
         </Helmet>
 

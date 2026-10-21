@@ -49,7 +49,7 @@ function AgentTrust() {
             name="description"
             content="AgentTrust is cryptographically verifiable, escrow-weighted reputation infrastructure for autonomous AI agents. Built at ETHDenver 2026 on Hedera."
           />
-          <link rel="canonical" href="https://jkok.dev/projects/agenttrust" />
+          <link rel="canonical" href="https://jkokinda.com/projects/agenttrust" />
           <meta name="robots" content="index, follow, noarchive" />
         </Helmet>
 

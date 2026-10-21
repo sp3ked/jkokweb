@@ -3,154 +3,154 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
   <url>
-    <loc>https://jkok.dev/</loc>
+    <loc>https://jkokinda.com/</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/resume</loc>
+    <loc>https://jkokinda.com/resume</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/projects</loc>
+    <loc>https://jkokinda.com/projects</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/contact</loc>
+    <loc>https://jkokinda.com/contactcard</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/projects/jaeger</loc>
+    <loc>https://jkokinda.com/projects/jaeger</loc>
     <lastmod>2025-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/projects/youvest</loc>
+    <loc>https://jkokinda.com/projects/youvest</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/projects/polyterm</loc>
+    <loc>https://jkokinda.com/projects/polyterm</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/projects/exoform</loc>
+    <loc>https://jkokinda.com/projects/exoform</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/projects/staklabs</loc>
+    <loc>https://jkokinda.com/projects/staklabs</loc>
     <lastmod>2025-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/projects/trunorth</loc>
+    <loc>https://jkokinda.com/projects/trunorth</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/projects/promptr</loc>
+    <loc>https://jkokinda.com/projects/promptr</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/projects/trip</loc>
+    <loc>https://jkokinda.com/projects/trip</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/projects/block</loc>
+    <loc>https://jkokinda.com/projects/block</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/projects/cosmos</loc>
+    <loc>https://jkokinda.com/projects/cosmos</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/projects/docu</loc>
+    <loc>https://jkokinda.com/projects/docu</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/projects/locallens</loc>
+    <loc>https://jkokinda.com/projects/locallens</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/projects/meta</loc>
+    <loc>https://jkokinda.com/projects/meta</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/projects/scout</loc>
+    <loc>https://jkokinda.com/projects/scout</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/projects/tools</loc>
+    <loc>https://jkokinda.com/projects/tools</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/projects/unbolted</loc>
+    <loc>https://jkokinda.com/projects/unbolted</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/projects/bike</loc>
+    <loc>https://jkokinda.com/projects/bike</loc>
     <lastmod>2024-08-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jkok.dev/projects/raspi</loc>
+    <loc>https://jkokinda.com/projects/raspi</loc>
     <lastmod>2023-12-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>

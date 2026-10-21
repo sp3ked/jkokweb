@@ -27,7 +27,7 @@ function Larp() {
       <Helmet>
         <title>Larp Corner — Joey Kokinda</title>
         <meta name="description" content="Laptops, terminals, and setups in the wild." />
-        <link rel="canonical" href="https://jkok.dev/larp" />
+        <link rel="canonical" href="https://jkokinda.com/larp" />
       </Helmet>
 
       {jetFlying && (

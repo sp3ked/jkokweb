@@ -126,6 +126,11 @@
   box-shadow: 0 16px 40px rgba(31, 111, 176, 0.22);
 }
 
+.project-card:focus-visible {
+  outline: 3px solid var(--sun);
+  outline-offset: 3px;
+}
+
 .project-thumb {
   position: relative;
   width: 100%;

@@ -49,7 +49,7 @@ function BoilerBlockchain() {
           name="description"
           content="Joey Kokinda is a core dev and board member of Boiler Blockchain, Purdue's blockchain club."
         />
-        <link rel="canonical" href="https://jkok.dev/boilerblockchain" />
+        <link rel="canonical" href="https://jkokinda.com/boilerblockchain" />
       </Helmet>
 
       <Link to="/" className="back-btn">← Home</Link>

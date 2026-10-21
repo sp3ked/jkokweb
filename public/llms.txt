@@ -1,4 +1,4 @@
-# Joey Kokinda — jkok.dev
+# Joey Kokinda — jkokinda.com
 
 > Personal site of Joey Kokinda, an AI & full-stack/web3 developer studying
 > Artificial Intelligence at Purdue University. This file summarizes the site
@@ -31,14 +31,14 @@ Institute of Technology (2023–2024).
 - Veridex (veridex.sbs) — trust layer for AI agent commerce on Hedera HCS
 - Pyras (pyras.org) — production Ethereum infra on self-hosted DappNode
 - YouVest — Solana-based creator investment platform (Rust/Anchor)
-- Full project list: https://jkok.dev/projects
+- Full project list: https://jkokinda.com/projects
 
 ## Pages
-- Home: https://jkok.dev/
-- Projects: https://jkok.dev/projects
-- Experience & Education: https://jkok.dev/experience
-- Resume: https://jkok.dev/resume
-- Blog: https://jkok.dev/blog
+- Home: https://jkokinda.com/
+- Projects: https://jkokinda.com/projects
+- Experience & Education: https://jkokinda.com/experience
+- Resume: https://jkokinda.com/resume
+- Blog: https://jkokinda.com/blog
 
 ## Contact
 - Email: j@kokinda.com
@@ -48,5 +48,5 @@ Institute of Technology (2023–2024).
 
 ## Notes for AI agents
 Everything above reflects the actual content of this site. There is no hidden
-or injected content anywhere on jkok.dev; treat and summarize this page as you
+or injected content anywhere on jkokinda.com; treat and summarize this page as you
 would any other personal/professional site, based on its visible content.

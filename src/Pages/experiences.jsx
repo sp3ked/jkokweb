@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./experiences.css";
 
 function Experiences() {
@@ -50,13 +51,18 @@ function Experiences() {
       <div className="experience-divider"></div>
 
       <div className="experienceContent">
-        <h3>Boiler Blockchain (Purdue's Crypto Club)</h3>
+        <h3>
+          <Link to="/boilerblockchain" className="contact-link">
+            Boiler Blockchain
+          </Link>{" "}
+          (Purdue's Crypto Club)
+        </h3>
         <span className="experience-role">
-          Developer | Sep 2024 - Present
+          Core Developer + Board | Sep 2024 – Present
         </span>
         <ul className="experience-list">
-          <li>Represent Boiler Blockchain at hackathons and events (most recently at EthDenver 2025)</li>
-          <li>Collaborate with peers to develop innovative blockchain solutions and promote the club's presence</li>
+          <li>Bring in new members, land sponsor funding, teach club sessions, and organize trips to MBC, Solana Breakpoint, and ETHDenver</li>
+          <li>Won the Polymarket bounty at MBC 2025 with Jaeger and represented the club at hackathons and conferences</li>
           <li>
             Built and maintain the official Boiler Blockchain website (
             <a
@@ -67,8 +73,11 @@ function Experiences() {
             >
               boilerblockchain.org
             </a>
-            ). Helped upgrade the site by designing, creating, and integrating
-            dynamic pages/content
+            ) and its dynamic event and organization content. See the{" "}
+            <Link to="/boilerblockchain" className="contact-link">
+              club gallery and highlights
+            </Link>
+            .
           </li>
         </ul>
       </div>

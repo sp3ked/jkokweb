@@ -37,7 +37,7 @@ function Veridex() {
             name="description"
             content="Veridex checks every AI agent action before it runs and writes the outcome to Hedera HCS. Pre-execution gate, tamper-proof audit trail, replayable trust scores, and operator policies — the trust middleware for agent commerce."
           />
-          <link rel="canonical" href="https://jkok.dev/projects/veridex" />
+          <link rel="canonical" href="https://jkokinda.com/projects/veridex" />
           <meta name="robots" content="index, follow, noarchive" />
         </Helmet>
 

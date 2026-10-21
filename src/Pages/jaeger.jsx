@@ -45,7 +45,7 @@ function Jaeger() {
           name="description"
           content="Chrome extension that surfaces relevant Polymarket prediction markets while browsing the web. Built with React 19, Vite, and Base smart accounts for Midwest Blockchain Conference Hackathon 2025."
         />
-        <link rel="canonical" href="https://jkok.dev/projects/jaeger" />
+        <link rel="canonical" href="https://jkokinda.com/projects/jaeger" />
         <meta name="robots" content="index, follow, noarchive" />
       </Helmet>
 

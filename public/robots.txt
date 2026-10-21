@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 Disallow: /admin
 
-Sitemap: https://jkok.dev/sitemap.xml
+Sitemap: https://jkokinda.com/sitemap.xml

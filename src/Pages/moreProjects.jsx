@@ -337,7 +337,7 @@ function MoreProject() {
         <Helmet>
           <title>{project.metaTitle} | Joey Kokinda</title>
           <meta name="description" content={project.metaDescription} />
-          <link rel="canonical" href={`https://jkok.dev/projects/${id}`} />
+          <link rel="canonical" href={`https://jkokinda.com/projects/${id}`} />
           <meta name="robots" content="index, follow, noarchive" />
         </Helmet>
 

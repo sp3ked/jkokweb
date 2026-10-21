@@ -43,7 +43,7 @@ function Resume() {
           name="description"
           content="Joey Kokinda's resume and skills: Go, TypeScript, Solana, Hedera HCS, Foundry, AI agents, and full-stack development."
         />
-        <link rel="canonical" href="https://jkok.dev/resume" />
+        <link rel="canonical" href="https://jkokinda.com/resume" />
         <meta name="robots" content="index, follow" />
       </Helmet>
 

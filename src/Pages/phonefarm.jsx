@@ -32,7 +32,7 @@ function PhoneFarm() {
             name="description"
             content="PhoneFarm is a local web dashboard to monitor and control a fleet of Android phones over wireless ADB. Live scrcpy + WebCodecs streaming, control-all input mirroring, and scheduled macro replay across every device."
           />
-          <link rel="canonical" href="https://jkok.dev/projects/phonefarm" />
+          <link rel="canonical" href="https://jkokinda.com/projects/phonefarm" />
           <meta name="robots" content="index, follow, noarchive" />
         </Helmet>
 

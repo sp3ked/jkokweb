@@ -173,7 +173,7 @@ function CurrentSetup() {
             name="description"
             content="Joey Kokinda's current setup: a self-hosted homelab — workstations, a GPU rig running local Qwen agents, a 56-core server, self-hosted BTC/XMR nodes on a DappNode home node, a Mac mini, an Android phone farm, and a fleet of Bambu Lab and Elegoo 3D printers."
           />
-          <link rel="canonical" href="https://jkok.dev/setup" />
+          <link rel="canonical" href="https://jkokinda.com/setup" />
           <meta name="robots" content="index, follow" />
         </Helmet>
 

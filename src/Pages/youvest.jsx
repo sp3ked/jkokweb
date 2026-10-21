@@ -39,7 +39,7 @@ function YouVest() {
       <Helmet>
         <title>YouVest Project - Joey Kokinda</title>
         <meta name="description" content="YouVest is a decentralized creator investment platform built on Solana. Built for Colosseum Cypherpunk Hackathon 2025 by Joey Kokinda." />
-        <link rel="canonical" href="https://jkok.dev/projects/youvest" />
+        <link rel="canonical" href="https://jkokinda.com/projects/youvest" />
         <meta name="robots" content="index, follow, noarchive" />
       </Helmet>
       <Link to="/projects" className="back-button">

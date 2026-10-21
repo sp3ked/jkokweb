@@ -28,7 +28,7 @@ function Trip() {
       <Helmet>
         <title>Trippian Project - Joey Kokinda</title>
         <meta name="description" content="Trippian is an AI-powered travel assistant built at HackHarvard 2025. A project by Joey Kokinda." />
-        <link rel="canonical" href="https://jkok.dev/projects/trip" />
+        <link rel="canonical" href="https://jkokinda.com/projects/trip" />
         <meta name="robots" content="index, follow, noarchive" />
       </Helmet>
       <Link to="/projects" className="back-button">

@@ -32,7 +32,6 @@ const pageLinks = [
   { type: "internal", to: "/resume", label: "resume" },
   { type: "internal", to: "/blog", label: "blog" },
   { type: "internal", to: "/books", label: "books" },
-  { type: "internal", to: "/boilerblockchain", label: "boiler blockchain" },
   { type: "internal", to: "/larp", label: "larp corner" },
 ];
 
@@ -75,7 +74,7 @@ const projectTiles = [
   { src: jaegerShot, title: "jaeger", tags: "1st . mbc '25", to: "/projects/jaeger" },
 ];
 
-const boilerTiles = [
+const experienceTiles = [
   { src: hackathonWinners, title: "hacking", tags: "1st . mbc '25" },
   { src: teachingClass, title: "guiding", tags: "club sessions" },
 ];
@@ -127,8 +126,8 @@ function HomePage() {
           name="description"
           content="Joey Kokinda is an AI student at Purdue University specializing in computer vision, blockchain development, and full-stack applications. Explore my projects, experience, and writing."
         />
-        <link rel="canonical" href="https://jkok.dev/" />
-        <meta property="og:url" content="https://jkok.dev/" />
+        <link rel="canonical" href="https://jkokinda.com/" />
+        <meta property="og:url" content="https://jkokinda.com/" />
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow, max-image-preview:large" />
       </Helmet>
@@ -154,14 +153,14 @@ function HomePage() {
         </section>
 
         <section className="home-panel glass">
-          <h2 className="home-panel-title">BOILER BLOCKCHAIN</h2>
+          <h2 className="home-panel-title">EXPERIENCE</h2>
           <div className="home-tile-grid">
-            {boilerTiles.map((tile) => (
-              <PhotoTile key={tile.title} tile={tile} to="/boilerblockchain" />
+            {experienceTiles.map((tile) => (
+              <PhotoTile key={tile.title} tile={tile} to="/experience" />
             ))}
           </div>
-          <Link to="/boilerblockchain" className="home-panel-button">
-            learn more &rarr;
+          <Link to="/experience" className="home-panel-button">
+            view experience &rarr;
           </Link>
         </section>
 
@@ -198,7 +197,7 @@ function HomePage() {
                 purdue university
               </a>
             </p>
-            <p className="home-sub home-open">open to summer 2027 full-time roles</p>
+            <p className="home-sub home-open">graduating May 2027 · seeking full-time roles</p>
             <div className="home-head-links">
               <LinkRow items={socialLinks} />
             </div>
