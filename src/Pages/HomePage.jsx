@@ -83,7 +83,7 @@ const boilerTiles = [
 const hobbyTiles = [
   { src: spartan, title: "racing" },
   { src: snowboard, title: "snowboarding" },
-  { src: hiking, title: "hiking + outdoors" },
+  { src: hiking, title: "hiking" },
   { src: biking, title: "biking" },
   { src: basketball, title: "basketball" },
   { src: pickleball, title: "pickleball" },
@@ -173,7 +173,11 @@ function HomePage() {
             ))}
           </div>
           <p className="home-panel-note">
-            and obviously anything tech: servers, systems, crypto, the homelab.
+            and anything tech, check out the{" "}
+            <Link to="/setup" className="text-link">
+              homelab
+            </Link>
+            .
           </p>
         </section>
       </aside>
