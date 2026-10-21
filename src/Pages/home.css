@@ -206,7 +206,7 @@
 /* Three panels floating on the sky: tiles, main card, feature photos */
 .home-layout {
   display: grid;
-  grid-template-columns: 290px minmax(0, 680px) 300px;
+  grid-template-columns: 260px minmax(0, 680px) 240px;
   gap: 1.25rem;
   align-items: start;
   justify-content: center;
@@ -496,4 +496,28 @@ figure.home-tile:hover {
 .home-tile-grid-projects .home-tile img {
   aspect-ratio: 4 / 3;
   object-position: top;
+}
+
+/* Desktop: keep side photos compact so the center card leads */
+.home-panel-right .home-feature img,
+.home-feature.home-feature-big img {
+  aspect-ratio: 4 / 3;
+}
+
+.home-feature-big figcaption strong {
+  font-size: 1rem;
+}
+
+.home-tile-grid-hobbies {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.35rem;
+}
+
+.home-tile-grid-hobbies .home-tile img {
+  aspect-ratio: 1 / 1;
+}
+
+.home-tile-grid-hobbies .home-tile strong {
+  padding: 0.25rem 0.3rem;
+  font-size: 0.62rem;
 }

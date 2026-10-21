@@ -14,7 +14,6 @@ import hiking from "../images/Activities/hiking.webp";
 import biking from "../images/Activities/biking.webp";
 import poker from "../images/Activities/poker.webp";
 import printing3d from "../images/Setup/printer-centauri.jpg";
-import gpuRig from "../images/Setup/gpu-rig.jpg";
 import larpPreview from "../images/Larp/larp6.webp";
 import homelabPhoto from "../images/Setup/full-setup.jpg";
 import moonshotPitch from "../images/moonshot-pyras.webp";
@@ -82,7 +81,7 @@ const boilerTiles = [
 ];
 
 const hobbyTiles = [
-  { src: spartan, title: "racing", wide: true },
+  { src: spartan, title: "racing" },
   { src: snowboard, title: "snowboarding" },
   { src: hiking, title: "hiking + outdoors" },
   { src: biking, title: "biking" },
@@ -90,7 +89,6 @@ const hobbyTiles = [
   { src: pickleball, title: "pickleball" },
   { src: poker, title: "poker" },
   { src: printing3d, title: "3d printing" },
-  { src: gpuRig, title: "gpus" },
 ];
 
 function PhotoTile({ tile, to }) {
@@ -169,7 +167,7 @@ function HomePage() {
 
         <section className="home-panel glass">
           <h2 className="home-panel-title">HOBBIES</h2>
-          <div className="home-tile-grid">
+          <div className="home-tile-grid home-tile-grid-hobbies">
             {hobbyTiles.map((tile) => (
               <PhotoTile key={tile.title} tile={tile} />
             ))}
@@ -272,7 +270,7 @@ function HomePage() {
         </p>
 
         <p className="home-about-more">
-          I pitched{" "}
+          I've pitched twice at Purdue's Moonshot Pitch Challenge:{" "}
           <a
             href="https://pyras.org"
             target="_blank"
@@ -281,8 +279,8 @@ function HomePage() {
           >
             Pyras
           </a>{" "}
-          on stage at Purdue's Moonshot Pitch Challenge: two minutes, a panel
-          of judges, and a GPU marketplace idea.
+          (2025), a GPU marketplace, and Perigee (2026), manufacturing in
+          orbit.
         </p>
 
         <p className="home-about-more">
@@ -390,8 +388,8 @@ function HomePage() {
         <figure className="home-feature">
           <img src={moonshotPitch} alt="Joey pitching Pyras at Purdue's Moonshot Pitch Challenge" loading="lazy" className="home-feature-wide" />
           <figcaption>
-            <strong>MOONSHOT PITCH</strong>
-            <span>pyras . purdue moonshot pitch challenge</span>
+            <strong>MOONSHOT PITCHES</strong>
+            <span>2025 pyras . 2026 perigee</span>
           </figcaption>
         </figure>
         <h2 className="home-panel-title home-panel-subtitle">ETC</h2>
