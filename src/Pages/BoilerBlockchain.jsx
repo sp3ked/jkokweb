@@ -36,7 +36,7 @@ const photos = [
   { src: tolyBreakpoint, caption: "with Toly at Breakpoint 2025" },
   { src: breakpoint, caption: "Breakpoint 2025" },
   { src: dogecon, caption: "DogeCon 2025" },
-  { src: conferenceSelfie, caption: "on the conference circuit" },
+  { src: conferenceSelfie, caption: "met the best incubator, iykyk" },
   { src: ethdenver, caption: "ETHDenver 2025" },
 ];
 

@@ -6,7 +6,7 @@ import AsciiFactory from "./AsciiFactory";
 import mbcWin from "../images/BoilerBlockchain/mbc-polymarket-win.webp";
 import hackathonWinners from "../images/BoilerBlockchain/mbc-hackathon-winners.webp";
 import tolyBreakpoint from "../images/BoilerBlockchain/toly-breakpoint.webp";
-import mbcAfterparty from "../images/BoilerBlockchain/mbc-afterparty.webp";
+import teachingClass from "../images/BoilerBlockchain/teaching-class.webp";
 import spartan from "../images/Activities/spartan.webp";
 import snowboard from "../images/Activities/snowboard.webp";
 import basketball from "../images/Activities/basketball.webp";
@@ -68,7 +68,7 @@ const boilerTiles = [
   { src: mbcCrew, title: "the crew", tags: "mbc '25" },
   { src: tolyBreakpoint, title: "with toly", tags: "breakpoint '25" },
   { src: hackathonWinners, title: "winners", tags: "mbc '25" },
-  { src: mbcAfterparty, title: "afterparty", tags: "mbc '25" },
+  { src: teachingClass, title: "teaching", tags: "club session" },
 ];
 
 const hobbyTiles = [
@@ -341,29 +341,30 @@ function HomePage() {
         </p>
       </main>
 
-      <aside className="home-panel home-panel-right">
-        <figure className="home-feature glass">
+      <aside className="home-panel home-panel-right glass">
+        <h2 className="home-panel-title">STANDOUTS</h2>
+        <figure className="home-feature">
           <img src={mbcWin} alt="Joey holding the $3,500 Polymarket bounty check at MBC '25" />
           <figcaption>
             <strong>1ST PLACE</strong>
             <span>polymarket bounty . mbc '25 . $3,500</span>
           </figcaption>
         </figure>
-        <Link to="/setup" className="home-feature home-feature-link glass">
+        <Link to="/setup" className="home-feature home-feature-link home-feature-big">
           <img src={homelabPhoto} alt="Joey's homelab" loading="lazy" />
           <figcaption>
             <strong>HOMELAB</strong>
-            <span>where everything gets built &rarr;</span>
+            <span>click to learn more &rarr;</span>
           </figcaption>
         </Link>
-        <figure className="home-feature glass">
+        <figure className="home-feature">
           <img src={moonshotPitch} alt="Joey pitching Pyras at Purdue's Moonshot Pitch Challenge" loading="lazy" className="home-feature-wide" />
           <figcaption>
             <strong>MOONSHOT PITCH</strong>
             <span>pyras . purdue moonshot pitch challenge</span>
           </figcaption>
         </figure>
-        <Link to="/larp" className="home-feature home-feature-link glass">
+        <Link to="/larp" className="home-feature home-feature-link">
           <img src={larpPreview} alt="Laptop and monitors setup" loading="lazy" />
           <figcaption>
             <strong>LARP CORNER</strong>

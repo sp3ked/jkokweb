@@ -432,3 +432,41 @@ figure.home-tile:hover {
 .home-bottom-links {
   margin-top: 1.2rem;
 }
+
+/* Standouts: one glass panel, each feature a card inside it */
+.home-panel-right .home-feature {
+  padding: 0.4rem;
+  border: 1px solid rgba(38, 51, 31, 0.25);
+  background: var(--cream);
+}
+
+.home-feature-link {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.home-feature-link:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 3px 3px 0 rgba(38, 51, 31, 0.35);
+}
+
+.home-feature.home-feature-big img {
+  aspect-ratio: 4 / 5;
+}
+
+.home-feature-big figcaption strong {
+  font-size: 1.2rem;
+}
+
+.home-panel-right .home-panel-title {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1180px) {
+  .home-panel-right .home-panel-title {
+    grid-column: 1 / -1;
+  }
+
+  .home-panel-right .home-feature.home-feature-big img {
+    aspect-ratio: 1 / 1;
+  }
+}
