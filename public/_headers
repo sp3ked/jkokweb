@@ -28,3 +28,6 @@
   Link: <https://fonts.googleapis.com>; rel=preconnect; crossorigin
   Link: <https://fonts.gstatic.com>; rel=preconnect; crossorigin
 
+
+/*.mp4
+  Cache-Control: public, max-age=86400
